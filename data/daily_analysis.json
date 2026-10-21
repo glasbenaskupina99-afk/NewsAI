@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T21:01:48+00:00",
+  "generated_at": "2026-10-21T21:06:43+00:00",
   "model": "Claude (ročna analiza)",
   "is_mock": false,
   "sources": [
@@ -34,7 +34,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 83,
+  "articles_scraped": 84,
   "stories": [
     {
       "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
@@ -177,6 +177,51 @@
       ],
       "neutral_summary": "Peter Gregorčič, nekdanji predsednik programskega sveta RTV Slovenija, je na Evropsko sodišče za človekove pravice vložil pritožbo zaradi predčasnega prenehanja mandata po noveli zakona o RTV iz leta 2022, ki je bila potrjena na referendumu. Ustavno sodišče je julija odločilo, da je bila novela v tem delu skladna z ustavo, ker je bila hkratna zamenjava vodstva po njegovi oceni nujna za depolitizacijo. Pritožnik mu očita neučinkovito sodno varstvo in predolg postopek.",
       "id": "story-2",
+      "has_international_source": false
+    },
+    {
+      "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Izhodišče so dejstva, ki jih navajata oba vira: ministrstvo za izobraževanje v okviru reforme šolstva pripravlja zakon o učiteljski zbornici. Glavni tajnik sindikata Sviz Branimir Štrukelj ji nasprotuje, ministrstvu očita aroganco in podcenjevanje učiteljev ter primerja zamisel z Madžarsko. Poudarja, da ministrstvo ne sme posegati v delovanje sindikatov.",
+      "coverage_comparison": [
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Sviz kritičen do učiteljske zbornice. Štrukelj: To je arogantna poteza.",
+          "article_url": "https://www.rtvslo.si/slovenija/sviz-kriticen-do-uciteljske-zbornice-strukelj-to-je-arogantna-poteza/797652",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Na ministrstvu so v odzivu za STA zapisali, da je predlog zakona o učiteljski zbornici v pripravi, javno pa bo predstavljen, ko bo pripravljen.",
+            "Prepričan je, da želi politika z ustanovitvijo zbornice z obveznim članstvom učiteljstvo prisiliti v ustanovo, ki bi ustvarjala videz, da izraža njihova stališča."
+          ],
+          "omitted_facts": [
+            "Stališče Učiteljskega združenja Slovenije, ki pravi, da je predlog zbornice več let pripravljalo v sodelovanju z učitelji (to je v nasprotju s Štrukljevo trditvijo, da učitelji ne sodelujejo).",
+            "Da v Sloveniji deluje več kot 20 drugih strokovnih zbornic.",
+            "Ministrove izjave, vključno s tem, da se ministrstvo ograjuje od dokumenta, ki je zaokrožil v javnosti."
+          ],
+          "category": "javni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Štrukelj nad učiteljsko združenje, Rončević pa: “Na kraj pameti mi ne pade, da bi se o tem pogovarjal s sindikati”",
+          "article_url": "https://nova24tv.si/strukelj-nad-uciteljsko-zdruzenje-roncevic-pa-na-kraj-pameti-mi-ne-pade-da-bi-se-o-tem-pogovarjal-s-sindikati/",
+          "sensationalism_score": 6,
+          "bias_leaning": "Desno",
+          "bias_evidence_quotes": [
+            "Glede na to, kako je predlog ministrstva o ustanovitvi učiteljske zbornice razbesnel sindikat Sviz, bi lahko sklepali, da se v sindikatu bojijo za svojo prihodnost.",
+            "Slovenijo je v nadaljevanju zaničljivo primerjal z Madžarsko."
+          ],
+          "omitted_facts": [
+            "Uradno stališče ministrstva, da o obveznem članstvu in članarini še ni odločeno.",
+            "Štrukljev argument, da je članstvo v sindikatu prostovoljno, v zbornici pa bi bilo obvezno.",
+            "Kontekst primerjave z Madžarsko: tamkajšnjo zbornico je leta 2013 ustanovila Orbanova vlada, reforme pa so se končale s protesti."
+          ],
+          "category": "alternativni",
+          "quotes_verified": true
+        }
+      ],
+      "neutral_summary": "Sindikat Sviz nasprotuje napovedani ustanovitvi učiteljske zbornice, ki jo ministrstvo pripravlja kot del reforme šolstva. Štrukelj trdi, da gre za politični projekt brez sodelovanja učiteljev, ki bi izrinil sindikat iz strokovnih vprašanj. Ministrstvo odgovarja, da zbornica ne bo nadomestila sindikatov in da o članstvu še ni odločeno. Učiteljsko združenje Slovenije pravi, da je predlog več let pripravljalo skupaj z učitelji.",
+      "id": "story-3",
       "has_international_source": false
     }
   ]
