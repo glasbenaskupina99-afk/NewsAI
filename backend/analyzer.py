@@ -26,6 +26,7 @@ MAX_STORIES = 5
 MAX_BODY_CHARS = 3500
 
 BiasLeaning = Literal["Levo", "Sredina-Levo", "Sredina", "Sredina-Desno", "Desno"]
+SidesRepresented = Literal["Obe strani", "Pretežno ena stran", "Samo ena stran"]
 
 
 # --------------------------------------------------------------------------- #
@@ -46,6 +47,22 @@ class MediaCoverage(BaseModel):
     )
     omitted_facts: list[str] = Field(
         description="Dejstva iz mednarodnega vira, ki jih ta medij ni navedel ali jih je minimiziral.",
+    )
+    voices_heard: list[str] = Field(
+        default_factory=list,
+        description="Osebe ali institucije, ki v članku dobijo besedo (neposredno ali posredno citirane).",
+    )
+    sides_represented: SidesRepresented = Field(
+        default="Obe strani",
+        description="Ali članek predstavi stališča vseh vpletenih strani ali le ene.",
+    )
+    factual_errors: list[str] = Field(
+        default_factory=list,
+        description="Trditve v članku, ki so v nasprotju z drugimi viri ali z istim člankom.",
+    )
+    notes: list[str] = Field(
+        default_factory=list,
+        description="Pomembne opombe k oceni (npr. delno dostopno besedilo, drugačen datum objave).",
     )
 
 
@@ -111,7 +128,10 @@ ANALYSIS_RULES = """Si strog, nepristranski medijski analitik. Pravila:
    Če mednarodnega vira ni, primerjaj z dejstvi, ki jih navaja večina drugih virov, in to
    povej v international_baseline. Prazen seznam je dovoljen.
 6. media_name, article_title in article_url prepiši natančno iz vhoda.
-7. Vsa besedila (razen citatov) piši v slovenščini.
+7. voices_heard našteje, kdo v članku dobi besedo; sides_represented pove, ali so predstavljena
+   stališča vseh vpletenih strani. To ocenjuj ločeno od besedišča.
+8. factual_errors navaja samo trditve, ki so v nasprotju z drugimi viri ali z istim člankom.
+9. Vsa besedila (razen citatov) piši v slovenščini.
 """
 
 

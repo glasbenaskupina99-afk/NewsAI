@@ -90,7 +90,7 @@ function renderMeta(data) {
   const meta = document.getElementById("meta");
   meta.replaceChildren(
     h("div", { class: "font-medium text-slate-700 dark:text-slate-200" }, formatDate(data.generated_at)),
-    h("div", {}, `${plural(data.stories.length, WORDS.story)} · ${plural(data.sources.length, WORDS.source)} · model: ${data.model}`));
+    h("div", {}, `${plural(data.stories.length, WORDS.story)} · ${plural(new Set(data.stories.flatMap((st) => st.coverage_comparison.map((c) => c.media_name))).size, WORDS.source)} · model: ${data.model}`));
 
   if (data.is_mock) {
     document.getElementById("banner").replaceChildren(
@@ -193,6 +193,34 @@ function spectrum(coverage) {
       LEANINGS.map((l) => h("div", {}, l))));
 }
 
+const SIDES_STYLE = {
+  "Obe strani": "bg-emerald-50 text-emerald-800 ring-emerald-200 dark:bg-emerald-950 dark:text-emerald-200 dark:ring-emerald-900",
+  "Pretežno ena stran": "bg-amber-50 text-amber-800 ring-amber-200 dark:bg-amber-950 dark:text-amber-200 dark:ring-amber-900",
+  "Samo ena stran": "bg-orange-100 text-orange-900 ring-orange-300 dark:bg-orange-950 dark:text-orange-200 dark:ring-orange-900",
+};
+
+function voicesBlock(c) {
+  const voices = c.voices_heard || [];
+  if (!voices.length && !c.sides_represented) return null;
+  return h("div", { class: "space-y-1" },
+    h("div", { class: "flex flex-wrap items-center justify-between gap-1 text-xs" },
+      h("span", { class: "text-slate-500 dark:text-slate-400" }, "Kdo dobi besedo"),
+      c.sides_represented
+        ? h("span", { class: `rounded px-1.5 py-0.5 text-[11px] font-semibold ring-1 ring-inset ${SIDES_STYLE[c.sides_represented] || SIDES_STYLE["Obe strani"]}` }, c.sides_represented)
+        : null),
+    voices.length
+      ? h("div", { class: "flex flex-wrap gap-1" }, voices.map((v) =>
+          h("span", { class: "rounded bg-slate-100 px-1.5 py-0.5 text-[11px] text-slate-700 dark:bg-slate-800 dark:text-slate-300" }, v)))
+      : null);
+}
+
+function listBlock(title, items, tone) {
+  if (!items || !items.length) return null;
+  return h("div", { class: `rounded-lg p-2 ${tone.box}` },
+    h("div", { class: `mb-1 text-xs font-semibold ${tone.title}` }, title),
+    h("ul", { class: "space-y-1" }, items.map((t) => h("li", { class: `text-xs ${tone.text}` }, t))));
+}
+
 function coverageColumn(c) {
   const url = safeUrl(c.article_url);
   const intl = c.category === "mednarodni";
@@ -206,6 +234,13 @@ function coverageColumn(c) {
       ? h("a", { href: url, target: "_blank", rel: "noopener noreferrer", class: "text-sm font-medium leading-snug text-slate-800 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:text-slate-100 dark:decoration-slate-600" }, c.article_title)
       : h("p", { class: "text-sm font-medium leading-snug" }, c.article_title),
     sensationalismMeter(c.sensationalism_score),
+    voicesBlock(c),
+    listBlock("Dejanska napaka", c.factual_errors, {
+      box: "bg-red-50 ring-1 ring-inset ring-red-200 dark:bg-red-950 dark:ring-red-900",
+      title: "text-red-800 dark:text-red-200", text: "text-red-900 dark:text-red-100" }),
+    listBlock("Opomba", c.notes, {
+      box: "bg-slate-100 dark:bg-slate-800",
+      title: "text-slate-600 dark:text-slate-300", text: "text-slate-600 dark:text-slate-300" }),
     h("div", { class: "mt-auto" },
       h("div", { class: "mb-1 text-xs font-semibold text-slate-600 dark:text-slate-300" }, intl ? "Referenčni vir" : "Zamolčano ali minimizirano"),
       intl
@@ -214,7 +249,9 @@ function coverageColumn(c) {
           ? h("ul", { class: "space-y-1" }, c.omitted_facts.map((f) =>
               h("li", { class: "flex gap-1.5 text-xs text-slate-700 dark:text-slate-300" },
                 h("span", { class: "mt-0.5 text-amber-600", "aria-hidden": "true" }, "▲"), f)))
-          : h("p", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznanih izpuščenih ključnih dejstev.")));
+          : (c.notes || []).length
+            ? h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "Ni ocenjeno – glej opombo.")
+            : h("p", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznanih izpuščenih ključnih dejstev.")));
 }
 
 function quotesCard(coverage) {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T21:15:01+00:00",
+  "generated_at": "2026-10-21T21:18:30+00:00",
   "model": "Claude (ročna analiza)",
   "is_mock": false,
   "sources": [
@@ -51,6 +51,19 @@
             "Russia has for months refused as it believes it is winning on the battlefield"
           ],
           "omitted_facts": [],
+          "voices_heard": [
+            "Jurij Ušakov (Kremelj)",
+            "Volodimir Zelenski",
+            "Steve Witkoff",
+            "Jared Kushner",
+            "ameriški uradnik",
+            "Donald Trump",
+            "Marco Rubio",
+            "JD Vance"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
           "category": "mednarodni",
           "quotes_verified": true
         },
@@ -69,6 +82,16 @@
             "Kritike demokratskih in nekaterih republikanskih kongresnikov ter Ukrajine in evropskih zaveznikov zaradi omilitve sankcij za ruski dizel (omilitev sankcij je omenjena, kritike ne).",
             "Spor med Kijevom in Washingtonom: Trumpovo izjavo, da Ukrajina potrebuje novega predsednika, in obtožbe o zadrževanju obveščevalnih podatkov."
           ],
+          "voices_heard": [
+            "Steve Witkoff",
+            "Jurij Ušakov (Kremelj)",
+            "Volodimir Zelenski",
+            "Donald Trump",
+            "Aleksander Novak"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
           "category": "javni",
           "quotes_verified": true
         },
@@ -88,6 +111,16 @@
             "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
             "Trumpovo izjavo, da Ukrajina potrebuje novega predsednika."
           ],
+          "voices_heard": [
+            "Steve Witkoff",
+            "Jurij Ušakov (Kremelj)",
+            "Volodimir Zelenski",
+            "Alexander Stubb",
+            "Donald Trump"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
           "category": "komercialni",
           "quotes_verified": true
         },
@@ -108,6 +141,16 @@
             "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
             "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
           ],
+          "voices_heard": [
+            "Steve Witkoff",
+            "Jurij Ušakov (Kremelj)",
+            "Vladimir Putin (po Reutersu)"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Ukrajinska stran v članku ne dobi besede."
+          ],
           "category": "alternativni",
           "quotes_verified": true
         },
@@ -127,6 +170,17 @@
             "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
             "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
           ],
+          "voices_heard": [
+            "Steve Witkoff",
+            "Jurij Ušakov (Kremelj)",
+            "Volodimir Zelenski",
+            "Aleksander Novak"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [
+            "V uvodu piše, da je Witkoff prišel »v Moskvo«; srečanje je bilo v Sankt Peterburgu, kot navaja tudi nadaljevanje istega članka."
+          ],
+          "notes": [],
           "category": "komercialni",
           "quotes_verified": true
         }
@@ -154,6 +208,16 @@
             "Sklic pritožnikov na sodbi ESČP Baka proti Madžarski in Grzęda proti Poljski.",
             "Da pritožnika poudarjata, da pritožba ni politična nezaupnica ustavnemu sodišču in da bosta sprejela tudi odločitev, da kršitev ni bilo."
           ],
+          "voices_heard": [
+            "Peter Gregorčič",
+            "Matej Avbelj",
+            "ustavno sodišče (utemeljitev odločbe)"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "RTV SLO poroča o zadevi, v kateri je sam udeležen."
+          ],
           "category": "javni",
           "quotes_verified": true
         },
@@ -170,6 +234,15 @@
           "omitted_facts": [
             "Utemeljitev ustavnega sodišča: hkratna zamenjava vseh organov je bila po njegovi oceni nujna za takojšnjo depolitizacijo in skladna z ustavo.",
             "Da je bila novela zakona o RTV iz leta 2022 potrjena na referendumu."
+          ],
+          "voices_heard": [
+            "Peter Gregorčič",
+            "Matej Avbelj"
+          ],
+          "sides_represented": "Samo ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Stališče ustavnega sodišča oziroma zakonodajalca v članku ni predstavljeno."
           ],
           "category": "alternativni",
           "quotes_verified": true
@@ -198,6 +271,13 @@
             "Da v Sloveniji deluje več kot 20 drugih strokovnih zbornic.",
             "Ministrove izjave, vključno s tem, da se ministrstvo ograjuje od dokumenta, ki je zaokrožil v javnosti."
           ],
+          "voices_heard": [
+            "Branimir Štrukelj (Sviz)",
+            "ministrstvo za izobraževanje"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
           "category": "javni",
           "quotes_verified": true
         },
@@ -216,6 +296,17 @@
             "Štrukljev argument, da je članstvo v sindikatu prostovoljno, v zbornici pa bi bilo obvezno.",
             "Kontekst primerjave z Madžarsko: tamkajšnjo zbornico je leta 2013 ustanovila Orbanova vlada, reforme pa so se končale s protesti."
           ],
+          "voices_heard": [
+            "Borut Rončević (minister)",
+            "Branimir Štrukelj (Sviz)",
+            "Matija Horvat (Učiteljsko združenje)",
+            "NSi"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Edini med mediji z dne 21. 10. predstavi stališče Učiteljskega združenja, ki je predlog pripravilo."
+          ],
           "category": "alternativni",
           "quotes_verified": true
         },
@@ -233,6 +324,13 @@
             "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo.",
             "Da se je minister ogradil od dokumenta, ki je zaokrožil v javnosti."
           ],
+          "voices_heard": [
+            "Branimir Štrukelj (Sviz)",
+            "ministrstvo za izobraževanje"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
           "category": "komercialni",
           "quotes_verified": true
         },
@@ -246,8 +344,15 @@
             "A ni jasno, zakaj bi država sploh morala ustanoviti zbornico.",
             "Zbornica, ki bi lahko dvignila roko za šolsko reformo"
           ],
-          "omitted_facts": [
-            "Ocena temelji samo na prosto dostopnem prvem odstavku (preostanek članka je plačljiv), zato izpuščenih dejstev ni mogoče zanesljivo oceniti."
+          "omitted_facts": [],
+          "voices_heard": [
+            "Branimir Štrukelj (Sviz)",
+            "ministrstvo za izobraževanje"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Ocena temelji samo na prosto dostopnem prvem odstavku; preostanek članka je plačljiv."
           ],
           "category": "komercialni",
           "quotes_verified": true
@@ -266,6 +371,14 @@
             "Odziv ministrstva: da o članstvu in članarini še ni odločeno in da zbornica ne bo nadomestila sindikatov.",
             "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo."
           ],
+          "voices_heard": [
+            "Branimir Štrukelj (Sviz)"
+          ],
+          "sides_represented": "Samo ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Odziv ministrstva v članku ni objavljen."
+          ],
           "category": "komercialni",
           "quotes_verified": true
         },
@@ -283,6 +396,15 @@
             "Štrukljevo primerjavo z Madžarsko, kjer je zbornico leta 2013 ustanovila Orbanova vlada.",
             "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo."
           ],
+          "voices_heard": [
+            "Branimir Štrukelj (Sviz)",
+            "ministrstvo za izobraževanje"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Edini medij, ki Štruklja politično označi (»politik iz vrst Levice«)."
+          ],
           "category": "regionalni",
           "quotes_verified": true
         },
@@ -296,8 +418,16 @@
             "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
             "Združenje nikoli ni bilo reprezentativni predstavnik učiteljstva, dodaja Večer."
           ],
-          "omitted_facts": [
-            "Članek je bil objavljen 19. 10., pred novinarsko konferenco Sviza, zato kasnejših izjav ne more vsebovati.",
+          "omitted_facts": [],
+          "voices_heard": [
+            "Matija Horvat (Učiteljsko združenje)",
+            "Branimir Štrukelj (Sviz)",
+            "Združenje ravnateljev"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Objavljeno 19. 10., pred novinarsko konferenco Sviza, zato kasnejših izjav ne more vsebovati.",
             "Naslov zamisel pripiše ministru, besedilo pa navaja, da je 53-stranski predlog pripravilo Učiteljsko združenje Slovenije."
           ],
           "category": "komercialni",

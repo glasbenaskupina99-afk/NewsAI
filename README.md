@@ -54,7 +54,9 @@ CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.htm
    dva medija (prednost imajo tisti z BBC). Če klic ne uspe, se uporabi leksikalno združevanje.
 3. **Analiza**: za vsako zgodbo en klic z `response_schema=StoryAnalysis`; odgovor se lokalno ponovno
    validira s Pydantic (ocene 1–10, nagib iz zaprtega nabora, 1–2 citata).
-4. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
+4. **Dodatna polja**: kdo v članku dobi besedo (`voices_heard`, `sides_represented`), dejanske napake
+   (`factual_errors`) in opombe k oceni (`notes`).
+5. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
    preveri, ali dobesedno obstaja v besedilu članka – nepreverjeni citati so v UI označeni.
 
 ## GitHub Actions
