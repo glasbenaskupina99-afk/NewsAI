@@ -33,7 +33,7 @@ def write_json(path: Path, payload: dict) -> None:
     tmp.replace(path)
 
 
-def run(limit: int, force_mock: bool) -> int:
+def run(limit: int, force_mock: bool, max_stories: int) -> int:
     load_dotenv(ROOT / ".env")
     has_key = bool(os.getenv("GEMINI_API_KEY"))
 
@@ -51,7 +51,7 @@ def run(limit: int, force_mock: bool) -> int:
             log.error("Noben vir ni vrnil člankov – obstoječa analiza ostane nespremenjena")
             return 1
         else:
-            result = analyze(articles)
+            result = analyze(articles, max_stories=max_stories)
             if not result.stories:
                 log.error("Analiza ni vrnila nobene zgodbe – obstoječa analiza ostane nespremenjena")
                 return 1
@@ -64,10 +64,11 @@ def run(limit: int, force_mock: bool) -> int:
 def main() -> None:
     parser = argparse.ArgumentParser(description="NewsAI dnevni cevovod")
     parser.add_argument("--limit", type=int, default=20, help="največ člankov na vir")
+    parser.add_argument("--max-stories", type=int, default=5, help="največ zgodb za analizo")
     parser.add_argument("--mock", action="store_true", help="zapiši demo podatke brez zajema")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    sys.exit(run(args.limit, args.mock))
+    sys.exit(run(args.limit, args.mock, args.max_stories))
 
 
 if __name__ == "__main__":

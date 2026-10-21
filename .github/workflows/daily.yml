@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "0 7 * * *"   # vsak dan ob 07:00 UTC
   workflow_dispatch:
+    inputs:
+      max_stories:
+        description: "Največ zgodb za analizo (1 = poskusni zagon)"
+        default: "5"
 
 permissions:
   contents: write
@@ -37,11 +41,20 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          MAX_STORIES: ${{ inputs.max_stories || '5' }}
         run: |
           if [ -z "$GEMINI_API_KEY" ]; then
             echo "::warning::Secret GEMINI_API_KEY ni nastavljen – zapisani bodo demo podatki."
           fi
-          python main.py
+          python main.py --max-stories "$MAX_STORIES"
+
+      - name: Shrani zajete članke
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-articles
+          path: data/raw_articles.json
+          if-no-files-found: ignore
 
       - name: Commit rezultatov
         run: |

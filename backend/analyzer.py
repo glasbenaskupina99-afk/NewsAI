@@ -276,18 +276,20 @@ def _source_infos() -> list[SourceInfo]:
     return [SourceInfo(name=s.name, category=s.category, url=s.url) for s in SOURCES]
 
 
-def analyze(articles: list[Article], model: str | None = None) -> DailyAnalysis:
+def analyze(
+    articles: list[Article], model: str | None = None, max_stories: int = MAX_STORIES
+) -> DailyAnalysis:
     """Celotna analiza z Gemini. Zahteva GEMINI_API_KEY."""
     model = model or os.getenv("GEMINI_MODEL", DEFAULT_MODEL)
     client = _client()
 
     try:
-        clusters = cluster_with_gemini(client, model, articles)
+        clusters = cluster_with_gemini(client, model, articles, max_stories)
     except RuntimeError as exc:
         log.warning("Združevanje z Gemini ni uspelo (%s) – uporabljam leksikalno metodo", exc)
         clusters = []
     if not clusters:
-        clusters = cluster_lexical(articles)
+        clusters = cluster_lexical(articles, max_stories)
     log.info("Najdenih %d skupnih zgodb", len(clusters))
 
     stories: list[StoryReport] = []
