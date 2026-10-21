@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T20:36:28+00:00",
+  "generated_at": "2026-10-21T20:51:03+00:00",
   "model": "Claude (ročna analiza, poskus)",
   "is_mock": false,
   "sources": [
@@ -29,7 +29,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 80,
+  "articles_scraped": 81,
   "stories": [
     {
       "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
@@ -65,6 +65,25 @@
             "Spor med Kijevom in Washingtonom: Trumpovo izjavo, da Ukrajina potrebuje novega predsednika, in obtožbe o zadrževanju obveščevalnih podatkov."
           ],
           "category": "javni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "24ur",
+          "article_title": "Witkoff tri ure pri Putinu: Rusija pripravljena na nove tristranske pogovore",
+          "article_url": "https://www.24ur.com/novice/tujina/po-konstruktivnih-pogovorih-z-zelenskim-witkoff-odhaja-k-putinu.html",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Ameriški predsednik Donald Trump v zadnjem času krepi pritisk na Ukrajino, naj sklene kakršen koli dogovor o končanju vojne.",
+            "Kijev je sicer pred dogodkom v Rusiji ZDA obtožil, da zadržujejo ključne obveščevalne podatke, kar je Washington zavrnil kot \"škandalozno\" obtožbo, piše BBC."
+          ],
+          "omitted_facts": [
+            "Da je Zelenski pripravljen sprejeti zamrznitev vojne vzdolž sedanje fronte.",
+            "Omilitev ameriških sankcij za ruski dizel in kritike tega koraka.",
+            "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
+            "Trumpovo izjavo, da Ukrajina potrebuje novega predsednika."
+          ],
+          "category": "komercialni",
           "quotes_verified": true
         },
         {
