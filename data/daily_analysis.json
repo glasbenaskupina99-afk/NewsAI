@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T20:58:18+00:00",
-  "model": "Claude (ročna analiza, poskus)",
+  "generated_at": "2026-10-21T21:01:48+00:00",
+  "model": "Claude (ročna analiza)",
   "is_mock": false,
   "sources": [
     {
@@ -34,7 +34,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 82,
+  "articles_scraped": 83,
   "stories": [
     {
       "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
@@ -134,6 +134,50 @@
       "neutral_summary": "Kremelj je po srečanju Putina z ameriškim odposlancem Witkoffom sporočil, da je pripravljen novembra obnoviti tristranske mirovne pogovore z Ukrajino in ZDA. Zelenski je pogovore podprl in predlagal zamrznitev fronte kot prvi korak. Srečanje je spremljala izpustitev ameriškega državljana Stephena Hubbarda, potekalo pa je ob napetostih med Kijevom in Washingtonom zaradi ameriškega pritiska na Ukrajino in omilitve sankcij za ruski dizel.",
       "id": "story-1",
       "has_international_source": true
+    },
+    {
+      "topic_title": "Gregorčič zaradi predčasnega prenehanja mandata v programskem svetu RTV vložil pritožbo na ESČP",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Izhodišče so dejstva, ki jih navajata oba vira: nekdanji predsednik programskega sveta RTV Slovenija Peter Gregorčič je s pravnikom Matejem Avbljem vložil pritožbo na ESČP, ker se je njegov mandat po noveli zakona o RTV iz leta 2022 končal neposredno na podlagi zakona. Ustavnemu sodišču očitata, da ni preverilo konkretnih razlogov za prenehanje mandata, da je odločalo skoraj tri leta in sedem mesecev, brez javne obravnave in z različnimi merili za stranke (s sklicem na ločeno mnenje sodnika Marka Starmana), ter da ni odgovorilo na predlog za predložitev vprašanj Sodišču EU. Predlagala sta prednostno obravnavo.",
+      "coverage_comparison": [
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Gregorčič v zadevi RTV Slovenija vložil pritožbo na ESČP",
+          "article_url": "https://www.rtvslo.si/slovenija/gregorcic-v-zadevi-rtv-slovenija-vlozil-pritozbo-na-escp/797667",
+          "sensationalism_score": 1,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Ustavno sodišče je ukrep ocenilo kot primeren za uresničevanje pravice do svobode izražanja posameznikov.",
+            "Gregorčič v danes vloženi pritožbi zatrjuje, da je sodišče sicer res presojalo ustavnost zakona, ni pa preverilo, ali so za predčasno prenehanje njegovega mandata obstajali konkretni razlogi."
+          ],
+          "omitted_facts": [
+            "Da je ministrstvo za kulturo avgusta pripravilo nov predlog zakona, ki naj bi znova predvideval predčasno prenehanje mandatov organov RTV.",
+            "Sklic pritožnikov na sodbi ESČP Baka proti Madžarski in Grzęda proti Poljski.",
+            "Da pritožnika poudarjata, da pritožba ni politična nezaupnica ustavnemu sodišču in da bosta sprejela tudi odločitev, da kršitev ni bilo."
+          ],
+          "category": "javni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Bo ustavno sodišče dobilo zaušnico ESČP pri ugrabitvi RTV?",
+          "article_url": "https://nova24tv.si/bo-ustavno-sodisce-dobilo-zausnico-escp-pri-ugrabitvi-rtv/",
+          "sensationalism_score": 8,
+          "bias_leaning": "Sredina-Desno",
+          "bias_evidence_quotes": [
+            "Bo ustavno sodišče dobilo zaušnico ESČP pri ugrabitvi RTV?",
+            "Bo večletni spor končno dobil pravni epilog?"
+          ],
+          "omitted_facts": [
+            "Utemeljitev ustavnega sodišča: hkratna zamenjava vseh organov je bila po njegovi oceni nujna za takojšnjo depolitizacijo in skladna z ustavo.",
+            "Da je bila novela zakona o RTV iz leta 2022 potrjena na referendumu."
+          ],
+          "category": "alternativni",
+          "quotes_verified": true
+        }
+      ],
+      "neutral_summary": "Peter Gregorčič, nekdanji predsednik programskega sveta RTV Slovenija, je na Evropsko sodišče za človekove pravice vložil pritožbo zaradi predčasnega prenehanja mandata po noveli zakona o RTV iz leta 2022, ki je bila potrjena na referendumu. Ustavno sodišče je julija odločilo, da je bila novela v tem delu skladna z ustavo, ker je bila hkratna zamenjava vodstva po njegovi oceni nujna za depolitizacijo. Pritožnik mu očita neučinkovito sodno varstvo in predolg postopek.",
+      "id": "story-2",
+      "has_international_source": false
     }
   ]
 }
