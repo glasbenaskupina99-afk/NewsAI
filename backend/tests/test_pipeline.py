@@ -43,6 +43,11 @@ class ScraperTest(unittest.TestCase):
         self.assertNotIn("<p>", first.summary)
         self.assertTrue(first.published.startswith("2026-10-21T06:00"))
 
+    def test_fallback_url_is_used(self):
+        source = Source("MMC RTV SLO", f"{self.base}/missing.xml", "javni", "sl",
+                        fallback_urls=(f"{self.base}/rtv.xml",))
+        self.assertEqual(len(fetch_feed(source)), 2)
+
     def test_unreachable_feed_returns_empty(self):
         self.assertEqual(fetch_feed(Source("X", f"{self.base}/missing.xml", "javni", "sl")), [])
 

@@ -32,6 +32,7 @@ class Source:
     url: str
     category: str  # "javni", "komercialni", "alternativni", "mednarodni"
     language: str
+    fallback_urls: tuple[str, ...] = ()
 
     @property
     def is_international(self) -> bool:
@@ -42,7 +43,8 @@ SOURCES: list[Source] = [
     Source("MMC RTV SLO", "https://www.rtvslo.si/feeds/00.xml", "javni", "sl"),
     Source("24ur", "https://www.24ur.com/rss", "komercialni", "sl"),
     Source("Nova24TV", "https://nova24tv.si/feed/", "alternativni", "sl"),
-    Source("Mladina", "https://www.mladina.si/rss/", "alternativni", "sl"),
+    Source("Mladina", "https://www.mladina.si/rss/", "alternativni", "sl",
+           fallback_urls=("https://www.mladina.si/rss.xml", "https://www.mladina.si/feed/")),
     Source("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml", "mednarodni", "en"),
 ]
 
@@ -78,9 +80,15 @@ def _published(entry) -> str | None:
 
 def fetch_feed(source: Source, limit: int = 15) -> list[Article]:
     """Prebere RSS vir in vrne do `limit` člankov (brez polnega besedila)."""
-    feed = feedparser.parse(source.url, agent=USER_AGENT)
-    if feed.bozo and not feed.entries:
-        log.warning("%s: RSS ni berljiv (%s)", source.name, feed.get("bozo_exception"))
+    for url in (source.url, *source.fallback_urls):
+        feed = feedparser.parse(url, agent=USER_AGENT)
+        if feed.entries:
+            break
+        log.warning(
+            "%s: RSS ni berljiv: %s (HTTP %s, %s, %s)", source.name, url, feed.get("status"),
+            feed.get("headers", {}).get("content-type"), feed.get("bozo_exception"),
+        )
+    else:
         return []
 
     articles = []
