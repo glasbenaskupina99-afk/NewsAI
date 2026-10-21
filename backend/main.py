@@ -33,9 +33,22 @@ def write_json(path: Path, payload: dict) -> None:
     tmp.replace(path)
 
 
-def run(limit: int, force_mock: bool, max_stories: int) -> int:
+def _existing_is_real() -> bool:
+    try:
+        return not json.loads(OUTPUT.read_text(encoding="utf-8")).get("is_mock", True)
+    except (OSError, ValueError):
+        return False
+
+
+def run(limit: int, force_mock: bool, max_stories: int, scrape_only: bool = False) -> int:
     load_dotenv(ROOT / ".env")
     has_key = bool(os.getenv("GEMINI_API_KEY"))
+
+    if scrape_only:
+        articles = scrape_all(limit=limit, fulltext=True)
+        write_json(RAW_OUTPUT, {"articles": [a.model_dump() for a in articles]})
+        log.info("Zajetih %d člankov → %s", len(articles), RAW_OUTPUT.relative_to(ROOT))
+        return 0 if articles else 1
 
     if force_mock:
         result = build_mock_analysis()
@@ -44,6 +57,9 @@ def run(limit: int, force_mock: bool, max_stories: int) -> int:
         write_json(RAW_OUTPUT, {"articles": [a.model_dump() for a in articles]})
         log.info("Zajetih %d člankov", len(articles))
 
+        if not has_key and _existing_is_real():
+            log.warning("GEMINI_API_KEY ni nastavljen – obstoječa prava analiza ostane nespremenjena")
+            return 0
         if not has_key:
             log.warning("GEMINI_API_KEY ni nastavljen – zapisujem demo podatke")
             result = build_mock_analysis(articles_scraped=len(articles))
@@ -65,10 +81,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="NewsAI dnevni cevovod")
     parser.add_argument("--limit", type=int, default=20, help="največ člankov na vir")
     parser.add_argument("--max-stories", type=int, default=5, help="največ zgodb za analizo")
+    parser.add_argument("--scrape-only", action="store_true",
+                        help="samo zajem s polnim besedilom v data/raw_articles.json")
     parser.add_argument("--mock", action="store_true", help="zapiši demo podatke brez zajema")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-    sys.exit(run(args.limit, args.mock, args.max_stories))
+    sys.exit(run(args.limit, args.mock, args.max_stories, args.scrape_only))
 
 
 if __name__ == "__main__":

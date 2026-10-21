@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-21T20:21:47+00:00",
-  "model": "mock",
-  "is_mock": true,
+  "generated_at": "2026-10-21T20:36:28+00:00",
+  "model": "Claude (ročna analiza, poskus)",
+  "is_mock": false,
   "sources": [
     {
       "name": "MMC RTV SLO",
@@ -32,169 +32,18 @@
   "articles_scraped": 80,
   "stories": [
     {
-      "topic_title": "EU ministri dosegli dogovor o skupni migracijski politiki",
-      "international_baseline": "Notranji ministri EU so po dvodnevnih pogajanjih potrdili kompromis o porazdelitvi prosilcev za azil. Države, ki prosilcev ne sprejmejo, plačajo prispevek v skupni sklad. Proti so glasovale tri države članice, dogovor mora potrditi še Evropski parlament.",
+      "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
+      "international_baseline": "Po srečanju Putina in ameriškega odposlanca Witkoffa v Sankt Peterburgu je Putinov svetovalec Ušakov dejal, da je Rusija »načeloma pripravljena« na nov krog pogovorov, morda okoli 10. novembra v Abu Dabiju, osredotočen na varnostni sistem po koncu vojne. Zelenski je tristransko srečanje podprl in se strinjal z zamrznitvijo fronte. Rusija je pogovore, prekinjene februarja, mesece zavračala, ker meni, da zmaguje na bojišču; Ukrajina in evropski zavezniki Putinovo trditev o napredovanju zavračajo. Pogovori potekajo ob sporu med Kijevom in Washingtonom: Trump je odpravil sankcije za ruski dizel, kar so kritizirali demokratski in nekateri republikanski kongresniki, Kijev je ZDA obtožil zadrževanja obveščevalnih podatkov, Trump pa je dejal, da Ukrajina potrebuje novega predsednika. Pred srečanjem je Rusija izpustila ameriškega državljana Stephena Hubbarda.",
       "coverage_comparison": [
         {
           "media_name": "BBC World",
-          "article_title": "EU ministers agree migration burden-sharing deal",
-          "article_url": "https://www.bbc.com/news/world",
-          "sensationalism_score": 2,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "The deal was backed by a qualified majority, with three member states voting against."
-          ],
-          "omitted_facts": [],
-          "category": "mednarodni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "MMC RTV SLO",
-          "article_title": "Ministri EU potrdili kompromis o azilnem sistemu",
-          "article_url": "https://www.rtvslo.si",
-          "sensationalism_score": 2,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Dogovor mora potrditi še Evropski parlament, pogajanja pa naj bi se začela jeseni."
-          ],
-          "omitted_facts": [
-            "Število držav, ki so glasovale proti."
-          ],
-          "category": "javni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "24ur",
-          "article_title": "Bruselj odločil: kdor ne sprejme migrantov, bo plačal",
-          "article_url": "https://www.24ur.com",
-          "sensationalism_score": 6,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Kdor ne bo sprejel migrantov, bo moral globoko seči v žep."
-          ],
-          "omitted_facts": [
-            "Da dogovor še ni dokončen in ga mora potrditi Evropski parlament."
-          ],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Nova24TV",
-          "article_title": "Bruselj Sloveniji vsiljuje kvote – vlada molči!",
-          "article_url": "https://nova24tv.si",
-          "sensationalism_score": 9,
-          "bias_leaning": "Desno",
-          "bias_evidence_quotes": [
-            "Bruseljska birokracija nam znova vsiljuje nezakonite migrante.",
-            "vlada pa kot vedno ponižno kima"
-          ],
-          "omitted_facts": [
-            "Da gre za izbiro med sprejemom in finančnim prispevkom, ne za obvezne kvote.",
-            "Da je dogovor podprla kvalificirana večina držav članic."
-          ],
-          "category": "alternativni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Mladina",
-          "article_title": "Evropa se odkupuje od solidarnosti",
-          "article_url": "https://www.mladina.si",
-          "sensationalism_score": 5,
-          "bias_leaning": "Sredina-Levo",
-          "bias_evidence_quotes": [
-            "Namesto solidarnosti z ljudmi v stiski je Evropa izbrala računovodstvo."
-          ],
-          "omitted_facts": [
-            "Da mora dogovor potrditi še Evropski parlament."
-          ],
-          "category": "alternativni",
-          "quotes_verified": true
-        }
-      ],
-      "neutral_summary": "Ministri EU so sprejeli kompromis o solidarnostnem mehanizmu za azil, ki državam omogoča izbiro med sprejemom prosilcev in finančnim prispevkom. Slovenija je dogovor podprla; končno besedilo mora potrditi še parlament.",
-      "id": "story-1",
-      "has_international_source": true
-    },
-    {
-      "topic_title": "Vlada predstavila predlog proračuna za prihodnje leto",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča; izhodišče so dejstva, ki jih navaja večina virov: predlog predvideva višje izdatke za zdravstvo in obrambo ter primanjkljaj okoli 2,8 % BDP.",
-      "coverage_comparison": [
-        {
-          "media_name": "MMC RTV SLO",
-          "article_title": "Vlada sprejela predlog proračuna, primanjkljaj 2,8 odstotka BDP",
-          "article_url": "https://www.rtvslo.si",
+          "article_title": "Russia says it is ready to resume talks with Ukraine and US to end war",
+          "article_url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
           "sensationalism_score": 1,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Primanjkljaj bo po napovedih znašal 2,8 odstotka BDP."
-          ],
-          "omitted_facts": [],
-          "category": "javni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "24ur",
-          "article_title": "Koliko denarja bo šlo za zdravstvo? Vse o novem proračunu",
-          "article_url": "https://www.24ur.com",
-          "sensationalism_score": 4,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Največji kos pogače bo tokrat dobilo zdravstvo."
-          ],
-          "omitted_facts": [
-            "Kritike fiskalnega sveta glede vzdržnosti javnih financ."
-          ],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Nova24TV",
-          "article_title": "Rekordno zadolževanje: vlada zapravlja kot še nikoli",
-          "article_url": "https://nova24tv.si",
-          "sensationalism_score": 8,
-          "bias_leaning": "Desno",
-          "bias_evidence_quotes": [
-            "Vlada brezglavo zapravlja denar davkoplačevalcev."
-          ],
-          "omitted_facts": [
-            "Povečanje izdatkov za obrambo, ki ga je zahtevala tudi opozicija.",
-            "Da je primanjkljaj pod mejo 3 % BDP."
-          ],
-          "category": "alternativni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Mladina",
-          "article_title": "Proračun, ki končno pomisli na bolnike",
-          "article_url": "https://www.mladina.si",
-          "sensationalism_score": 4,
-          "bias_leaning": "Levo",
-          "bias_evidence_quotes": [
-            "Po letih varčevanja na plečih najšibkejših je to proračun, ki končno pomisli na ljudi."
-          ],
-          "omitted_facts": [
-            "Višino primanjkljaja in opozorila o zadolževanju."
-          ],
-          "category": "alternativni",
-          "quotes_verified": true
-        }
-      ],
-      "neutral_summary": "Vlada je v parlamentarni postopek poslala predlog proračuna z višjimi izdatki za zdravstvo in obrambo. Opozicija kritizira višino primanjkljaja, fiskalni svet bo mnenje podal prihodnji teden.",
-      "id": "story-2",
-      "has_international_source": false
-    },
-    {
-      "topic_title": "Močan potres v vzhodnem Sredozemlju, več žrtev",
-      "international_baseline": "Potres z magnitudo 6,4 je prizadel obalno območje; oblasti potrjujejo najmanj 14 žrtev in več kot 200 poškodovanih. Reševalne ekipe iščejo preživele pod ruševinami, EU je ponudila pomoč.",
-      "coverage_comparison": [
-        {
-          "media_name": "BBC World",
-          "article_title": "Deadly earthquake strikes eastern Mediterranean",
-          "article_url": "https://www.bbc.com/news/world",
-          "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "At least 14 people have been confirmed dead, officials said."
+            "Ukraine and its European allies are disputing Putin's claim, pointing to a virtual stalemate on the front.",
+            "Russia has for months refused as it believes it is winning on the battlefield"
           ],
           "omitted_facts": [],
           "category": "mednarodni",
@@ -202,51 +51,45 @@
         },
         {
           "media_name": "MMC RTV SLO",
-          "article_title": "Potres z magnitudo 6,4: najmanj 14 mrtvih",
-          "article_url": "https://www.rtvslo.si",
-          "sensationalism_score": 3,
+          "article_title": "Kremelj privolil v obnovitev mirovnih pogajanj med Rusijo, Ukrajino in ZDA",
+          "article_url": "https://www.rtvslo.si/svet/vojna-v-ukrajini/kremelj-privolil-v-obnovitev-mirovnih-pogajanj-med-rusijo-ukrajino-in-zda/797676",
+          "sensationalism_score": 2,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Na ministrstvu za zunanje zadeve pravijo, da med žrtvami ni slovenskih državljanov."
+            "Kot je ocenil Ušakov, je Witkoff glede pogovorov z Zelenskim omenil nekaj novih vidikov v pristopih Evrope in Kijeva, vendar v njih ni bilo veliko vsebine.",
+            "Ameriški predsednik Donald Trump v zadnjem času krepi pritisk na Ukrajino, naj sklene kakršen koli dogovor o končanju vojne."
           ],
-          "omitted_facts": [],
+          "omitted_facts": [
+            "Da je Rusija pogovore mesece zavračala, ker meni, da zmaguje na bojišču, ter da Ukrajina in zavezniki Putinovo trditev o napredovanju zavračajo.",
+            "Kritike demokratskih in nekaterih republikanskih kongresnikov ter Ukrajine in evropskih zaveznikov zaradi omilitve sankcij za ruski dizel (omilitev sankcij je omenjena, kritike ne).",
+            "Spor med Kijevom in Washingtonom: Trumpovo izjavo, da Ukrajina potrebuje novega predsednika, in obtožbe o zadrževanju obveščevalnih podatkov."
+          ],
           "category": "javni",
           "quotes_verified": true
         },
         {
-          "media_name": "24ur",
-          "article_title": "GROZLJIVI POSNETKI: Zemlja se je stresla, ljudje bežali na ulice",
-          "article_url": "https://www.24ur.com",
-          "sensationalism_score": 9,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Prizori, ob katerih zastane dih."
-          ],
-          "omitted_facts": [
-            "Uradno število žrtev in poškodovanih.",
-            "Da je EU aktivirala mehanizem pomoči."
-          ],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
           "media_name": "Nova24TV",
-          "article_title": "Potres v Sredozemlju terjal življenja",
-          "article_url": "https://nova24tv.si",
-          "sensationalism_score": 3,
+          "article_title": "Srečanje Witkoffa s Putinom – smo res bližje miru v Ukrajini?",
+          "article_url": "https://nova24tv.si/srecanje-witkoffa-s-putinom-smo-res-blizje-miru-v-ukrajini/",
+          "sensationalism_score": 4,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Reševalci še vedno iščejo preživele pod ruševinami."
+            "Iz Kremlja so sporočili, da so tristranske pogovore pripravljeni obnoviti novembra.",
+            "Svetovalec Kremlja Ušakov je danes ocenil, da je Witkoff omenil nekaj novih vidikov v pristopih Evrope in Kijeva, vendar v njih ni bilo veliko vsebine."
           ],
           "omitted_facts": [
-            "Da je EU ponudila pomoč prizadetemu območju."
+            "Da je Zelenski tristranske pogovore podprl in se zavzel za zamrznitev fronte.",
+            "Predvideni datum in kraj pogovorov (okoli 10. novembra v Abu Dabiju) ter njihov poudarek na varnosti po koncu vojne.",
+            "Omilitev ameriških sankcij za ruski dizel in kritike tega koraka.",
+            "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
+            "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
           ],
           "category": "alternativni",
           "quotes_verified": true
         }
       ],
-      "neutral_summary": "Potres z magnitudo 6,4 je zahteval najmanj 14 življenj. Slovenskih državljanov med žrtvami po podatkih ministrstva za zunanje zadeve ni, EU je aktivirala mehanizem civilne zaščite.",
-      "id": "story-3",
+      "neutral_summary": "Kremelj je po srečanju Putina z ameriškim odposlancem Witkoffom sporočil, da je pripravljen novembra obnoviti tristranske mirovne pogovore z Ukrajino in ZDA. Zelenski je pogovore podprl in predlagal zamrznitev fronte kot prvi korak. Srečanje je spremljala izpustitev ameriškega državljana Stephena Hubbarda, potekalo pa je ob napetostih med Kijevom in Washingtonom zaradi ameriškega pritiska na Ukrajino in omilitve sankcij za ruski dizel.",
+      "id": "story-1",
       "has_international_source": true
     }
   ]

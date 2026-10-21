@@ -241,7 +241,11 @@ def analyze_story(client, model: str, cluster: list[Article], index: int) -> Sto
         "v coverage_comparison.\n\n" + "\n\n".join(blocks)
     )
     analysis = _generate(client, model, prompt, StoryAnalysis)
+    return build_story_report(analysis, cluster, index)
 
+
+def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: int) -> StoryReport:
+    """Poveže analizo z zajetimi članki: preveri citate, naslove in URL-je vzame iz zajema."""
     by_source = {a.source.lower(): a for a in cluster}
     coverage: list[CoverageReport] = []
     for item in analysis.coverage_comparison:
@@ -272,7 +276,7 @@ def analyze_story(client, model: str, cluster: list[Article], index: int) -> Sto
     )
 
 
-def _source_infos() -> list[SourceInfo]:
+def source_infos() -> list[SourceInfo]:
     return [SourceInfo(name=s.name, category=s.category, url=s.url) for s in SOURCES]
 
 
@@ -304,7 +308,7 @@ def analyze(
         generated_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
         model=model,
         is_mock=False,
-        sources=_source_infos(),
+        sources=source_infos(),
         articles_scraped=len(articles),
         stories=stories,
     )
@@ -435,7 +439,7 @@ def build_mock_analysis(articles_scraped: int = 0) -> DailyAnalysis:
         generated_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
         model="mock",
         is_mock=True,
-        sources=_source_infos(),
+        sources=source_infos(),
         articles_scraped=articles_scraped,
         stories=stories,
     )

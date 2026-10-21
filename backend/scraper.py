@@ -12,6 +12,7 @@ import hashlib
 import html
 import logging
 import re
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -23,7 +24,7 @@ from pydantic import BaseModel
 log = logging.getLogger(__name__)
 
 USER_AGENT = "Mozilla/5.0 (compatible; NewsAI-BiasAnalyzer/0.1; +https://github.com/glasbenaskupina99-afk/NewsAI)"
-MAX_TEXT_CHARS = 6000
+MAX_TEXT_CHARS = 15000
 
 
 @dataclass(frozen=True)
@@ -116,9 +117,12 @@ def fetch_feed(source: Source, limit: int = 15) -> list[Article]:
 def extract_text(url: str) -> str:
     """Prenese stran in vrne čisto besedilo članka (prazen niz ob napaki)."""
     try:
-        downloaded = trafilatura.fetch_url(url)
-        if not downloaded:
-            return ""
+        # urllib (namesto trafilatura.fetch_url) upošteva sistemski HTTP(S)_PROXY
+        # bbc.co.uk izven VB tako ali tako preusmeri na bbc.com
+        url = url.replace("://www.bbc.co.uk/", "://www.bbc.com/")
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(request, timeout=20) as response:
+            downloaded = response.read()
         text = trafilatura.extract(
             downloaded, include_comments=False, include_tables=False, favor_precision=True
         )
