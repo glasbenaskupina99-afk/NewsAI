@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medijsko ogledalo · NewsAI</title>
+  <meta name="description" content="Dnevna primerjava poročanja slovenskih in mednarodnih medijev: pristranskost, senzacionalizem in zamolčana dejstva.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f172a'/%3E%3Crect x='6' y='14' width='6' height='4' rx='1' fill='%23dc2626'/%3E%3Crect x='13' y='14' width='6' height='4' rx='1' fill='%2394a3b8'/%3E%3Crect x='20' y='14' width='6' height='4' rx='1' fill='%232563eb'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+  <header class="border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-900/80 sticky top-0 z-10">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+      <div class="flex items-center gap-3">
+        <div class="flex h-9 w-9 items-center justify-center gap-0.5 rounded-lg bg-slate-900 dark:bg-slate-100" aria-hidden="true">
+          <span class="h-3 w-1.5 rounded-sm bg-red-600"></span><span class="h-3 w-1.5 rounded-sm bg-slate-400"></span><span class="h-3 w-1.5 rounded-sm bg-blue-600"></span>
+        </div>
+        <div>
+          <h1 class="text-lg font-bold leading-tight">Medijsko ogledalo</h1>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Kako slovenski mediji poročajo o istih zgodbah</p>
+        </div>
+      </div>
+      <div id="meta" class="text-xs sm:text-right text-slate-500 dark:text-slate-400"></div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-6">
+    <div id="banner"></div>
+    <section id="legend" class="mb-6"></section>
+    <section id="profile" class="mb-8"></section>
+    <nav id="toc" class="mb-6"></nav>
+    <div id="stories" class="space-y-8">
+      <p class="py-16 text-center text-slate-500" id="loading">Nalagam dnevno analizo …</p>
+    </div>
+  </main>
+
+  <footer class="mx-auto max-w-6xl px-4 pb-10 pt-4 text-xs text-slate-500 dark:text-slate-400">
+    Ocene so samodejno ustvarjene z jezikovnim modelom na podlagi dobesednih citatov in izbire besedišča v posameznem članku.
+    Niso ocena medija kot celote. Vedno preberite izvirni članek.
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
