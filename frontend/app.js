@@ -15,6 +15,7 @@ const CATEGORY_LABEL = {
   javni: "Javni servis",
   komercialni: "Komercialni",
   alternativni: "Alternativni",
+  regionalni: "Regionalni",
   mednarodni: "Mednarodno sidro",
 };
 

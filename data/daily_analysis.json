@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T21:06:43+00:00",
+  "generated_at": "2026-10-21T21:15:01+00:00",
   "model": "Claude (ročna analiza)",
   "is_mock": false,
   "sources": [
@@ -34,7 +34,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 84,
+  "articles_scraped": 89,
   "stories": [
     {
       "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
@@ -218,9 +218,93 @@
           ],
           "category": "alternativni",
           "quotes_verified": true
+        },
+        {
+          "media_name": "24ur",
+          "article_title": "Štrukelj kritičen do učiteljske zbornice: To je projekt politike",
+          "article_url": "https://www.24ur.com/novice/slovenija/strukelj-kriticen-do-uciteljske-zbornice-to-je-projekt-politike.html",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Na ministrstvu medtem poudarjajo, da končne rešitve glede članstva še niso določene, namen zbornice pa ni nadomeščanje sindikatov.",
+            "Prepričan je, da želi politika z ustanovitvijo zbornice z obveznim članstvom učiteljstvo prisiliti v ustanovo, ki bi ustvarjala videz, da izraža njihova stališča."
+          ],
+          "omitted_facts": [
+            "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo.",
+            "Da se je minister ogradil od dokumenta, ki je zaokrožil v javnosti."
+          ],
+          "category": "komercialni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "Delo",
+          "article_title": "Zbornica, ki bi lahko dvignila roko za šolsko reformo",
+          "article_url": "https://www.delo.si/novice/slovenija/ucitelji-sviz-solstvo-reforme-vzgoja-in-izobrazevanje-uciteljska-zbornica",
+          "sensationalism_score": 4,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "A ni jasno, zakaj bi država sploh morala ustanoviti zbornico.",
+            "Zbornica, ki bi lahko dvignila roko za šolsko reformo"
+          ],
+          "omitted_facts": [
+            "Ocena temelji samo na prosto dostopnem prvem odstavku (preostanek članka je plačljiv), zato izpuščenih dejstev ni mogoče zanesljivo oceniti."
+          ],
+          "category": "komercialni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "Svet24",
+          "article_title": "Štrukelj kritičen: \"Učiteljska zbornica bo podaljšana roka ministrstva\"",
+          "article_url": "https://svet24.si/novice/slovenija/branimir-strukelj-sindikat-sviz-solstvo-1935126",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Glavni tajnik Sindikata vzgoje, izobraževanja, znanosti in kulture Slovenije (Sviz) Branimir Štrukelj je na novinarski konferenci ostro kritiziral načrte za ustanovitev učiteljske zbornice",
+            "»Učiteljska zbornica bo narejena za to, da bo podaljšana roka šolskega ministrstva,« je ocenil."
+          ],
+          "omitted_facts": [
+            "Odziv ministrstva: da o članstvu in članarini še ni odločeno in da zbornica ne bo nadomestila sindikatov.",
+            "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo."
+          ],
+          "category": "komercialni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "Moja Dolenjska",
+          "article_title": "Ministrstvo: Članstvo v učiteljski zbornici še ni določeno, namen ni nadomeščanje sindikatov",
+          "article_url": "https://moja-dolenjska.si/ministrstvo-clanstvo-v-uciteljski-zbornici-se-ni-doloceno-namen-ni-nadomescanje-sindikatov/",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina-Desno",
+          "bias_evidence_quotes": [
+            "tudi politika iz vrst Levice (kandidiral je na njihovi listi)",
+            "Pred leti kandidat za poslanca stranke Levica in glavni tajnik Sviza Branimir Štrukelj."
+          ],
+          "omitted_facts": [
+            "Štrukljevo primerjavo z Madžarsko, kjer je zbornico leta 2013 ustanovila Orbanova vlada.",
+            "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo."
+          ],
+          "category": "regionalni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
+          "article_url": "https://www.zurnal24.si/slovenija/ideja-o-ustanovitvi-uciteljske-zbornice-buri-duhove-466915",
+          "sensationalism_score": 6,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
+            "Združenje nikoli ni bilo reprezentativni predstavnik učiteljstva, dodaja Večer."
+          ],
+          "omitted_facts": [
+            "Članek je bil objavljen 19. 10., pred novinarsko konferenco Sviza, zato kasnejših izjav ne more vsebovati.",
+            "Naslov zamisel pripiše ministru, besedilo pa navaja, da je 53-stranski predlog pripravilo Učiteljsko združenje Slovenije."
+          ],
+          "category": "komercialni",
+          "quotes_verified": true
         }
       ],
-      "neutral_summary": "Sindikat Sviz nasprotuje napovedani ustanovitvi učiteljske zbornice, ki jo ministrstvo pripravlja kot del reforme šolstva. Štrukelj trdi, da gre za politični projekt brez sodelovanja učiteljev, ki bi izrinil sindikat iz strokovnih vprašanj. Ministrstvo odgovarja, da zbornica ne bo nadomestila sindikatov in da o članstvu še ni odločeno. Učiteljsko združenje Slovenije pravi, da je predlog več let pripravljalo skupaj z učitelji.",
+      "neutral_summary": "Sindikat Sviz nasprotuje napovedani ustanovitvi učiteljske zbornice, ki jo ministrstvo pripravlja kot del reforme šolstva in je bila obljubljena že v koalicijski pogodbi. Štrukelj trdi, da gre za politični projekt brez sodelovanja učiteljev, ki bi izrinil sindikat iz strokovnih vprašanj, in jo primerja z Orbanovo zbornico na Madžarskem. Ministrstvo odgovarja, da zbornica ne bo nadomestila sindikatov in da o članstvu še ni odločeno. Predlog Učiteljskega združenja Slovenije, ki je zaokrožil v javnosti, predvideva obvezno članstvo in okoli 8 evrov mesečne članarine; minister se je od tega dokumenta ogradil.",
       "id": "story-3",
       "has_international_source": false
     }
