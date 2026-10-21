@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T20:08:48+00:00",
+  "generated_at": "2026-10-21T20:19:41+00:00",
   "model": "mock",
   "is_mock": true,
   "sources": [
@@ -29,7 +29,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 0,
+  "articles_scraped": 80,
   "stories": [
     {
       "topic_title": "EU ministri dosegli dogovor o skupni migracijski politiki",
