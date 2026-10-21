@@ -21,6 +21,7 @@ data/            daily_analysis.json (bere ga frontend)
 |---|---|---|
 | MMC RTV SLO | javni servis | `https://www.rtvslo.si/feeds/00.xml` |
 | 24ur | komercialni | `https://www.24ur.com/rss` |
+| N1 | komercialni | `https://n1info.si/feed/` |
 | Nova24TV | alternativni (desno profiliran) | `https://nova24tv.si/feed/` |
 | Mladina | alternativni (levo profiliran) | `https://www.mladina.si/rss/` |
 | BBC World | mednarodno sidro objektivnosti | `https://feeds.bbci.co.uk/news/world/rss.xml` |

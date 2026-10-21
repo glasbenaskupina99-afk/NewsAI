@@ -43,6 +43,7 @@ class Source:
 SOURCES: list[Source] = [
     Source("MMC RTV SLO", "https://www.rtvslo.si/feeds/00.xml", "javni", "sl"),
     Source("24ur", "https://www.24ur.com/rss", "komercialni", "sl"),
+    Source("N1", "https://n1info.si/feed/", "komercialni", "sl"),
     Source("Nova24TV", "https://nova24tv.si/feed/", "alternativni", "sl"),
     Source("Mladina", "https://www.mladina.si/rss/", "alternativni", "sl",
            fallback_urls=("https://www.mladina.si/rss.xml", "https://www.mladina.si/feed/")),

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T20:51:03+00:00",
+  "generated_at": "2026-10-21T20:58:18+00:00",
   "model": "Claude (ročna analiza, poskus)",
   "is_mock": false,
   "sources": [
@@ -12,6 +12,11 @@
       "name": "24ur",
       "category": "komercialni",
       "url": "https://www.24ur.com/rss"
+    },
+    {
+      "name": "N1",
+      "category": "komercialni",
+      "url": "https://n1info.si/feed/"
     },
     {
       "name": "Nova24TV",
@@ -29,7 +34,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 81,
+  "articles_scraped": 82,
   "stories": [
     {
       "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
@@ -104,6 +109,25 @@
             "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
           ],
           "category": "alternativni",
+          "quotes_verified": true
+        },
+        {
+          "media_name": "N1",
+          "article_title": "Rusija mirovna pogajanja z Ukrajino in ZDA pripravljena obnoviti novembra",
+          "article_url": "https://n1info.si/novice/svet/rusija-mirovna-pogajanja-z-ukrajino-in-zda-pripravljena-obnoviti-novembra/",
+          "sensationalism_score": 1,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Iz Kremlja so po sestanku ameriškega posebnega odposlanca Steva Witkoffa in ruskega predsednika Vladimirja Putina sporočili, da so tristranske pogovore o končanju vojne v Ukrajini pripravljeni obnoviti novembra.",
+            "Svetovalec Kremlja Ušakov je danes ocenil, da je Witkoff omenil nekaj novih vidikov v pristopih Evrope in Kijeva, vendar v njih ni bilo veliko vsebine."
+          ],
+          "omitted_facts": [
+            "Da je Zelenski podprl tristransko srečanje in želi, da se začne čim prej.",
+            "Omilitev ameriških sankcij za ruski dizel in kritike tega koraka (dobava dizla je omenjena, sankcije ne).",
+            "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
+            "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
+          ],
+          "category": "komercialni",
           "quotes_verified": true
         }
       ],
