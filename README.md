@@ -44,6 +44,23 @@ cd .. && python -m http.server 8000
 # odprite http://localhost:8000/frontend/
 ```
 
+### Ročno dodajanje člankov (24ur, Delo, Žurnal24 …)
+
+Za medije, ki samodejnega zajema ne dovolijo, v brskalniku kopirajte celotno stran (Ctrl+A, Ctrl+C) in jo
+shranite v datoteko. `add_article.py` odstrani menije, povezave, »Preberi še«, oglase in komentarje ter članek
+doda v `data/raw_articles.json`:
+
+```bash
+cd backend
+python add_article.py stran.txt --source 24ur \
+  --url https://www.24ur.com/novice/slovenija/... \
+  --title "Naslov članka natanko kot na strani" --date 2026-11-13
+python add_article.py stran.txt ... --dry-run   # samo prikaže očiščeno besedilo
+```
+
+Naslov služi kot sidro: besedilo se začne za vrstico z naslovom. Analizo nato uvozite z
+`python manual_analysis.py analiza.json --date 2026-11-13`.
+
 CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.html`/`app.js`:
 `cd frontend && npm install && npm run build:css`.
 

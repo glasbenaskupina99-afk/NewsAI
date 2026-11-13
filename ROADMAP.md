@@ -32,7 +32,7 @@ Cilj: pokriti ključne slovenske medije, tudi tiste, ki samodejnega zajema ne do
 |---|---|---|---|
 | 1.2.1 | Novi RSS viri: Delo, Večer, Dnevnik, Žurnal24, Svet24, Siol, Demokracija, Mladina, Necenzurirano | Pri učiteljski zbornici je bila slika popolna šele s 7 mediji | S |
 | 1.2.2 | Drugo mednarodno sidro: **The Guardian API** (brezplačen ključ, dovoljuje uporabo) + DW/Euronews RSS | BBC pokrije malo slovenskih tem; Reuters ni na voljo | M |
-| 1.2.3 | Orodje `add_article.py`: prilepiš besedilo s strani, samo odstrani menije, komentarje in oglase ter doda članek k zgodbi | Ročno čiščenje prilepljenih strani je zdaj zamudno | M |
+| 1.2.3 ✅ | Orodje `add_article.py`: prilepiš besedilo s strani, samo odstrani menije, komentarje in oglase ter doda članek k zgodbi | Ročno čiščenje prilepljenih strani je zdaj zamudno | M |
 | 1.2.4 | Označevanje plačljivih in delno dostopnih člankov (`partial_text: true`) | Pri Delu je ocena temeljila le na prvem odstavku | S |
 | 1.2.5 | Dogovor z mediji (Pro Plus, Delo …) za dostop do vsebin | Zakonita pot za vire, ki blokirajo robote | L (neodvisno od kode) |
 

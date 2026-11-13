@@ -15,6 +15,7 @@ from analyzer import (  # noqa: E402
     DailyAnalysis, analyze_story, build_mock_analysis, cited_sources, cluster_lexical, text_overlaps,
     verify_quotes,
 )
+from add_article import clean_page  # noqa: E402
 from scraper import Article, Source, fetch_feed  # noqa: E402
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -134,6 +135,32 @@ class AnalyzerTest(unittest.TestCase):
         roundtrip = DailyAnalysis.model_validate_json(mock.model_dump_json())
         self.assertTrue(roundtrip.is_mock)
         self.assertGreaterEqual(len(roundtrip.stories), 3)
+
+
+class AddArticleTest(unittest.TestCase):
+    def test_drops_counters_bylines_and_bulleted_end_marker(self):
+        page = "Naslov članka\n197\nPrvi odstavek članka z vsebino.\nC. Š., STA\nM. D.\n* OZNAKE\n* [Oznaka](https://x/)\nNoga strani"
+        self.assertEqual(clean_page(page, "Naslov članka"), "Prvi odstavek članka z vsebino.")
+
+    def test_24ur_page_keeps_body_and_drops_page_furniture(self):
+        page = (FIXTURES / "paste_24ur.txt").read_text(encoding="utf-8")
+        text = clean_page(page, "Štrukelj kritičen do učiteljske zbornice: To je projekt politike")
+        lines = text.splitlines()
+        self.assertTrue(lines[0].startswith("Ministrstvo za izobraževanje bo učiteljsko zbornico"))
+        self.assertIn("Odziv ministrstva", lines)
+        self.assertTrue(lines[-1].startswith("Na ministrstvu so v odzivu zapisali"))
+        for junk in ("Otok ljubezni", "Deli zgodbo", "Avtor", "prednostni vir", "filipinskih", "Ronćevića", "FOTO", "min branja"):
+            self.assertNotIn(junk, text)
+
+    def test_n1_page_drops_related_links_inside_body(self):
+        page = (FIXTURES / "paste_n1.txt").read_text(encoding="utf-8")
+        text = clean_page(page, "Rusija mirovna pogajanja z Ukrajino in ZDA pripravljena obnoviti novembra")
+        self.assertIn("predlagal nova mirovna pogajanja", text)
+        self.assertIn("Vladimirju Putinu predlagal", text)  # povezava v besedilu ostane kot besedilo
+        self.assertIn("Zelenski za zamrznitev fronte v vojni z Rusijo", text)
+        for junk in ("Moharič", "Golob", "pred 10 h", "Forbes", "komentarjev", "Foto:", "16:46", "pogajanja\n"):
+            self.assertNotIn(junk, text)
+        self.assertEqual(len(text.splitlines()), 5)
 
 
 if __name__ == "__main__":
