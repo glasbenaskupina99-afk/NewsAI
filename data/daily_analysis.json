@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:44:44+00:00",
+  "generated_at": "2026-11-13T22:59:37+00:00",
   "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
@@ -524,7 +524,199 @@
         }
       ],
       "id": "story-1",
-      "has_international_source": false
+      "has_international_source": false,
+      "source_checks": [
+        {
+          "claim": "V proračunu za leto 2027 je za socialne transferje predvidenih nekaj več kot 300 milijonov evrov manj.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Potrjeno",
+          "finding": "Po tabeli ministrstva za finance v oceni fiskalnega sveta naj bi se transferji posameznikom in gospodinjstvom znižali z 2.234 na 1.901 milijona evrov (−333 milijonov oziroma −14,9 %).",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Socialne pravice so v proračunu določene v višini 2,2 milijarde evrov.",
+          "claimed_by": [
+            "MMC RTV SLO"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "2,2 milijarde (2.234 milijonov) je znesek transferjev posameznikom in gospodinjstvom za leto 2026. Za leto 2027 je v predlogu proračuna predvidenih 1.901 milijona. Ni jasno, ali je minister imel v mislih drugo kategorijo izdatkov.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Prihranki bodo dosegli z boljšim preverjanjem upravičenosti in povezovanjem evidenc, brez posegov v pravice.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Vprašljivo",
+          "finding": "Fiskalni svet ugotavlja, da obrazložitev proračuna predvideva uskladitev transferjev z inflacijo (3,7 %). Brez spremembe višine pravic bi bilo treba pri petih največjih transferjih število upravičencev zmanjšati za petino do tretjino; podlage za tako zmanjšanje v dokumentih niso predstavljene.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Proračun bo v okviru fiskalnih pravil.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "V nasprotju z virom",
+          "finding": "Po oceni fiskalnega sveta naj bi skupna rast neto izdatkov, po kateri se presoja spoštovanje fiskalnih pravil, presegala zavezo iz srednjeročnega fiskalnega načrta; ukrepi za znižanje primanjkljaja niso jasno predstavljeni.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: povzetek ocene",
+              "url": "https://www.fs-rs.si/ocena-proracunskih-dokumentov-za-leti-2027-in-2028/"
+            },
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Javni dolg se bo zmanjševal za najmanj 0,5 odstotne točke BDP letno.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Vprašljivo",
+          "finding": "V projekciji fiskalnega sveta brez nepojasnjenih ukrepov dolg pade s 63,4 % BDP (2026) na 62,7 % (2027), v letu 2028 pa naraste na 63,6 %. Povprečno znižanje za 0,7 odstotne točke izpolni zahtevo le zaradi porabe sredstev na računih zakladnice; brez tega bi znašalo 0,4 odstotne točke.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Učinki interventnega zakona niso vključeni v proračun; ob njegovem sprejetju bo potreben rebalans.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "24ur"
+          ],
+          "status": "Potrjeno",
+          "finding": "Fiskalni svet potrjuje, da učinki zakona niso v osnovni projekciji. Po oceni ministrstva za finance bi se primanjkljaj ob uveljavitvi povečal še za okoli 650 milijonov evrov.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: govor na odboru DZ 13. 11. 2026",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Govor-OF2028_13nov26_koncni_obj.pdf"
+            },
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Spremembe plačnega sistema bodo v okviru proračuna.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "24ur"
+          ],
+          "status": "Vprašljivo",
+          "finding": "Predlog proračuna predvideva znižanje stroškov dela za 160 milijonov evrov v letu 2027, čeprav se plačna reforma nadaljuje (povprečna plača v javnem sektorju +6,5 %). Fiskalni svet ocenjuje razkorak na več kot 500 milijonov evrov in pravi, da v dokumentih ni pojasnila.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "claim": "Prejšnja vlada je pustila obveznosti, ki niso bile vključene v proračun (posledice dviga minimalne plače).",
+          "claimed_by": [
+            "Nova24TV",
+            "Žurnal24",
+            "24ur"
+          ],
+          "status": "Ni preverljivo",
+          "finding": "V pregledanih dokumentih fiskalnega sveta te trditve nismo mogli preveriti.",
+          "sources": []
+        }
+      ],
+      "missing_context": [
+        {
+          "text": "Istega dne (13. 11.) je predsednik fiskalnega sveta na odboru DZ dejal, da proračun za 2027 predvideva okoli 700 milijonov evrov ukrepov, ki v dokumentih niso pojasnjeni; skupaj z interventnim zakonom gre za okoli 1,3 milijarde evrov nepojasnjenih ukrepov.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: govor na odboru DZ 13. 11. 2026",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Govor-OF2028_13nov26_koncni_obj.pdf"
+            }
+          ]
+        },
+        {
+          "text": "Vlada za leto 2028 načrtuje primanjkljaj 2,3 % BDP, po projekciji fiskalnega sveta ob veljavnih politikah pa bi se približal 4 % BDP.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: govor na odboru DZ 13. 11. 2026",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Govor-OF2028_13nov26_koncni_obj.pdf"
+            },
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "text": "Fiskalni svet opozarja, da scenarij brez dodatnih ukrepov povečuje verjetnost postopka EU zaradi presežnega primanjkljaja proti Sloveniji.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "text": "Po izračunu fiskalnega sveta bi lahko tako obsežno omejevanje porabe zmanjšalo gospodarsko aktivnost za okoli 0,6 % kratkoročno in blizu 1,5 % dolgoročno; vladne projekcije tega ne upoštevajo.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
+              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+            }
+          ]
+        },
+        {
+          "text": "Po analizi fiskalnega sveta bi interventni zakon leta 2027 neposredno poslabšal saldo za okoli 1,2 milijarde evrov (1,5 % BDP); višja gospodarska rast bi to nadomestila za okoli četrtino kratkoročno in polovico po desetih letih.",
+          "sources": [
+            {
+              "title": "Fiskalni svet: Analiza učinkov interventnega zakona",
+              "url": "https://www.fs-rs.si/analiza-javnofinancnih-ucinkov-zakona-o-interventnih-ukrepih-za-razvoj-slovenije/"
+            }
+          ]
+        }
+      ]
     },
     {
       "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
@@ -974,7 +1166,215 @@
         }
       ],
       "id": "story-2",
-      "has_international_source": false
+      "has_international_source": false,
+      "source_checks": [
+        {
+          "claim": "ZZZS bo do 185 milijonov evrov obveznosti poravnal šele v začetku leta 2027.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Potrjeno",
+          "finding": "Izvirno sporočilo ZZZS navaja zamik »do 185 milijonov evrov« in poplačilo v prvih dneh januarja z novim likvidnostnim posojilom.",
+          "sources": [
+            {
+              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            }
+          ]
+        },
+        {
+          "claim": "Primanjkljaj obveznega zavarovanja je do 30. 9. znašal 153.819.314 evrov, dolg v enotnem zakladniškem računu 156 milijonov.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Potrjeno",
+          "finding": "Številki se natančno ujemata s sporočilom ZZZS.",
+          "sources": [
+            {
+              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            }
+          ]
+        },
+        {
+          "claim": "Okoli 85 % zamika se nanaša na izvajalce zdravstvenih storitev; prilagoditev se začne 21. decembra.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Potrjeno",
+          "finding": "Ujema se s sporočilom ZZZS. Septembrsko sporočilo zamik razčleni: 158 milijonov izvajalcem, 13 za zdravila, 11 za bolniška nadomestila, 3,5 za medicinske pripomočke.",
+          "sources": [
+            {
+              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            },
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "claim": "Oktobrski rebalans je proračunski transfer ZZZS zmanjšal s 520 na 420 milijonov evrov.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Žurnal24",
+            "Svet24",
+            "24ur"
+          ],
+          "status": "Potrjeno",
+          "finding": "ZZZS to navaja kot »pomemben dejavnik« in zmanjšanje imenuje »nepričakovano«. Zmanjšanje je bilo sicer predlagano že septembra in ZZZS mu je takrat javno nasprotoval, zato je »nepričakovano« le glede na sprejeti finančni načrt.",
+          "sources": [
+            {
+              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            },
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "claim": "Težave ZZZS so posledica ukinitve dopolnilnega zdravstvenega zavarovanja (naslov: »zaradi njega tone v likvidnostne težave«).",
+          "claimed_by": [
+            "Nova24TV"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "ZZZS ukinitev dopolnilnega zavarovanja navaja kot enega od dveh glavnih vzrokov primanjkljaja (drugi je plačna reforma); manko iz tega naslova v letu 2026 ocenjuje na 184 milijonov evrov. Za obseg decembrskega zamika pa je ključno tudi zmanjšanje transfera za 100 milijonov, ki ga članek ne omeni.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            },
+            {
+              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            }
+          ]
+        },
+        {
+          "claim": "Vlada oziroma koalicija je ZZZS »odvzela« 100 milijonov evrov.",
+          "claimed_by": [
+            "Žurnal24"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "DZ je z rebalansom znižal zakonsko zgornjo mejo transfera (»do 520 milijonov«) na 420 milijonov. Minister Ostrc trdi, da je prejšnja vlada v proračunu ministrstva namenila le 420 milijonov in da gre za odpravo neskladja; ZZZS pa navaja, da je vlada januarja dala soglasje k finančnemu načrtu z 520 milijoni. Izraz »odvzeli« zato poenostavi spor o tem, ali je bil denar dejansko zagotovljen.",
+          "sources": [
+            {
+              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
+              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
+            },
+            {
+              "title": "RTV SLO: minister Ostrc o zmanjšanju (september)",
+              "url": "https://www.rtvslo.si/slovenija/ostrc-o-100-milijonskem-zmanjsanju-za-zzzs-iscemo-resitve/794094"
+            }
+          ]
+        },
+        {
+          "claim": "Brez zmanjšanja transfera bi bil zamik okoli 85 milijonov evrov, z njim 185 milijonov.",
+          "claimed_by": [
+            "Svet24"
+          ],
+          "status": "Potrjeno",
+          "finding": "ZZZS je septembra pojasnil, da je sprejeti finančni načrt predvideval 85-milijonski zamik dela decembrskih akontacij, ki bi se ob zmanjšanju transfera povečal za 100 milijonov.",
+          "sources": [
+            {
+              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
+              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
+            }
+          ]
+        },
+        {
+          "claim": "Interventni zakon bi zdravstveni blagajni odvzel še 113 milijonov evrov letno (z dolgotrajno oskrbo 211 milijonov).",
+          "claimed_by": [
+            "Žurnal24"
+          ],
+          "status": "Ni preverljivo",
+          "finding": "V pregledanih sporočilih ZZZS teh zneskov nismo našli. Skupščina ZZZS je vlado septembra pozvala, naj pojasni, kako bo nadomestila izpad sredstev ob uveljavitvi interventnega zakona, zneska pa ne navaja.",
+          "sources": [
+            {
+              "title": "ZZZS, skupščina 16. 9. 2026",
+              "url": "https://www.zzzs.si/novica/skupscina-zzzs-poziva-k-ukrepom-za-zagotovitev-nemotenega-financiranja-obveznega-zdravstvenega-zavarovanja/"
+            }
+          ]
+        }
+      ],
+      "missing_context": [
+        {
+          "text": "ZZZS: »Če izločimo vpliv ukinitve dopolnilnega zavarovanja in plačne reforme, bi ZZZS posloval izravnano, brez primanjkljaja prihodkov nad odhodki.« Plačna reforma ZZZS letno stane okoli 587 milijonov evrov, manko zaradi prenizko določenega obveznega zdravstvenega prispevka pa v letu 2026 znaša 184 milijonov.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "text": "Primanjkljaj ima dva ločena vzroka: strukturni del izvira iz ukrepov prejšnje vlade (ukinitev dopolnilnega zavarovanja, plačna reforma), obseg decembrskega zamika pa se je zaradi oktobrskega rebalansa sedanje vlade povečal s 85 na 185 milijonov evrov.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            },
+            {
+              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
+              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
+            }
+          ]
+        },
+        {
+          "text": "Razlika med 520 in 420 milijoni izvira iz prejšnjega mandata: zakon je dovoljeval do 520 milijonov, v proračunu ministrstva za zdravje pa je bilo po navedbah ministra Ostrca predvidenih 420 milijonov.",
+          "sources": [
+            {
+              "title": "RTV SLO: minister Ostrc o zmanjšanju (september)",
+              "url": "https://www.rtvslo.si/slovenija/ostrc-o-100-milijonskem-zmanjsanju-za-zzzs-iscemo-resitve/794094"
+            },
+            {
+              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
+              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
+            }
+          ]
+        },
+        {
+          "text": "Za leto 2027 ZZZS napoveduje 260 milijonov evrov nepokritega primanjkljaja, in to kljub prenosu 145 milijonov plačil v leto 2028 ter brez upoštevanja interventnega zakona.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "text": "Del zamika (11 milijonov evrov) se nanaša na bolniška nadomestila, ki jih ZZZS povrne delodajalcem.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "text": "ZZZS v letu 2026 izvaja varčevalne ukrepe v vrednosti 194 milijonov evrov; julija je ministrstvoma predlagal še za 93,2 milijona dodatnih ukrepov, ki čakajo na pravno podlago.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        }
+      ]
     },
     {
       "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
@@ -1276,7 +1676,9 @@
         }
       ],
       "id": "story-3",
-      "has_international_source": true
+      "has_international_source": true,
+      "source_checks": [],
+      "missing_context": []
     }
   ]
 }

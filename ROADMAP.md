@@ -50,6 +50,8 @@ Cilj: ocene, ki jim bralec lahko zaupa in jih lahko preveri.
 | 1.3.6 | Navzkrižno preverjanje z drugim modelom; ob neskladju oznaka »negotova ocena« | Zmanjša vpliv posamezne napačne ocene | M |
 | 1.3.7 | Združevanje zgodb z vektorskimi vložitvami (embeddings) namesto le z LLM | Cenejše, stabilnejše, deluje tudi med jeziki | M |
 
+| 1.3.8 ✅ | **Preverjanje trditev v izvirnih virih** in »kontekst, ki ga ni navedel noben medij« (ročno, s povezavami na dokumente) | Mediji pogosto povzemajo isto vest STA; primerjava z izvirnikom pokaže, česar ni imel nihče | M na zgodbo |
+
 ## 1.4 Spletna stran
 
 Cilj: bralec hitro najde, primerja in razume.

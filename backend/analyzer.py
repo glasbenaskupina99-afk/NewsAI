@@ -51,6 +51,29 @@ class FactPresence(BaseModel):
     media: list[str] = Field(description="Imena medijev, ki to dejstvo navedejo.")
 
 
+CheckStatus = Literal["Potrjeno", "Delno potrjeno", "Vprašljivo", "V nasprotju z virom", "Ni preverljivo"]
+
+
+class SourceLink(BaseModel):
+    title: str
+    url: str
+
+
+class SourceCheck(BaseModel):
+    """Trditev iz člankov, preverjena v izvirnem dokumentu (ročno, ne z jezikovnim modelom)."""
+    claim: str
+    claimed_by: list[str] = Field(default_factory=list, description="Mediji, ki trditev navedejo.")
+    status: CheckStatus
+    finding: str
+    sources: list[SourceLink] = Field(default_factory=list)
+
+
+class ContextItem(BaseModel):
+    """Dejstvo iz izvirnih virov, ki ga ni navedel noben od primerjanih medijev."""
+    text: str
+    sources: list[SourceLink] = Field(default_factory=list)
+
+
 class TextOverlap(BaseModel):
     media: str
     percent: int
@@ -157,6 +180,9 @@ class StoryReport(StoryAnalysis):
     id: str
     coverage_comparison: list[CoverageReport]
     has_international_source: bool = False
+    # Preverjanje v izvirnih virih se ne generira z modelom; doda ga manual_analysis.py
+    source_checks: list[SourceCheck] = Field(default_factory=list)
+    missing_context: list[ContextItem] = Field(default_factory=list)
 
 
 class SourceInfo(BaseModel):

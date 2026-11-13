@@ -78,9 +78,13 @@ CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.htm
    enakega drugemu mediju (6-gramsko prekrivanje brez citatov).
 5. **Arhiv**: vsak dan se shrani v `data/archive/YYYY-MM-DD.json`, seznam dni je v `data/archive/index.json`;
    stran omogoča izbiro datuma (`?datum=YYYY-MM-DD`).
-6. **Dodatna polja**: kdo v članku dobi besedo (`voices_heard`, `sides_represented`), dejanske napake
+6. **Preverjanje v izvirnih virih** (`source_checks`, `missing_context`): ključne trditve iz člankov so ročno
+   primerjane z izvirnimi dokumenti (sporočila institucij, ocene fiskalnega sveta …) s statusom Potrjeno /
+   Delno potrjeno / Vprašljivo / V nasprotju z virom / Ni preverljivo in povezavo na vir. Model teh polj ne
+   generira; vnesejo se prek `manual_analysis.py`.
+7. **Dodatna polja**: kdo v članku dobi besedo (`voices_heard`, `sides_represented`), dejanske napake
    (`factual_errors`) in opombe k oceni (`notes`).
-7. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
+8. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
    preveri, ali dobesedno obstaja v besedilu članka – nepreverjeni citati so v UI označeni.
 
 ## GitHub Actions

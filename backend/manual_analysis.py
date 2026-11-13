@@ -4,6 +4,9 @@ Vhod je JSON z zgodbami v obliki StoryAnalysis in seznamom ID-jev člankov iz ra
 
     {"model": "...", "stories": [{"article_ids": ["ab12...", ...], "topic_title": ..., ...}]}
 
+Neobvezno lahko zgodba vsebuje še "source_checks" (trditve, preverjene v izvirnih dokumentih)
+in "missing_context" (dejstva iz izvirnih virov, ki jih ni navedel noben medij).
+
 Za vsako zgodbo se uporabi ista validacija kot pri Gemini: Pydantic shema, preverjanje
 dobesednih citatov ter naslovi in URL-ji iz zajetih podatkov.
 
@@ -17,7 +20,7 @@ import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
-from analyzer import DailyAnalysis, StoryAnalysis, build_story_report, source_infos
+from analyzer import ContextItem, DailyAnalysis, SourceCheck, StoryAnalysis, build_story_report, source_infos
 from main import OUTPUT, RAW_OUTPUT, publish
 from scraper import Article
 
@@ -40,6 +43,8 @@ def main() -> None:
     for i, story in enumerate(spec["stories"]):
         cluster = [articles[aid] for aid in story["article_ids"]]
         report = build_story_report(StoryAnalysis.model_validate(story), cluster, i)
+        report.source_checks = [SourceCheck.model_validate(c) for c in story.get("source_checks", [])]
+        report.missing_context = [ContextItem.model_validate(c) for c in story.get("missing_context", [])]
         for c in report.coverage_comparison:
             if not c.quotes_verified:
                 log.warning("%s: citat ni dobesedno najden v besedilu", c.media_name)

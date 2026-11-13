@@ -347,6 +347,50 @@ function detailCard(c) {
             : null))));
 }
 
+const CHECK_STYLE = {
+  "Potrjeno": "bg-emerald-100 text-emerald-800 ring-emerald-200 dark:bg-emerald-950 dark:text-emerald-200 dark:ring-emerald-900",
+  "Delno potrjeno": "bg-lime-100 text-lime-900 ring-lime-200 dark:bg-lime-950 dark:text-lime-200 dark:ring-lime-900",
+  "Vprašljivo": "bg-amber-100 text-amber-900 ring-amber-200 dark:bg-amber-950 dark:text-amber-200 dark:ring-amber-900",
+  "V nasprotju z virom": "bg-red-100 text-red-800 ring-red-200 dark:bg-red-950 dark:text-red-200 dark:ring-red-900",
+  "Ni preverljivo": "bg-slate-100 text-slate-700 ring-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:ring-slate-700",
+};
+
+function sourceLinks(sources) {
+  const links = (sources || []).map((src) => ({ ...src, href: safeUrl(src.url) })).filter((src) => src.href);
+  if (!links.length) return null;
+  return h("div", { class: "flex flex-wrap gap-x-3 gap-y-1 text-xs" },
+    h("span", { class: "text-slate-500 dark:text-slate-400" }, "Vir:"),
+    links.map((src) => h("a", { href: src.href, target: "_blank", rel: "noopener noreferrer", class: "text-blue-700 underline underline-offset-2 hover:text-blue-900 dark:text-blue-300" }, src.title)));
+}
+
+function sourceChecks(story) {
+  const checks = story.source_checks || [];
+  const context = story.missing_context || [];
+  if (!checks.length && !context.length) return null;
+  return h("div", { class: "rounded-xl border border-blue-200 bg-blue-50/40 p-4 dark:border-blue-900 dark:bg-blue-950/20" },
+    h("h4", { class: "mb-1 text-sm font-semibold" }, "Preverjeno v izvirnih virih"),
+    h("p", { class: "mb-3 text-xs text-slate-500 dark:text-slate-400" },
+      "Trditve iz člankov, ročno primerjane z izvirnimi dokumenti (sporočila institucij, analize, uradni podatki). Status velja glede na navedeni vir; pri vsaki je povezava, da jo lahko preverite sami."),
+    checks.length
+      ? h("ul", { class: "space-y-3" }, checks.map((c) => h("li", { class: "rounded-lg bg-white p-3 ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-800" },
+          h("div", { class: "mb-1 flex flex-wrap items-start justify-between gap-2" },
+            h("p", { class: "text-sm font-medium" }, c.claim),
+            h("span", { class: `shrink-0 rounded px-1.5 py-0.5 text-[11px] font-semibold ring-1 ring-inset ${CHECK_STYLE[c.status] || CHECK_STYLE["Ni preverljivo"]}` }, c.status)),
+          (c.claimed_by || []).length
+            ? h("div", { class: "mb-1 text-[11px] text-slate-500 dark:text-slate-400" }, `Navajajo: ${c.claimed_by.join(", ")}`)
+            : null,
+          h("p", { class: "mb-1 text-sm text-slate-700 dark:text-slate-200" }, c.finding),
+          sourceLinks(c.sources))))
+      : null,
+    context.length
+      ? h("div", { class: "mt-4" },
+          h("h5", { class: "mb-2 text-sm font-semibold" }, "Kontekst, ki ga ni navedel noben od primerjanih medijev"),
+          h("ul", { class: "space-y-2" }, context.map((c) => h("li", { class: "rounded-lg bg-white p-3 ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-800" },
+            h("p", { class: "mb-1 text-sm text-slate-700 dark:text-slate-200" }, c.text),
+            sourceLinks(c.sources)))))
+      : null);
+}
+
 function factMatrix(story, coverage) {
   const facts = story.fact_matrix || [];
   if (!facts.length) return null;
@@ -415,6 +459,7 @@ function storyCard(story, index) {
             h("ol", { class: "list-decimal space-y-1.5 pl-5 text-sm text-slate-700 dark:text-slate-200" },
               story.key_differences.map((d) => h("li", {}, d))))
         : null,
+      sourceChecks(story),
       h("div", {},
         h("h4", { class: "mb-3 text-sm font-semibold" }, "Kdo poroča in kaj je zamolčal"),
         h("div", { class: "grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" }, coverage.map(coverageColumn))),
