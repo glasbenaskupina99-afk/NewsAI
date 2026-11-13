@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:22:19+00:00",
+  "generated_at": "2026-11-13T22:39:42+00:00",
   "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
@@ -34,11 +34,11 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 8,
+  "articles_scraped": 12,
   "stories": [
     {
       "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro obeh virov: finančni minister Andrej Šircelj je v izjavi zavrnil opozorila, da bi bila zaradi proračuna ogrožena izplačila pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov, ter napovedal, da novega zujfa ne bo. Okoli 300 milijonov evrov prihrankov pripisuje gospodarnejši porabi in strožjemu preverjanju upravičenosti s povezovanjem evidenc. Napovedal je zmanjševanje dolga za vsaj 0,5 odstotne točke BDP letno, rebalans proračuna ob sprejetju razvojnega (interventnega) zakona in plačne stebre po koalicijski pogodbi.",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro slovenskih virov: finančni minister Andrej Šircelj je v izjavi zavrnil opozorila, da bi bila zaradi proračuna ogrožena izplačila pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov, ter napovedal, da novega zujfa ne bo. Okoli 300 milijonov evrov prihrankov pripisuje gospodarnejši porabi in strožjemu preverjanju upravičenosti s povezovanjem evidenc. Napovedal je zmanjševanje dolga za vsaj 0,5 odstotne točke BDP letno, rebalans proračuna ob sprejetju razvojnega (interventnega) zakona in plačne stebre po koalicijski pogodbi.",
       "coverage_comparison": [
         {
           "media_name": "MMC RTV SLO",
@@ -51,6 +51,7 @@
             "Finančni minister Andrej Šircelj je zavrnil navedbe, da bi lahko zaradi proračunskih razmer nastale zamude ali omejitve pri izplačilih socialnih transferjev"
           ],
           "omitted_facts": [
+            "Ministrov poziv opoziciji, naj »neha zavajati in lagati«; RTV SLO navede le očitek o »zavajanju in strašenju«.",
             "Konkretni primer obveznosti, ki po ministru niso bile vključene v proračun (posledice dviga minimalne plače)."
           ],
           "voices_heard": [
@@ -82,14 +83,19 @@
           "published": "2026-11-13T09:27:59+00:00",
           "word_count": 1088,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [
+            {
+              "media": "Svet24",
+              "percent": 19
+            }
+          ]
         },
         {
           "media_name": "Nova24TV",
           "article_title": "Šircelj zavrača strašenje opozicije: “Nikomur ne bomo nič vzeli, vse zagotovljene pravice bomo izplačali”",
           "article_url": "https://nova24tv.si/sircelj-zavraca-strasenje-opozicije-nikomur-ne-bomo-nic-vzeli-vse-zagotovljene-pravice-bomo-izplacali/",
           "sensationalism_score": 5,
-          "bias_leaning": "Desno",
+          "bias_leaning": "Sredina-Desno",
           "bias_evidence_quotes": [
             "Šircelj zavrača strašenje opozicije",
             "v luči zavajanj in laži s strani opozicijskih strank"
@@ -122,7 +128,7 @@
             },
             {
               "quote": "zavajanj in laži s strani opozicijskih strank",
-              "explanation": "Avtor sam (ne minister) trdi, da opozicija laže; za trditev ne navede dokaza.",
+              "explanation": "Ministrov očitek (»nehajo zavajati in lagati«) je prevzet v avtorjev glas brez pripisa, kot da gre za ugotovljeno dejstvo.",
               "verified": true
             },
             {
@@ -144,7 +150,7 @@
             "Minister je opozicijo »pozval in prosil«, naj preneha s strašenjem.",
             "Citat »Mi poudarjamo vizijo, drugi strašijo«."
           ],
-          "reasoning": "Večina besedila zvesto povzema ministrovo izjavo. Nagib pa izhaja iz treh stvari: naslov ministrov izraz »strašenje« predstavi kot dejstvo; avtor v uvodu z lastnimi besedami trdi, da opozicija širi »zavajanja in laži«; opozicija sploh ne dobi besede. Besedilo brez uvoda je zmerneje obarvano, zato je ocena besedila Sredina-Desno, naslova in celote pa Desno.",
+          "reasoning": "Večina besedila zvesto povzema ministrovo izjavo. Nagib izhaja iz tega, da avtor ministrova sporna očitka prevzame kot dejstvo brez pripisa: v naslovu »strašenje opozicije«, v uvodu »zavajanja in laži« opozicije (minister je opozicijo res pozval, naj »neha zavajati in lagati«, vendar je to njegova trditev). Opozicija ne dobi besede. Naslov je zato ocenjen kot Desno, besedilo in celota kot Sredina-Desno.",
           "confidence": "Visoka",
           "category": "alternativni",
           "quotes_verified": true,
@@ -159,78 +165,213 @@
               "percent": 5
             }
           ]
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Šircelj miri: \"Vse mame bodo dobile porodniško nadomestilo\"",
+          "article_url": "https://www.zurnal24.si/slovenija/sircelj-miri-vse-mame-bodo-dobile-porodnisko-nadomestilo-468182",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Pozivam in prosim, opozicijske stranke, da nehajo zavajati in lagati v zvezi z izplačili različnih prejemkov iz proračuna.",
+            "Šircelj je odgovoril tudi na vprašanje glede napovedanih sprememb plačnega sistema"
+          ],
+          "omitted_facts": [
+            "Odziva opozicije (Levica, Svoboda).",
+            "Znesek 2,2 milijarde evrov za socialne pravice.",
+            "Datum referenduma o interventnem zakonu."
+          ],
+          "voices_heard": [
+            "Andrej Šircelj (minister za finance)"
+          ],
+          "sides_represented": "Samo ena stran",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov uporabi glagol »miri«, ki ministra predstavi kot tistega, ki odpravlja (neupravičene) skrbi, in doda njegov najbolj oseben citat o mamah.",
+          "main_frame": "Uradna izjava",
+          "frame_description": "Članek je skoraj v celoti sestavljen iz ministrovih citatov in povzetkov; vmesni naslovi so njegove besede (»Pretehtali bomo vsak evro, kam gre«).",
+          "lede_focus": "Članek začne z dolgim ministrovim citatom, v katerem opozicijo poziva, naj »nehajo zavajati in lagati«.",
+          "loaded_language": [
+            {
+              "quote": "Šircelj miri",
+              "explanation": "Glagol v naslovu ministrovo izjavo uokviri kot pomiritev, ne kot stališče v sporu.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Vprašanje o plačnem sistemu je sledilo napovedi ministra Matoza o izstopu policistov iz enotnega plačnega sistema.",
+            "Minister meni, da se nadzorni mehanizmi, ki so že v zakonih, ne izvajajo tako, kot bi se morali."
+          ],
+          "reasoning": "Vse trditve so jasno pripisane ministru, avtorske sodbe ni. Članek pa objavi samo ministrovo stran, opozicija, ki jo minister obtoži laganja, ne dobi besede. Glagol »miri« v naslovu je blago naklonjen uokvirjanju vlade.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-13",
+          "word_count": 409,
+          "cited_sources": [],
+          "text_overlap": []
+        },
+        {
+          "media_name": "Svet24",
+          "article_title": "Šircelj: Ne bo novega Zujfa, opozicija izvaja politiko strahu in zavisti",
+          "article_url": "https://svet24.si/novice/slovenija/andrej-sircelj-interventni-zakon-1940357",
+          "sensationalism_score": 4,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "A od nekod bo treba vzeti.",
+            "Ob tem velja spomniti, da pomislekov glede proračuna ne izražajo samo opozicija in sindikati."
+          ],
+          "omitted_facts": [
+            "Znesek 2,2 milijarde evrov za socialne pravice.",
+            "Napoved rebalansa ob sprejetju interventnega zakona in plačni stebri po koalicijski pogodbi."
+          ],
+          "voices_heard": [
+            "Andrej Šircelj (minister za finance)",
+            "Ukom",
+            "Asta Vrečko (Levica)",
+            "Klemen Boštjančič (Svoboda)",
+            "nevladne organizacije"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Besedilo o odzivu Levice in Svobode je skoraj enako kot pri RTV SLO; obe povzemata STA."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Naslov navede ministrove trditve s pripisom (»Šircelj: …«), vključno z ostro oceno o »politiki strahu in zavisti«, ki je njegova.",
+          "main_frame": "Politični spor pred referendumom",
+          "frame_description": "Ministrova izjava je postavljena v kontekst referendumske kampanje: najprej njegove trditve, nato dvom avtorja, opozorila nevladnikov, odziva Levice in Svobode ter vprašanje o pritisku na fiskalni svet.",
+          "lede_focus": "Uvod: minister je opozicijo »obtožil laži in zavajanja«; drugi odstavek doda, da je vladni urad Ukom že pred konferenco trdil, da gre za laži.",
+          "loaded_language": [
+            {
+              "quote": "zloglasni zakon o uravnoteženju javnih financ",
+              "explanation": "Pridevnik »zloglasni« vrednoti zujf iz leta 2012.",
+              "verified": true
+            },
+            {
+              "quote": "A od nekod bo treba vzeti.",
+              "explanation": "Avtorjev skeptični komentar k ministrovemu zagotovilu.",
+              "verified": true
+            },
+            {
+              "quote": "Discipliniranje neodvisnih institucij?",
+              "explanation": "Vmesni naslov prevzame Boštjančičev okvir v obliki vprašanja.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "A od nekod bo treba vzeti.",
+            "Ob tem velja spomniti, da pomislekov glede proračuna ne izražajo samo opozicija in sindikati."
+          ],
+          "unique_facts": [
+            "Ukom je trditve opozicije že pred novinarsko konferenco označil za laži.",
+            "Nevladniki so odločevalce pozvali k premisleku glede rezov v socialnih transferjih.",
+            "DZ je predsednika fiskalnega sveta Davorina Kračuna pozval k izselitvi iz službenega stanovanja v 14 dneh; fiskalni svet je edini objavil kvantitativno analizo interventnega zakona (po Boštjančiču).",
+            "Asta Vrečko: vlada gre »z motorko po proračunu«."
+          ],
+          "reasoning": "Ministrove trditve so podrobno in pošteno povzete, opozicija dobi enak prostor. Avtor pa doda skeptične pripombe (»A od nekod bo treba vzeti«, »velja spomniti«) in kontekst, ki ministrova zagotovila postavlja pod vprašaj; izraz »zloglasni« vrednoti zujf. Besedilo je zato ocenjeno kot Sredina-Levo, naslov kot Sredina.",
+          "confidence": "Srednja",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-13",
+          "word_count": 813,
+          "cited_sources": [
+            "STA"
+          ],
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 25
+            }
+          ]
         }
       ],
       "neutral_summary": "Finančni minister Andrej Šircelj je zagotovil, da bodo vsi zakonsko določeni prejemki izplačani in da novega zakona za uravnoteženje javnih financ ne bo. Opozorila o krčenju pravic je označil za politiko strahu in zavisti. Opozicijski stranki Levica in Svoboda trdita, da proračun za prihodnji dve leti zmanjšuje sredstva za transferje, šolstvo in zdravstvo, ter opozarjata, da za zagotovila ni pisne podlage.",
       "context": "Proračunska dokumenta za leti 2027 in 2028 sta v postopku v državnem zboru. O zakonu o interventnih ukrepih za razvoj Slovenije bodo volivci 6. decembra odločali na referendumu. Opozicija opozarja, da proračun predvideva manj sredstev za socialne transferje, vlada pa razliko pripisuje boljšemu nadzoru nad upravičenostjo.",
       "key_differences": [
-        "RTV SLO objavi tako ministrovo izjavo kot odziva Levice (Asta Vrečko) in Svobode (Klemen Boštjančič); Nova24TV objavi samo ministra.",
-        "Nova24TV že v uvodu z lastnimi besedami zapiše, da gre za odziv »v luči zavajanj in laži s strani opozicijskih strank«; RTV SLO vrednostne izraze (»zavajanje«, »politika strahu«) navaja le kot ministrove besede.",
-        "Naslov Nova24TV prevzame ministrov izraz »strašenje« kot dejstvo; naslov RTV SLO je pripisan dobesedni citat.",
-        "Drugi del članka Nova24TV je povzet po MMC (»po navedbah MMC«); en novinarjev povzetek iz MMC je postavljen v narekovaje kot ministrov citat.",
-        "Samo RTV SLO navede znesek 2,2 milijarde evrov za socialne pravice, datum referenduma in to, da časovnica plačne prenove še ni določena; samo Nova24TV navede dvig minimalne plače kot primer obveznosti, ki jih prejšnja vlada ni vključila v proračun."
+        "Minister je opozicijo pozval, naj »neha zavajati in lagati«. Žurnal24 in Svet24 to navedeta kot ministrov citat, Nova24TV isti očitek zapiše v avtorjevem glasu brez pripisa (»v luči zavajanj in laži s strani opozicijskih strank«), RTV SLO pa očitka o laganju ne omeni in navede le »zavajanje in strašenje«.",
+        "Odziv opozicije (Levica, Svoboda) objavita RTV SLO in Svet24; Nova24TV in Žurnal24 objavita samo ministra.",
+        "Svet24 doda kritični kontekst, ki ga drugi nimajo: urad vlade Ukom je trditve opozicije že pred konferenco označil za laži, nevladniki opozarjajo na reze, fiskalni svet je bil pozvan k izselitvi iz službenega stanovanja; avtor pripomni »A od nekod bo treba vzeti.«",
+        "Naslovi: RTV SLO in Svet24 navedeta ministrove besede s pripisom (»Šircelj: …«), Žurnal24 ga predstavi kot pomirjevalca (»Šircelj miri«), Nova24TV pa ministrov izraz »strašenje opozicije« zapiše kot dejstvo.",
+        "Drugi del članka Nova24TV je povzet po MMC; besedilo o odzivu opozicije v Svet24 je skoraj enako kot pri RTV SLO (obe po STA)."
       ],
       "fact_matrix": [
         {
           "fact": "Minister zagotavlja izplačilo pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "»Nobenega zujfa ne bo«",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "Minister poziva opozicijo, naj »neha zavajati in lagati«",
+          "media": [
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Opozorila o krčenju pravic označi za »politiko strahu in politiko zavisti«",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Svet24"
           ]
         },
         {
           "fact": "Okoli 300 milijonov evrov prihrankov iz gospodarnejše porabe in povezovanja evidenc",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Dolg se bo zmanjševal za vsaj 0,5 odstotne točke BDP letno",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
-          "fact": "Rebalans proračuna, če bo sprejet razvojni zakon",
+          "fact": "Rebalans proračuna, če bo sprejet razvojni (interventni) zakon",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24"
           ]
         },
         {
-          "fact": "Plačni stebri (policija, vojska, zdravstvo) po koalicijski pogodbi",
+          "fact": "Plačni stebri (policija, vojska, zdravstvo) po koalicijski pogodbi; časovnica še ni določena",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24"
           ]
         },
         {
-          "fact": "Prejšnja vlada nekaterih obveznosti ni vključila v proračun (po ministru)",
+          "fact": "Primer neupoštevanih obveznosti prejšnje vlade: posledice dviga minimalne plače",
           "media": [
-            "MMC RTV SLO",
-            "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Primer: posledice dviga minimalne plače",
-          "media": [
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24"
           ]
         },
         {
@@ -240,27 +381,42 @@
           ]
         },
         {
-          "fact": "Časovnica prenove plačnega sistema še ni določena",
+          "fact": "Referendum o interventnem zakonu 6. decembra",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Svet24"
           ]
         },
         {
-          "fact": "Referendum o interventnem zakonu 6. decembra",
+          "fact": "Ukom je trditve opozicije pred konferenco označil za laži",
           "media": [
-            "MMC RTV SLO"
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "Nevladniki opozarjajo na reze v socialnih transferjih",
+          "media": [
+            "Svet24"
           ]
         },
         {
           "fact": "Odziv Levice: rez pri socialni državi, več za vojsko",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Svet24"
           ]
         },
         {
           "fact": "Odziv Svobode: za zagotovila ni zakona, seznama ne ocene; »amerikanizacija Slovenije«",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "DZ je predsednika fiskalnega sveta pozval k izselitvi iz službenega stanovanja",
+          "media": [
+            "Svet24"
           ]
         }
       ],
@@ -269,7 +425,7 @@
     },
     {
       "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro obeh virov: Zavod za zdravstveno zavarovanje Slovenije bo zaradi poslabšane likvidnosti ob koncu leta do 185 milijonov evrov obveznosti do izvajalcev zdravstvenih storitev in drugih partnerjev poravnal šele v začetku leta 2027.",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro slovenskih virov: Zavod za zdravstveno zavarovanje Slovenije bo zaradi poslabšane likvidnosti ob koncu leta do 185 milijonov evrov obveznosti do izvajalcev zdravstvenih storitev in drugih partnerjev poravnal šele v začetku leta 2027.",
       "coverage_comparison": [
         {
           "media_name": "MMC RTV SLO",
@@ -313,6 +469,10 @@
           "cited_sources": [],
           "text_overlap": [
             {
+              "media": "Žurnal24",
+              "percent": 13
+            },
+            {
               "media": "Nova24TV",
               "percent": 8
             }
@@ -329,7 +489,7 @@
             "Kot vidimo, res ni vseeno, kdo vodi državo."
           ],
           "omitted_facts": [
-            "Zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov z oktobrskim rebalansom, ki ga ZZZS v istem sporočilu navaja kot pomemben dejavnik.",
+            "Zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov z oktobrskim rebalansom, ki ga ZZZS v istem sporočilu navaja kot pomemben dejavnik in ga navedejo vsi trije drugi mediji.",
             "Izvedbene podrobnosti: 85 % zamika se nanaša na izvajalce, poplačilo v januarju z novim posojilom, dolgotrajna oskrba ni prizadeta.",
             "Posledice za izvajalce zdravstvenih storitev.",
             "Sedanji odziv prejšnje vlade ali zagovornikov ukrepa."
@@ -415,75 +575,218 @@
               "percent": 7
             }
           ]
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Težave zdravstvene blagajne: Odvzeli 100 milijonov, grozi še nov izpad",
+          "article_url": "https://www.zurnal24.si/slovenija/154-milijonov-minusa-placila-zdravnikom-in-dobaviteljem-prestavljena-468082",
+          "sensationalism_score": 6,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "Janševa koalicija transferje iz proračuna za ZZZS zmanjšala za sto milijonov evrov",
+            "Odvzeli 100 milijonov, grozi še nov izpad"
+          ],
+          "omitted_facts": [
+            "Vladno pojasnilo, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov."
+          ],
+          "voices_heard": [
+            "ZZZS (sporočilo za javnost)"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Vmesni naslov o »Janševi koaliciji« je avtorjev; ZZZS v citiranem sporočilu govori o odločitvi Državnega zbora."
+          ],
+          "headline_leaning": "Sredina-Levo",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov izpostavi enega od vzrokov, zmanjšanje proračunskih sredstev, z glagolom »odvzeli«, ki nakazuje dejanje vlade, in doda grožnjo novega izpada zaradi interventnega zakona. Glavno novico, zamik plačil, pusti v ozadju.",
+          "main_frame": "Odgovornost sedanje vlade",
+          "frame_description": "Članek povzame celotno sporočilo ZZZS z vsemi vzroki, vendar poudarek z naslovom in vmesnim naslovom (»Janševa koalicija transferje … zmanjšala za sto milijonov evrov«) ter sklepnim delom o interventnem zakonu usmeri na sedanjo vlado.",
+          "lede_focus": "Uvod navede primanjkljaj in zakonsko prepoved dolga ob koncu leta.",
+          "loaded_language": [
+            {
+              "quote": "Odvzeli 100 milijonov",
+              "explanation": "Glagol »odvzeti« predstavi znižanje zgornje meje financiranja kot odvzem že dodeljenega denarja; Svet24 pojasni, da to ni nujno tako.",
+              "verified": true
+            },
+            {
+              "quote": "Janševa koalicija",
+              "explanation": "Vmesni naslov odločitev DZ pripiše strankam z imenom predsednika vlade.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Če bo uveljavljen interventni zakon, bo ZZZS prejel še 113 milijonov evrov manj; z dolgotrajno oskrbo bi bil skupni letni izpad okoli 211 milijonov.",
+            "Glavni ukrepi interventnega zakona, ki znižujejo prihodke blagajne: razvojna kapica pri 7.500 evrih bruto plače, nižji prispevki za mikro samostojne podjetnike in kmete."
+          ],
+          "reasoning": "Besedilo zvesto povzame sporočilo ZZZS, vključno z vzroki, ki zadevajo prejšnjo vlado. Izbira naslova in vmesnega naslova pa poudarek usmeri na sedanjo koalicijo, glagol »odvzeli« pa ne razloči med znižanjem zgornje meje in odvzemom denarja. Vlada ne dobi besede.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-11",
+          "word_count": 517,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 16
+            }
+          ]
+        },
+        {
+          "media_name": "Svet24",
+          "article_title": "Zdravstvena blagajna v težavah: denarja za decembrska plačila ni dovolj",
+          "article_url": "https://svet24.si/novice/slovenija/zdravstveno-zavarovanje-zamik-placila-denar-1939901",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Razlika ne pomeni nujno, da je država že odobrila in nato odvzela celoten znesek, saj zakon določa sredstva v višini do določene vrednosti.",
+            "Vlada je septembra pojasnjevala, da je bilo za ta namen v državnem proračunu že prvotno načrtovanih 420 milijonov evrov."
+          ],
+          "omitted_facts": [
+            "Oceno ZZZS o izpadu prihodkov zaradi interventnega zakona (113 oziroma 211 milijonov evrov)."
+          ],
+          "voices_heard": [
+            "ZZZS",
+            "vlada (septembrsko pojasnilo)"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Informativen naslov, ki pove, kaj se dogaja (»denarja za decembrska plačila ni dovolj«); »v težavah« je opisno.",
+          "main_frame": "Pojasnjevalno poročilo",
+          "frame_description": "Članek po vrsti razloži, kaj se bo zgodilo, komu, zakaj in kaj to pomeni za bolnike; pri vsakem vzroku navede tudi drugo plat.",
+          "lede_focus": "Uvod pove, da bo ZZZS del decembrskih plačil prestavil v januar in kdo so prejemniki.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Akontacije izvajalcem v višini 145 milijonov evrov so del istega prilagajanja plačil.",
+            "Brez zmanjšanja proračunskega transfera bi bil zamik okoli 85 milijonov evrov; zmanjšanje ga je povečalo na 185 milijonov.",
+            "Vlada je septembra pojasnila, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov.",
+            "Zamik povračil delodajalcem sam po sebi ne pomeni zamude pri nadomestilih za bolniško odsotnost."
+          ],
+          "reasoning": "Najbolj pojasnjevalen in uravnotežen članek: pri zmanjšanju transfera navede tudi vladno pojasnilo in razliko med zgornjo mejo in dodeljenim zneskom, vse vzroke ZZZS navede brez poudarjanja enega. Vrednostnih izrazov ni.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-11",
+          "word_count": 1044,
+          "cited_sources": [],
+          "text_overlap": []
         }
       ],
       "neutral_summary": "ZZZS bo zaradi primanjkljaja do 185 milijonov evrov letošnjih obveznosti, večinoma do izvajalcev zdravstvenih storitev, plačal v začetku leta 2027 z novim likvidnostnim posojilom, ker ob koncu leta zakonsko ne sme izkazovati dolga. Kot vzroke navaja več dejavnikov: ukinitev dopolnilnega zdravstvenega zavarovanja, plačno reformo, višje stroške dela in tudi oktobrsko zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov. Izvajalci opozarjajo na likvidnostne težave.",
       "context": "Dopolnilno zdravstveno zavarovanje je prejšnja vlada Roberta Goloba ukinila s 1. januarjem 2024 in ga nadomestila z obveznim prispevkom. ZZZS je 13. 11. napovedal tudi morebitno prodajo svojega 15-odstotnega deleža v zavarovalnici Vzajemna. RTV SLO je istega dne poročal še o finančnih težavah NIJZ.",
       "key_differences": [
-        "RTV SLO povzame sporočilo ZZZS v celoti, z vsemi navedenimi vzroki; Nova24TV iz istega sporočila navede vzroke, povezane s prejšnjo vlado, izpusti pa oktobrsko zmanjšanje proračunskega transfera za 100 milijonov evrov, ki ga ZZZS izpostavi kot pomemben dejavnik in ga je sprejela sedanja koalicija.",
-        "Naslov Nova24TV težave pripiše enemu ukrepu prejšnje vlade, čeprav ZZZS v istem članku našteje več dejavnikov.",
-        "Nova24TV vsebuje več odstavkov avtorjevega mnenja (»kako nepremišljen je bil ukrep«, »res ni vseeno, kdo vodi državo«) in uporabi izjave iz let 2023–2025 kot dokaz proti zagovornikom ukrepa; RTV SLO je nevtralen povzetek sporočila.",
-        "RTV SLO navede izvedbene podrobnosti (85 % zamika se nanaša na izvajalce, začetek 21. decembra, novo likvidnostno posojilo, dolgotrajna oskrba ni prizadeta); Nova24TV teh ne navaja.",
-        "O posledicah za izvajalce je RTV SLO poročal v ločenem prispevku (»Mali izvajalci o zamiku plačil ZZZS-ja«), Nova24TV o njih ne poroča."
+        "Zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov z oktobrskim rebalansom navedejo RTV SLO, Žurnal24 in Svet24; Žurnal24 ga postavi v naslov (»Odvzeli 100 milijonov«) in v vmesnem naslovu pripiše »Janševi koaliciji«. Nova24TV ga ne omeni, čeprav citira isto sporočilo ZZZS.",
+        "Nasprotno Nova24TV v naslovu težave pripiše enemu ukrepu prejšnje vlade (ukinitev dopolnilnega zavarovanja), čeprav ZZZS navaja več dejavnikov.",
+        "Svet24 je edini, ki navede vladno pojasnilo (v proračunu je bilo že prvotno načrtovanih 420 milijonov) in razloži, da bi bil zamik brez zmanjšanja okoli 85 milijonov, z njim pa 185 milijonov.",
+        "Žurnal24 edini doda oceno ZZZS, da bi interventni zakon zdravstveni blagajni odvzel še 113 milijonov evrov letno (skupaj z dolgotrajno oskrbo 211 milijonov), kar je pomembno pred referendumom 6. decembra.",
+        "Nova24TV je komentar z več avtorjevimi sodbami; RTV SLO, Žurnal24 in Svet24 so poročila, pri čemer je Svet24 najbolj pojasnjevalen (akontacije, kaj zamik pomeni za bolnike)."
       ],
       "fact_matrix": [
         {
           "fact": "Zamik plačila do 185 milijonov evrov obveznosti v leto 2027",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Primanjkljaj obveznega zavarovanja okoli 154 milijonov evrov do 30. 9.",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "ZZZS ob koncu leta zakonsko ne sme izkazovati dolga",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Vzroki: ukinitev dopolnilnega zavarovanja in plačna reforma",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Vzroki: višji stroški dela, minimalna plača, zimski regres, staranje, nove tehnologije",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV"
+            "Nova24TV",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Vzrok: oktobrski rebalans je proračunski transfer zmanjšal s 520 na 420 milijonov evrov",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Žurnal24",
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "Vlada: v proračunu je bilo že prvotno načrtovanih 420 milijonov",
+          "media": [
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "Brez zmanjšanja transfera bi bil zamik okoli 85 milijonov evrov",
+          "media": [
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "Interventni zakon bi blagajni odvzel še 113 milijonov (z dolgotrajno oskrbo 211 milijonov) letno",
+          "media": [
+            "Žurnal24"
           ]
         },
         {
           "fact": "Okoli 85 % zamika se nanaša na izvajalce zdravstvenih storitev; začetek 21. decembra",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Poplačilo v januarju z novim likvidnostnim posojilom",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Žurnal24",
+            "Svet24"
           ]
         },
         {
           "fact": "Dolgotrajna oskrba ni prizadeta",
           "media": [
-            "MMC RTV SLO"
+            "MMC RTV SLO",
+            "Žurnal24",
+            "Svet24"
+          ]
+        },
+        {
+          "fact": "Za zdaj ni napovedanega zmanjšanja pravic za zavarovance",
+          "media": [
+            "Svet24"
           ]
         },
         {
