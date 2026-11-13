@@ -45,6 +45,7 @@ def main() -> None:
         report = build_story_report(StoryAnalysis.model_validate(story), cluster, i)
         report.source_checks = [SourceCheck.model_validate(c) for c in story.get("source_checks", [])]
         report.missing_context = [ContextItem.model_validate(c) for c in story.get("missing_context", [])]
+        report.not_covered_by = story.get("not_covered_by", [])
         for c in report.coverage_comparison:
             if not c.quotes_verified:
                 log.warning("%s: citat ni dobesedno najden v besedilu", c.media_name)

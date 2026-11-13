@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:59:37+00:00",
+  "generated_at": "2026-11-13T23:21:33+00:00",
   "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
@@ -34,7 +34,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 14,
+  "articles_scraped": 18,
   "stories": [
     {
       "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
@@ -363,6 +363,65 @@
               "percent": 21
             }
           ]
+        },
+        {
+          "media_name": "Portal24",
+          "article_title": "Minister Šircelj zavrača strašenje: Izplačane bodo vse zakonske pravice",
+          "article_url": "https://portal24.si/minister-sircelj-zavraca-strasenje-izplacane-bodo-vse-zakonske-pravice/",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Minister Šircelj zavrača strašenje",
+            "je dejal in njihove navedbe označil za zavajanje in laži, poroča STA"
+          ],
+          "omitted_facts": [
+            "Odziva opozicije (Levica, Svoboda), čeprav članek omenja njihova opozorila.",
+            "Stališče Inštituta 8. marec in drugih nevladnikov.",
+            "Znesek 2,2 milijarde evrov za socialne pravice."
+          ],
+          "voices_heard": [
+            "Andrej Šircelj (minister za finance)"
+          ],
+          "sides_represented": "Samo ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Besedilo je preoblikovana vest STA (navedeno v članku), zato je dobesednega prekrivanja z drugimi mediji malo (7 % z 24ur), vsebina ministrovega dela pa se ujema s 24ur."
+          ],
+          "headline_leaning": "Sredina-Desno",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov ministrov izraz »strašenje« zapiše brez narekovajev (»Minister Šircelj zavrača strašenje«), kar sporne trditve opozicije že v naslovu označi kot strašenje; drugi del je pripisano ministrovo zagotovilo.",
+          "main_frame": "Uradna izjava",
+          "frame_description": "Predelana vest STA, ki po vrsti povzame ministrova zagotovila; vmesni naslovi (»Proračun naj bi ostal znotraj fiskalnih pravil«) so previdno pogojni.",
+          "lede_focus": "Uvod povzame ministrovo zagotovilo in pojasnilo za 300 milijonov manj porabe.",
+          "loaded_language": [
+            {
+              "quote": "zavrača strašenje",
+              "explanation": "Ministrov izraz v naslovu brez pripisa; opozorila nasprotnikov vnaprej označi kot strašenje.",
+              "verified": true
+            },
+            {
+              "quote": "je bil oster",
+              "explanation": "Ocenjevalni glagol govorjenja, prevzet iz STA; opisuje ton.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [],
+          "reasoning": "Besedilo je zvesto in previdno pripisano (»po Šircljevih zagotovilih«, »naj bi«), zato je ocenjeno kot Sredina. Naslov pa prevzame ministrov izraz »strašenje« in opozicija, na katero se minister odziva, ne dobi besede.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-13",
+          "word_count": 458,
+          "cited_sources": [
+            "STA"
+          ],
+          "text_overlap": [
+            {
+              "media": "24ur",
+              "percent": 7
+            }
+          ]
         }
       ],
       "neutral_summary": "Finančni minister Andrej Šircelj je zagotovil, da bodo vsi zakonsko določeni prejemki izplačani in da novega zakona za uravnoteženje javnih financ ne bo. Opozorila o krčenju pravic je označil za politiko strahu in zavisti. Opozicijski stranki Levica in Svoboda trdita, da proračun za prihodnji dve leti zmanjšuje sredstva za transferje, šolstvo in zdravstvo, ter opozarjata, da za zagotovila ni pisne podlage.",
@@ -373,7 +432,8 @@
         "24ur je najcelovitejši: kritiko opozicije navede že v uvodu, poleg obeh strank pa objavi še fiskalni svet in Inštitut 8. marec, ki trdi, da tako velikih rezov ni mogoče doseči z »mehkimi ukrepi«.",
         "Svet24 doda kritični kontekst in avtorjeve pripombe: Ukom je trditve opozicije že pred konferenco označil za laži, avtor pripomni »A od nekod bo treba vzeti.«",
         "Naslovi: RTV SLO, 24ur in Svet24 navedejo ministrove besede s pripisom, Žurnal24 ga predstavi kot pomirjevalca (»Šircelj miri«), Nova24TV pa ministrov izraz »strašenje opozicije« zapiše kot dejstvo.",
-        "RTV SLO, 24ur in Svet24 imajo del o opoziciji skoraj enak, ker povzemajo STA; drugi del članka Nova24TV je povzet po MMC."
+        "RTV SLO, 24ur in Svet24 imajo del o opoziciji skoraj enak, ker povzemajo STA; drugi del članka Nova24TV je povzet po MMC.",
+        "Portal24 objavi predelano vest STA samo z ministrovo stranjo: kritike opozicije, sindikatov in nevladnikov omeni v enem stavku, nihče od njih pa ne dobi besede. Naslov prevzame ministrov izraz »strašenje«."
       ],
       "fact_matrix": [
         {
@@ -383,7 +443,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -401,7 +462,8 @@
           "media": [
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -410,7 +472,8 @@
             "MMC RTV SLO",
             "Nova24TV",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -420,7 +483,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -430,7 +494,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -439,7 +504,8 @@
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -448,7 +514,8 @@
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -456,7 +523,8 @@
           "media": [
             "Nova24TV",
             "Žurnal24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -477,7 +545,8 @@
           "media": [
             "MMC RTV SLO",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         },
         {
@@ -519,7 +588,8 @@
         {
           "fact": "Učinki interventnega zakona niso vključeni v predlog proračuna 2027",
           "media": [
-            "24ur"
+            "24ur",
+            "Portal24"
           ]
         }
       ],
@@ -533,7 +603,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "Potrjeno",
           "finding": "Po tabeli ministrstva za finance v oceni fiskalnega sveta naj bi se transferji posameznikom in gospodinjstvom znižali z 2.234 na 1.901 milijona evrov (−333 milijonov oziroma −14,9 %).",
@@ -565,7 +636,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "Vprašljivo",
           "finding": "Fiskalni svet ugotavlja, da obrazložitev proračuna predvideva uskladitev transferjev z inflacijo (3,7 %). Brez spremembe višine pravic bi bilo treba pri petih največjih transferjih število upravičencev zmanjšati za petino do tretjino; podlage za tako zmanjšanje v dokumentih niso predstavljene.",
@@ -583,7 +655,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "V nasprotju z virom",
           "finding": "Po oceni fiskalnega sveta naj bi skupna rast neto izdatkov, po kateri se presoja spoštovanje fiskalnih pravil, presegala zavezo iz srednjeročnega fiskalnega načrta; ukrepi za znižanje primanjkljaja niso jasno predstavljeni.",
@@ -605,7 +678,8 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "Vprašljivo",
           "finding": "V projekciji fiskalnega sveta brez nepojasnjenih ukrepov dolg pade s 63,4 % BDP (2026) na 62,7 % (2027), v letu 2028 pa naraste na 63,6 %. Povprečno znižanje za 0,7 odstotne točke izpolni zahtevo le zaradi porabe sredstev na računih zakladnice; brez tega bi znašalo 0,4 odstotne točke.",
@@ -622,7 +696,8 @@
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "Potrjeno",
           "finding": "Fiskalni svet potrjuje, da učinki zakona niso v osnovni projekciji. Po oceni ministrstva za finance bi se primanjkljaj ob uveljavitvi povečal še za okoli 650 milijonov evrov.",
@@ -643,7 +718,8 @@
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "Vprašljivo",
           "finding": "Predlog proračuna predvideva znižanje stroškov dela za 160 milijonov evrov v letu 2027, čeprav se plačna reforma nadaljuje (povprečna plača v javnem sektorju +6,5 %). Fiskalni svet ocenjuje razkorak na več kot 500 milijonov evrov in pravi, da v dokumentih ni pojasnila.",
@@ -659,7 +735,8 @@
           "claimed_by": [
             "Nova24TV",
             "Žurnal24",
-            "24ur"
+            "24ur",
+            "Portal24"
           ],
           "status": "Ni preverljivo",
           "finding": "V pregledanih dokumentih fiskalnega sveta te trditve nismo mogli preveriti.",
@@ -716,6 +793,10 @@
             }
           ]
         }
+      ],
+      "not_covered_by": [
+        "N1",
+        "Mladina"
       ]
     },
     {
@@ -772,8 +853,16 @@
               "percent": 13
             },
             {
+              "media": "Info360",
+              "percent": 10
+            },
+            {
               "media": "Nova24TV",
               "percent": 8
+            },
+            {
+              "media": "Portal24",
+              "percent": 7
             }
           ]
         },
@@ -1031,10 +1120,186 @@
               "percent": 16
             },
             {
+              "media": "Info360",
+              "percent": 11
+            },
+            {
               "media": "Nova24TV",
               "percent": 10
+            },
+            {
+              "media": "Portal24",
+              "percent": 7
             }
           ]
+        },
+        {
+          "media_name": "Portal24",
+          "article_title": "ZZZS bo do 185 milijonov evrov obveznosti poravnal šele v začetku leta 2027",
+          "article_url": "https://portal24.si/zzzs-bo-do-185-milijonov-evrov-obveznosti-poravnal-sele-v-zacetku-leta-2027/",
+          "sensationalism_score": 1,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Likvidnostne težave ZZZS so posledica sistemskih finančnih pritiskov.",
+            "Proračunski transfer zmanjšan za 100 milijonov evrov"
+          ],
+          "omitted_facts": [
+            "Vladno pojasnilo, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov."
+          ],
+          "voices_heard": [
+            "ZZZS (sporočilo za javnost)"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Najpopolnejši povzetek izvirnega sporočila ZZZS med primerjanimi mediji, z veliko dobesednimi citati."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Informativen naslov z zneskom in rokom.",
+          "main_frame": "Uradno sporočilo institucije",
+          "frame_description": "Obsežen povzetek sporočila ZZZS z dolgimi dobesednimi citati in vsemi vzroki, vključno z zmanjšanjem proračunskega transfera.",
+          "lede_focus": "Uvod navede zamik do 185 milijonov in delež izvajalcev (85 %).",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "ZZZS poudarja, da ne gre za zmanjšanje ali preklic pogodbenih obveznosti, temveč za začasno spremembo časa plačila."
+          ],
+          "reasoning": "Zvest, obsežen povzetek sporočila ZZZS z vsemi vzroki, brez vrednostnih izrazov. Drugi deležniki ne dobijo besede.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-11",
+          "word_count": 839,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "24ur",
+              "percent": 6
+            },
+            {
+              "media": "MMC RTV SLO",
+              "percent": 5
+            }
+          ]
+        },
+        {
+          "media_name": "Info360",
+          "article_title": "Zmanjkuje denarja: ZZZS odlaga izplačila pogodbenikom in delodajalcem za nadomestila bolniških",
+          "article_url": "https://info360.si/aktualno/zmanjkuje-denarja-zzzs-odlaga-izplacila-pogodbenikom-in-delodajalcem-za-nadomestila-bolniskih/",
+          "sensationalism_score": 5,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Zmanjkuje denarja: ZZZS odlaga izplačila pogodbenikom in delodajalcem za nadomestila bolniških",
+            "Kot pravijo naši viri na ZZZS"
+          ],
+          "omitted_facts": [
+            "Delež zamika, ki se nanaša na izvajalce (okoli 85 %).",
+            "Poplačilo z novim likvidnostnim posojilom."
+          ],
+          "voices_heard": [
+            "ZZZS (sporočilo za javnost)",
+            "anonimni viri na ZZZS"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [
+            "Navaja, da bo zamik povračil za bolniška nadomestila »predvidoma 3,5 milijona evrov«; po razčlenitvi ZZZS iz septembra gre za 11 milijonov, 3,5 milijona pa je znesek za medicinske pripomočke."
+          ],
+          "notes": [
+            "Del informacij temelji na anonimnih virih, ki jih ni mogoče preveriti."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov začne z dramatičnim »Zmanjkuje denarja« in izpostavi bolniška nadomestila, ki so le manjši del zamika.",
+          "main_frame": "Posledice za zaposlene in delodajalce",
+          "frame_description": "Povzetek sporočila ZZZS, dopolnjen z informacijami anonimnih virov na ZZZS o tem, kaj zamik pomeni za plače v bolnišnicah in povračila za bolniške odsotnosti.",
+          "lede_focus": "Uvod navede, da zaposleni v zdravstvu in na bolniški naj ne bi nosili posledic.",
+          "loaded_language": [
+            {
+              "quote": "Zmanjkuje denarja",
+              "explanation": "Dramatičen uvod v naslovu; vsebinsko točen (ZZZS govori o poslabšani likvidnosti).",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Po anonimnih virih na ZZZS bolnišnice in zdravstveni domovi plač zaposlenim zaradi zamika ne bodo izplačali z zamudo."
+          ],
+          "reasoning": "Besedilo zvesto citira sporočilo ZZZS in nima političnega nagiba. Naslov poudari manjši del zgodbe, en navedeni znesek pa se ne ujema z razčlenitvijo ZZZS.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-11",
+          "word_count": 482,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "24ur",
+              "percent": 14
+            },
+            {
+              "media": "MMC RTV SLO",
+              "percent": 13
+            }
+          ]
+        },
+        {
+          "media_name": "NaDlani",
+          "article_title": "ZZZS nima dovolj denarja za vsa plačila: bodo delavci na bolniški ostali brez plačila?",
+          "article_url": "https://www.nadlani.si/novice/zzzs-nima-dovolj-denarja-za-vsa-placila-bodo-delavci-na-bolniski-ostali-brez-placila/",
+          "sensationalism_score": 7,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "bodo delavci na bolniški ostali brez plačila?",
+            "zamik refundacij delodajalcem ne pomeni, da bodo zaposleni na bolniški samodejno ostali brez nadomestila"
+          ],
+          "omitted_facts": [
+            "Akontacije izvajalcem (145 milijonov evrov).",
+            "Izvirne izjave ZZZS v dobesedni obliki."
+          ],
+          "voices_heard": [
+            "ZZZS (sporočilo za javnost)",
+            "Info360 (prevzeto)"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Za odgovor na vprašanje iz naslova se sklicuje na Info360, ki temelji na anonimnih virih."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov kombinira dramatično trditev (»nima dovolj denarja za vsa plačila«) z vprašanjem, ki vzbudi strah (»bodo delavci na bolniški ostali brez plačila?«); besedilo na vprašanje odgovori nikalno.",
+          "main_frame": "Posledice za zaposlene",
+          "frame_description": "Pojasnjevalni povzetek, ki se osredotoči na bolniška nadomestila; za ključni odgovor se sklicuje na Info360.",
+          "lede_focus": "Uvod govori o »resnih likvidnostnih težavah« in napove vprašanje, kaj to pomeni za bolnišnice, delodajalce in zaposlene na bolniški.",
+          "loaded_language": [
+            {
+              "quote": "bodo delavci na bolniški ostali brez plačila?",
+              "explanation": "Vprašanje v naslovu vzbudi skrb, na katero besedilo odgovori nikalno (klikabejt).",
+              "verified": true
+            },
+            {
+              "quote": "resnih likvidnostnih težavah",
+              "explanation": "Okrepljen opis; ZZZS govori o »poslabšani likvidnosti«.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "Čeprav zavod poudarja, da gre za začasen ukrep, dogajanje odpira pomembno vprašanje: kako dolgo lahko zdravstveni sistem deluje brez dodatnih finančnih pritiskov na ustanove in podjetja, ki zagotavljajo zdravstveno oskrbo?"
+          ],
+          "unique_facts": [
+            "Pojasni, da delodajalci zaposlenim izplačujejo nadomestila in jim jih ZZZS pozneje povrne, zato zamik povračil ne pomeni zamude pri izplačilu zaposlenim."
+          ],
+          "reasoning": "Politično nevtralno besedilo, ki dejstva povzame pravilno in na koncu doda avtorjevo retorično vprašanje. Glavna slabost je naslov v obliki vprašanja, ki napoveduje posledico, ki je besedilo ne potrdi.",
+          "confidence": "Visoka",
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-11",
+          "word_count": 394,
+          "cited_sources": [
+            "Info360"
+          ],
+          "text_overlap": []
         }
       ],
       "neutral_summary": "ZZZS bo zaradi primanjkljaja do 185 milijonov evrov letošnjih obveznosti, večinoma do izvajalcev zdravstvenih storitev, plačal v začetku leta 2027 z novim likvidnostnim posojilom, ker ob koncu leta zakonsko ne sme izkazovati dolga. Kot vzroke navaja več dejavnikov: ukinitev dopolnilnega zdravstvenega zavarovanja, plačno reformo, višje stroške dela in tudi oktobrsko zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov. Izvajalci opozarjajo na likvidnostne težave.",
@@ -1045,7 +1310,8 @@
         "Svet24 je edini, ki navede vladno pojasnilo (v proračunu je bilo že prvotno načrtovanih 420 milijonov) in razloži, da bi bil zamik brez zmanjšanja okoli 85 milijonov, z njim pa 185 milijonov.",
         "Žurnal24 edini doda oceno ZZZS, da bi interventni zakon zdravstveni blagajni odvzel še 113 milijonov evrov letno (skupaj z dolgotrajno oskrbo 211 milijonov), kar je pomembno pred referendumom 6. decembra.",
         "Nova24TV je komentar z več avtorjevimi sodbami; RTV SLO, Žurnal24 in Svet24 so poročila, pri čemer je Svet24 najbolj pojasnjevalen (akontacije, kaj zamik pomeni za bolnike).",
-        "RTV SLO in 24ur objavita skoraj enako agencijsko besedilo STA; razlikujeta se le v naslovu in uvodu."
+        "RTV SLO in 24ur objavita skoraj enako agencijsko besedilo STA; razlikujeta se le v naslovu in uvodu.",
+        "Info360 in NaDlani zgodbo uokvirita okoli bolniških nadomestil. Naslov NaDlani je vprašanje (»bodo delavci na bolniški ostali brez plačila?«), na katero besedilo odgovori nikalno; Info360 navaja znesek, ki se ne ujema z razčlenitvijo ZZZS."
       ],
       "fact_matrix": [
         {
@@ -1055,7 +1321,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ]
         },
         {
@@ -1065,7 +1334,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ]
         },
         {
@@ -1075,7 +1347,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ]
         },
         {
@@ -1085,7 +1360,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ]
         },
         {
@@ -1095,7 +1373,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ]
         },
         {
@@ -1104,7 +1385,10 @@
             "MMC RTV SLO",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ]
         },
         {
@@ -1131,7 +1415,9 @@
             "MMC RTV SLO",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "NaDlani"
           ]
         },
         {
@@ -1140,7 +1426,9 @@
             "MMC RTV SLO",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "NaDlani"
           ]
         },
         {
@@ -1149,7 +1437,9 @@
             "MMC RTV SLO",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360"
           ]
         },
         {
@@ -1163,6 +1453,22 @@
           "media": [
             "Nova24TV"
           ]
+        },
+        {
+          "fact": "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika",
+          "media": [
+            "Svet24",
+            "Portal24",
+            "Info360"
+          ]
+        },
+        {
+          "fact": "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila",
+          "media": [
+            "Svet24",
+            "Info360",
+            "NaDlani"
+          ]
         }
       ],
       "id": "story-2",
@@ -1175,7 +1481,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ],
           "status": "Potrjeno",
           "finding": "Izvirno sporočilo ZZZS navaja zamik »do 185 milijonov evrov« in poplačilo v prvih dneh januarja z novim likvidnostnim posojilom.",
@@ -1193,7 +1502,10 @@
             "Nova24TV",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ],
           "status": "Potrjeno",
           "finding": "Številki se natančno ujemata s sporočilom ZZZS.",
@@ -1210,7 +1522,9 @@
             "MMC RTV SLO",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "NaDlani"
           ],
           "status": "Potrjeno",
           "finding": "Ujema se s sporočilom ZZZS. Septembrsko sporočilo zamik razčleni: 158 milijonov izvajalcem, 13 za zdravila, 11 za bolniška nadomestila, 3,5 za medicinske pripomočke.",
@@ -1231,7 +1545,10 @@
             "MMC RTV SLO",
             "Žurnal24",
             "Svet24",
-            "24ur"
+            "24ur",
+            "Portal24",
+            "Info360",
+            "NaDlani"
           ],
           "status": "Potrjeno",
           "finding": "ZZZS to navaja kot »pomemben dejavnik« in zmanjšanje imenuje »nepričakovano«. Zmanjšanje je bilo sicer predlagano že septembra in ZZZS mu je takrat javno nasprotoval, zato je »nepričakovano« le glede na sprejeti finančni načrt.",
@@ -1309,6 +1626,24 @@
               "url": "https://www.zzzs.si/novica/skupscina-zzzs-poziva-k-ukrepom-za-zagotovitev-nemotenega-financiranja-obveznega-zdravstvenega-zavarovanja/"
             }
           ]
+        },
+        {
+          "claim": "Zamik povračil delodajalcem za nadomestila med bolniško odsotnostjo bo predvidoma znašal 3,5 milijona evrov.",
+          "claimed_by": [
+            "Info360"
+          ],
+          "status": "V nasprotju z virom",
+          "finding": "Po razčlenitvi zamika v septembrskem sporočilu ZZZS (pri enakem skupnem znesku 185 milijonov) gre za bolniška nadomestila 11 milijonov evrov; 3,5 milijona je znesek za medicinske pripomočke. Novembrsko sporočilo razčlenitve ne navaja.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            },
+            {
+              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            }
+          ]
         }
       ],
       "missing_context": [
@@ -1374,6 +1709,10 @@
             }
           ]
         }
+      ],
+      "not_covered_by": [
+        "N1",
+        "Mladina"
       ]
     },
     {
@@ -1678,7 +2017,8 @@
       "id": "story-3",
       "has_international_source": true,
       "source_checks": [],
-      "missing_context": []
+      "missing_context": [],
+      "not_covered_by": []
     }
   ]
 }

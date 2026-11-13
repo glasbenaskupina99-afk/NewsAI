@@ -440,6 +440,9 @@ function storyCard(story, index) {
           ? h("span", { class: "rounded-full bg-emerald-100 px-2 py-0.5 font-medium text-emerald-800 dark:bg-emerald-900 dark:text-emerald-100" }, "Z mednarodnim sidrom")
           : h("span", { class: "rounded-full bg-amber-100 px-2 py-0.5 font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100" }, "Brez mednarodnega vira")),
       h("h3", { class: "text-xl font-bold leading-tight sm:text-2xl" }, story.topic_title),
+      (story.not_covered_by || []).length
+        ? h("p", { class: "mt-1 text-xs text-slate-500 dark:text-slate-400" }, `Niso poročali (preverjeno): ${story.not_covered_by.join(", ")}`)
+        : null,
       h("p", { class: "mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300" }, story.neutral_summary),
       story.context
         ? h("p", { class: "mt-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400" }, h("span", { class: "font-semibold" }, "Ozadje: "), story.context)

@@ -34,6 +34,7 @@ KNOWN_SOURCES = [
     "STA", "MMC", "AFP", "Reuters", "AP", "Bloomberg", "CNN", "CBS", "CNBC", "BBC", "Fox News",
     "New York Times", "New York Post", "Financial Times", "Politico", "Dnevnik",
     "Siol", "24ur", "N1", "Nova24TV", "Mladina", "Žurnal24", "Svet24", "Demokracija", "Tanjug", "Hina",
+    "Info360", "Portal24", "NaDlani",
 ]
 
 
@@ -183,6 +184,9 @@ class StoryReport(StoryAnalysis):
     # Preverjanje v izvirnih virih se ne generira z modelom; doda ga manual_analysis.py
     source_checks: list[SourceCheck] = Field(default_factory=list)
     missing_context: list[ContextItem] = Field(default_factory=list)
+    not_covered_by: list[str] = Field(
+        default_factory=list, description="Preverjeni mediji, ki o dogodku niso objavili članka."
+    )
 
 
 class SourceInfo(BaseModel):

@@ -26,6 +26,7 @@ MEDIA_CATEGORIES = {s.name: s.category for s in SOURCES} | {
     "Svet24": "komercialni", "Siol": "komercialni", "N1": "komercialni", "Demokracija": "alternativni",
     "Mladina": "alternativni", "Necenzurirano": "alternativni", "Reporter": "alternativni",
     "Moja Dolenjska": "regionalni", "Primorske novice": "regionalni",
+    "Portal24": "komercialni", "Info360": "komercialni", "NaDlani": "komercialni", "Lokalec": "regionalni",
 }
 
 _LINK = re.compile(r"!?\[([^\]]*)\]\([^)]*\)")
