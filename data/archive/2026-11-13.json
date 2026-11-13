@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:14:40+00:00",
+  "generated_at": "2026-11-13T22:22:19+00:00",
   "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
@@ -34,7 +34,7 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 7,
+  "articles_scraped": 8,
   "stories": [
     {
       "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
@@ -273,52 +273,50 @@
       "coverage_comparison": [
         {
           "media_name": "MMC RTV SLO",
-          "article_title": "Mali izvajalci o zamiku plačil ZZZS-ja: Verjetno bo marsikdo likvidnostno v škripcih",
-          "article_url": "https://www.rtvslo.si/slovenija/mali-izvajalci-o-zamiku-placil-zzzs-ja-verjetno-bo-marsikdo-likvidnostno-v-skripcih/799934",
-          "sensationalism_score": 3,
+          "article_title": "ZZZS bo do 185 milijonov evrov zapadlih obveznosti poravnal na začetku leta 2027",
+          "article_url": "https://www.rtvslo.si/zdravje/zzzs-bo-do-185-milijonov-evrov-zapadlih-obveznosti-poravnal-na-zacetku-leta-2027/799769",
+          "sensationalism_score": 1,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Zdravstveni blagajni zmanjkuje denarja, zato bo Zavod za zdravstveno zavarovanje (ZZZS) v prihodnje leto prenesel do 185 milijonov evrov neporavnanih obveznosti.",
-            "Na ZZZS-ju zagotavljajo, da zavarovanci zamika plačil za zdaj ne bodo občutili"
+            "je poslabšana likvidnost ZZZS-ja v letu 2026 posledica več medsebojno povezanih dejavnikov",
+            "Pomemben dejavnik je ob koncu leta po navedbah zavoda tudi nepričakovano zmanjšanje transfera iz državnega proračuna"
           ],
-          "omitted_facts": [
-            "Vzroki za likvidnostne težave, ki jih navaja ZZZS (ukinitev dopolnilnega zavarovanja, plačna reforma, višji stroški dela, dvig minimalne plače, zimski regres, staranje prebivalstva).",
-            "Višina dosedanjega primanjkljaja (153,8 milijona evrov do 30. 9.).",
-            "Zakonska podlaga za zamik (ZZZS ob koncu leta ne sme izkazovati dolga)."
-          ],
+          "omitted_facts": [],
           "voices_heard": [
-            "Helena Mole (strokovno združenje zasebnih zdravnikov)",
-            "Tatjana Jevševar (Združenje zdravstvenih zavodov)",
-            "ZZZS"
+            "ZZZS (sporočilo za javnost)"
           ],
-          "sides_represented": "Obe strani",
+          "sides_represented": "Pretežno ena stran",
           "factual_errors": [],
           "notes": [
-            "Kratek prispevek (okoli 240 besed), verjetno spremno besedilo televizijskega prispevka. O razlogih za zamik je RTV SLO morda poročal v drugem članku, ki ga v viru RSS ni bilo.",
-            "Članek ne obravnava vzrokov, zato politična razprava o odgovornosti v njem ni predstavljena."
+            "Povzetek sporočila za javnost ZZZS; odzivov vlade, opozicije ali izvajalcev v tem članku ni. O posledicah za izvajalce je RTV SLO poročal v ločenem prispevku »Mali izvajalci o zamiku plačil ZZZS-ja«."
           ],
           "headline_leaning": "Sredina",
           "body_leaning": "Sredina",
-          "headline_analysis": "Naslov je pripisan citat prizadetih (»Verjetno bo marsikdo likvidnostno v škripcih«). Pogovorni izraz »v škripcih« doda nekaj čustvenosti, a je jasno izjava vira.",
-          "main_frame": "Posledice za prizadete",
-          "frame_description": "Zgodba je povedana z vidika izvajalcev: pediatrinja z zasebno ambulanto, združenje bolnišnic, nato pomiritev ZZZS in napoved možnih posegov v pravice. Politična odgovornost in vzroki niso tema članka.",
-          "lede_focus": "Uvod pove, da zdravstveni blagajni zmanjkuje denarja in da je za manjše ambulante vsak zamik velika težava.",
+          "headline_analysis": "Informativen naslov, ki navede znesek in rok; brez vrednotenja.",
+          "main_frame": "Uradno sporočilo institucije",
+          "frame_description": "Članek po vrsti povzame sporočilo ZZZS: obseg in razlog zamika, izvedbo, vse navedene vzroke in na koncu zmanjšanje proračunskega transfera.",
+          "lede_focus": "Uvod navede, da so težave po navedbah ZZZS posledica sistemskih finančnih pritiskov in da dolgotrajna oskrba ni prizadeta.",
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [
-            "Javni zdravstveni zavodi imajo za skoraj 88 milijonov evrov zapadlih obveznosti do dobaviteljev.",
-            "Šest bolnišnic je že kratkoročno zadolženih.",
-            "ZZZS za prihodnje leto napoveduje okoli 140 milijonov evrov primanjkljaja; skrajna možnost je zmanjšanje pravic iz obveznega zavarovanja.",
-            "Zavarovanci zamika za zdaj ne bodo občutili."
+            "Z oktobrskim rebalansom je bil proračunski transfer zmanjšan s 520 na 420 milijonov evrov; ZZZS je DZ že septembra pozval, naj sredstva ohrani.",
+            "Okoli 85 odstotkov zamika se nanaša na izvajalce zdravstvenih storitev; zamik se začne predvidoma 21. decembra.",
+            "Obveznosti bodo poravnane v januarju z novim likvidnostnim posojilom v sistemu enotnega zakladniškega računa.",
+            "Dolgotrajna oskrba ni prizadeta."
           ],
-          "reasoning": "Besedišče je nevtralno, vse ocene so pripisane virom. Članek ne kaže političnega nagiba, ker se politični vprašanji vzrokov in odgovornosti sploh ne loti. To je njegova glavna omejitev, ne pristranskost.",
-          "confidence": "Srednja",
+          "reasoning": "Članek zvesto in v celoti povzame sporočilo ZZZS, vse trditve so pripisane zavodu, brez vrednostnih izrazov. Navede vse vzroke, tudi tiste, ki zadevajo prejšnjo vlado (ukinitev dopolnilnega zavarovanja, plačna reforma), in tistega, ki zadeva sedanjo (zmanjšanje proračunskega transfera).",
+          "confidence": "Visoka",
           "category": "javni",
           "quotes_verified": true,
-          "published": "2026-11-12T18:10:56+00:00",
-          "word_count": 237,
+          "published": "2026-11-11",
+          "word_count": 476,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [
+            {
+              "media": "Nova24TV",
+              "percent": 8
+            }
+          ]
         },
         {
           "media_name": "Nova24TV",
@@ -331,8 +329,9 @@
             "Kot vidimo, res ni vseeno, kdo vodi državo."
           ],
           "omitted_facts": [
-            "Posledice za izvajalce: zasebne ambulante, 88 milijonov zapadlih obveznosti javnih zavodov, šest že zadolženih bolnišnic.",
-            "Zagotovilo ZZZS, da zavarovanci zamika za zdaj ne bodo občutili, in napovedani primanjkljaj za prihodnje leto.",
+            "Zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov z oktobrskim rebalansom, ki ga ZZZS v istem sporočilu navaja kot pomemben dejavnik.",
+            "Izvedbene podrobnosti: 85 % zamika se nanaša na izvajalce, poplačilo v januarju z novim posojilom, dolgotrajna oskrba ni prizadeta.",
+            "Posledice za izvajalce zdravstvenih storitev.",
             "Sedanji odziv prejšnje vlade ali zagovornikov ukrepa."
           ],
           "voices_heard": [
@@ -347,6 +346,7 @@
           ],
           "notes": [
             "Besedilo je po žanru komentar, objavljen brez oznake mnenja.",
+            "Članek citira sporočilo ZZZS o vzrokih, izpusti pa del istega sporočila o oktobrskem zmanjšanju proračunskega transfera za 100 milijonov evrov, ki ga je DZ sprejel z rebalansom sedanje vlade.",
             "Sklep, da bi morale biti trditve o dobičkih zavarovalnic napačne, ker ima ZZZS danes težave, ne sledi iz navedenih podatkov: dobički zasebnih zavarovalnic in likvidnost ZZZS sta ločeni vprašanji.",
             "Nasprotna stran je citirana le z izjavami iz preteklih let, ki jih članek nato zavrne."
           ],
@@ -395,12 +395,10 @@
             "Kot vidimo, res ni vseeno, kdo vodi državo."
           ],
           "unique_facts": [
-            "Primanjkljaj obveznega zavarovanja do 30. 9. je znašal 153.819.314 evrov, dolg na enotnem zakladniškem računu 156 milijonov.",
-            "ZZZS ob koncu leta po zakonu o javnih financah in zakonu o fiskalnem pravilu ne sme izkazovati dolga.",
-            "ZZZS kot vzroke navaja ukinitev dopolnilnega zavarovanja, plačno reformo, višje stroške dela, dvig minimalne plače, zimski regres, staranje prebivalstva in nove zdravstvene tehnologije.",
-            "Opozorila poslanca SDS Zvoneta Černača iz leta 2023."
+            "Opozorila poslanca SDS Zvoneta Černača iz leta 2023.",
+            "Izjave Roberta Goloba in Inštituta 8. marec ob uvedbi ukrepa (2023–2025)."
           ],
-          "reasoning": "Članek vsebuje več avtorjevih sodb, zapisanih kot dejstva, in se konča s politično poanto (»res ni vseeno, kdo vodi državo«). Dejanske podatke ZZZS navaja natančno, a izbere le dva od več navedenih vzrokov za naslov in okvir. Nasprotna stran nastopa le z izjavami iz preteklosti, ki jih avtor zavrača.",
+          "reasoning": "Članek vsebuje več avtorjevih sodb, zapisanih kot dejstva, in se konča s politično poanto (»res ni vseeno, kdo vodi državo«). Iz sporočila ZZZS izbere vzroke, ki bremenijo prejšnjo vlado, izpusti pa zmanjšanje proračunskega transfera, ki ga je sprejela sedanja koalicija; v naslovu težave pripiše enemu samemu ukrepu. Nasprotna stran nastopa le z izjavami iz preteklosti, ki jih avtor zavrača.",
           "confidence": "Visoka",
           "category": "alternativni",
           "quotes_verified": true,
@@ -411,17 +409,22 @@
             "Siol",
             "24ur"
           ],
-          "text_overlap": []
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 7
+            }
+          ]
         }
       ],
-      "neutral_summary": "ZZZS bo zaradi primanjkljaja do 185 milijonov evrov letošnjih obveznosti plačal v začetku leta 2027, ker ob koncu leta zakonsko ne sme izkazovati dolga. Kot vzroke navaja več dejavnikov, med njimi ukinitev dopolnilnega zdravstvenega zavarovanja, plačno reformo in višje stroške dela. Izvajalci, zlasti manjše zasebne ambulante in že zadolžene bolnišnice, opozarjajo na likvidnostne težave; ZZZS zagotavlja, da zavarovanci zamika za zdaj ne bodo občutili.",
+      "neutral_summary": "ZZZS bo zaradi primanjkljaja do 185 milijonov evrov letošnjih obveznosti, večinoma do izvajalcev zdravstvenih storitev, plačal v začetku leta 2027 z novim likvidnostnim posojilom, ker ob koncu leta zakonsko ne sme izkazovati dolga. Kot vzroke navaja več dejavnikov: ukinitev dopolnilnega zdravstvenega zavarovanja, plačno reformo, višje stroške dela in tudi oktobrsko zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov. Izvajalci opozarjajo na likvidnostne težave.",
       "context": "Dopolnilno zdravstveno zavarovanje je prejšnja vlada Roberta Goloba ukinila s 1. januarjem 2024 in ga nadomestila z obveznim prispevkom. ZZZS je 13. 11. napovedal tudi morebitno prodajo svojega 15-odstotnega deleža v zavarovalnici Vzajemna. RTV SLO je istega dne poročal še o finančnih težavah NIJZ.",
       "key_differences": [
-        "RTV SLO poroča o posledicah (likvidnost izvajalcev, bolnišnic, morebitni posegi v pravice) in ne navaja vzrokov; Nova24TV poroča o vzrokih in posledic za izvajalce ne omenja.",
+        "RTV SLO povzame sporočilo ZZZS v celoti, z vsemi navedenimi vzroki; Nova24TV iz istega sporočila navede vzroke, povezane s prejšnjo vlado, izpusti pa oktobrsko zmanjšanje proračunskega transfera za 100 milijonov evrov, ki ga ZZZS izpostavi kot pomemben dejavnik in ga je sprejela sedanja koalicija.",
         "Naslov Nova24TV težave pripiše enemu ukrepu prejšnje vlade, čeprav ZZZS v istem članku našteje več dejavnikov.",
-        "Nova24TV vsebuje več odstavkov avtorjevega mnenja (»kako nepremišljen je bil ukrep«, »res ni vseeno, kdo vodi državo«) in uporabi izjave iz let 2023–2025 kot dokaz za nasprotnike ukrepa.",
-        "RTV SLO da besedo izvajalcem (zasebni zdravniki, Združenje zdravstvenih zavodov) in ZZZS; Nova24TV ZZZS-ju ter politikom in Inštitutu 8. marec iz preteklih let.",
-        "Nova24TV navede natančne podatke o primanjkljaju (153.819.314 evrov do 30. 9.) in zakonsko podlago za zamik; RTV SLO navede 88 milijonov zapadlih obveznosti javnih zavodov in 140 milijonov napovedanega primanjkljaja za prihodnje leto."
+        "Nova24TV vsebuje več odstavkov avtorjevega mnenja (»kako nepremišljen je bil ukrep«, »res ni vseeno, kdo vodi državo«) in uporabi izjave iz let 2023–2025 kot dokaz proti zagovornikom ukrepa; RTV SLO je nevtralen povzetek sporočila.",
+        "RTV SLO navede izvedbene podrobnosti (85 % zamika se nanaša na izvajalce, začetek 21. decembra, novo likvidnostno posojilo, dolgotrajna oskrba ni prizadeta); Nova24TV teh ne navaja.",
+        "O posledicah za izvajalce je RTV SLO poročal v ločenem prispevku (»Mali izvajalci o zamiku plačil ZZZS-ja«), Nova24TV o njih ne poroča."
       ],
       "fact_matrix": [
         {
@@ -432,57 +435,61 @@
           ]
         },
         {
-          "fact": "Primanjkljaj obveznega zavarovanja 153,8 milijona evrov do 30. 9.",
+          "fact": "Primanjkljaj obveznega zavarovanja okoli 154 milijonov evrov do 30. 9.",
           "media": [
+            "MMC RTV SLO",
             "Nova24TV"
           ]
         },
         {
           "fact": "ZZZS ob koncu leta zakonsko ne sme izkazovati dolga",
           "media": [
+            "MMC RTV SLO",
             "Nova24TV"
           ]
         },
         {
-          "fact": "Vzroki po ZZZS: ukinitev dopolnilnega zavarovanja, plačna reforma, stroški dela, minimalna plača, zimski regres, staranje",
+          "fact": "Vzroki: ukinitev dopolnilnega zavarovanja in plačna reforma",
           "media": [
+            "MMC RTV SLO",
             "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Vzroki: višji stroški dela, minimalna plača, zimski regres, staranje, nove tehnologije",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Vzrok: oktobrski rebalans je proračunski transfer zmanjšal s 520 na 420 milijonov evrov",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Okoli 85 % zamika se nanaša na izvajalce zdravstvenih storitev; začetek 21. decembra",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Poplačilo v januarju z novim likvidnostnim posojilom",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Dolgotrajna oskrba ni prizadeta",
+          "media": [
+            "MMC RTV SLO"
           ]
         },
         {
           "fact": "Opozorila takratne opozicije (SDS) ob preoblikovanju zavarovanja leta 2023",
           "media": [
             "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Javni zavodi imajo 88 milijonov evrov zapadlih obveznosti do dobaviteljev",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Šest bolnišnic je že kratkoročno zadolženih",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Težave manjših zasebnih ambulant s koncesijo",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Zavarovanci zamika za zdaj ne bodo občutili",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Za prihodnje leto napovedan primanjkljaj okoli 140 milijonov evrov; skrajna možnost je zmanjšanje pravic",
-          "media": [
-            "MMC RTV SLO"
           ]
         }
       ],
