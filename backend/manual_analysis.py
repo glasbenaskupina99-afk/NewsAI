@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from analyzer import DailyAnalysis, StoryAnalysis, build_story_report, source_infos
-from main import OUTPUT, RAW_OUTPUT, write_json
+from main import OUTPUT, RAW_OUTPUT, publish
 from scraper import Article
 
 log = logging.getLogger("manual")
@@ -28,6 +28,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Uvoz ročne analize")
     parser.add_argument("analysis", type=Path)
     parser.add_argument("--raw", type=Path, default=RAW_OUTPUT)
+    parser.add_argument("--date", help="datum analize YYYY-MM-DD (privzeto današnji)")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
@@ -52,8 +53,8 @@ def main() -> None:
         articles_scraped=len(articles),
         stories=stories,
     )
-    write_json(OUTPUT, result.model_dump())
-    log.info("Zapisano: %s (%d zgodb)", OUTPUT, len(stories))
+    publish(result, args.date)
+    log.info("Zapisano: %s in arhiv (%d zgodb)", OUTPUT, len(stories))
 
 
 if __name__ == "__main__":

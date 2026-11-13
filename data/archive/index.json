@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-11-13",
+    "stories": 3,
+    "model": "Claude (ročna podrobna analiza)",
+    "is_mock": false
+  },
+  {
+    "date": "2026-10-21",
+    "stories": 3,
+    "model": "Claude (ročna analiza)",
+    "is_mock": false
+  }
+]

@@ -27,11 +27,35 @@ MAX_BODY_CHARS = 3500
 
 BiasLeaning = Literal["Levo", "Sredina-Levo", "Sredina", "Sredina-Desno", "Desno"]
 SidesRepresented = Literal["Obe strani", "Pretežno ena stran", "Samo ena stran"]
+Confidence = Literal["Visoka", "Srednja", "Nizka"]
+
+# Agencije in mediji, na katere se članki pogosto sklicujejo (za samodejno zaznavo virov)
+KNOWN_SOURCES = [
+    "STA", "MMC", "AFP", "Reuters", "AP", "Bloomberg", "CNN", "CBS", "CNBC", "BBC", "Fox News",
+    "New York Times", "New York Post", "Financial Times", "Politico", "Dnevnik",
+    "Siol", "24ur", "N1", "Nova24TV", "Mladina", "Žurnal24", "Svet24", "Demokracija", "Tanjug", "Hina",
+]
 
 
 # --------------------------------------------------------------------------- #
 # Sheme
 # --------------------------------------------------------------------------- #
+class LoadedTerm(BaseModel):
+    quote: str = Field(description="DOBESEDNA beseda ali besedna zveza iz avtorjevega besedila (ne iz citata vira).")
+    explanation: str = Field(description="Zakaj je izraz vrednostno obarvan in kaj sporoča bralcu.")
+    verified: bool = Field(default=False, description="Izpolni sistem: ali je izraz najden v besedilu.")
+
+
+class FactPresence(BaseModel):
+    fact: str = Field(description="Ključno dejstvo zgodbe, kratko in nevtralno.")
+    media: list[str] = Field(description="Imena medijev, ki to dejstvo navedejo.")
+
+
+class TextOverlap(BaseModel):
+    media: str
+    percent: int
+
+
 class MediaCoverage(BaseModel):
     media_name: str = Field(description="Ime medija, natančno kot je podano v vhodu.")
     article_title: str = Field(description="Naslov članka tega medija.")
@@ -64,6 +88,30 @@ class MediaCoverage(BaseModel):
         default_factory=list,
         description="Pomembne opombe k oceni (npr. delno dostopno besedilo, drugačen datum objave).",
     )
+    headline_leaning: BiasLeaning = Field(default="Sredina", description="Nagib samega naslova.")
+    body_leaning: BiasLeaning = Field(default="Sredina", description="Nagib besedila brez naslova.")
+    headline_analysis: str = Field(
+        default="", description="Katere tehnike uporablja naslov (vprašanje, citat, pretiravanje …) in s kakšnim učinkom."
+    )
+    main_frame: str = Field(
+        default="",
+        description="Prevladujoči okvir: npr. konflikt, odgovornost, gospodarske posledice, človeška zgodba, "
+        "škandal, moralnost, uradna izjava.",
+    )
+    frame_description: str = Field(default="", description="Kako je okvir uresničen v članku.")
+    lede_focus: str = Field(default="", description="Kaj članek postavi v uvod (prvi odstavek) in kaj s tem poudari.")
+    loaded_language: list[LoadedTerm] = Field(
+        default_factory=list, description="Vrednostno obarvani izrazi AVTORJA članka (ne citiranih virov)."
+    )
+    editorial_statements: list[str] = Field(
+        default_factory=list,
+        description="DOBESEDNI stavki, v katerih avtor izraža lastno mnenje ali sodbo, ne poročanja.",
+    )
+    unique_facts: list[str] = Field(
+        default_factory=list, description="Dejstva, ki jih navaja samo ta medij med primerjanimi."
+    )
+    reasoning: str = Field(default="", description="Utemeljitev ocene nagiba v 2–4 stavkih.")
+    confidence: Confidence = Field(default="Srednja", description="Zanesljivost ocene.")
 
 
 class StoryAnalysis(BaseModel):
@@ -73,6 +121,13 @@ class StoryAnalysis(BaseModel):
     )
     coverage_comparison: list[MediaCoverage]
     neutral_summary: str = Field(description="Kratek nevtralen povzetek celotne zgodbe.")
+    context: str = Field(default="", description="Ozadje, potrebno za razumevanje zgodbe (2–4 stavki).")
+    key_differences: list[str] = Field(
+        default_factory=list, description="3–6 najpomembnejših razlik v poročanju med mediji."
+    )
+    fact_matrix: list[FactPresence] = Field(
+        default_factory=list, description="6–12 ključnih dejstev in kateri mediji jih navedejo."
+    )
 
 
 class StoryCluster(BaseModel):
@@ -89,6 +144,12 @@ class CoverageReport(MediaCoverage):
     category: str = ""
     quotes_verified: bool = Field(
         default=False, description="Ali so vsi citati dobesedno najdeni v besedilu članka."
+    )
+    published: str | None = None
+    word_count: int = 0
+    cited_sources: list[str] = Field(default_factory=list, description="Agencije in mediji, navedeni v besedilu.")
+    text_overlap: list[TextOverlap] = Field(
+        default_factory=list, description="Delež avtorskega besedila (brez citatov), enakega besedilu drugega medija."
     )
 
 
@@ -131,7 +192,16 @@ ANALYSIS_RULES = """Si strog, nepristranski medijski analitik. Pravila:
 7. voices_heard našteje, kdo v članku dobi besedo; sides_represented pove, ali so predstavljena
    stališča vseh vpletenih strani. To ocenjuj ločeno od besedišča.
 8. factual_errors navaja samo trditve, ki so v nasprotju z drugimi viri ali z istim člankom.
-9. Vsa besedila (razen citatov) piši v slovenščini.
+9. headline_leaning in body_leaning ocenjuj ločeno: naslov je lahko obarvan, besedilo pa ne.
+10. loaded_language in editorial_statements vsebujeta SAMO avtorjevo besedilo, nikoli izjav
+   citiranih oseb (citat politika ni obarvanost medija). Vse prepiši dobesedno.
+11. main_frame, lede_focus in unique_facts opisujejo izbiro poudarkov: kaj je v uvodu, kaj je
+   samo v tem mediju, katera zgodba se pripoveduje.
+12. fact_matrix: 6–12 ključnih dejstev zgodbe in za vsakega imena medijev, ki ga navedejo.
+   key_differences: 3–6 najpomembnejših razlik med mediji.
+13. reasoning v 2–4 stavkih poveže oceno s konkretnimi dokazi; confidence je "Nizka", če je
+   besedilo kratko, delno dostopno ali so dokazi šibki.
+14. Vsa besedila (razen citatov) piši v slovenščini.
 """
 
 
@@ -239,6 +309,40 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
+def quote_in_text(quote: str, body: str) -> bool:
+    return _normalize(quote).strip("\"'. »«") in _normalize(body)
+
+
+_QUOTED = re.compile(r"[„“”\"»«][^„“”\"»«]{0,600}[„“”\"»«]")
+_WORDS = re.compile(r"\w+")
+
+
+def _shingles(text: str, n: int = 6) -> set[tuple[str, ...]]:
+    """n-gramska množica avtorskega besedila; citirane izjave so izločene."""
+    words = _WORDS.findall(_QUOTED.sub(" ", text).lower())
+    return {tuple(words[i:i + n]) for i in range(len(words) - n + 1)}
+
+
+def text_overlaps(article: Article, others: list[Article]) -> list[TextOverlap]:
+    """Koliko avtorskega besedila članka je enakega besedilu drugih člankov iste zgodbe."""
+    own = _shingles(article.body)
+    result = []
+    for other in others:
+        if other.id == article.id or other.language != article.language or not own:
+            continue
+        shared = len(own & _shingles(other.body))
+        percent = round(100 * shared / len(own))
+        if percent >= 5:
+            result.append(TextOverlap(media=other.source, percent=percent))
+    return sorted(result, key=lambda o: -o.percent)
+
+
+def cited_sources(text: str, own_name: str) -> list[str]:
+    # dovoli slovenske sklonske končnice (Reutersa, AFP-ja, CNN-a)
+    found = [s for s in KNOWN_SOURCES if re.search(rf"(?<!\w){re.escape(s)}(?:-?[a-zčšž]{{0,3}})(?!\w)", text)]
+    return [s for s in found if s.lower() not in own_name.lower()]
+
+
 def verify_quotes(quotes: list[str], body: str) -> tuple[list[str], bool]:
     """Vrne citate, ki dobesedno obstajajo v besedilu; drugi element pove, ali so preverjeni vsi."""
     norm_body = _normalize(body)
@@ -273,10 +377,23 @@ def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: i
         if article is None:
             log.warning("Model je vrnil neznan medij %r – izpuščam", item.media_name)
             continue
-        quotes, all_ok = verify_quotes(item.bias_evidence_quotes, f"{article.title}\n{article.body}")
+        full_text = f"{article.title}\n{article.body}"
+        quotes, all_ok = verify_quotes(item.bias_evidence_quotes, full_text)
+        for term in item.loaded_language:
+            term.verified = quote_in_text(term.quote, full_text)
+        editorial = [e for e in item.editorial_statements if quote_in_text(e, full_text)]
+        if len(editorial) < len(item.editorial_statements):
+            log.warning("%s: izpuščenih %d nedobesednih avtorskih stavkov", item.media_name,
+                        len(item.editorial_statements) - len(editorial))
         coverage.append(
             CoverageReport(
-                **item.model_dump(exclude={"article_title", "article_url", "bias_evidence_quotes"}),
+                **item.model_dump(exclude={"article_title", "article_url", "bias_evidence_quotes",
+                                           "editorial_statements"}),
+                editorial_statements=editorial,
+                published=article.published,
+                word_count=len(_WORDS.findall(article.body)),
+                cited_sources=cited_sources(article.body, article.source),
+                text_overlap=text_overlaps(article, cluster),
                 # naslov in URL vedno vzamemo iz zajetih podatkov, ne iz modela
                 article_title=article.title,
                 article_url=article.url,
@@ -291,6 +408,9 @@ def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: i
         topic_title=analysis.topic_title,
         international_baseline=analysis.international_baseline,
         neutral_summary=analysis.neutral_summary,
+        context=analysis.context,
+        key_differences=analysis.key_differences,
+        fact_matrix=analysis.fact_matrix,
         coverage_comparison=coverage,
         has_international_source=any(a.category == "mednarodni" for a in cluster),
     )

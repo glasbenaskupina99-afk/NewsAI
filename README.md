@@ -54,9 +54,16 @@ CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.htm
    dva medija (prednost imajo tisti z BBC). Če klic ne uspe, se uporabi leksikalno združevanje.
 3. **Analiza**: za vsako zgodbo en klic z `response_schema=StoryAnalysis`; odgovor se lokalno ponovno
    validira s Pydantic (ocene 1–10, nagib iz zaprtega nabora, 1–2 citata).
-4. **Dodatna polja**: kdo v članku dobi besedo (`voices_heard`, `sides_represented`), dejanske napake
+4. **Podrobna analiza** (od 13. 11. 2026): ločen nagib naslova in besedila, okvir zgodbe, poudarek uvoda,
+   obremenjeno besedišče avtorja z razlago, avtorjeva mnenja v novici, dejstva samo v enem mediju, utemeljitev
+   in zanesljivost ocene ter za vsako zgodbo ozadje, ključne razlike in matrika dejstev (kdo omeni kaj).
+   Samodejno se izračunajo število besed, navedeni viri (STA, MMC, Reuters …) in delež avtorskega besedila,
+   enakega drugemu mediju (6-gramsko prekrivanje brez citatov).
+5. **Arhiv**: vsak dan se shrani v `data/archive/YYYY-MM-DD.json`, seznam dni je v `data/archive/index.json`;
+   stran omogoča izbiro datuma (`?datum=YYYY-MM-DD`).
+6. **Dodatna polja**: kdo v članku dobi besedo (`voices_heard`, `sides_represented`), dejanske napake
    (`factual_errors`) in opombe k oceni (`notes`).
-5. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
+7. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
    preveri, ali dobesedno obstaja v besedilu članka – nepreverjeni citati so v UI označeni.
 
 ## GitHub Actions

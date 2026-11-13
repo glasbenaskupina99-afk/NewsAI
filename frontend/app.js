@@ -1,7 +1,6 @@
 "use strict";
 
-// Kandidatne poti do podatkov: lokalni strežnik v korenu repozitorija ali kopija ob frontendu.
-const DATA_URLS = ["../data/daily_analysis.json", "data/daily_analysis.json"];
+const DATA_BASES = ["../data/", "data/"];
 
 const LEANINGS = ["Levo", "Sredina-Levo", "Sredina", "Sredina-Desno", "Desno"];
 const LEAN_STYLE = {
@@ -131,8 +130,8 @@ function renderProfile(data) {
 
   document.getElementById("profile").replaceChildren(
     h("div", { class: "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900" },
-      h("h2", { class: "mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500" }, "Današnji profil medijev"),
-      h("p", { class: "mb-4 text-xs text-slate-500 dark:text-slate-400" }, "Povprečje ocen vseh analiziranih člankov dneva. Položaj na lestvici je povprečni nagib."),
+      h("h2", { class: "mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500" }, "Profil medijev za ta dan"),
+      h("p", { class: "mb-4 text-xs text-slate-500 dark:text-slate-400" }, "Povprečje ocen vseh analiziranih člankov tega dne. Položaj na lestvici je povprečni nagib."),
       h("div", { class: "space-y-3" }, rows.map((r) =>
         h("div", { class: "grid grid-cols-1 items-center gap-2 sm:grid-cols-[10rem_1fr_9rem]" },
           h("div", {},
@@ -234,6 +233,12 @@ function coverageColumn(c) {
       ? h("a", { href: url, target: "_blank", rel: "noopener noreferrer", class: "text-sm font-medium leading-snug text-slate-800 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:text-slate-100 dark:decoration-slate-600" }, c.article_title)
       : h("p", { class: "text-sm font-medium leading-snug" }, c.article_title),
     sensationalismMeter(c.sensationalism_score),
+    c.main_frame
+      ? h("div", { class: "text-xs text-slate-600 dark:text-slate-300" }, h("span", { class: "text-slate-500 dark:text-slate-400" }, "Okvir: "), c.main_frame)
+      : null,
+    c.headline_leaning && c.body_leaning && c.headline_leaning !== c.body_leaning
+      ? h("div", { class: "text-xs text-slate-600 dark:text-slate-300" }, `Naslov: ${c.headline_leaning} · besedilo: ${c.body_leaning}`)
+      : null,
     voicesBlock(c),
     listBlock("Dejanska napaka", c.factual_errors, {
       box: "bg-red-50 ring-1 ring-inset ring-red-200 dark:bg-red-950 dark:ring-red-900",
@@ -252,6 +257,115 @@ function coverageColumn(c) {
           : (c.notes || []).length
             ? h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "Ni ocenjeno – glej opombo.")
             : h("p", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznanih izpuščenih ključnih dejstev.")));
+}
+
+const CONFIDENCE_STYLE = {
+  "Visoka": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-100",
+  "Srednja": "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100",
+  "Nizka": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100",
+};
+
+function section(title, ...content) {
+  const body = content.flat().filter(Boolean);
+  if (!body.length) return null;
+  return h("div", { class: "space-y-1.5" },
+    h("h6", { class: "text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400" }, title),
+    body);
+}
+
+function para(text) {
+  return text ? h("p", { class: "text-sm leading-relaxed text-slate-700 dark:text-slate-200" }, text) : null;
+}
+
+function hasDetail(c) {
+  return Boolean(c.reasoning || c.main_frame || c.headline_analysis || (c.loaded_language || []).length ||
+    (c.editorial_statements || []).length || (c.unique_facts || []).length);
+}
+
+function overlapBlock(c) {
+  const overlaps = c.text_overlap || [];
+  const sources = c.cited_sources || [];
+  return [
+    sources.length
+      ? h("div", { class: "flex flex-wrap items-center gap-1 text-xs text-slate-600 dark:text-slate-300" },
+          "Navaja vire:", sources.map((s) => h("span", { class: "rounded bg-slate-100 px-1.5 py-0.5 dark:bg-slate-800" }, s)))
+      : h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "V besedilu ni navedenih agencij ali drugih medijev."),
+    overlaps.length
+      ? h("ul", { class: "space-y-0.5" }, overlaps.map((o) =>
+          h("li", { class: "text-xs text-slate-700 dark:text-slate-200" },
+            h("span", { class: "font-semibold tabular-nums" }, `${o.percent} %`), ` avtorskega besedila (brez citatov) je enakega kot pri mediju ${o.media}.`)))
+      : h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "Prevzemanja besedila od drugih primerjanih medijev ni zaznati (prag 5 %)."),
+  ];
+}
+
+function detailCard(c) {
+  const url = safeUrl(c.article_url);
+  const published = c.published ? formatDate(c.published) : null;
+  return h("article", { class: `rounded-xl border-l-4 bg-slate-50 p-4 dark:bg-slate-900/60 ${leanStyle(c.bias_leaning).border}` },
+    h("div", { class: "mb-3 flex flex-wrap items-start justify-between gap-2" },
+      h("div", {},
+        h("div", { class: "text-base font-bold" }, c.media_name),
+        url
+          ? h("a", { href: url, target: "_blank", rel: "noopener noreferrer", class: "text-sm underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:decoration-slate-600" }, c.article_title)
+          : h("p", { class: "text-sm" }, c.article_title),
+        h("div", { class: "mt-1 text-[11px] text-slate-500 dark:text-slate-400" },
+          [published, c.word_count ? `${c.word_count} besed` : null].filter(Boolean).join(" · "))),
+      h("div", { class: "flex flex-wrap items-center gap-1.5" },
+        leanBadge(c.bias_leaning),
+        c.confidence ? h("span", { class: `rounded px-1.5 py-0.5 text-[11px] font-semibold ${CONFIDENCE_STYLE[c.confidence] || ""}` }, `Zanesljivost: ${c.confidence.toLowerCase()}`) : null)),
+
+    h("div", { class: "grid gap-4 lg:grid-cols-2" },
+      h("div", { class: "space-y-4" },
+        section("Utemeljitev ocene", para(c.reasoning)),
+        section("Naslov",
+          h("div", { class: "flex flex-wrap gap-3 text-xs text-slate-600 dark:text-slate-300" },
+            h("span", {}, "Naslov: ", leanBadge(c.headline_leaning || c.bias_leaning)),
+            h("span", {}, "Besedilo: ", leanBadge(c.body_leaning || c.bias_leaning))),
+          para(c.headline_analysis)),
+        section("Okvir zgodbe",
+          c.main_frame ? h("p", { class: "text-sm font-semibold" }, c.main_frame) : null,
+          para(c.frame_description)),
+        section("Kaj je v uvodu", para(c.lede_focus)),
+        section("Viri in prevzemanje", overlapBlock(c))),
+      h("div", { class: "space-y-4" },
+        section("Obremenjeno besedišče avtorja",
+          (c.loaded_language || []).length
+            ? h("ul", { class: "space-y-2" }, c.loaded_language.map((t) =>
+                h("li", { class: "text-sm" },
+                  h("span", { class: "rounded bg-amber-100 px-1 font-medium text-amber-900 dark:bg-amber-900 dark:text-amber-100" }, `»${t.quote}«`),
+                  t.verified ? null : h("span", { class: "ml-1 text-[10px] font-semibold text-red-700 dark:text-red-300" }, "(ni najdeno v besedilu)"),
+                  h("span", { class: "text-slate-600 dark:text-slate-300" }, ` — ${t.explanation}`))))
+            : (c.reasoning ? h("p", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Avtor ne uporablja vrednostno obarvanih izrazov; ti so le v citatih virov.") : null)),
+        section("Avtorjeva mnenja v novici",
+          (c.editorial_statements || []).map((e) =>
+            h("blockquote", { class: "border-l-2 border-slate-300 pl-2 text-sm italic text-slate-700 dark:border-slate-600 dark:text-slate-200" }, `»${e}«`))),
+        section("Samo v tem mediju",
+          (c.unique_facts || []).length
+            ? h("ul", { class: "space-y-1" }, c.unique_facts.map((f) =>
+                h("li", { class: "flex gap-1.5 text-sm text-slate-700 dark:text-slate-200" },
+                  h("span", { class: "text-emerald-600", "aria-hidden": "true" }, "+"), f)))
+            : null))));
+}
+
+function factMatrix(story, coverage) {
+  const facts = story.fact_matrix || [];
+  if (!facts.length) return null;
+  const media = coverage.map((c) => c.media_name);
+  return h("div", {},
+    h("h4", { class: "mb-1 text-sm font-semibold" }, "Kdo navede katero dejstvo"),
+    h("p", { class: "mb-2 text-xs text-slate-500 dark:text-slate-400" }, "Ključna dejstva zgodbe in mediji, ki jih omenijo."),
+    h("div", { class: "overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800" },
+      h("table", { class: "w-full min-w-[32rem] text-left text-sm" },
+        h("thead", { class: "bg-slate-50 text-xs text-slate-500 dark:bg-slate-800/60 dark:text-slate-400" },
+          h("tr", {},
+            h("th", { class: "px-3 py-2 font-semibold", scope: "col" }, "Dejstvo"),
+            media.map((m) => h("th", { class: "px-2 py-2 text-center font-semibold", scope: "col" }, m)))),
+        h("tbody", { class: "divide-y divide-slate-100 dark:divide-slate-800" },
+          facts.map((f) => h("tr", {},
+            h("td", { class: "px-3 py-2 text-slate-700 dark:text-slate-200" }, f.fact),
+            media.map((m) => f.media.includes(m)
+              ? h("td", { class: "px-2 py-2 text-center font-bold text-emerald-600", "aria-label": "navede" }, "✓")
+              : h("td", { class: "px-2 py-2 text-center text-slate-300 dark:text-slate-600", "aria-label": "ne navede" }, "–"))))))));
 }
 
 function quotesCard(coverage) {
@@ -283,6 +397,9 @@ function storyCard(story, index) {
           : h("span", { class: "rounded-full bg-amber-100 px-2 py-0.5 font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100" }, "Brez mednarodnega vira")),
       h("h3", { class: "text-xl font-bold leading-tight sm:text-2xl" }, story.topic_title),
       h("p", { class: "mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300" }, story.neutral_summary),
+      story.context
+        ? h("p", { class: "mt-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400" }, h("span", { class: "font-semibold" }, "Ozadje: "), story.context)
+        : null,
       h("div", { class: "mt-4" },
         h("div", { class: "mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500" }, "Pokritost po nagibu"),
         distributionBar(coverage),
@@ -292,10 +409,22 @@ function storyCard(story, index) {
       h("div", { class: "rounded-xl bg-slate-900 p-4 text-slate-100 dark:bg-slate-800" },
         h("div", { class: "mb-1 text-xs font-semibold uppercase tracking-wide text-emerald-300" }, "Mednarodno izhodišče dejstev"),
         h("p", { class: "text-sm leading-relaxed" }, story.international_baseline)),
+      (story.key_differences || []).length
+        ? h("div", { class: "rounded-xl border border-slate-200 p-4 dark:border-slate-800" },
+            h("h4", { class: "mb-2 text-sm font-semibold" }, "Ključne razlike v poročanju"),
+            h("ol", { class: "list-decimal space-y-1.5 pl-5 text-sm text-slate-700 dark:text-slate-200" },
+              story.key_differences.map((d) => h("li", {}, d))))
+        : null,
       h("div", {},
         h("h4", { class: "mb-3 text-sm font-semibold" }, "Kdo poroča in kaj je zamolčal"),
         h("div", { class: "grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" }, coverage.map(coverageColumn))),
-      quotesCard(coverage)));
+      factMatrix(story, coverage),
+      quotesCard(coverage),
+      coverage.some(hasDetail)
+        ? h("div", {},
+            h("h4", { class: "mb-3 text-sm font-semibold" }, "Podrobna analiza po medijih"),
+            h("div", { class: "space-y-3" }, coverage.filter(hasDetail).map(detailCard)))
+        : null));
 }
 
 function renderError(message) {
@@ -308,25 +437,60 @@ function renderError(message) {
         ", nato odprite ", h("code", { class: "font-mono" }, "http://localhost:8000/frontend/"), ".")));
 }
 
-async function loadData() {
+// Mapa s podatki: lokalni strežnik v korenu repozitorija (../data/) ali kopija ob frontendu (data/).
+let dataBase = null;
+
+async function fetchJson(path) {
+  const bases = dataBase ? [dataBase] : DATA_BASES;
   let lastError = "";
-  for (const url of DATA_URLS) {
+  for (const base of bases) {
     try {
-      const res = await fetch(url, { cache: "no-store" });
-      if (res.ok) return await res.json();
-      lastError = `${url}: HTTP ${res.status}`;
+      const res = await fetch(base + path, { cache: "no-store" });
+      if (res.ok) {
+        dataBase = base;
+        return await res.json();
+      }
+      lastError = `${base}${path}: HTTP ${res.status}`;
     } catch (err) {
-      lastError = `${url}: ${err.message}`;
+      lastError = `${base}${path}: ${err.message}`;
     }
   }
   throw new Error(lastError);
 }
 
+function formatDay(isoDate) {
+  const d = new Date(`${isoDate}T12:00:00`);
+  return Number.isNaN(d.getTime()) ? isoDate : d.toLocaleDateString("sl-SI", { day: "numeric", month: "long", year: "numeric" });
+}
+
+function renderDates(index, current) {
+  if (!index || index.length < 2) return;
+  document.getElementById("dates").replaceChildren(
+    h("div", { class: "flex flex-wrap items-center gap-2" },
+      h("span", { class: "text-xs font-semibold uppercase tracking-wide text-slate-500" }, "Arhiv"),
+      index.map((e) => h("a", {
+        href: `?datum=${encodeURIComponent(e.date)}`,
+        "aria-current": e.date === current ? "page" : null,
+        class: e.date === current
+          ? "rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-white dark:bg-slate-100 dark:text-slate-900"
+          : "rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700 hover:border-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200",
+      }, `${formatDay(e.date)} · ${plural(e.stories, WORDS.story)}`))));
+}
+
 async function init() {
   renderLegend();
+  const requested = new URLSearchParams(location.search).get("datum");
+  let index = null;
+  try {
+    index = await fetchJson("archive/index.json");
+  } catch {
+    // arhiva še ni – prikažemo samo najnovejšo analizo
+  }
+  const entry = index && requested ? index.find((e) => e.date === requested) : null;
+
   let data;
   try {
-    data = await loadData();
+    data = await fetchJson(entry ? `archive/${entry.date}.json` : "daily_analysis.json");
   } catch (err) {
     renderError(err.message);
     return;
@@ -335,6 +499,7 @@ async function init() {
     renderError("Datoteka nima pričakovane strukture (manjka seznam »stories«).");
     return;
   }
+  renderDates(index, entry ? entry.date : index?.[0]?.date);
   renderMeta(data);
   renderProfile(data);
   renderToc(data);

@@ -11,7 +11,10 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import analyzer  # noqa: E402
-from analyzer import DailyAnalysis, analyze_story, build_mock_analysis, cluster_lexical, verify_quotes  # noqa: E402
+from analyzer import (  # noqa: E402
+    DailyAnalysis, analyze_story, build_mock_analysis, cited_sources, cluster_lexical, text_overlaps,
+    verify_quotes,
+)
 from scraper import Article, Source, fetch_feed  # noqa: E402
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -111,6 +114,20 @@ class AnalyzerTest(unittest.TestCase):
             generate_content=lambda **kw: SimpleNamespace(text=json.dumps(bad))))
         with mock.patch.object(analyzer.time, "sleep"), self.assertRaises(RuntimeError):
             analyzer._generate(client, "m", "p", analyzer.StoryAnalysis, retries=1)
+
+    def test_text_overlap_ignores_shared_quotes(self):
+        agency = "Minister je danes na novinarski konferenci predstavil predlog proračuna za prihodnje leto in poudaril stabilnost."
+        quote = "„Proračun je stabilen in finance so varne, nikomur ne bomo nič vzeli,“ je dejal."
+        a = _article("RTV", "javni", "t", agency + " " + quote)
+        b = _article("N24", "alternativni", "t", "Uvod drugačen od drugih. " + agency)
+        c = _article("X", "komercialni", "t", "Popolnoma drugačno besedilo brez skupnih delov. " + quote)
+        overlaps = {o.media: o.percent for o in text_overlaps(a, [a, b, c])}
+        self.assertGreaterEqual(overlaps["N24"], 80)
+        self.assertNotIn("X", overlaps)
+
+    def test_cited_sources_excludes_own_name(self):
+        text = "Kot poroča STA, je minister po navedbah MMC in Reutersa dejal, da ..."
+        self.assertEqual(cited_sources(text, "MMC RTV SLO"), ["STA", "Reuters"])
 
     def test_mock_is_valid_schema(self):
         mock = build_mock_analysis()

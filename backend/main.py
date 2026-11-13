@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 OUTPUT = DATA_DIR / "daily_analysis.json"
 RAW_OUTPUT = DATA_DIR / "raw_articles.json"
+ARCHIVE_DIR = DATA_DIR / "archive"
 
 log = logging.getLogger("pipeline")
 
@@ -31,6 +32,28 @@ def write_json(path: Path, payload: dict) -> None:
     tmp = path.with_suffix(".tmp")
     tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     tmp.replace(path)
+
+
+def publish(result, date: str | None = None) -> None:
+    """Zapiše analizo kot najnovejšo in v arhiv po dnevih (data/archive/YYYY-MM-DD.json + index.json)."""
+    date = date or result.generated_at[:10]
+    payload = result.model_dump()
+    write_json(ARCHIVE_DIR / f"{date}.json", payload)
+
+    index_path = ARCHIVE_DIR / "index.json"
+    try:
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        index = []
+    index = [e for e in index if e["date"] != date] + [
+        {"date": date, "stories": len(result.stories), "model": result.model, "is_mock": result.is_mock}
+    ]
+    index.sort(key=lambda e: e["date"], reverse=True)
+    write_json(index_path, index)
+
+    # daily_analysis.json je vedno najnovejši dan v arhivu
+    if index[0]["date"] == date:
+        write_json(OUTPUT, payload)
 
 
 def _existing_is_real() -> bool:
@@ -72,7 +95,10 @@ def run(limit: int, force_mock: bool, max_stories: int, scrape_only: bool = Fals
                 log.error("Analiza ni vrnila nobene zgodbe – obstoječa analiza ostane nespremenjena")
                 return 1
 
-    write_json(OUTPUT, result.model_dump())
+    if result.is_mock:
+        write_json(OUTPUT, result.model_dump())  # demo podatki ne gredo v arhiv
+    else:
+        publish(result)
     log.info("Zapisano: %s (%d zgodb, mock=%s)", OUTPUT.relative_to(ROOT), len(result.stories), result.is_mock)
     return 0
 

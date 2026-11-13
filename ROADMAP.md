@@ -5,6 +5,8 @@ Nova24TV, BBC World), Gemini analizo s Pydantic shemo, ročnim uvozom analiz (`m
 preverjanjem dobesednih citatov in statično stranjo na GitHub Pages. Objavljene so 3 ročno
 analizirane zgodbe z 11 mediji.
 
+Stanje 13. 11. 2026: ✅ = narejeno (arhiv po dnevih, ločena ocena naslova in besedila, merjenje prevzemanja besedila med primerjanimi mediji in navedenih virov, izbira datuma na strani). Pri 1.3.1 manjka primerjava z izvirnim besedilom STA, ki ni prosto dostopno.
+
 Obseg: **S** = do pol dneva, **M** = 1–3 dni, **L** = teden ali več.
 
 ---
@@ -17,7 +19,7 @@ Cilj: stran se vsak dan sama posodobi s pravimi podatki, brez ročnega dela.
 |---|---|---|---|
 | 1.1.1 | Dodati `GEMINI_API_KEY` v GitHub secrets in izvesti prvi samodejni zagon | Brez ključa samodejne analize ni | S |
 | 1.1.2 | Preveriti RSS za N1 (`/feed/`) in poiskati pravi RSS za Mladino | N1 je dodan nepreverjeno, Mladina ne deluje | S |
-| 1.1.3 | **Arhiv po dnevih**: `data/archive/YYYY-MM-DD.json` + `data/index.json` | Zdaj vsak zagon prepiše prejšnji dan | S |
+| 1.1.3 ✅ | **Arhiv po dnevih**: `data/archive/YYYY-MM-DD.json` + `data/index.json` | Zdaj vsak zagon prepiše prejšnji dan | S |
 | 1.1.4 | Samodejne in ročne analize se **združujejo**, ne prepisujejo (ročne imajo prednost) | Ročno dodani mediji (Delo, Svet24 …) bi se ob naslednjem zagonu izgubili | M |
 | 1.1.5 | Opozorilo (GitHub issue), ko vir 2 dni zapored ne vrne člankov | Okvara vira zdaj ostane neopažena | S |
 | 1.1.6 | Posodobitev GitHub Actions na Node 24 (`checkout@v5`, `setup-python@v6` …) | Actions že opozarjajo na opustitev Node 20 | S |
@@ -40,9 +42,9 @@ Cilj: ocene, ki jim bralec lahko zaupa in jih lahko preveri.
 
 | # | Naloga | Zakaj | Obseg |
 |---|---|---|---|
-| 1.3.1 | **Zaznava agencijskih vesti (STA)**: podobnost besedil med mediji, oznaka »X % enako besedilu STA« | Večina razlik je bila v tem, kaj je medij k vesti STA dodal ali izpustil | M |
+| 1.3.1 (delno) | **Zaznava agencijskih vesti (STA)**: podobnost besedil med mediji, oznaka »X % enako besedilu STA« | Večina razlik je bila v tem, kaj je medij k vesti STA dodal ali izpustil | M |
 | 1.3.2 | Prikaz **razlik glede na skupno jedro** (kaj je medij dodal / odvzel), ne le glede na BBC | Pri slovenskih temah mednarodnega sidra pogosto ni | M |
-| 1.3.3 | Ločena ocena naslova in besedila (`headline_leaning`, `body_leaning`) | Pri Nova24TV (ESČP) je bil obarvan predvsem naslov | S |
+| 1.3.3 ✅ | Ločena ocena naslova in besedila (`headline_leaning`, `body_leaning`) | Pri Nova24TV (ESČP) je bil obarvan predvsem naslov | S |
 | 1.3.4 | Pisna lestvica za senzacionalizem in nagib (z zgledi za vsako stopnjo) v navodilih modelu | Doslednost ocen med dnevi in zgodbami | S |
 | 1.3.5 | Testni nabor 20–30 ročno ocenjenih člankov in merjenje ujemanja modela | Brez tega ne vemo, kako dober je model | M |
 | 1.3.6 | Navzkrižno preverjanje z drugim modelom; ob neskladju oznaka »negotova ocena« | Zmanjša vpliv posamezne napačne ocene | M |
@@ -54,7 +56,7 @@ Cilj: bralec hitro najde, primerja in razume.
 
 | # | Naloga | Zakaj | Obseg |
 |---|---|---|---|
-| 1.4.1 | Izbira datuma (arhiv) in povezava na posamezno zgodbo (`#story-…` z datumom) | Deljenje in pregled za nazaj | S (po 1.1.3) |
+| 1.4.1 ✅ | Izbira datuma (arhiv) in povezava na posamezno zgodbo (`#story-…` z datumom) | Deljenje in pregled za nazaj | S (po 1.1.3) |
 | 1.4.2 | Filter po mediju in pogled »vse zgodbe izbranega medija« | Primerjava enega medija skozi čas | M |
 | 1.4.3 | **Profil medija skozi čas**: povprečni senzacionalizem, nagib, delež »samo ena stran« po tednih | Vzorci postanejo vidni šele čez več dni | M |
 | 1.4.4 | Stran **»Metodologija«**: kako nastanejo ocene, omejitve, kdo jih je pripravil (model / ročno) | Preglednost in zaupanje | S |

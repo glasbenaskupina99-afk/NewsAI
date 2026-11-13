@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T21:18:30+00:00",
-  "model": "Claude (ročna analiza)",
+  "generated_at": "2026-11-13T22:14:40+00:00",
+  "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
     {
@@ -34,409 +34,762 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 89,
+  "articles_scraped": 7,
   "stories": [
     {
-      "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
-      "international_baseline": "Po srečanju Putina in ameriškega odposlanca Witkoffa v Sankt Peterburgu je Putinov svetovalec Ušakov dejal, da je Rusija »načeloma pripravljena« na nov krog pogovorov, morda okoli 10. novembra v Abu Dabiju, osredotočen na varnostni sistem po koncu vojne. Zelenski je tristransko srečanje podprl in se strinjal z zamrznitvijo fronte. Rusija je pogovore, prekinjene februarja, mesece zavračala, ker meni, da zmaguje na bojišču; Ukrajina in evropski zavezniki Putinovo trditev o napredovanju zavračajo. Pogovori potekajo ob sporu med Kijevom in Washingtonom: Trump je odpravil sankcije za ruski dizel, kar so kritizirali demokratski in nekateri republikanski kongresniki, Kijev je ZDA obtožil zadrževanja obveščevalnih podatkov, Trump pa je dejal, da Ukrajina potrebuje novega predsednika. Pred srečanjem je Rusija izpustila ameriškega državljana Stephena Hubbarda.",
-      "coverage_comparison": [
-        {
-          "media_name": "BBC World",
-          "article_title": "Russia says it is ready to resume talks with Ukraine and US to end war",
-          "article_url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
-          "sensationalism_score": 1,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Ukraine and its European allies are disputing Putin's claim, pointing to a virtual stalemate on the front.",
-            "Russia has for months refused as it believes it is winning on the battlefield"
-          ],
-          "omitted_facts": [],
-          "voices_heard": [
-            "Jurij Ušakov (Kremelj)",
-            "Volodimir Zelenski",
-            "Steve Witkoff",
-            "Jared Kushner",
-            "ameriški uradnik",
-            "Donald Trump",
-            "Marco Rubio",
-            "JD Vance"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [],
-          "category": "mednarodni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "MMC RTV SLO",
-          "article_title": "Kremelj privolil v obnovitev mirovnih pogajanj med Rusijo, Ukrajino in ZDA",
-          "article_url": "https://www.rtvslo.si/svet/vojna-v-ukrajini/kremelj-privolil-v-obnovitev-mirovnih-pogajanj-med-rusijo-ukrajino-in-zda/797676",
-          "sensationalism_score": 2,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Kot je ocenil Ušakov, je Witkoff glede pogovorov z Zelenskim omenil nekaj novih vidikov v pristopih Evrope in Kijeva, vendar v njih ni bilo veliko vsebine.",
-            "Ameriški predsednik Donald Trump v zadnjem času krepi pritisk na Ukrajino, naj sklene kakršen koli dogovor o končanju vojne."
-          ],
-          "omitted_facts": [
-            "Da je Rusija pogovore mesece zavračala, ker meni, da zmaguje na bojišču, ter da Ukrajina in zavezniki Putinovo trditev o napredovanju zavračajo.",
-            "Kritike demokratskih in nekaterih republikanskih kongresnikov ter Ukrajine in evropskih zaveznikov zaradi omilitve sankcij za ruski dizel (omilitev sankcij je omenjena, kritike ne).",
-            "Spor med Kijevom in Washingtonom: Trumpovo izjavo, da Ukrajina potrebuje novega predsednika, in obtožbe o zadrževanju obveščevalnih podatkov."
-          ],
-          "voices_heard": [
-            "Steve Witkoff",
-            "Jurij Ušakov (Kremelj)",
-            "Volodimir Zelenski",
-            "Donald Trump",
-            "Aleksander Novak"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [],
-          "category": "javni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "24ur",
-          "article_title": "Witkoff tri ure pri Putinu: Rusija pripravljena na nove tristranske pogovore",
-          "article_url": "https://www.24ur.com/novice/tujina/po-konstruktivnih-pogovorih-z-zelenskim-witkoff-odhaja-k-putinu.html",
-          "sensationalism_score": 2,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Ameriški predsednik Donald Trump v zadnjem času krepi pritisk na Ukrajino, naj sklene kakršen koli dogovor o končanju vojne.",
-            "Kijev je sicer pred dogodkom v Rusiji ZDA obtožil, da zadržujejo ključne obveščevalne podatke, kar je Washington zavrnil kot \"škandalozno\" obtožbo, piše BBC."
-          ],
-          "omitted_facts": [
-            "Da je Zelenski pripravljen sprejeti zamrznitev vojne vzdolž sedanje fronte.",
-            "Omilitev ameriških sankcij za ruski dizel in kritike tega koraka.",
-            "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
-            "Trumpovo izjavo, da Ukrajina potrebuje novega predsednika."
-          ],
-          "voices_heard": [
-            "Steve Witkoff",
-            "Jurij Ušakov (Kremelj)",
-            "Volodimir Zelenski",
-            "Alexander Stubb",
-            "Donald Trump"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Nova24TV",
-          "article_title": "Srečanje Witkoffa s Putinom – smo res bližje miru v Ukrajini?",
-          "article_url": "https://nova24tv.si/srecanje-witkoffa-s-putinom-smo-res-blizje-miru-v-ukrajini/",
-          "sensationalism_score": 4,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Iz Kremlja so sporočili, da so tristranske pogovore pripravljeni obnoviti novembra.",
-            "Svetovalec Kremlja Ušakov je danes ocenil, da je Witkoff omenil nekaj novih vidikov v pristopih Evrope in Kijeva, vendar v njih ni bilo veliko vsebine."
-          ],
-          "omitted_facts": [
-            "Da je Zelenski tristranske pogovore podprl in se zavzel za zamrznitev fronte.",
-            "Predvideni datum in kraj pogovorov (okoli 10. novembra v Abu Dabiju) ter njihov poudarek na varnosti po koncu vojne.",
-            "Omilitev ameriških sankcij za ruski dizel in kritike tega koraka.",
-            "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
-            "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
-          ],
-          "voices_heard": [
-            "Steve Witkoff",
-            "Jurij Ušakov (Kremelj)",
-            "Vladimir Putin (po Reutersu)"
-          ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Ukrajinska stran v članku ne dobi besede."
-          ],
-          "category": "alternativni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "N1",
-          "article_title": "Rusija mirovna pogajanja z Ukrajino in ZDA pripravljena obnoviti novembra",
-          "article_url": "https://n1info.si/novice/svet/rusija-mirovna-pogajanja-z-ukrajino-in-zda-pripravljena-obnoviti-novembra/",
-          "sensationalism_score": 1,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Iz Kremlja so po sestanku ameriškega posebnega odposlanca Steva Witkoffa in ruskega predsednika Vladimirja Putina sporočili, da so tristranske pogovore o končanju vojne v Ukrajini pripravljeni obnoviti novembra.",
-            "Svetovalec Kremlja Ušakov je danes ocenil, da je Witkoff omenil nekaj novih vidikov v pristopih Evrope in Kijeva, vendar v njih ni bilo veliko vsebine."
-          ],
-          "omitted_facts": [
-            "Da je Zelenski podprl tristransko srečanje in želi, da se začne čim prej.",
-            "Omilitev ameriških sankcij za ruski dizel in kritike tega koraka (dobava dizla je omenjena, sankcije ne).",
-            "Da Rusija meni, da zmaguje na bojišču, Ukrajina in zavezniki pa to zavračajo.",
-            "Spor med Kijevom in Washingtonom (izjava o novem ukrajinskem predsedniku, obtožbe o obveščevalnih podatkih)."
-          ],
-          "voices_heard": [
-            "Steve Witkoff",
-            "Jurij Ušakov (Kremelj)",
-            "Volodimir Zelenski",
-            "Aleksander Novak"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [
-            "V uvodu piše, da je Witkoff prišel »v Moskvo«; srečanje je bilo v Sankt Peterburgu, kot navaja tudi nadaljevanje istega članka."
-          ],
-          "notes": [],
-          "category": "komercialni",
-          "quotes_verified": true
-        }
-      ],
-      "neutral_summary": "Kremelj je po srečanju Putina z ameriškim odposlancem Witkoffom sporočil, da je pripravljen novembra obnoviti tristranske mirovne pogovore z Ukrajino in ZDA. Zelenski je pogovore podprl in predlagal zamrznitev fronte kot prvi korak. Srečanje je spremljala izpustitev ameriškega državljana Stephena Hubbarda, potekalo pa je ob napetostih med Kijevom in Washingtonom zaradi ameriškega pritiska na Ukrajino in omilitve sankcij za ruski dizel.",
-      "id": "story-1",
-      "has_international_source": true
-    },
-    {
-      "topic_title": "Gregorčič zaradi predčasnega prenehanja mandata v programskem svetu RTV vložil pritožbo na ESČP",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča. Izhodišče so dejstva, ki jih navajata oba vira: nekdanji predsednik programskega sveta RTV Slovenija Peter Gregorčič je s pravnikom Matejem Avbljem vložil pritožbo na ESČP, ker se je njegov mandat po noveli zakona o RTV iz leta 2022 končal neposredno na podlagi zakona. Ustavnemu sodišču očitata, da ni preverilo konkretnih razlogov za prenehanje mandata, da je odločalo skoraj tri leta in sedem mesecev, brez javne obravnave in z različnimi merili za stranke (s sklicem na ločeno mnenje sodnika Marka Starmana), ter da ni odgovorilo na predlog za predložitev vprašanj Sodišču EU. Predlagala sta prednostno obravnavo.",
+      "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro obeh virov: finančni minister Andrej Šircelj je v izjavi zavrnil opozorila, da bi bila zaradi proračuna ogrožena izplačila pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov, ter napovedal, da novega zujfa ne bo. Okoli 300 milijonov evrov prihrankov pripisuje gospodarnejši porabi in strožjemu preverjanju upravičenosti s povezovanjem evidenc. Napovedal je zmanjševanje dolga za vsaj 0,5 odstotne točke BDP letno, rebalans proračuna ob sprejetju razvojnega (interventnega) zakona in plačne stebre po koalicijski pogodbi.",
       "coverage_comparison": [
         {
           "media_name": "MMC RTV SLO",
-          "article_title": "Gregorčič v zadevi RTV Slovenija vložil pritožbo na ESČP",
-          "article_url": "https://www.rtvslo.si/slovenija/gregorcic-v-zadevi-rtv-slovenija-vlozil-pritozbo-na-escp/797667",
-          "sensationalism_score": 1,
+          "article_title": "Šircelj: Ne gre za to, da bi komur koli kaj vzeli, gre izključno za to, da bomo gospodarno ravnali",
+          "article_url": "https://www.rtvslo.si/slovenija/sircelj-ne-gre-za-to-da-bi-komur-koli-kaj-vzeli-gre-izkljucno-za-to-da-bomo-gospodarno-ravnali/799990",
+          "sensationalism_score": 2,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Ustavno sodišče je ukrep ocenilo kot primeren za uresničevanje pravice do svobode izražanja posameznikov.",
-            "Gregorčič v danes vloženi pritožbi zatrjuje, da je sodišče sicer res presojalo ustavnost zakona, ni pa preverilo, ali so za predčasno prenehanje njegovega mandata obstajali konkretni razlogi."
+            "Opozicija kritična do Šircljevih besed o izplačilu socialnih pravic",
+            "Finančni minister Andrej Šircelj je zavrnil navedbe, da bi lahko zaradi proračunskih razmer nastale zamude ali omejitve pri izplačilih socialnih transferjev"
           ],
           "omitted_facts": [
-            "Da je ministrstvo za kulturo avgusta pripravilo nov predlog zakona, ki naj bi znova predvideval predčasno prenehanje mandatov organov RTV.",
-            "Sklic pritožnikov na sodbi ESČP Baka proti Madžarski in Grzęda proti Poljski.",
-            "Da pritožnika poudarjata, da pritožba ni politična nezaupnica ustavnemu sodišču in da bosta sprejela tudi odločitev, da kršitev ni bilo."
+            "Konkretni primer obveznosti, ki po ministru niso bile vključene v proračun (posledice dviga minimalne plače)."
           ],
           "voices_heard": [
-            "Peter Gregorčič",
-            "Matej Avbelj",
-            "ustavno sodišče (utemeljitev odločbe)"
+            "Andrej Šircelj (minister za finance)",
+            "Asta Vrečko (Levica)",
+            "Klemen Boštjančič (Svoboda)"
           ],
           "sides_represented": "Obe strani",
           "factual_errors": [],
-          "notes": [
-            "RTV SLO poroča o zadevi, v kateri je sam udeležen."
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov je dolg dobesedni citat ministra z navedbo govorca. Povzame vladno sporočilo, vendar kot jasno pripisano izjavo, brez uredniškega vrednotenja.",
+          "main_frame": "Uradna izjava in politični spor",
+          "frame_description": "Prvi del članka povzema ministrovo izjavo in odgovore na novinarska vprašanja, drugi del (vmesni naslov »Opozicija kritična do Šircljevih besed …«) predstavi odziva dveh opozicijskih strank. Zgodba je tako soočenje vladnega zagotovila in opozicijskega dvoma.",
+          "lede_focus": "Uvod povzame, da je minister zavrnil navedbe o zamudah izplačil in jih označil za zavajajoče; ocena »zavajajoče« je pripisana ministru.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Socialne pravice so v proračunu določene v višini 2,2 milijarde evrov.",
+            "Časovnica prenove plačnega sistema še ni določena.",
+            "Referendum o interventnem zakonu bo 6. decembra.",
+            "Odziva Levice in Svobode, vključno z Boštjančičevo primerjavo z zujfom (»vsaj zakon, imel je besedilo«)."
           ],
+          "reasoning": "Ministrove trditve so dosledno pripisane (»je poudaril«, »po njegovih besedah«) z nevtralnimi glagoli. Vrednostni izrazi (»zavajanje«, »politika strahu«) se pojavljajo le v citatih. Kritika dveh opozicijskih strank dobi samostojen del članka in podoben obseg kot posamezni ministrovi odgovori. Naslov vladno sporočilo povzame kot pripisan citat, kar je običajna praksa.",
+          "confidence": "Visoka",
           "category": "javni",
-          "quotes_verified": true
+          "quotes_verified": true,
+          "published": "2026-11-13T09:27:59+00:00",
+          "word_count": 1088,
+          "cited_sources": [],
+          "text_overlap": []
         },
         {
           "media_name": "Nova24TV",
-          "article_title": "Bo ustavno sodišče dobilo zaušnico ESČP pri ugrabitvi RTV?",
-          "article_url": "https://nova24tv.si/bo-ustavno-sodisce-dobilo-zausnico-escp-pri-ugrabitvi-rtv/",
-          "sensationalism_score": 8,
-          "bias_leaning": "Sredina-Desno",
+          "article_title": "Šircelj zavrača strašenje opozicije: “Nikomur ne bomo nič vzeli, vse zagotovljene pravice bomo izplačali”",
+          "article_url": "https://nova24tv.si/sircelj-zavraca-strasenje-opozicije-nikomur-ne-bomo-nic-vzeli-vse-zagotovljene-pravice-bomo-izplacali/",
+          "sensationalism_score": 5,
+          "bias_leaning": "Desno",
           "bias_evidence_quotes": [
-            "Bo ustavno sodišče dobilo zaušnico ESČP pri ugrabitvi RTV?",
-            "Bo večletni spor končno dobil pravni epilog?"
+            "Šircelj zavrača strašenje opozicije",
+            "v luči zavajanj in laži s strani opozicijskih strank"
           ],
           "omitted_facts": [
-            "Utemeljitev ustavnega sodišča: hkratna zamenjava vseh organov je bila po njegovi oceni nujna za takojšnjo depolitizacijo in skladna z ustavo.",
-            "Da je bila novela zakona o RTV iz leta 2022 potrjena na referendumu."
+            "Odziva opozicije (Levica, Svoboda) in njuni konkretni očitki o zmanjšanju sredstev za transferje, šolstvo in zdravstvo.",
+            "Znesek 2,2 milijarde evrov za socialne pravice.",
+            "Datum referenduma o interventnem zakonu (6. december).",
+            "Da časovnica prenove plačnega sistema še ni določena."
           ],
           "voices_heard": [
-            "Peter Gregorčič",
-            "Matej Avbelj"
+            "Andrej Šircelj (minister za finance)"
           ],
           "sides_represented": "Samo ena stran",
           "factual_errors": [],
           "notes": [
-            "Stališče ustavnega sodišča oziroma zakonodajalca v članku ni predstavljeno."
+            "Drugi del članka je povzet po MMC (»po navedbah MMC«). Stavek, ki je v članku MMC novinarjev povzetek v odvisnem govoru (»da spremembe izhajajo iz koalicijske pogodbe …«), je tu v narekovajih, kot da bi bil dobeseden ministrov citat."
           ],
+          "headline_leaning": "Desno",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Naslov uporabi ministrov izraz »strašenje opozicije« brez narekovajev, kot uredniško ugotovitev, in mu doda ministrov citat. Bralcu tako že pred branjem sporoči, da so opozorila opozicije neutemeljena.",
+          "main_frame": "Vlada se brani pred napadi opozicije",
+          "frame_description": "Zgodba je postavljena kot ministrova obramba pred neresničnimi trditvami opozicije. Opozicija ne dobi besede, njene trditve pa so v uvodu z avtorjevimi besedami označene kot »zavajanja in laži«. Vmesni naslovi (»Proračun je stabilen in finance so varne«, »Zavrača strašenje …«) prevzemajo ministrova sporočila.",
+          "lede_focus": "Uvod začne z ministrovim citatom in ga postavi »v luči zavajanj in laži s strani opozicijskih strank« ter navede, da je minister opozicijo »pozval in prosil, naj preneha s tovrstnim strašenjem«.",
+          "loaded_language": [
+            {
+              "quote": "strašenje opozicije",
+              "explanation": "V naslovu je ministrov izraz zapisan kot dejstvo, ne kot njegova trditev.",
+              "verified": true
+            },
+            {
+              "quote": "zavajanj in laži s strani opozicijskih strank",
+              "explanation": "Avtor sam (ne minister) trdi, da opozicija laže; za trditev ne navede dokaza.",
+              "verified": true
+            },
+            {
+              "quote": "je bil jasen",
+              "explanation": "Ocenjevalni glagol govorjenja, ki ministrovo izjavo predstavi kot prepričljivo; v članku se ponovi dvakrat.",
+              "verified": true
+            },
+            {
+              "quote": "navaja in pomirja",
+              "explanation": "Glagol »pomirja« ministru pripiše vlogo tistega, ki odpravlja neupravičen strah.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "v luči zavajanj in laži s strani opozicijskih strank v zvezi z izplačili različnih prejemkov iz proračuna"
+          ],
+          "unique_facts": [
+            "Minister je kot primer neupoštevanih obveznosti navedel posledice dviga minimalne plače.",
+            "Minister je opozicijo »pozval in prosil«, naj preneha s strašenjem.",
+            "Citat »Mi poudarjamo vizijo, drugi strašijo«."
+          ],
+          "reasoning": "Večina besedila zvesto povzema ministrovo izjavo. Nagib pa izhaja iz treh stvari: naslov ministrov izraz »strašenje« predstavi kot dejstvo; avtor v uvodu z lastnimi besedami trdi, da opozicija širi »zavajanja in laži«; opozicija sploh ne dobi besede. Besedilo brez uvoda je zmerneje obarvano, zato je ocena besedila Sredina-Desno, naslova in celote pa Desno.",
+          "confidence": "Visoka",
           "category": "alternativni",
-          "quotes_verified": true
+          "quotes_verified": true,
+          "published": "2026-11-13T12:45:11+00:00",
+          "word_count": 677,
+          "cited_sources": [
+            "MMC"
+          ],
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 5
+            }
+          ]
         }
       ],
-      "neutral_summary": "Peter Gregorčič, nekdanji predsednik programskega sveta RTV Slovenija, je na Evropsko sodišče za človekove pravice vložil pritožbo zaradi predčasnega prenehanja mandata po noveli zakona o RTV iz leta 2022, ki je bila potrjena na referendumu. Ustavno sodišče je julija odločilo, da je bila novela v tem delu skladna z ustavo, ker je bila hkratna zamenjava vodstva po njegovi oceni nujna za depolitizacijo. Pritožnik mu očita neučinkovito sodno varstvo in predolg postopek.",
+      "neutral_summary": "Finančni minister Andrej Šircelj je zagotovil, da bodo vsi zakonsko določeni prejemki izplačani in da novega zakona za uravnoteženje javnih financ ne bo. Opozorila o krčenju pravic je označil za politiko strahu in zavisti. Opozicijski stranki Levica in Svoboda trdita, da proračun za prihodnji dve leti zmanjšuje sredstva za transferje, šolstvo in zdravstvo, ter opozarjata, da za zagotovila ni pisne podlage.",
+      "context": "Proračunska dokumenta za leti 2027 in 2028 sta v postopku v državnem zboru. O zakonu o interventnih ukrepih za razvoj Slovenije bodo volivci 6. decembra odločali na referendumu. Opozicija opozarja, da proračun predvideva manj sredstev za socialne transferje, vlada pa razliko pripisuje boljšemu nadzoru nad upravičenostjo.",
+      "key_differences": [
+        "RTV SLO objavi tako ministrovo izjavo kot odziva Levice (Asta Vrečko) in Svobode (Klemen Boštjančič); Nova24TV objavi samo ministra.",
+        "Nova24TV že v uvodu z lastnimi besedami zapiše, da gre za odziv »v luči zavajanj in laži s strani opozicijskih strank«; RTV SLO vrednostne izraze (»zavajanje«, »politika strahu«) navaja le kot ministrove besede.",
+        "Naslov Nova24TV prevzame ministrov izraz »strašenje« kot dejstvo; naslov RTV SLO je pripisan dobesedni citat.",
+        "Drugi del članka Nova24TV je povzet po MMC (»po navedbah MMC«); en novinarjev povzetek iz MMC je postavljen v narekovaje kot ministrov citat.",
+        "Samo RTV SLO navede znesek 2,2 milijarde evrov za socialne pravice, datum referenduma in to, da časovnica plačne prenove še ni določena; samo Nova24TV navede dvig minimalne plače kot primer obveznosti, ki jih prejšnja vlada ni vključila v proračun."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Minister zagotavlja izplačilo pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "»Nobenega zujfa ne bo«",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Opozorila o krčenju pravic označi za »politiko strahu in politiko zavisti«",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Okoli 300 milijonov evrov prihrankov iz gospodarnejše porabe in povezovanja evidenc",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Dolg se bo zmanjševal za vsaj 0,5 odstotne točke BDP letno",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Rebalans proračuna, če bo sprejet razvojni zakon",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Plačni stebri (policija, vojska, zdravstvo) po koalicijski pogodbi",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Prejšnja vlada nekaterih obveznosti ni vključila v proračun (po ministru)",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Primer: posledice dviga minimalne plače",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Socialne pravice v proračunu: 2,2 milijarde evrov",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Časovnica prenove plačnega sistema še ni določena",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Referendum o interventnem zakonu 6. decembra",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Odziv Levice: rez pri socialni državi, več za vojsko",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Odziv Svobode: za zagotovila ni zakona, seznama ne ocene; »amerikanizacija Slovenije«",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        }
+      ],
+      "id": "story-1",
+      "has_international_source": false
+    },
+    {
+      "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro obeh virov: Zavod za zdravstveno zavarovanje Slovenije bo zaradi poslabšane likvidnosti ob koncu leta do 185 milijonov evrov obveznosti do izvajalcev zdravstvenih storitev in drugih partnerjev poravnal šele v začetku leta 2027.",
+      "coverage_comparison": [
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Mali izvajalci o zamiku plačil ZZZS-ja: Verjetno bo marsikdo likvidnostno v škripcih",
+          "article_url": "https://www.rtvslo.si/slovenija/mali-izvajalci-o-zamiku-placil-zzzs-ja-verjetno-bo-marsikdo-likvidnostno-v-skripcih/799934",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Zdravstveni blagajni zmanjkuje denarja, zato bo Zavod za zdravstveno zavarovanje (ZZZS) v prihodnje leto prenesel do 185 milijonov evrov neporavnanih obveznosti.",
+            "Na ZZZS-ju zagotavljajo, da zavarovanci zamika plačil za zdaj ne bodo občutili"
+          ],
+          "omitted_facts": [
+            "Vzroki za likvidnostne težave, ki jih navaja ZZZS (ukinitev dopolnilnega zavarovanja, plačna reforma, višji stroški dela, dvig minimalne plače, zimski regres, staranje prebivalstva).",
+            "Višina dosedanjega primanjkljaja (153,8 milijona evrov do 30. 9.).",
+            "Zakonska podlaga za zamik (ZZZS ob koncu leta ne sme izkazovati dolga)."
+          ],
+          "voices_heard": [
+            "Helena Mole (strokovno združenje zasebnih zdravnikov)",
+            "Tatjana Jevševar (Združenje zdravstvenih zavodov)",
+            "ZZZS"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Kratek prispevek (okoli 240 besed), verjetno spremno besedilo televizijskega prispevka. O razlogih za zamik je RTV SLO morda poročal v drugem članku, ki ga v viru RSS ni bilo.",
+            "Članek ne obravnava vzrokov, zato politična razprava o odgovornosti v njem ni predstavljena."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov je pripisan citat prizadetih (»Verjetno bo marsikdo likvidnostno v škripcih«). Pogovorni izraz »v škripcih« doda nekaj čustvenosti, a je jasno izjava vira.",
+          "main_frame": "Posledice za prizadete",
+          "frame_description": "Zgodba je povedana z vidika izvajalcev: pediatrinja z zasebno ambulanto, združenje bolnišnic, nato pomiritev ZZZS in napoved možnih posegov v pravice. Politična odgovornost in vzroki niso tema članka.",
+          "lede_focus": "Uvod pove, da zdravstveni blagajni zmanjkuje denarja in da je za manjše ambulante vsak zamik velika težava.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Javni zdravstveni zavodi imajo za skoraj 88 milijonov evrov zapadlih obveznosti do dobaviteljev.",
+            "Šest bolnišnic je že kratkoročno zadolženih.",
+            "ZZZS za prihodnje leto napoveduje okoli 140 milijonov evrov primanjkljaja; skrajna možnost je zmanjšanje pravic iz obveznega zavarovanja.",
+            "Zavarovanci zamika za zdaj ne bodo občutili."
+          ],
+          "reasoning": "Besedišče je nevtralno, vse ocene so pripisane virom. Članek ne kaže političnega nagiba, ker se politični vprašanji vzrokov in odgovornosti sploh ne loti. To je njegova glavna omejitev, ne pristranskost.",
+          "confidence": "Srednja",
+          "category": "javni",
+          "quotes_verified": true,
+          "published": "2026-11-12T18:10:56+00:00",
+          "word_count": 237,
+          "cited_sources": [],
+          "text_overlap": []
+        },
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Golobova vlada se je hvalila z zgodovinskim ukrepom, danes ZZZS zaradi njega tone v likvidnostne težave",
+          "article_url": "https://nova24tv.si/golobova-vlada-se-je-hvalila-z-zgodovinskim-ukrepom-danes-zzzs-zaradi-njega-tone-v-likvidnostne-tezave/",
+          "sensationalism_score": 7,
+          "bias_leaning": "Desno",
+          "bias_evidence_quotes": [
+            "Danes je mogoče videti, kako nepremišljen je bil ukrep tako imenovane ukinitve oziroma preoblikovanja dopolnilnega zdravstvenega zavarovanja.",
+            "Kot vidimo, res ni vseeno, kdo vodi državo."
+          ],
+          "omitted_facts": [
+            "Posledice za izvajalce: zasebne ambulante, 88 milijonov zapadlih obveznosti javnih zavodov, šest že zadolženih bolnišnic.",
+            "Zagotovilo ZZZS, da zavarovanci zamika za zdaj ne bodo občutili, in napovedani primanjkljaj za prihodnje leto.",
+            "Sedanji odziv prejšnje vlade ali zagovornikov ukrepa."
+          ],
+          "voices_heard": [
+            "ZZZS (upravni odbor)",
+            "Zvone Černač (SDS, izjave iz leta 2023)",
+            "Robert Golob (izjave iz leta 2023)",
+            "Inštitut 8. marec (izjave iz let 2023 in 2025)"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [
+            "Naslov težave pripiše enemu ukrepu (»zaradi njega«), ZZZS pa v istem članku navaja »več medsebojno povezanih dejavnikov«, med njimi plačno reformo, višje stroške dela, dvig minimalne plače, zimski regres in staranje prebivalstva."
+          ],
+          "notes": [
+            "Besedilo je po žanru komentar, objavljen brez oznake mnenja.",
+            "Sklep, da bi morale biti trditve o dobičkih zavarovalnic napačne, ker ima ZZZS danes težave, ne sledi iz navedenih podatkov: dobički zasebnih zavarovalnic in likvidnost ZZZS sta ločeni vprašanji.",
+            "Nasprotna stran je citirana le z izjavami iz preteklih let, ki jih članek nato zavrne."
+          ],
+          "headline_leaning": "Desno",
+          "body_leaning": "Desno",
+          "headline_analysis": "Naslov poveže pretekli ponos vlade (»se je hvalila z zgodovinskim ukrepom«) z današnjo krizo (»tone«) in težave pripiše enemu ukrepu (»zaradi njega«). Glagol »tone« je dramatičen, ironični kontrast pa je značilen za komentar.",
+          "main_frame": "Odgovornost prejšnje vlade",
+          "frame_description": "Likvidnostne težave so predstavljene kot dokaz, da je bila ukinitev dopolnilnega zavarovanja napaka prejšnje vlade. Članek citira takratna opozorila SDS, nato izjave Goloba in Inštituta 8. marec, ki jih zavrne, ter se konča s politično sodbo.",
+          "lede_focus": "Prvi stavek je avtorjeva sodba (»Danes je mogoče videti, kako nepremišljen je bil ukrep …«), šele drugi stavek poroča o sporočilu ZZZS.",
+          "loaded_language": [
+            {
+              "quote": "tone v likvidnostne težave",
+              "explanation": "Dramatična prispodoba v naslovu; ZZZS sam govori o »poslabšani likvidnosti«.",
+              "verified": true
+            },
+            {
+              "quote": "nepremišljen",
+              "explanation": "Avtorjeva ocena ukrepa, zapisana kot dejstvo v prvem stavku.",
+              "verified": true
+            },
+            {
+              "quote": "gluhe za opozorila",
+              "explanation": "Prispodoba, ki takratni koaliciji pripiše namerno ignoriranje kritike.",
+              "verified": true
+            },
+            {
+              "quote": "bogatunske kapitalistične zavarovalnice",
+              "explanation": "Ironično pretiravanje, s katerim avtor smeši argumente zagovornikov ukrepa.",
+              "verified": true
+            },
+            {
+              "quote": "še en biser prejšnje Golobove vlade",
+              "explanation": "Ironični izraz za plačno reformo.",
+              "verified": true
+            },
+            {
+              "quote": "populističen ukrep",
+              "explanation": "Avtorjeva sodba o ukrepu.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "Danes je mogoče videti, kako nepremišljen je bil ukrep tako imenovane ukinitve oziroma preoblikovanja dopolnilnega zdravstvenega zavarovanja.",
+            "Že nekaj mesecev pozneje se je izkazalo, da je imel Černač prav",
+            "Tako se je danes le še dodatno pokazalo, za kako populističen ukrep je v resnici šlo.",
+            "Kot vidimo, res ni vseeno, kdo vodi državo."
+          ],
+          "unique_facts": [
+            "Primanjkljaj obveznega zavarovanja do 30. 9. je znašal 153.819.314 evrov, dolg na enotnem zakladniškem računu 156 milijonov.",
+            "ZZZS ob koncu leta po zakonu o javnih financah in zakonu o fiskalnem pravilu ne sme izkazovati dolga.",
+            "ZZZS kot vzroke navaja ukinitev dopolnilnega zavarovanja, plačno reformo, višje stroške dela, dvig minimalne plače, zimski regres, staranje prebivalstva in nove zdravstvene tehnologije.",
+            "Opozorila poslanca SDS Zvoneta Černača iz leta 2023."
+          ],
+          "reasoning": "Članek vsebuje več avtorjevih sodb, zapisanih kot dejstva, in se konča s politično poanto (»res ni vseeno, kdo vodi državo«). Dejanske podatke ZZZS navaja natančno, a izbere le dva od več navedenih vzrokov za naslov in okvir. Nasprotna stran nastopa le z izjavami iz preteklosti, ki jih avtor zavrača.",
+          "confidence": "Visoka",
+          "category": "alternativni",
+          "quotes_verified": true,
+          "published": "2026-11-12T10:21:56+00:00",
+          "word_count": 762,
+          "cited_sources": [
+            "STA",
+            "Siol",
+            "24ur"
+          ],
+          "text_overlap": []
+        }
+      ],
+      "neutral_summary": "ZZZS bo zaradi primanjkljaja do 185 milijonov evrov letošnjih obveznosti plačal v začetku leta 2027, ker ob koncu leta zakonsko ne sme izkazovati dolga. Kot vzroke navaja več dejavnikov, med njimi ukinitev dopolnilnega zdravstvenega zavarovanja, plačno reformo in višje stroške dela. Izvajalci, zlasti manjše zasebne ambulante in že zadolžene bolnišnice, opozarjajo na likvidnostne težave; ZZZS zagotavlja, da zavarovanci zamika za zdaj ne bodo občutili.",
+      "context": "Dopolnilno zdravstveno zavarovanje je prejšnja vlada Roberta Goloba ukinila s 1. januarjem 2024 in ga nadomestila z obveznim prispevkom. ZZZS je 13. 11. napovedal tudi morebitno prodajo svojega 15-odstotnega deleža v zavarovalnici Vzajemna. RTV SLO je istega dne poročal še o finančnih težavah NIJZ.",
+      "key_differences": [
+        "RTV SLO poroča o posledicah (likvidnost izvajalcev, bolnišnic, morebitni posegi v pravice) in ne navaja vzrokov; Nova24TV poroča o vzrokih in posledic za izvajalce ne omenja.",
+        "Naslov Nova24TV težave pripiše enemu ukrepu prejšnje vlade, čeprav ZZZS v istem članku našteje več dejavnikov.",
+        "Nova24TV vsebuje več odstavkov avtorjevega mnenja (»kako nepremišljen je bil ukrep«, »res ni vseeno, kdo vodi državo«) in uporabi izjave iz let 2023–2025 kot dokaz za nasprotnike ukrepa.",
+        "RTV SLO da besedo izvajalcem (zasebni zdravniki, Združenje zdravstvenih zavodov) in ZZZS; Nova24TV ZZZS-ju ter politikom in Inštitutu 8. marec iz preteklih let.",
+        "Nova24TV navede natančne podatke o primanjkljaju (153.819.314 evrov do 30. 9.) in zakonsko podlago za zamik; RTV SLO navede 88 milijonov zapadlih obveznosti javnih zavodov in 140 milijonov napovedanega primanjkljaja za prihodnje leto."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Zamik plačila do 185 milijonov evrov obveznosti v leto 2027",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Primanjkljaj obveznega zavarovanja 153,8 milijona evrov do 30. 9.",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "ZZZS ob koncu leta zakonsko ne sme izkazovati dolga",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Vzroki po ZZZS: ukinitev dopolnilnega zavarovanja, plačna reforma, stroški dela, minimalna plača, zimski regres, staranje",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Opozorila takratne opozicije (SDS) ob preoblikovanju zavarovanja leta 2023",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Javni zavodi imajo 88 milijonov evrov zapadlih obveznosti do dobaviteljev",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Šest bolnišnic je že kratkoročno zadolženih",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Težave manjših zasebnih ambulant s koncesijo",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Zavarovanci zamika za zdaj ne bodo občutili",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Za prihodnje leto napovedan primanjkljaj okoli 140 milijonov evrov; skrajna možnost je zmanjšanje pravic",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        }
+      ],
       "id": "story-2",
       "has_international_source": false
     },
     {
-      "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča. Izhodišče so dejstva, ki jih navajata oba vira: ministrstvo za izobraževanje v okviru reforme šolstva pripravlja zakon o učiteljski zbornici. Glavni tajnik sindikata Sviz Branimir Štrukelj ji nasprotuje, ministrstvu očita aroganco in podcenjevanje učiteljev ter primerja zamisel z Madžarsko. Poudarja, da ministrstvo ne sme posegati v delovanje sindikatov.",
+      "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
+      "international_baseline": "BBC poroča, da je Jensen Huang zapustil vodstvo Nvidie po razkritju razmerja z Alice Huang, nekdanjo direktorico singapurskega podjetja Megaspeed, ki jo ameriške obveščevalne službe domnevno sumijo povezav s kitajsko obveščevalno službo; Peking obtožbe zavrača, upravni odbor Nvidie pa pravi, da nima razlogov za sum, da bi bile ogrožene poslovne skrivnosti ali nacionalna varnost. Ker je bil Huang eden najbližjih poslovnežev Donalda Trumpa in vpliven pri odločitvah o izvozu čipov na Kitajsko, se vprašanja zdaj širijo na ministrstvo za trgovino (Howard Lutnick), ki je bilo pod pritiskom, naj Megaspeed uvrsti na izvozni črni seznam. Preiskave so sprožili kongresniki obeh strank.",
       "coverage_comparison": [
         {
-          "media_name": "MMC RTV SLO",
-          "article_title": "Sviz kritičen do učiteljske zbornice. Štrukelj: To je arogantna poteza.",
-          "article_url": "https://www.rtvslo.si/slovenija/sviz-kriticen-do-uciteljske-zbornice-strukelj-to-je-arogantna-poteza/797652",
-          "sensationalism_score": 3,
+          "media_name": "BBC World",
+          "article_title": "How a sex scandal at Nvidia is putting pressure on the White House",
+          "article_url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
+          "sensationalism_score": 4,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Na ministrstvu so v odzivu za STA zapisali, da je predlog zakona o učiteljski zbornici v pripravi, javno pa bo predstavljen, ko bo pripravljen.",
-            "Prepričan je, da želi politika z ustanovitvijo zbornice z obveznim članstvom učiteljstvo prisiliti v ustanovo, ki bi ustvarjala videz, da izraža njihova stališča."
+            "How close is Donald Trump to Jensen Huang?",
+            "This is becoming difficult to dismiss as the misjudgement of one businessman or one government department."
           ],
-          "omitted_facts": [
-            "Stališče Učiteljskega združenja Slovenije, ki pravi, da je predlog zbornice več let pripravljalo v sodelovanju z učitelji (to je v nasprotju s Štrukljevo trditvijo, da učitelji ne sodelujejo).",
-            "Da v Sloveniji deluje več kot 20 drugih strokovnih zbornic.",
-            "Ministrove izjave, vključno s tem, da se ministrstvo ograjuje od dokumenta, ki je zaokrožil v javnosti."
-          ],
+          "omitted_facts": [],
           "voices_heard": [
-            "Branimir Štrukelj (Sviz)",
-            "ministrstvo za izobraževanje"
+            "Tan Yong Pong (Megaspeed)",
+            "Scott Bessent (minister za finance)",
+            "John Moolenaar (republikanec)",
+            "Elizabeth Warren (demokratka)",
+            "Bela hiša (prek New York Posta)",
+            "upravni odbor Nvidie"
           ],
           "sides_represented": "Obe strani",
           "factual_errors": [],
-          "notes": [],
+          "notes": [
+            "Članek je analitični prispevek, ne zgolj poročilo; avtorjeve sklepne ocene so označene v razdelku avtorskih stavkov."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov uporabi izraz »sex scandal«, ki je opisen, a privlačen; jedro naslova je politična posledica (»pressure on the White House«).",
+          "main_frame": "Nacionalna varnost in politična odgovornost",
+          "frame_description": "Osebna afera je izhodišče, zgodba pa je o tem, kaj je vedela administracija in kdo je odgovoren za nadzor izvoza čipov. Članek se konča z vprašanji, ki segajo do predsednika.",
+          "lede_focus": "Uvod z vprašanjem »How close is Donald Trump to Jensen Huang?« takoj postavi v ospredje politično razsežnost.",
+          "loaded_language": [
+            {
+              "quote": "sex scandal",
+              "explanation": "V naslovu poudari osebni vidik zgodbe, čeprav je besedilo pretežno o politiki izvoza.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "This is becoming difficult to dismiss as the misjudgement of one businessman or one government department."
+          ],
+          "unique_facts": [
+            "Ministrstvo za trgovino je prejelo zaupni memorandum o Alice Huang in Megaspeedu, a proti podjetju ni ukrepalo.",
+            "Po poročanju NYT je preiskavo Megaspeeda zamrznilo po posredovanju Nvidiinega pravnega svetovalca.",
+            "Bela hiša izraža popolno zaupanje Lutnicku; po poročilih se tehta njegova odstavitev."
+          ],
+          "reasoning": "Kritična vprašanja administraciji so podprta z navedbami virov (NYT, FT, CNBC) in uravnotežena z izjavami republikancev, demokratov, podjetja Megaspeed in Bele hiše. Sklepni stavek je avtorjeva ocena, vendar izhaja iz predstavljenih dejstev. Ideološko obarvanega besedišča ni.",
+          "confidence": "Visoka",
+          "category": "mednarodni",
+          "quotes_verified": true,
+          "published": "2026-11-13T12:22:30+00:00",
+          "word_count": 1017,
+          "cited_sources": [
+            "CNBC",
+            "New York Times",
+            "New York Post"
+          ],
+          "text_overlap": []
+        },
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Po objavi afer, tudi z domnevno kitajsko vohunko, odstopil izvršni direktor Nvidie",
+          "article_url": "https://www.rtvslo.si/svet/po-objavi-afer-tudi-z-domnevno-kitajsko-vohunko-odstopil-izvrsni-direktor-nvidie/799926",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Huang je bil eden najtesnejših zaveznikov predsednika Trumpa med voditelji tehnoloških podjetij.",
+            "Nvidia je proti Huangu zaradi razmerja z domnevno kitajsko vohunko Alice Huang v začetku tedna uvedla neodvisno preiskavo"
+          ],
+          "omitted_facts": [
+            "Vloga ministrstva za trgovino (Lutnick) in neuvrstitev Megaspeeda na izvozni črni seznam.",
+            "Sum, da je Megaspeed preusmerjal napredne čipe na Kitajsko.",
+            "Izjava upravnega odbora Nvidie, da nima razlogov za sum, da je bila ogrožena nacionalna varnost."
+          ],
+          "voices_heard": [
+            "Colette Kress (začasna direktorica)",
+            "Harvey Jones (predsednik upravnega odbora)",
+            "Donald Trump",
+            "Mike Johnson (predsednik predstavniškega doma)"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Objavljeno 12. 11., dan pred člankom BBC; poznejših izjav (npr. ministra Bessenta) zato ne more vsebovati."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov je informativen in previden (»domnevno kitajsko vohunko«); množina »afer« napove, da ni šlo le za eno razmerje.",
+          "main_frame": "Poslovna novica s političnim ozadjem",
+          "frame_description": "Najprej odstop in padec delnic, nato vodstvene spremembe, podrobnosti afere in na koncu Huangova bližina Trumpu ter vpliv na politiko izvoza čipov.",
+          "lede_focus": "Uvod (po povzetku) navaja, da se je Huang odpovedal tudi mestu v upravnem odboru in da podjetje razlogov ni navedlo.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Delnice so ob odstopu sprva izgubile 14 odstotkov (skoraj 600 milijard dolarjev tržne vrednosti).",
+            "Vodenje je začasno prevzela finančna direktorica Colette Kress.",
+            "Trump je predlagal, naj Nvidio vodi Tim Cook iz Appla.",
+            "Delničarji so vložili skupinsko tožbo; Nvidia je za plesno dvorano v Beli hiši obljubila 25 milijonov dolarjev."
+          ],
+          "reasoning": "Dejstva so skrbno pripisana virom (AFP, CBS, CNN, NYT), sum vohunjenja je dosledno označen kot domneven, Pekingova zavrnitev je navedena. Trumpov predlog je pospremljen s pripombo o njegovih prejšnjih šalah, kar je pojasnilo, ne vrednotenje. Ideološkega nagiba ni.",
+          "confidence": "Visoka",
           "category": "javni",
-          "quotes_verified": true
+          "quotes_verified": true,
+          "published": "2026-11-12T15:01:25+00:00",
+          "word_count": 596,
+          "cited_sources": [
+            "AFP",
+            "CNN",
+            "CBS",
+            "New York Times"
+          ],
+          "text_overlap": []
         },
         {
           "media_name": "Nova24TV",
-          "article_title": "Štrukelj nad učiteljsko združenje, Rončević pa: “Na kraj pameti mi ne pade, da bi se o tem pogovarjal s sindikati”",
-          "article_url": "https://nova24tv.si/strukelj-nad-uciteljsko-zdruzenje-roncevic-pa-na-kraj-pameti-mi-ne-pade-da-bi-se-o-tem-pogovarjal-s-sindikati/",
-          "sensationalism_score": 6,
-          "bias_leaning": "Desno",
+          "article_title": "Nvidiinega milijarderja odnesle ljubezenske afere: Po domnevni kitajski vohunki razkriti še dve ljubici",
+          "article_url": "https://nova24tv.si/nvidiinega-milijarderja-odnesle-ljubezenske-afere-po-domnevni-kitajski-vohunki-razkriti-se-dve-ljubici/",
+          "sensationalism_score": 8,
+          "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Glede na to, kako je predlog ministrstva o ustanovitvi učiteljske zbornice razbesnel sindikat Sviz, bi lahko sklepali, da se v sindikatu bojijo za svojo prihodnost.",
-            "Slovenijo je v nadaljevanju zaničljivo primerjal z Madžarsko."
+            "Nvidiinega milijarderja odnesle ljubezenske afere",
+            "Kako točno so ameriški obveščevalni organi izvedeli, da je Huangova posredovala tajne informacije iz podjetja Nvidia, ni znano."
           ],
           "omitted_facts": [
-            "Uradno stališče ministrstva, da o obveznem članstvu in članarini še ni odločeno.",
-            "Štrukljev argument, da je članstvo v sindikatu prostovoljno, v zbornici pa bi bilo obvezno.",
-            "Kontekst primerjave z Madžarsko: tamkajšnjo zbornico je leta 2013 ustanovila Orbanova vlada, reforme pa so se končale s protesti."
+            "Huangova bližina Trumpu in vpliv na politiko izvoza čipov.",
+            "Vloga ministrstva za trgovino in preiskave kongresa obeh strank.",
+            "Pekingova zavrnitev obtožb in izjava upravnega odbora Nvidie, da nima razlogov za sum, da so bile ogrožene skrivnosti."
           ],
           "voices_heard": [
-            "Borut Rončević (minister)",
-            "Branimir Štrukelj (Sviz)",
-            "Matija Horvat (Učiteljsko združenje)",
-            "NSi"
+            "Jensen Huang (odgovor New York Timesu)",
+            "Reuters (anonimni viri)",
+            "Forbes"
           ],
           "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [
-            "Edini med mediji z dne 21. 10. predstavi stališče Učiteljskega združenja, ki je predlog pripravilo."
+          "factual_errors": [
+            "Kot dejstvo navaja, da je Alice Huang »posredovala tajne informacije iz podjetja Nvidia«; BBC in RTV SLO poročata le o sumu obveščevalnih služb, upravni odbor Nvidie pa pravi, da nima razlogov za sum, da so bile skrivnosti ogrožene."
           ],
+          "notes": [
+            "Trditev, da je razkritje razmerja s Kimberly Powell »prispevalo k njegovemu odstopu«, nima navedenega vira; Nvidia razlogov za odstop ni navedla (RTV SLO).",
+            "Isti medij je 9. 11. v članku »Seks, vohunjenje in umetna inteligenca …« opisal Huangovo bližino s Trumpom; v tem članku politične razsežnosti ni."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov poudari zasebno življenje (»odnesle ljubezenske afere«, »še dve ljubici«) in stopnjevanje števila razmerij. Politično ni obarvan, je pa izrazito senzacionalističen.",
+          "main_frame": "Osebni škandal",
+          "frame_description": "Zgodba je pripoved o številu razmerij, morebitni ločitvi in delitvi premoženja. Vprašanja nacionalne varnosti so omenjena le kot ugibanje, politična razsežnost (Trump, ministrstvo za trgovino, kongres) manjka.",
+          "lede_focus": "Uvod stopnjuje: »naj ne bi imel samo ene ljubice. Niti dveh.«",
+          "loaded_language": [
+            {
+              "quote": "ljubice",
+              "explanation": "Pogovoren, moralno obarvan izraz za razmerja.",
+              "verified": true
+            },
+            {
+              "quote": "Niti dveh.",
+              "explanation": "Retorično stopnjevanje v uvodu, značilno za tabloidni slog.",
+              "verified": true
+            },
+            {
+              "quote": "eksplodirala vest",
+              "explanation": "Dramatična prispodoba za poročanje medijev.",
+              "verified": true
+            },
+            {
+              "quote": "vrtoglavih 143 milijard dolarjev",
+              "explanation": "Pridevnik poudarja bogastvo in s tem kontrast z afero.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "Nekdanjemu direktorju Nvidie tudi v tem primeru ne bi bilo hudega.",
+            "bržčas pa so se nanašale na dva tipa podatkov: industrijske in poslovne skrivnosti, morebiti tudi informacije, ki so se nanašale na ameriške omejitve izvoza najnaprednejših čipov Nvidie na Kitajsko"
+          ],
+          "unique_facts": [
+            "Reuters je ob sklicevanju na anonimne vire poročal o tretjem razmerju.",
+            "V Kaliforniji se premoženje ob ločitvi deli na polovico; Lori in Jensen Huang imata 3,5-odstotni delež v Nvidii.",
+            "Forbes ocenjuje Huangovo premoženje na 143 milijard dolarjev (13. mesto med najbogatejšimi)."
+          ],
+          "reasoning": "Ideološko obarvanega besedišča ni, zato je politični nagib ocenjen kot Sredina. Glavni težavi sta senzacionalistični okvir (osebno življenje namesto politike izvoza in nacionalne varnosti) in natančnost: sum je zapisan kot ugotovljeno dejstvo, avtorjeva ugibanja o vrsti posredovanih informacij pa niso podprta z virom.",
+          "confidence": "Srednja",
           "category": "alternativni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "24ur",
-          "article_title": "Štrukelj kritičen do učiteljske zbornice: To je projekt politike",
-          "article_url": "https://www.24ur.com/novice/slovenija/strukelj-kriticen-do-uciteljske-zbornice-to-je-projekt-politike.html",
-          "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Na ministrstvu medtem poudarjajo, da končne rešitve glede članstva še niso določene, namen zbornice pa ni nadomeščanje sindikatov.",
-            "Prepričan je, da želi politika z ustanovitvijo zbornice z obveznim članstvom učiteljstvo prisiliti v ustanovo, ki bi ustvarjala videz, da izraža njihova stališča."
+          "quotes_verified": true,
+          "published": "2026-11-13T14:04:43+00:00",
+          "word_count": 357,
+          "cited_sources": [
+            "Reuters",
+            "New York Times"
           ],
-          "omitted_facts": [
-            "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo.",
-            "Da se je minister ogradil od dokumenta, ki je zaokrožil v javnosti."
-          ],
-          "voices_heard": [
-            "Branimir Štrukelj (Sviz)",
-            "ministrstvo za izobraževanje"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Delo",
-          "article_title": "Zbornica, ki bi lahko dvignila roko za šolsko reformo",
-          "article_url": "https://www.delo.si/novice/slovenija/ucitelji-sviz-solstvo-reforme-vzgoja-in-izobrazevanje-uciteljska-zbornica",
-          "sensationalism_score": 4,
-          "bias_leaning": "Sredina-Levo",
-          "bias_evidence_quotes": [
-            "A ni jasno, zakaj bi država sploh morala ustanoviti zbornico.",
-            "Zbornica, ki bi lahko dvignila roko za šolsko reformo"
-          ],
-          "omitted_facts": [],
-          "voices_heard": [
-            "Branimir Štrukelj (Sviz)",
-            "ministrstvo za izobraževanje"
-          ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Ocena temelji samo na prosto dostopnem prvem odstavku; preostanek članka je plačljiv."
-          ],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Svet24",
-          "article_title": "Štrukelj kritičen: \"Učiteljska zbornica bo podaljšana roka ministrstva\"",
-          "article_url": "https://svet24.si/novice/slovenija/branimir-strukelj-sindikat-sviz-solstvo-1935126",
-          "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Glavni tajnik Sindikata vzgoje, izobraževanja, znanosti in kulture Slovenije (Sviz) Branimir Štrukelj je na novinarski konferenci ostro kritiziral načrte za ustanovitev učiteljske zbornice",
-            "»Učiteljska zbornica bo narejena za to, da bo podaljšana roka šolskega ministrstva,« je ocenil."
-          ],
-          "omitted_facts": [
-            "Odziv ministrstva: da o članstvu in članarini še ni odločeno in da zbornica ne bo nadomestila sindikatov.",
-            "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo."
-          ],
-          "voices_heard": [
-            "Branimir Štrukelj (Sviz)"
-          ],
-          "sides_represented": "Samo ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Odziv ministrstva v članku ni objavljen."
-          ],
-          "category": "komercialni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Moja Dolenjska",
-          "article_title": "Ministrstvo: Članstvo v učiteljski zbornici še ni določeno, namen ni nadomeščanje sindikatov",
-          "article_url": "https://moja-dolenjska.si/ministrstvo-clanstvo-v-uciteljski-zbornici-se-ni-doloceno-namen-ni-nadomescanje-sindikatov/",
-          "sensationalism_score": 2,
-          "bias_leaning": "Sredina-Desno",
-          "bias_evidence_quotes": [
-            "tudi politika iz vrst Levice (kandidiral je na njihovi listi)",
-            "Pred leti kandidat za poslanca stranke Levica in glavni tajnik Sviza Branimir Štrukelj."
-          ],
-          "omitted_facts": [
-            "Štrukljevo primerjavo z Madžarsko, kjer je zbornico leta 2013 ustanovila Orbanova vlada.",
-            "Stališče Učiteljskega združenja Slovenije, ki je predlog zbornice pripravilo."
-          ],
-          "voices_heard": [
-            "Branimir Štrukelj (Sviz)",
-            "ministrstvo za izobraževanje"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [
-            "Edini medij, ki Štruklja politično označi (»politik iz vrst Levice«)."
-          ],
-          "category": "regionalni",
-          "quotes_verified": true
-        },
-        {
-          "media_name": "Žurnal24",
-          "article_title": "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
-          "article_url": "https://www.zurnal24.si/slovenija/ideja-o-ustanovitvi-uciteljske-zbornice-buri-duhove-466915",
-          "sensationalism_score": 6,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
-            "Združenje nikoli ni bilo reprezentativni predstavnik učiteljstva, dodaja Večer."
-          ],
-          "omitted_facts": [],
-          "voices_heard": [
-            "Matija Horvat (Učiteljsko združenje)",
-            "Branimir Štrukelj (Sviz)",
-            "Združenje ravnateljev"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [
-            "Objavljeno 19. 10., pred novinarsko konferenco Sviza, zato kasnejših izjav ne more vsebovati.",
-            "Naslov zamisel pripiše ministru, besedilo pa navaja, da je 53-stranski predlog pripravilo Učiteljsko združenje Slovenije."
-          ],
-          "category": "komercialni",
-          "quotes_verified": true
+          "text_overlap": []
         }
       ],
-      "neutral_summary": "Sindikat Sviz nasprotuje napovedani ustanovitvi učiteljske zbornice, ki jo ministrstvo pripravlja kot del reforme šolstva in je bila obljubljena že v koalicijski pogodbi. Štrukelj trdi, da gre za politični projekt brez sodelovanja učiteljev, ki bi izrinil sindikat iz strokovnih vprašanj, in jo primerja z Orbanovo zbornico na Madžarskem. Ministrstvo odgovarja, da zbornica ne bo nadomestila sindikatov in da o članstvu še ni odločeno. Predlog Učiteljskega združenja Slovenije, ki je zaokrožil v javnosti, predvideva obvezno članstvo in okoli 8 evrov mesečne članarine; minister se je od tega dokumenta ogradil.",
+      "neutral_summary": "Jensen Huang je odstopil kot izvršni direktor Nvidie po razkritju razmerja z Alice Huang, ki jo ameriške službe sumijo povezav s kitajsko obveščevalno službo, ter poročilih o drugih razmerjih. Delnice Nvidie so močno padle. Ker je bil Huang blizu Trumpa in vpliven pri politiki izvoza čipov, kongres preiskuje, zakaj ministrstvo za trgovino ni ukrepalo proti podjetju Megaspeed.",
+      "context": "ZDA od leta 2022 omejujejo izvoz najnaprednejših čipov Nvidie na Kitajsko; čipe je mogoče kupiti v tretjih državah in jih preusmeriti. Huang je omejitve javno kritiziral, Trumpova administracija pa je Nvidii lani dovolila prodajo nekaterih čipov na Kitajsko v zameno za delež prihodkov.",
+      "key_differences": [
+        "BBC zgodbo obravnava kot vprašanje nacionalne varnosti in odgovornosti v vladi; RTV SLO kot novico o odstopu s poslovnimi posledicami in Huangovo bližino Trumpu; Nova24TV kot osebni škandal (»ljubice«, ločitev, premoženje).",
+        "Nova24TV kot dejstvo zapiše, da je Alice Huang »posredovala tajne informacije iz podjetja Nvidia«; BBC in RTV SLO poročata le o sumu, Peking ga zavrača, upravni odbor Nvidie pa nima razlogov za sum, da so bile skrivnosti ogrožene.",
+        "Politične razsežnosti (Trump, ministrstvo za trgovino, preiskave kongresa) v članku Nova24TV z dne 13. 11. ni, čeprav jih je isti medij omenil 9. 11.",
+        "RTV SLO edini navede padec delnic, začasno direktorico Colette Kress in Trumpov predlog, naj Nvidio vodi Tim Cook; Nova24TV edina navede morebitno delitev premoženja ob ločitvi in tretje domnevno razmerje.",
+        "Naslova RTV SLO in BBC uporabljata previdne izraze (»domnevno«, »sex scandal« kot opis); naslov Nova24TV je senzacionalističen (»odnesle ljubezenske afere«, »še dve ljubici«)."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Huang ni več izvršni direktor Nvidie",
+          "media": [
+            "BBC World",
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Razmerje z Alice Huang iz singapurskega podjetja Megaspeed",
+          "media": [
+            "BBC World",
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Ameriške službe Alice Huang sumijo povezav s kitajsko obveščevalno službo",
+          "media": [
+            "BBC World",
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Peking obtožbe zavrača",
+          "media": [
+            "BBC World",
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Upravni odbor Nvidie: ni razlogov za sum, da so bile ogrožene skrivnosti ali nacionalna varnost",
+          "media": [
+            "BBC World"
+          ]
+        },
+        {
+          "fact": "Poročila o razmerju z uslužbenko Kimberly Powell (NYT)",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Tretje domnevno razmerje (Reuters, anonimni viri)",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Huang je bil eden najbližjih poslovnežev Trumpa",
+          "media": [
+            "BBC World",
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Ministrstvo za trgovino (Lutnick) ni uvrstilo Megaspeeda na izvozni črni seznam",
+          "media": [
+            "BBC World"
+          ]
+        },
+        {
+          "fact": "Kongres želi zaslišati Huanga; preiskave obeh strank",
+          "media": [
+            "BBC World",
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Padec delnic Nvidie (do 14 % ob odstopu)",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Začasna direktorica Colette Kress",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Trump predlaga Tima Cooka za novega direktorja",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Morebitna delitev premoženja ob ločitvi; Huangovo premoženje 143 milijard dolarjev",
+          "media": [
+            "Nova24TV"
+          ]
+        }
+      ],
       "id": "story-3",
-      "has_international_source": false
+      "has_international_source": true
     }
   ]
 }

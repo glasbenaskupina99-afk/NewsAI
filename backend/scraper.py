@@ -115,6 +115,10 @@ def fetch_feed(source: Source, limit: int = 15) -> list[Article]:
     return articles
 
 
+# Vrstice, ki niso del članka (npr. »Spremljajte RTVSLO.si kot prednostni vir na Google«)
+_BOILERPLATE = re.compile(r"prednostni vir na Google|Deli zgodbo|Preberi še", re.IGNORECASE)
+
+
 def extract_text(url: str) -> str:
     """Prenese stran in vrne čisto besedilo članka (prazen niz ob napaki)."""
     try:
@@ -127,7 +131,8 @@ def extract_text(url: str) -> str:
         text = trafilatura.extract(
             downloaded, include_comments=False, include_tables=False, favor_precision=True
         )
-        return (text or "")[:MAX_TEXT_CHARS]
+        lines = [ln for ln in (text or "").splitlines() if not _BOILERPLATE.search(ln)]
+        return "\n".join(lines)[:MAX_TEXT_CHARS]
     except Exception as exc:  # trafilatura lahko vrže različne napake omrežja/parserja
         log.debug("Ekstrakcija ni uspela za %s: %s", url, exc)
         return ""
