@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T23:21:33+00:00",
+  "generated_at": "2026-11-17T23:41:07+00:00",
   "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
@@ -76,8 +76,9 @@
             "Referendum o interventnem zakonu bo 6. decembra.",
             "Odziva Levice in Svobode, vključno z Boštjančičevo primerjavo z zujfom (»vsaj zakon, imel je besedilo«)."
           ],
-          "reasoning": "Ministrove trditve so dosledno pripisane (»je poudaril«, »po njegovih besedah«) z nevtralnimi glagoli. Vrednostni izrazi (»zavajanje«, »politika strahu«) se pojavljajo le v citatih. Kritika dveh opozicijskih strank dobi samostojen del članka in podoben obseg kot posamezni ministrovi odgovori. Naslov vladno sporočilo povzame kot pripisan citat, kar je običajna praksa.",
+          "reasoning": "Ministrove trditve so dosledno pripisane (»je poudaril«, »po njegovih besedah«) z nevtralnimi glagoli. Vrednostni izrazi (»zavajanje«, »politika strahu«) se pojavljajo le v citatih. Kritika dveh opozicijskih strank dobi samostojen del članka in podoben obseg kot posamezni ministrovi odgovori. Naslov vladno sporočilo povzame kot pripisan citat, kar je običajna praksa. Smer: 0 – minister in opozicija dobita ločena, obsežna dela; ublažen ministrov očitek o »laganju« in vladni naslov se izravnata z obsežnim odzivom opozicije.",
           "confidence": "Visoka",
+          "lean_score": 0.0,
           "category": "javni",
           "quotes_verified": true,
           "published": "2026-11-13T09:27:59+00:00",
@@ -156,6 +157,7 @@
           ],
           "reasoning": "Večina besedila zvesto povzema ministrovo izjavo. Nagib izhaja iz tega, da avtor ministrova sporna očitka prevzame kot dejstvo brez pripisa: v naslovu »strašenje opozicije«, v uvodu »zavajanja in laži« opozicije (minister je opozicijo res pozval, naj »neha zavajati in lagati«, vendar je to njegova trditev). Opozicija ne dobi besede. Naslov je zato ocenjen kot Desno, besedilo in celota kot Sredina-Desno.",
           "confidence": "Visoka",
+          "lean_score": 1.25,
           "category": "alternativni",
           "quotes_verified": true,
           "published": "2026-11-13T12:45:11+00:00",
@@ -179,7 +181,7 @@
           "article_title": "Šircelj miri: \"Vse mame bodo dobile porodniško nadomestilo\"",
           "article_url": "https://www.zurnal24.si/slovenija/sircelj-miri-vse-mame-bodo-dobile-porodnisko-nadomestilo-468182",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Desno",
           "bias_evidence_quotes": [
             "Pozivam in prosim, opozicijske stranke, da nehajo zavajati in lagati v zvezi z izplačili različnih prejemkov iz proračuna.",
             "Šircelj je odgovoril tudi na vprašanje glede napovedanih sprememb plačnega sistema"
@@ -213,8 +215,9 @@
             "Vprašanje o plačnem sistemu je sledilo napovedi ministra Matoza o izstopu policistov iz enotnega plačnega sistema.",
             "Minister meni, da se nadzorni mehanizmi, ki so že v zakonih, ne izvajajo tako, kot bi se morali."
           ],
-          "reasoning": "Vse trditve so jasno pripisane ministru, avtorske sodbe ni. Članek pa objavi samo ministrovo stran, opozicija, ki jo minister obtoži laganja, ne dobi besede. Glagol »miri« v naslovu je blago naklonjen uokvirjanju vlade.",
+          "reasoning": "Vse trditve so jasno pripisane ministru, avtorske sodbe ni. Članek pa objavi samo ministrovo stran, opozicija, ki jo minister obtoži laganja, ne dobi besede. Glagol »miri« v naslovu je blago naklonjen uokvirjanju vlade. Smer: +0,75 – objavi samo ministra, vključno z njegovim očitkom o laganju opozicije, in ga v naslovu predstavi kot pomirjevalca (»miri«); zato Sredina-Desno.",
           "confidence": "Visoka",
+          "lean_score": 0.75,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-13",
@@ -283,6 +286,7 @@
           ],
           "reasoning": "Ministrove trditve so podrobno in pošteno povzete, opozicija dobi enak prostor. Avtor pa doda skeptične pripombe (»A od nekod bo treba vzeti«, »velja spomniti«) in kontekst, ki ministrova zagotovila postavlja pod vprašaj; izraz »zloglasni« vrednoti zujf. Besedilo je zato ocenjeno kot Sredina-Levo, naslov kot Sredina.",
           "confidence": "Srednja",
+          "lean_score": -1.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-13",
@@ -306,7 +310,7 @@
           "article_title": "Šircelj: Izplačane bodo vse zakonske pravice",
           "article_url": "https://www.24ur.com/novice/slovenija/sircelj-izplacane-bodo-vse-zakonske-pravice.html",
           "sensationalism_score": 2,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
             "300 milijonov evrov nižji izdatki za to bodo posledica večje racionalnosti in preverjanja izpolnjevanja pogojev, trdi minister za finance Andrej Šircelj. V opoziciji so kritični.",
             "Označil jih je za zavajanje in laži."
@@ -346,8 +350,9 @@
             "Učinki interventnega zakona niso vključeni v predlog proračuna za 2027.",
             "Pri prenovi plačnega sistema je predvideno tudi dogovarjanje s socialnimi partnerji."
           ],
-          "reasoning": "Agencijsko besedilo, ki trditve dosledno pripisuje (»trdi«, »je poudaril«) in obe strani predstavi že v uvodu. Ministrov očitek o »zavajanju in lažeh« je naveden kot njegova ocena. Edini ocenjevalni glagol (»je bil oster«) opisuje ton, ne vsebine.",
+          "reasoning": "Agencijsko besedilo, ki trditve dosledno pripisuje (»trdi«, »je poudaril«) in obe strani predstavi že v uvodu. Ministrov očitek o »zavajanju in lažeh« je naveden kot njegova ocena. Edini ocenjevalni glagol (»je bil oster«) opisuje ton, ne vsebine. Smer: −0,6 – kritika opozicije je že v uvodu, na koncu pa doda še Inštitut 8. marec s peticijo; kritični glasovi dobijo več kot polovico besedila, zato rahlo Sredina-Levo.",
           "confidence": "Visoka",
+          "lean_score": -0.6,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-13T12:08:00+01:00",
@@ -369,7 +374,7 @@
           "article_title": "Minister Šircelj zavrača strašenje: Izplačane bodo vse zakonske pravice",
           "article_url": "https://portal24.si/minister-sircelj-zavraca-strasenje-izplacane-bodo-vse-zakonske-pravice/",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Desno",
           "bias_evidence_quotes": [
             "Minister Šircelj zavrača strašenje",
             "je dejal in njihove navedbe označil za zavajanje in laži, poroča STA"
@@ -407,8 +412,9 @@
           ],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "Besedilo je zvesto in previdno pripisano (»po Šircljevih zagotovilih«, »naj bi«), zato je ocenjeno kot Sredina. Naslov pa prevzame ministrov izraz »strašenje« in opozicija, na katero se minister odziva, ne dobi besede.",
+          "reasoning": "Besedilo je zvesto in previdno pripisano (»po Šircljevih zagotovilih«, »naj bi«), zato je ocenjeno kot Sredina. Naslov pa prevzame ministrov izraz »strašenje« in opozicija, na katero se minister odziva, ne dobi besede. Smer: +1 – objavi samo ministra in v naslovu prevzame njegov izraz »strašenje«; opozicija ne dobi besede. Zato Sredina-Desno.",
           "confidence": "Visoka",
+          "lean_score": 1.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-13",
@@ -836,8 +842,9 @@
             "Obveznosti bodo poravnane v januarju z novim likvidnostnim posojilom v sistemu enotnega zakladniškega računa.",
             "Dolgotrajna oskrba ni prizadeta."
           ],
-          "reasoning": "Članek zvesto in v celoti povzame sporočilo ZZZS, vse trditve so pripisane zavodu, brez vrednostnih izrazov. Navede vse vzroke, tudi tiste, ki zadevajo prejšnjo vlado (ukinitev dopolnilnega zavarovanja, plačna reforma), in tistega, ki zadeva sedanjo (zmanjšanje proračunskega transfera).",
+          "reasoning": "Članek zvesto in v celoti povzame sporočilo ZZZS, vse trditve so pripisane zavodu, brez vrednostnih izrazov. Navede vse vzroke, tudi tiste, ki zadevajo prejšnjo vlado (ukinitev dopolnilnega zavarovanja, plačna reforma), in tistega, ki zadeva sedanjo (zmanjšanje proračunskega transfera). Smer: 0 – navede vzroke, ki bremenijo obe vladi, brez poudarka.",
           "confidence": "Visoka",
+          "lean_score": 0.0,
           "category": "javni",
           "quotes_verified": true,
           "published": "2026-11-11",
@@ -948,6 +955,7 @@
           ],
           "reasoning": "Članek vsebuje več avtorjevih sodb, zapisanih kot dejstva, in se konča s politično poanto (»res ni vseeno, kdo vodi državo«). Iz sporočila ZZZS izbere vzroke, ki bremenijo prejšnjo vlado, izpusti pa zmanjšanje proračunskega transfera, ki ga je sprejela sedanja koalicija; v naslovu težave pripiše enemu samemu ukrepu. Nasprotna stran nastopa le z izjavami iz preteklosti, ki jih avtor zavrača.",
           "confidence": "Visoka",
+          "lean_score": 2.5,
           "category": "alternativni",
           "quotes_verified": true,
           "published": "2026-11-12T10:21:56+00:00",
@@ -1014,6 +1022,7 @@
           ],
           "reasoning": "Besedilo zvesto povzame sporočilo ZZZS, vključno z vzroki, ki zadevajo prejšnjo vlado. Izbira naslova in vmesnega naslova pa poudarek usmeri na sedanjo koalicijo, glagol »odvzeli« pa ne razloči med znižanjem zgornje meje in odvzemom denarja. Vlada ne dobi besede.",
           "confidence": "Visoka",
+          "lean_score": -1.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-11",
@@ -1064,8 +1073,9 @@
             "Vlada je septembra pojasnila, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov.",
             "Zamik povračil delodajalcem sam po sebi ne pomeni zamude pri nadomestilih za bolniško odsotnost."
           ],
-          "reasoning": "Najbolj pojasnjevalen in uravnotežen članek: pri zmanjšanju transfera navede tudi vladno pojasnilo in razliko med zgornjo mejo in dodeljenim zneskom, vse vzroke ZZZS navede brez poudarjanja enega. Vrednostnih izrazov ni.",
+          "reasoning": "Najbolj pojasnjevalen in uravnotežen članek: pri zmanjšanju transfera navede tudi vladno pojasnilo in razliko med zgornjo mejo in dodeljenim zneskom, vse vzroke ZZZS navede brez poudarjanja enega. Vrednostnih izrazov ni. Smer: 0 – edini navede tudi vladno pojasnilo k zmanjšanju transfera.",
           "confidence": "Visoka",
+          "lean_score": 0.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-11",
@@ -1103,8 +1113,9 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "Zvest agencijski povzetek sporočila ZZZS z vsemi navedenimi vzroki, brez vrednostnih izrazov. Vlada ali drugi deležniki ne dobijo besede.",
+          "reasoning": "Zvest agencijski povzetek sporočila ZZZS z vsemi navedenimi vzroki, brez vrednostnih izrazov. Vlada ali drugi deležniki ne dobijo besede. Smer: 0 – enako agencijsko besedilo kot RTV SLO.",
           "confidence": "Visoka",
+          "lean_score": 0.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-11T13:20:00+01:00",
@@ -1165,8 +1176,9 @@
           "unique_facts": [
             "ZZZS poudarja, da ne gre za zmanjšanje ali preklic pogodbenih obveznosti, temveč za začasno spremembo časa plačila."
           ],
-          "reasoning": "Zvest, obsežen povzetek sporočila ZZZS z vsemi vzroki, brez vrednostnih izrazov. Drugi deležniki ne dobijo besede.",
+          "reasoning": "Zvest, obsežen povzetek sporočila ZZZS z vsemi vzroki, brez vrednostnih izrazov. Drugi deležniki ne dobijo besede. Smer: 0 – vmesni naslov o zmanjšanju transfera je uravnotežen z vsemi drugimi vzroki.",
           "confidence": "Visoka",
+          "lean_score": 0.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-11",
@@ -1225,8 +1237,9 @@
           "unique_facts": [
             "Po anonimnih virih na ZZZS bolnišnice in zdravstveni domovi plač zaposlenim zaradi zamika ne bodo izplačali z zamudo."
           ],
-          "reasoning": "Besedilo zvesto citira sporočilo ZZZS in nima političnega nagiba. Naslov poudari manjši del zgodbe, en navedeni znesek pa se ne ujema z razčlenitvijo ZZZS.",
+          "reasoning": "Besedilo zvesto citira sporočilo ZZZS in nima političnega nagiba. Naslov poudari manjši del zgodbe, en navedeni znesek pa se ne ujema z razčlenitvijo ZZZS. Smer: 0 – brez politične izbire poudarkov; težava je natančnost, ne nagib.",
           "confidence": "Visoka",
+          "lean_score": 0.0,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-11",
@@ -1290,8 +1303,9 @@
           "unique_facts": [
             "Pojasni, da delodajalci zaposlenim izplačujejo nadomestila in jim jih ZZZS pozneje povrne, zato zamik povračil ne pomeni zamude pri izplačilu zaposlenim."
           ],
-          "reasoning": "Politično nevtralno besedilo, ki dejstva povzame pravilno in na koncu doda avtorjevo retorično vprašanje. Glavna slabost je naslov v obliki vprašanja, ki napoveduje posledico, ki je besedilo ne potrdi.",
+          "reasoning": "Politično nevtralno besedilo, ki dejstva povzame pravilno in na koncu doda avtorjevo retorično vprašanje. Glavna slabost je naslov v obliki vprašanja, ki napoveduje posledico, ki je besedilo ne potrdi. Smer: −0,2 – vmesni naslov »Država zmanjšala predvidena sredstva« izpostavi vladni del, a besedilo navede tudi druge vzroke; ostaja Sredina.",
           "confidence": "Visoka",
+          "lean_score": -0.2,
           "category": "komercialni",
           "quotes_verified": true,
           "published": "2026-11-11",
@@ -1724,7 +1738,7 @@
           "article_title": "How a sex scandal at Nvidia is putting pressure on the White House",
           "article_url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
           "sensationalism_score": 4,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
             "How close is Donald Trump to Jensen Huang?",
             "This is becoming difficult to dismiss as the misjudgement of one businessman or one government department."
@@ -1764,8 +1778,9 @@
             "Po poročanju NYT je preiskavo Megaspeeda zamrznilo po posredovanju Nvidiinega pravnega svetovalca.",
             "Bela hiša izraža popolno zaupanje Lutnicku; po poročilih se tehta njegova odstavitev."
           ],
-          "reasoning": "Kritična vprašanja administraciji so podprta z navedbami virov (NYT, FT, CNBC) in uravnotežena z izjavami republikancev, demokratov, podjetja Megaspeed in Bele hiše. Sklepni stavek je avtorjeva ocena, vendar izhaja iz predstavljenih dejstev. Ideološko obarvanega besedišča ni.",
+          "reasoning": "Kritična vprašanja administraciji so podprta z navedbami virov (NYT, FT, CNBC) in uravnotežena z izjavami republikancev, demokratov, podjetja Megaspeed in Bele hiše. Sklepni stavek je avtorjeva ocena, vendar izhaja iz predstavljenih dejstev. Ideološko obarvanega besedišča ni. Smer: −0,6 – sklepna avtorska ocena odgovornost usmeri proti predsedniku Trumpu (»questions now reach into the White House«); kritike sicer navaja tudi od republikancev, zato rahlo Sredina-Levo.",
           "confidence": "Visoka",
+          "lean_score": -0.6,
           "category": "mednarodni",
           "quotes_verified": true,
           "published": "2026-11-13T12:22:30+00:00",
@@ -1817,8 +1832,9 @@
             "Trump je predlagal, naj Nvidio vodi Tim Cook iz Appla.",
             "Delničarji so vložili skupinsko tožbo; Nvidia je za plesno dvorano v Beli hiši obljubila 25 milijonov dolarjev."
           ],
-          "reasoning": "Dejstva so skrbno pripisana virom (AFP, CBS, CNN, NYT), sum vohunjenja je dosledno označen kot domneven, Pekingova zavrnitev je navedena. Trumpov predlog je pospremljen s pripombo o njegovih prejšnjih šalah, kar je pojasnilo, ne vrednotenje. Ideološkega nagiba ni.",
+          "reasoning": "Dejstva so skrbno pripisana virom (AFP, CBS, CNN, NYT), sum vohunjenja je dosledno označen kot domneven, Pekingova zavrnitev je navedena. Trumpov predlog je pospremljen s pripombo o njegovih prejšnjih šalah, kar je pojasnilo, ne vrednotenje. Ideološkega nagiba ni. Smer: −0,4 – rahlo ironična pripomba o Trumpovih »šalah« in podatek o donaciji za plesno dvorano; odklon je majhen, zato Sredina.",
           "confidence": "Visoka",
+          "lean_score": -0.4,
           "category": "javni",
           "quotes_verified": true,
           "published": "2026-11-12T15:01:25+00:00",
@@ -1896,8 +1912,9 @@
             "V Kaliforniji se premoženje ob ločitvi deli na polovico; Lori in Jensen Huang imata 3,5-odstotni delež v Nvidii.",
             "Forbes ocenjuje Huangovo premoženje na 143 milijard dolarjev (13. mesto med najbogatejšimi)."
           ],
-          "reasoning": "Ideološko obarvanega besedišča ni, zato je politični nagib ocenjen kot Sredina. Glavni težavi sta senzacionalistični okvir (osebno življenje namesto politike izvoza in nacionalne varnosti) in natančnost: sum je zapisan kot ugotovljeno dejstvo, avtorjeva ugibanja o vrsti posredovanih informacij pa niso podprta z virom.",
+          "reasoning": "Ideološko obarvanega besedišča ni, zato je politični nagib ocenjen kot Sredina. Glavni težavi sta senzacionalistični okvir (osebno življenje namesto politike izvoza in nacionalne varnosti) in natančnost: sum je zapisan kot ugotovljeno dejstvo, avtorjeva ugibanja o vrsti posredovanih informacij pa niso podprta z virom. Smer: +0,3 – izpusti Huangovo bližino Trumpu in odgovornost administracije, kar jo je istega dne izpostavil BBC; ker gre predvsem za tabloidni okvir, ostaja Sredina.",
           "confidence": "Srednja",
+          "lean_score": 0.3,
           "category": "alternativni",
           "quotes_verified": true,
           "published": "2026-11-13T14:04:43+00:00",

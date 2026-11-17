@@ -47,6 +47,23 @@ function leanStyle(leaning) {
   return LEAN_STYLE[leaning] || LEAN_STYLE["Sredina"];
 }
 
+// Številčna ocena −3 (levo) … +3 (desno); starejši podatki brez nje dobijo sredino razreda.
+const LEAN_DEFAULT_SCORE = { "Levo": -2.5, "Sredina-Levo": -1, "Sredina": 0, "Sredina-Desno": 1, "Desno": 2.5 };
+
+function leanScore(c) {
+  return typeof c.lean_score === "number" ? c.lean_score : LEAN_DEFAULT_SCORE[c.bias_leaning] ?? 0;
+}
+
+function formatScore(x) {
+  const v = Math.round(x * 10) / 10;
+  return (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toLocaleString("sl-SI", { minimumFractionDigits: 1 });
+}
+
+function scoreChip(c) {
+  if (typeof c.lean_score !== "number") return null;
+  return h("span", { class: "rounded bg-slate-100 px-1.5 py-0.5 text-[11px] font-semibold tabular-nums text-slate-700 dark:bg-slate-800 dark:text-slate-200", title: "Nagib na lestvici od −3 (levo) do +3 (desno)" }, formatScore(c.lean_score));
+}
+
 function leanBadge(leaning) {
   return h("span", { class: `inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${leanStyle(leaning).soft}` },
     h("span", { class: `h-2 w-2 rounded-full ${leanStyle(leaning).dot}`, "aria-hidden": "true" }), leaning);
@@ -106,7 +123,8 @@ function renderLegend() {
     h("div", { class: "flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-600 dark:text-slate-300" },
       h("span", { class: "font-semibold uppercase tracking-wide text-slate-500" }, "Lestvica nagiba"),
       LEANINGS.map((l) => h("span", { class: "inline-flex items-center gap-1.5" },
-        h("span", { class: `h-2.5 w-2.5 rounded-full ${leanStyle(l).dot}`, "aria-hidden": "true" }), l))));
+        h("span", { class: `h-2.5 w-2.5 rounded-full ${leanStyle(l).dot}`, "aria-hidden": "true" }), l)),
+      h("span", { class: "text-slate-500 dark:text-slate-400" }, "Številka ob oceni: −3 levo … 0 uravnoteženo … +3 desno")));
 }
 
 // Povprečje po medijih čez vse zgodbe dneva.
@@ -116,7 +134,7 @@ function renderProfile(data) {
     for (const c of story.coverage_comparison) {
       const entry = byMedia.get(c.media_name) || { category: c.category, scores: [], leanings: [] };
       entry.scores.push(c.sensationalism_score);
-      entry.leanings.push(c.bias_leaning);
+      entry.leanings.push(leanScore(c));
       byMedia.set(c.media_name, entry);
     }
   }
@@ -124,26 +142,26 @@ function renderProfile(data) {
 
   const rows = [...byMedia.entries()].map(([name, e]) => {
     const avg = e.scores.reduce((a, b) => a + b, 0) / e.scores.length;
-    const avgLean = e.leanings.reduce((a, l) => a + LEANINGS.indexOf(l), 0) / e.leanings.length;
+    const avgLean = e.leanings.reduce((a, l) => a + l, 0) / e.leanings.length;
     return { name, category: e.category, avg, avgLean, count: e.scores.length, leanings: e.leanings };
   }).sort((a, b) => a.avgLean - b.avgLean);
 
   document.getElementById("profile").replaceChildren(
     h("div", { class: "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900" },
       h("h2", { class: "mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500" }, "Profil medijev za ta dan"),
-      h("p", { class: "mb-4 text-xs text-slate-500 dark:text-slate-400" }, "Povprečje ocen vseh analiziranih člankov tega dne. Položaj na lestvici je povprečni nagib."),
+      h("p", { class: "mb-4 text-xs text-slate-500 dark:text-slate-400" }, "Povprečje ocen vseh analiziranih člankov tega dne. Položaj na lestvici je povprečni nagib od −3 (levo) do +3 (desno)."),
       h("div", { class: "space-y-3" }, rows.map((r) =>
-        h("div", { class: "grid grid-cols-1 items-center gap-2 sm:grid-cols-[10rem_1fr_9rem]" },
+        h("div", { class: "grid grid-cols-1 items-center gap-2 sm:grid-cols-[10rem_1fr_12rem]" },
           h("div", {},
             h("div", { class: "text-sm font-medium" }, r.name),
             h("div", { class: "text-[11px] text-slate-500" }, `${CATEGORY_LABEL[r.category] || r.category} · ${plural(r.count, WORDS.article)}`)),
-          h("div", { class: "relative h-2 rounded-full bg-gradient-to-r from-red-500 via-slate-300 to-blue-500 dark:via-slate-600", title: `Povprečni nagib: ${LEANINGS[Math.round(r.avgLean)]}` },
+          h("div", { class: "relative h-2 rounded-full bg-gradient-to-r from-red-500 via-slate-300 to-blue-500 dark:via-slate-600", title: `Povprečni nagib: ${formatScore(r.avgLean)} (od −3 do +3)` },
             h("span", {
               class: "absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-slate-900 shadow dark:border-slate-900 dark:bg-white",
-              style: `left:${(r.avgLean / 4) * 100}%`,
+              style: `left:${((r.avgLean + 3) / 6) * 100}%`,
             })),
-          h("div", { class: "text-xs text-slate-600 dark:text-slate-300 sm:text-right" },
-            "Senzac. ", h("span", { class: "font-semibold tabular-nums" }, r.avg.toFixed(1)), "/10"))))));
+          h("div", { class: "whitespace-nowrap text-xs text-slate-600 dark:text-slate-300 sm:text-right" },
+            "Nagib ", h("span", { class: "font-semibold tabular-nums" }, formatScore(r.avgLean)), " · Senzac. ", h("span", { class: "font-semibold tabular-nums" }, r.avg.toFixed(1)), "/10"))))));
 }
 
 function renderToc(data) {
@@ -228,7 +246,7 @@ function coverageColumn(c) {
       h("div", {},
         h("div", { class: "text-sm font-bold" }, c.media_name),
         h("div", { class: "text-[11px] uppercase tracking-wide text-slate-500" }, CATEGORY_LABEL[c.category] || c.category)),
-      leanBadge(c.bias_leaning)),
+      h("div", { class: "flex shrink-0 items-center gap-1" }, leanBadge(c.bias_leaning), scoreChip(c))),
     url
       ? h("a", { href: url, target: "_blank", rel: "noopener noreferrer", class: "text-sm font-medium leading-snug text-slate-800 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:text-slate-100 dark:decoration-slate-600" }, c.article_title)
       : h("p", { class: "text-sm font-medium leading-snug" }, c.article_title),
@@ -311,7 +329,7 @@ function detailCard(c) {
         h("div", { class: "mt-1 text-[11px] text-slate-500 dark:text-slate-400" },
           [published, c.word_count ? `${c.word_count} besed` : null].filter(Boolean).join(" · "))),
       h("div", { class: "flex flex-wrap items-center gap-1.5" },
-        leanBadge(c.bias_leaning),
+        leanBadge(c.bias_leaning), scoreChip(c),
         c.confidence ? h("span", { class: `rounded px-1.5 py-0.5 text-[11px] font-semibold ${CONFIDENCE_STYLE[c.confidence] || ""}` }, `Zanesljivost: ${c.confidence.toLowerCase()}`) : null)),
 
     h("div", { class: "grid gap-4 lg:grid-cols-2" },

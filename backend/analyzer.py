@@ -136,6 +136,11 @@ class MediaCoverage(BaseModel):
     )
     reasoning: str = Field(default="", description="Utemeljitev ocene nagiba v 2–4 stavkih.")
     confidence: Confidence = Field(default="Srednja", description="Zanesljivost ocene.")
+    lean_score: float | None = Field(
+        default=None, ge=-3, le=3,
+        description="Nagib na lestvici od -3 (levo) do +3 (desno); 0 = povsem uravnoteženo. "
+        "Določa bias_leaning: |x| < 0,5 Sredina, do ±2 Sredina-Levo/-Desno, sicer Levo/Desno.",
+    )
 
 
 class StoryAnalysis(BaseModel):
@@ -229,9 +234,14 @@ ANALYSIS_RULES = """Si strog, nepristranski medijski analitik. Pravila:
    samo v tem mediju, katera zgodba se pripoveduje.
 12. fact_matrix: 6–12 ključnih dejstev zgodbe in za vsakega imena medijev, ki ga navedejo.
    key_differences: 3–6 najpomembnejših razlik med mediji.
-13. reasoning v 2–4 stavkih poveže oceno s konkretnimi dokazi; confidence je "Nizka", če je
+13. lean_score določi vedno, tudi za sredinske članke: tudi uravnotežen članek se lahko rahlo nagiba
+   z izbiro sogovornikov (kdo dobi več prostora, kdo uvod), dejstev (kaj izpusti) in naslova. Na slovenski
+   politični osi je levo sedanja opozicija (Svoboda, Levica, SD), sindikati in levo usmerjene NVO, desno
+   sedanja koalicija (SDS, NSi, Demokrati …). 0 dodeli samo, če sta strani res enakovredni ali politične
+   razsežnosti ni. Vsak odklon od 0 utemelji v reasoning s konkretnim dokazom.
+14. reasoning v 2–4 stavkih poveže oceno s konkretnimi dokazi; confidence je "Nizka", če je
    besedilo kratko, delno dostopno ali so dokazi šibki.
-14. Vsa besedila (razen citatov) piši v slovenščini.
+15. Vsa besedila (razen citatov) piši v slovenščini.
 """
 
 
@@ -398,6 +408,19 @@ def analyze_story(client, model: str, cluster: list[Article], index: int) -> Sto
     return build_story_report(analysis, cluster, index)
 
 
+def leaning_from_score(score: float) -> str:
+    """Ime ocene iz številčne lestvice; meje so enake v navodilih modelu in na strani."""
+    if score <= -2:
+        return "Levo"
+    if score <= -0.5:
+        return "Sredina-Levo"
+    if score < 0.5:
+        return "Sredina"
+    if score < 2:
+        return "Sredina-Desno"
+    return "Desno"
+
+
 def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: int) -> StoryReport:
     """Poveže analizo z zajetimi članki: preveri citate, naslove in URL-je vzame iz zajema."""
     by_source = {a.source.lower(): a for a in cluster}
@@ -415,6 +438,8 @@ def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: i
         if len(editorial) < len(item.editorial_statements):
             log.warning("%s: izpuščenih %d nedobesednih avtorskih stavkov", item.media_name,
                         len(item.editorial_statements) - len(editorial))
+        if item.lean_score is not None:
+            item.bias_leaning = leaning_from_score(item.lean_score)
         coverage.append(
             CoverageReport(
                 **item.model_dump(exclude={"article_title", "article_url", "bias_evidence_quotes",

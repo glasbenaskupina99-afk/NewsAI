@@ -130,6 +130,11 @@ class AnalyzerTest(unittest.TestCase):
         text = "Kot poroča STA, je minister po navedbah MMC in Reutersa dejal, da ..."
         self.assertEqual(cited_sources(text, "MMC RTV SLO"), ["STA", "Reuters"])
 
+    def test_leaning_derived_from_score(self):
+        from analyzer import leaning_from_score
+        self.assertEqual([leaning_from_score(x) for x in (-2.5, -0.6, -0.4, 0, 0.4, 0.5, 1.9, 2)],
+                         ["Levo", "Sredina-Levo", "Sredina", "Sredina", "Sredina", "Sredina-Desno", "Sredina-Desno", "Desno"])
+
     def test_mock_is_valid_schema(self):
         mock = build_mock_analysis()
         roundtrip = DailyAnalysis.model_validate_json(mock.model_dump_json())

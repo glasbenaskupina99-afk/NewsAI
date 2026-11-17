@@ -73,14 +73,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: 0 – kritične navedbe o Trumpu in Rusiji so uravnotežene z izjavami vseh strani; leve-desne slovenske razsežnosti ni.",
           "confidence": "Srednja",
           "category": "mednarodni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 0
         },
         {
           "media_name": "MMC RTV SLO",
@@ -116,14 +117,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: 0 – agencijsko besedilo z izjavami vseh treh strani, brez izbire, ki bi bila v prid eni politični opciji.",
           "confidence": "Srednja",
           "category": "javni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 0
         },
         {
           "media_name": "24ur",
@@ -160,14 +162,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: 0 – enako kot RTV SLO; dodatni Stubbovi in Trumpovi izjavi ne spremenita ravnotežja.",
           "confidence": "Srednja",
           "category": "komercialni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 0
         },
         {
           "media_name": "Nova24TV",
@@ -205,14 +208,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: +0,2 – izpusti ukrajinsko stran in zahodne kritike, vendar to ni jasen nagib na slovenski levo-desni osi; zato ostaja Sredina.",
           "confidence": "Srednja",
           "category": "alternativni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 0.2
         },
         {
           "media_name": "N1",
@@ -250,14 +254,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: 0 – agencijsko besedilo z vsemi stranmi.",
           "confidence": "Srednja",
           "category": "komercialni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 0
         }
       ],
       "neutral_summary": "Kremelj je po srečanju Putina z ameriškim odposlancem Witkoffom sporočil, da je pripravljen novembra obnoviti tristranske mirovne pogovore z Ukrajino in ZDA. Zelenski je pogovore podprl in predlagal zamrznitev fronte kot prvi korak. Srečanje je spremljala izpustitev ameriškega državljana Stephena Hubbarda, potekalo pa je ob napetostih med Kijevom in Washingtonom zaradi ameriškega pritiska na Ukrajino in omilitve sankcij za ruski dizel.",
@@ -305,14 +310,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: −0,3 – utemeljitev ustavnega sodišča (in s tem zakona iz leta 2022) dobi več prostora kot pritožnikovi argumenti, izpuščen pa je novi predlog sedanjega ministrstva; odklon je majhen, zato ostaja Sredina.",
           "confidence": "Srednja",
           "category": "javni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": -0.3
         },
         {
           "media_name": "Nova24TV",
@@ -353,7 +359,8 @@
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 1.25
         }
       ],
       "neutral_summary": "Peter Gregorčič, nekdanji predsednik programskega sveta RTV Slovenija, je na Evropsko sodišče za človekove pravice vložil pritožbo zaradi predčasnega prenehanja mandata po noveli zakona o RTV iz leta 2022, ki je bila potrjena na referendumu. Ustavno sodišče je julija odločilo, da je bila novela v tem delu skladna z ustavo, ker je bila hkratna zamenjava vodstva po njegovi oceni nujna za depolitizacijo. Pritožnik mu očita neučinkovito sodno varstvo in predolg postopek.",
@@ -372,7 +379,7 @@
           "article_title": "Sviz kritičen do učiteljske zbornice. Štrukelj: To je arogantna poteza.",
           "article_url": "https://www.rtvslo.si/slovenija/sviz-kriticen-do-uciteljske-zbornice-strukelj-to-je-arogantna-poteza/797652",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
             "Na ministrstvu so v odzivu za STA zapisali, da je predlog zakona o učiteljski zbornici v pripravi, javno pa bo predstavljen, ko bo pripravljen.",
             "Prepričan je, da želi politika z ustanovitvijo zbornice z obveznim članstvom učiteljstvo prisiliti v ustanovo, ki bi ustvarjala videz, da izraža njihova stališča."
@@ -398,14 +405,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: −0,75 – naslov je Štrukljev citat (»arogantna poteza«), sindikat dobi večino besedila, odziv ministrstva je šele na koncu, Učiteljsko združenje pa ne dobi besede; zato Sredina-Levo.",
           "confidence": "Srednja",
           "category": "javni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": -0.75
         },
         {
           "media_name": "Nova24TV",
@@ -449,14 +457,15 @@
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 2.25
         },
         {
           "media_name": "24ur",
           "article_title": "Štrukelj kritičen do učiteljske zbornice: To je projekt politike",
           "article_url": "https://www.24ur.com/novice/slovenija/strukelj-kriticen-do-uciteljske-zbornice-to-je-projekt-politike.html",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
             "Na ministrstvu medtem poudarjajo, da končne rešitve glede članstva še niso določene, namen zbornice pa ni nadomeščanje sindikatov.",
             "Prepričan je, da želi politika z ustanovitvijo zbornice z obveznim članstvom učiteljstvo prisiliti v ustanovo, ki bi ustvarjala videz, da izraža njihova stališča."
@@ -481,14 +490,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: −0,75 – enako agencijsko besedilo kot RTV SLO z naslovom iz Štrukljeve izjave (»projekt politike«); ministrstvo dobi odziv na koncu, združenje ne dobi besede.",
           "confidence": "Srednja",
           "category": "komercialni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": -0.75
         },
         {
           "media_name": "Delo",
@@ -526,14 +536,15 @@
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": -1.0
         },
         {
           "media_name": "Svet24",
           "article_title": "Štrukelj kritičen: \"Učiteljska zbornica bo podaljšana roka ministrstva\"",
           "article_url": "https://svet24.si/novice/slovenija/branimir-strukelj-sindikat-sviz-solstvo-1935126",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
             "Glavni tajnik Sindikata vzgoje, izobraževanja, znanosti in kulture Slovenije (Sviz) Branimir Štrukelj je na novinarski konferenci ostro kritiziral načrte za ustanovitev učiteljske zbornice",
             "»Učiteljska zbornica bo narejena za to, da bo podaljšana roka šolskega ministrstva,« je ocenil."
@@ -559,14 +570,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: −1,25 – objavi samo sindikat, brez odziva ministrstva, in mu nameni tudi dodatne teme (plače, stavka).",
           "confidence": "Srednja",
           "category": "komercialni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": -1.25
         },
         {
           "media_name": "Moja Dolenjska",
@@ -607,14 +619,15 @@
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": 0.75
         },
         {
           "media_name": "Žurnal24",
           "article_title": "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
           "article_url": "https://www.zurnal24.si/slovenija/ideja-o-ustanovitvi-uciteljske-zbornice-buri-duhove-466915",
           "sensationalism_score": 6,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
             "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
             "Združenje nikoli ni bilo reprezentativni predstavnik učiteljstva, dodaja Večer."
@@ -640,14 +653,15 @@
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [],
-          "reasoning": "",
+          "reasoning": " Smer: −0,6 – naslov zamisel pripiše ministru in poudari, da so »šolniki na nogah«; besedilo sicer predstavi tudi združenje in ravnatelje, a doda Večerovo oceno, da združenje »ni bilo reprezentativno«.",
           "confidence": "Srednja",
           "category": "komercialni",
           "quotes_verified": true,
           "published": null,
           "word_count": 0,
           "cited_sources": [],
-          "text_overlap": []
+          "text_overlap": [],
+          "lean_score": -0.6
         }
       ],
       "neutral_summary": "Sindikat Sviz nasprotuje napovedani ustanovitvi učiteljske zbornice, ki jo ministrstvo pripravlja kot del reforme šolstva in je bila obljubljena že v koalicijski pogodbi. Štrukelj trdi, da gre za politični projekt brez sodelovanja učiteljev, ki bi izrinil sindikat iz strokovnih vprašanj, in jo primerja z Orbanovo zbornico na Madžarskem. Ministrstvo odgovarja, da zbornica ne bo nadomestila sindikatov in da o članstvu še ni odločeno. Predlog Učiteljskega združenja Slovenije, ki je zaokrožil v javnosti, predvideva obvezno članstvo in okoli 8 evrov mesečne članarine; minister se je od tega dokumenta ogradil.",
