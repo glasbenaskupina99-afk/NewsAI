@@ -61,6 +61,10 @@ python add_article.py stran.txt ... --dry-run   # samo prikaže očiščeno bese
 Naslov služi kot sidro: besedilo se začne za vrstico z naslovom. Analizo nato uvozite z
 `python manual_analysis.py analiza.json --date 2026-11-13`.
 
+Slepa ročna analiza: `python manual_analysis.py analiza.json --print-prompts` izpiše besedila z mediji kot
+`MEDIJ_A`, `MEDIJ_B` … (brez imen, URL-jev in kategorij). Če analiza navaja medije s temi psevdonimi, jih
+uvoz sam preslika nazaj v imena in zgodbo označi kot »Slepa ocena«.
+
 CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.html`/`app.js`:
 `cd frontend && npm install && npm run build:css`.
 

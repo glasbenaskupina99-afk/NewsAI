@@ -7,6 +7,11 @@ Vhod je JSON z zgodbami v obliki StoryAnalysis in seznamom ID-jev člankov iz ra
 Neobvezno lahko zgodba vsebuje še "source_checks" (trditve, preverjene v izvirnih dokumentih)
 in "missing_context" (dejstva iz izvirnih virov, ki jih ni navedel noben medij).
 
+Slepa analiza: če so mediji v analizi navedeni s psevdonimi (MEDIJ_A, MEDIJ_B …), ki jih za zgodbo
+na istem mestu in z istimi članki vrne analyzer.make_aliases, se psevdonimi preslikajo nazaj v imena
+medijev, citati pa obnovijo v izvirni obliki (enako kot pri samodejni analizi). Zakrita besedila za
+ročno analizo izpiše --print-prompts.
+
 Za vsako zgodbo se uporabi ista validacija kot pri Gemini: Pydantic shema, preverjanje
 dobesednih citatov ter naslovi in URL-ji iz zajetih podatkov.
 
@@ -21,7 +26,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from analyzer import (
-    ContextItem, DailyAnalysis, SourceCheck, StoryAnalysis, build_story_report, leaning_from_score, source_infos,
+    _ALIAS, ContextItem, DailyAnalysis, SourceCheck, StoryAnalysis, build_story_report, leaning_from_score,
+    make_aliases, source_infos, story_prompt, unmask_analysis,
 )
 from main import OUTPUT, RAW_OUTPUT, publish
 from scraper import Article
@@ -34,6 +40,8 @@ def main() -> None:
     parser.add_argument("analysis", type=Path)
     parser.add_argument("--raw", type=Path, default=RAW_OUTPUT)
     parser.add_argument("--date", help="datum analize YYYY-MM-DD (privzeto današnji)")
+    parser.add_argument("--print-prompts", action="store_true",
+                        help="samo izpiše zakrita besedila (MEDIJ_A …) za slepo ročno analizo")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
@@ -41,13 +49,24 @@ def main() -> None:
     articles = {a["id"]: Article(**a) for a in raw["articles"]}
     spec = json.loads(args.analysis.read_text(encoding="utf-8"))
 
+    if args.print_prompts:
+        for i, story in enumerate(spec["stories"]):
+            cluster = [articles[aid] for aid in story["article_ids"]]
+            print(f"===== ZGODBA {i + 1}\n{story_prompt(cluster, make_aliases(cluster, i))}\n")
+        return
+
     stories = []
     for i, story in enumerate(spec["stories"]):
         cluster = [articles[aid] for aid in story["article_ids"]]
         for cov in story["coverage_comparison"]:
             if cov.get("lean_score") is not None and "bias_leaning" not in cov:
                 cov["bias_leaning"] = leaning_from_score(cov["lean_score"])
-        report = build_story_report(StoryAnalysis.model_validate(story), cluster, i)
+        analysis = StoryAnalysis.model_validate(story)
+        blind = all(_ALIAS.fullmatch(c.media_name) for c in analysis.coverage_comparison)
+        if blind:
+            analysis = unmask_analysis(analysis, make_aliases(cluster, i), cluster)
+        report = build_story_report(analysis, cluster, i)
+        report.blind_analysis = blind
         report.source_checks = [SourceCheck.model_validate(c) for c in story.get("source_checks", [])]
         report.missing_context = [ContextItem.model_validate(c) for c in story.get("missing_context", [])]
         report.not_covered_by = story.get("not_covered_by", [])

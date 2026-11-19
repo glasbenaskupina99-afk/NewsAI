@@ -117,6 +117,27 @@ def fetch_feed(source: Source, limit: int = 15) -> list[Article]:
 
 # Vrstice, ki niso del članka (npr. »Spremljajte RTVSLO.si kot prednostni vir na Google«)
 _BOILERPLATE = re.compile(r"prednostni vir na Google|Deli zgodbo|Preberi še", re.IGNORECASE)
+# Cele vrstice, ki niso del članka (oglasni okvirji, gumbi)
+_JUNK_LINE = re.compile(r"^(?:oglaševanje|oglas|najnovejše|sorodno|video)$", re.IGNORECASE)
+# Od te vrstice naprej je samo okolica članka (komentarji, priporočila, e-novice)
+_END_LINE = re.compile(
+    r"^(?:kakšno je tvoje mnenje o tem\??|sodeluj v razpravi|najbolj brano|prva stran dneva"
+    r"|preberite tudi|več novic|komentarji)\b",
+    re.IGNORECASE,
+)
+
+
+def clean_text(text: str) -> str:
+    """Odstrani oglasne vrstice in vse od komentarjev ali priporočil naprej."""
+    lines = []
+    for line in (text or "").splitlines():
+        stripped = line.strip()
+        if _END_LINE.match(stripped):
+            break
+        if _BOILERPLATE.search(stripped) or _JUNK_LINE.match(stripped):
+            continue
+        lines.append(line)
+    return "\n".join(lines).strip()
 
 
 def extract_text(url: str) -> str:
@@ -131,8 +152,7 @@ def extract_text(url: str) -> str:
         text = trafilatura.extract(
             downloaded, include_comments=False, include_tables=False, favor_precision=True
         )
-        lines = [ln for ln in (text or "").splitlines() if not _BOILERPLATE.search(ln)]
-        return "\n".join(lines)[:MAX_TEXT_CHARS]
+        return clean_text(text)[:MAX_TEXT_CHARS]
     except Exception as exc:  # trafilatura lahko vrže različne napake omrežja/parserja
         log.debug("Ekstrakcija ni uspela za %s: %s", url, exc)
         return ""

@@ -125,6 +125,17 @@ class AnalyzerTest(unittest.TestCase):
         restored = analyzer.restore_quote(quote, aliases, cluster[0].body)
         self.assertEqual(restored, "Kot je za MMC povedal minister")
 
+    def test_mask_spelling_variants(self):
+        cluster = [_article("Info360", "komercialni", "t", "x"), _article("Žurnal24", "komercialni", "t", "y")]
+        aliases = analyzer.make_aliases(cluster, 0)
+        masked = analyzer.mask_names("Kot so za Info 360 in portal info360 povedali ...", aliases)
+        self.assertNotIn("360", masked)
+
+    def test_clean_text_drops_ads_and_page_tail(self):
+        from scraper import clean_text
+        text = "Prvi odstavek.\nOglaševanje\nDrugi odstavek.\nKakšno je tvoje mnenje o tem?\nNajbolj brano\nDrug članek"
+        self.assertEqual(clean_text(text), "Prvi odstavek.\nDrugi odstavek.")
+
     def test_prompt_has_publication_time_and_partial_flag(self):
         short = _article("Delo", "komercialni", "t", "Za nadaljevanje branja postanite naročnik.")
         short.published = "2026-11-18T08:00:00+01:00"

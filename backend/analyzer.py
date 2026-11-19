@@ -443,11 +443,12 @@ NAME_VARIANTS = {
     "Nova24TV": ["nova24tv.si", "Nova24TV", "Nova24 TV", "Nova24"],
     "Mladina": ["mladina.si", "Mladina", "Mladine", "Mladini"],
     "BBC World": ["BBC News", "BBC World", "bbc.com", "BBC"],
-    "Žurnal24": ["zurnal24.si", "Žurnal24", "Žurnal 24"],
-    "Svet24": ["svet24.si", "Svet24"],
+    "Žurnal24": ["zurnal24.si", "Žurnal24", "Žurnal 24", "Zurnal24", "zurnal24"],
+    "Svet24": ["svet24.si", "Svet24", "Svet 24", "svet24"],
     "Delo": ["delo.si", "Delo", "Dela", "Delu"],
-    "Info360": ["info360.si", "Info360"],
-    "Portal24": ["portal24.si", "Portal24"],
+    "Info360": ["info360.si", "Info360", "Info 360", "info360", "INFO360"],
+    "Portal24": ["portal24.si", "Portal24", "Portal 24", "portal24"],
+    "NaDlani": ["nadlani.si", "NaDlani.si", "NaDlani", "Na dlani"],
 }
 
 

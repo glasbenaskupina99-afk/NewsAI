@@ -1,8 +1,8 @@
 [
   {
     "date": "2026-11-18",
-    "stories": 2,
-    "model": "Claude (ročna podrobna analiza)",
+    "stories": 4,
+    "model": "Claude (ročna podrobna analiza; zgodbi 3–4 slepo)",
     "is_mock": false
   },
   {
