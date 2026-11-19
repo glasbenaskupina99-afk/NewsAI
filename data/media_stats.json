@@ -1,5 +1,5 @@
 {
-  "days": 3,
+  "days": 4,
   "media": [
     {
       "name": "Delo",
@@ -33,26 +33,70 @@
       ]
     },
     {
+      "name": "Mladina",
+      "category": "alternativni",
+      "count": 1,
+      "lean": [
+        -0.75
+      ],
+      "avg_lean": -0.75,
+      "min_lean": -0.75,
+      "max_lean": -0.75,
+      "avg_sens": 1.0,
+      "one_sided_share": 0,
+      "avg_words": 930,
+      "avg_own_percent": 94,
+      "agency_copy_share": 0,
+      "orientation": null,
+      "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Resnico zapustila dva poslanca",
+          "article_url": "https://www.mladina.si/253640/resnico-zapustila-dva-poslanca/",
+          "lean_score": -0.75,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 1,
+          "sides_represented": "Obe strani",
+          "shared_percent": 6
+        }
+      ]
+    },
+    {
       "name": "Svet24",
       "category": "komercialni",
-      "count": 5,
+      "count": 6,
       "lean": [
+        -0.75,
         0.0,
         0.25,
         -1.0,
         0.0,
         -1.25
       ],
-      "avg_lean": -0.4,
+      "avg_lean": -0.46,
       "min_lean": -1.25,
       "max_lean": 0.25,
-      "avg_sens": 3.4,
-      "one_sided_share": 20,
-      "avg_words": 598,
-      "avg_own_percent": 76,
+      "avg_sens": 3.67,
+      "one_sided_share": 17,
+      "avg_words": 691,
+      "avg_own_percent": 78,
       "agency_copy_share": 0,
       "orientation": "sredina",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Vrečko prepričana, da bosta Kokot in Štorek kmalu pristala v SDS",
+          "article_url": "https://svet24.si/novice/slovenija/resnica-katja-kokot-vodenje-stranke-martina-haring-1941776",
+          "lean_score": -0.75,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 5,
+          "sides_represented": "Obe strani",
+          "shared_percent": 10
+        },
         {
           "date": "2026-11-18",
           "story_id": "story-4",
@@ -188,8 +232,10 @@
     {
       "name": "Žurnal24",
       "category": "komercialni",
-      "count": 7,
+      "count": 9,
       "lean": [
+        0.0,
+        -0.25,
         -0.5,
         -0.75,
         0.0,
@@ -198,16 +244,40 @@
         -1.0,
         -0.6
       ],
-      "avg_lean": -0.3,
+      "avg_lean": -0.26,
       "min_lean": -1.0,
       "max_lean": 0.75,
-      "avg_sens": 4.57,
-      "one_sided_share": 14,
+      "avg_sens": 4.56,
+      "one_sided_share": 11,
       "avg_words": 415,
       "avg_own_percent": 64,
-      "agency_copy_share": 33,
+      "agency_copy_share": 25,
       "orientation": "sredina",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Razkol v Resnici: Odhajata Kokot in Štorek",
+          "article_url": "https://www.zurnal24.si/slovenija/katja-kokot-ni-vec-vodja-poslanske-skupine-resnica-468465",
+          "lean_score": -0.25,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 5,
+          "sides_represented": "Obe strani",
+          "shared_percent": 5
+        },
+        {
+          "date": "2026-11-19",
+          "story_id": "story-1",
+          "topic_title": "Vrh koalicije voljnih v Berlinu: Evropa želi za pogajalsko mizo, Janša kritičen do njene šibkosti",
+          "article_title": "Janša Evropi očita pasivnost",
+          "article_url": "https://www.zurnal24.si/slovenija/jansa-evropa-ocitki-pasivnost-rusija-468496",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 4,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 64
+        },
         {
           "date": "2026-11-18",
           "story_id": "story-4",
@@ -297,21 +367,34 @@
     {
       "name": "BBC World",
       "category": "mednarodni",
-      "count": 2,
+      "count": 3,
       "lean": [
+        0.0,
         -0.6,
         0.0
       ],
-      "avg_lean": -0.3,
+      "avg_lean": -0.2,
       "min_lean": -0.6,
       "max_lean": 0.0,
-      "avg_sens": 2.5,
+      "avg_sens": 2.33,
       "one_sided_share": 0,
-      "avg_words": 1017,
+      "avg_words": 945,
       "avg_own_percent": null,
       "agency_copy_share": null,
       "orientation": "sredina",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-1",
+          "topic_title": "Vrh koalicije voljnih v Berlinu: Evropa želi za pogajalsko mizo, Janša kritičen do njene šibkosti",
+          "article_title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+          "article_url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        },
         {
           "date": "2026-11-13",
           "story_id": "story-3",
@@ -429,8 +512,10 @@
     {
       "name": "MMC RTV SLO",
       "category": "javni",
-      "count": 10,
+      "count": 12,
       "lean": [
+        0.0,
+        -0.25,
         0.0,
         0.5,
         0.0,
@@ -445,13 +530,37 @@
       "avg_lean": -0.12,
       "min_lean": -0.75,
       "max_lean": 0.5,
-      "avg_sens": 1.8,
-      "one_sided_share": 10,
-      "avg_words": 778,
-      "avg_own_percent": 65,
-      "agency_copy_share": 29,
+      "avg_sens": 1.83,
+      "one_sided_share": 8,
+      "avg_words": 844,
+      "avg_own_percent": 67,
+      "agency_copy_share": 22,
       "orientation": "sredina",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Kokot in Štorek zapustila poslansko skupino Resni.ce. \"Nesoglasja se vlečejo že več kot leto dni.\"",
+          "article_url": "https://www.rtvslo.si/slovenija/kokot-in-storek-zapustila-poslansko-skupino-resni-ce-nesoglasja-se-vlecejo-ze-vec-kot-leto-dni/800593",
+          "lean_score": -0.25,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 9
+        },
+        {
+          "date": "2026-11-19",
+          "story_id": "story-1",
+          "topic_title": "Vrh koalicije voljnih v Berlinu: Evropa želi za pogajalsko mizo, Janša kritičen do njene šibkosti",
+          "article_title": "Koalicija voljnih: \"Cilj je varna Ukrajina v varni Evropi\". Janša kritičen do šibke vloge Evrope.",
+          "article_url": "https://www.rtvslo.si/svet/vojna-v-ukrajini/koalicija-voljnih-cilj-je-varna-ukrajina-v-varni-evropi-jansa-kriticen-do-sibke-vloge-evrope/800664",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 42
+        },
         {
           "date": "2026-11-18",
           "story_id": "story-4",
@@ -577,23 +686,49 @@
     {
       "name": "N1",
       "category": "komercialni",
-      "count": 4,
+      "count": 6,
       "lean": [
+        0.0,
+        0.0,
         -0.5,
         0.0,
         0.0,
         0.0
       ],
-      "avg_lean": -0.12,
+      "avg_lean": -0.08,
       "min_lean": -0.5,
       "max_lean": 0.0,
-      "avg_sens": 1.25,
+      "avg_sens": 1.67,
       "one_sided_share": 0,
-      "avg_words": 727,
-      "avg_own_percent": 44,
-      "agency_copy_share": 33,
+      "avg_words": 800,
+      "avg_own_percent": 56,
+      "agency_copy_share": 20,
       "orientation": "sredina",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Pretres v Resnici: Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine in stranke",
+          "article_url": "https://n1info.si/novice/slovenija/katja-kokot-izstopila-iz-poslanske-skupine-resnice/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": 5
+        },
+        {
+          "date": "2026-11-19",
+          "story_id": "story-1",
+          "topic_title": "Vrh koalicije voljnih v Berlinu: Evropa želi za pogajalsko mizo, Janša kritičen do njene šibkosti",
+          "article_title": "Janša kritičen do šibke pozicije Evrope: To se mora v prihodnje spremeniti",
+          "article_url": "https://n1info.si/novice/slovenija/jansa-kriticen-do-sibke-pozicije-evrope-to-se-mora-v-prihodnje-spremeniti/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 45
+        },
         {
           "date": "2026-11-18",
           "story_id": "story-4",
@@ -647,22 +782,35 @@
     {
       "name": "Portal24",
       "category": "komercialni",
-      "count": 3,
+      "count": 4,
       "lean": [
+        0.0,
         0.0,
         1.0,
         0.0
       ],
-      "avg_lean": 0.33,
+      "avg_lean": 0.25,
       "min_lean": 0.0,
       "max_lean": 1.0,
       "avg_sens": 2.0,
-      "one_sided_share": 33,
-      "avg_words": 518,
+      "one_sided_share": 25,
+      "avg_words": 447,
       "avg_own_percent": 94,
       "agency_copy_share": 0,
       "orientation": "sredina",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Po Katji Kokot Resnico zapušča še Aleksander Štorek, poslanska skupina ostaja s tremi člani",
+          "article_url": "https://portal24.si/po-katji-kokot-resnico-zapusca-se-aleksander-storek-poslanska-skupina-ostaja-s-tremi-clani/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 7
+        },
         {
           "date": "2026-11-18",
           "story_id": "story-4",
@@ -735,8 +883,10 @@
     {
       "name": "Nova24TV",
       "category": "alternativni",
-      "count": 9,
+      "count": 11,
       "lean": [
+        0.25,
+        0.5,
         1.75,
         1.0,
         2.0,
@@ -747,16 +897,40 @@
         1.25,
         2.25
       ],
-      "avg_lean": 1.39,
+      "avg_lean": 1.2,
       "min_lean": 0.2,
       "max_lean": 2.5,
-      "avg_sens": 6.22,
-      "one_sided_share": 44,
-      "avg_words": 487,
-      "avg_own_percent": 95,
+      "avg_sens": 5.55,
+      "one_sided_share": 36,
+      "avg_words": 439,
+      "avg_own_percent": 91,
       "agency_copy_share": 0,
       "orientation": "desno",
       "articles": [
+        {
+          "date": "2026-11-19",
+          "story_id": "story-2",
+          "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+          "article_title": "Kokotova in Štorek zapustila poslansko skupino, umazanega perila pa v javnosti ne bosta prala",
+          "article_url": "https://nova24tv.si/katja-kokot-zapustila-poslansko-skupino-resnice/",
+          "lean_score": 0.5,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 3,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 7
+        },
+        {
+          "date": "2026-11-19",
+          "story_id": "story-1",
+          "topic_title": "Vrh koalicije voljnih v Berlinu: Evropa želi za pogajalsko mizo, Janša kritičen do njene šibkosti",
+          "article_title": "Janša meni, da je pozicija Evrope glede pogajanj o Ukrajini prešibka",
+          "article_url": "https://nova24tv.si/jansa-meni-da-je-pozicija-evrope-glede-pogajanj-o-ukrajini-presibka/",
+          "lean_score": 0.25,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 33
+        },
         {
           "date": "2026-11-18",
           "story_id": "story-4",

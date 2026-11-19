@@ -50,11 +50,17 @@ def main() -> None:
     spec = json.loads(args.analysis.read_text(encoding="utf-8"))
 
     if args.print_prompts:
+        # Preslikave ne izpišemo: kdor analizira, je ne sme videti pred oceno. Shranimo jo ob analizi,
+        # da jo uvoz lahko uporabi (polje »aliases« v zgodbi ima prednost).
+        alias_maps = []
         for i, story in enumerate(spec["stories"]):
             cluster = [articles[aid] for aid in story["article_ids"]]
             aliases = story.get("aliases") or make_aliases(cluster, i)
+            alias_maps.append({"article_ids": story["article_ids"], "aliases": aliases})
             print(f"===== ZGODBA {i + 1}\n{story_prompt(cluster, aliases)}\n")
-            log.info("Zgodba %d psevdonimi: %s", i + 1, json.dumps(aliases, ensure_ascii=False))
+        alias_path = args.analysis.with_suffix(".aliases.json")
+        alias_path.write_text(json.dumps(alias_maps, ensure_ascii=False, indent=2), encoding="utf-8")
+        log.info("Preslikava psevdonimov je shranjena v %s (ne odpirajte je pred oceno)", alias_path)
         return
 
     stories = []

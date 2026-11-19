@@ -1,0 +1,1353 @@
+{
+  "generated_at": "2026-11-19T19:52:01+00:00",
+  "model": "Claude (ročna podrobna analiza na zakritih besedilih)",
+  "is_mock": false,
+  "sources": [
+    {
+      "name": "MMC RTV SLO",
+      "category": "javni",
+      "url": "https://www.rtvslo.si/feeds/00.xml"
+    },
+    {
+      "name": "24ur",
+      "category": "komercialni",
+      "url": "https://www.24ur.com/rss"
+    },
+    {
+      "name": "N1",
+      "category": "komercialni",
+      "url": "https://n1info.si/feed/"
+    },
+    {
+      "name": "Nova24TV",
+      "category": "alternativni",
+      "url": "https://nova24tv.si/feed/"
+    },
+    {
+      "name": "Mladina",
+      "category": "alternativni",
+      "url": "https://www.mladina.si/rss/"
+    },
+    {
+      "name": "BBC World",
+      "category": "mednarodni",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    }
+  ],
+  "articles_scraped": 12,
+  "stories": [
+    {
+      "topic_title": "Vrh koalicije voljnih v Berlinu: Evropa želi za pogajalsko mizo, Janša kritičen do njene šibkosti",
+      "international_baseline": "Po poročanju mednarodnega vira so evropski voditelji na vrhu koalicije voljnih v Berlinu sporočili, da so pripravljeni na pogajanja z Rusijo o koncu vojne. Merz je ruske zahteve označil za nerealne, Kushner je dejal, da Trump želi dogovor z Evropo ob strani, in da naj bi Rusija sprejela varnostna jamstva po vzoru 5. člena Nata. Putin je Evropejce povabil v Moskvo, Zelenski pa je opozoril, da je Putin doslej vse zavrnil. Med srečanjem so droni napadli središče Kijeva.",
+      "coverage_comparison": [
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Janša meni, da je pozicija Evrope glede pogajanj o Ukrajini prešibka",
+          "article_url": "https://nova24tv.si/jansa-meni-da-je-pozicija-evrope-glede-pogajanj-o-ukrajini-presibka/",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Kot je povedal za RTV Slovenija, je pozicija Evrope glede pogajanj o Ukrajini šibka, saj odgovarja na zahteve Rusije, namesto da bi postavljala svoje."
+          ],
+          "omitted_facts": [],
+          "voices_heard": [
+            "Janez Janša"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Objavljeno pred koncem vrha, zato izida srečanja ni mogoče šteti za zamolčanega."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov povzame premierjevo stališče s pogojnikom »meni«; brez vrednotenja.",
+          "main_frame": "Uradna izjava",
+          "frame_description": "Kratko poročilo o premierjevi izjavi z ozadjem koalicije.",
+          "lede_focus": "Janševa kritika pozicije Evrope.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [],
+          "reasoning": "Prenos izjave brez vrednotenja. Članek poda le premierjev pogled, drugih voditeljev ne navede; ker je bil objavljen pred srečanjem, je to delno posledica časa. Minimalen odklon: +0,25.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Janša",
+              "share_percent": 75,
+              "direct_quotes": 2,
+              "in_lede": true
+            },
+            {
+              "side": "drugi evropski voditelji",
+              "share_percent": 0,
+              "direct_quotes": 0,
+              "in_lede": false
+            },
+            {
+              "side": "ZDA (Kushner, Witkoff)",
+              "share_percent": 5,
+              "direct_quotes": 0,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.25,
+          "category": "alternativni",
+          "quotes_verified": true,
+          "published": "2026-11-19T15:44:39+00:00",
+          "word_count": 190,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "Žurnal24",
+              "percent": 32
+            },
+            {
+              "media": "N1",
+              "percent": 23
+            },
+            {
+              "media": "MMC RTV SLO",
+              "percent": 18
+            }
+          ],
+          "shared_core": {
+            "shared_percent": 33,
+            "own_percent": 67,
+            "own_sentences": [
+              "Bili smo šibki, kar se tiče diplomacije, mi smo samo odgovarjali na zahteve Ruske federacija namesto, da bi postavljali svoje in to se mora v prihodnje spremeniti,” je Janša izjavil pred začetkom zasedanja v Berlinu."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": []
+        },
+        {
+          "media_name": "N1",
+          "article_title": "Janša kritičen do šibke pozicije Evrope: To se mora v prihodnje spremeniti",
+          "article_url": "https://n1info.si/novice/slovenija/jansa-kriticen-do-sibke-pozicije-evrope-to-se-mora-v-prihodnje-spremeniti/",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Koalicija je na srečanju Ukrajini zagotovila nadaljnjo podporo, je po vrhu sporočil Merz."
+          ],
+          "omitted_facts": [
+            "Kushnerjeva izjava, da naj bi Rusija sprejela varnostna jamstva po vzoru 5. člena Nata.",
+            "Putinovo povabilo Evropejcem v Moskvo."
+          ],
+          "voices_heard": [
+            "Friedrich Merz",
+            "Janez Janša",
+            "Andy Burnham",
+            "Ursula von der Leyen",
+            "Antonio Costa",
+            "Gitanas Nauseda",
+            "Andris Kulbergs"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Naslov je o Janši, uvod pa o Merzu in izidu vrha."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov poudari Janševo kritiko in citat; je točen povzetek izjave.",
+          "main_frame": "Diplomacija in pogajanja",
+          "frame_description": "Izid vrha z izjavami evropskih voditeljev; Janševa kritika kot slovenski poudarek.",
+          "lede_focus": "Merz je gostil vrh, koalicija zagotavlja podporo Ukrajini in poziva Putina h koncu vojne.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Izjave litovskega predsednika in latvijskega premierja o večji pomoči Ukrajini."
+          ],
+          "reasoning": "Uravnotežen povzetek izjav več voditeljev brez vrednotenja. Ocena 0.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Janša",
+              "share_percent": 20,
+              "direct_quotes": 2,
+              "in_lede": true
+            },
+            {
+              "side": "drugi evropski voditelji",
+              "share_percent": 65,
+              "direct_quotes": 6,
+              "in_lede": true
+            },
+            {
+              "side": "ZDA (Kushner, Witkoff)",
+              "share_percent": 5,
+              "direct_quotes": 0,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.0,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-19T18:38:18+00:00",
+          "word_count": 881,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 37
+            },
+            {
+              "media": "Žurnal24",
+              "percent": 15
+            }
+          ],
+          "shared_core": {
+            "shared_percent": 45,
+            "own_percent": 55,
+            "own_sentences": [
+              "Nemški kancler Friedrich Merz je v Berlinu gostil srečanje koalicije voljnih za Ukrajino, ki se ga je udeležil tudi slovenski premier Janez Janša.",
+              "Po poročanju nemškega spletnega portala Tagesschau sta ameriška odposlanca nemškega kanclerja seznanila z najnovejšimi prizadevanji za mir v Ukrajini."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Kushner: Trump želi dogovor z Evropo ob strani",
+            "Kushner: varnostna jamstva po 5. členu Nata, Rusija naj bi soglašala",
+            "Zelenski: potreben je pritisk na Rusijo; Putin je doslej vse zavrnil"
+          ]
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Janša Evropi očita pasivnost",
+          "article_url": "https://www.zurnal24.si/slovenija/jansa-evropa-ocitki-pasivnost-rusija-468496",
+          "sensationalism_score": 4,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Premier Janez Janša je bil pred začetkom srečanja t. i. koalicije voljnih za Ukrajino kritičen do šibke pozicije Evrope glede pogajanj o Ukrajini"
+          ],
+          "omitted_facts": [],
+          "voices_heard": [
+            "Janez Janša"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [
+            "Naslov Janši pripiše očitek »pasivnosti«; Janša je govoril o šibkosti in odzivanju na ruske zahteve, ne o pasivnosti."
+          ],
+          "notes": [
+            "Objavljeno ob začetku vrha (»se začenja«), zato izida ni mogoče šteti za zamolčanega."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "»Očita pasivnost« izjavo zaostri in jo prevede v besedo, ki je premier ni uporabil.",
+          "main_frame": "Uradna izjava",
+          "frame_description": "Premierjeva izjava in napoved srečanja.",
+          "lede_focus": "Janševa kritika pozicije Evrope.",
+          "loaded_language": [
+            {
+              "quote": "pasivnost",
+              "explanation": "Avtorjeva zaostritev izjave; premier je govoril o šibkosti.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [],
+          "reasoning": "Agencijsko besedilo; naslov izjavo zaostri, a brez političnega nagiba. Ocena 0.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Janša",
+              "share_percent": 60,
+              "direct_quotes": 2,
+              "in_lede": true
+            },
+            {
+              "side": "drugi evropski voditelji",
+              "share_percent": 0,
+              "direct_quotes": 0,
+              "in_lede": false
+            },
+            {
+              "side": "ZDA (Kushner, Witkoff)",
+              "share_percent": 5,
+              "direct_quotes": 0,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.0,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-19T16:32:00+01:00",
+          "word_count": 248,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "N1",
+              "percent": 57
+            },
+            {
+              "media": "MMC RTV SLO",
+              "percent": 24
+            },
+            {
+              "media": "Nova24TV",
+              "percent": 22
+            }
+          ],
+          "shared_core": {
+            "shared_percent": 64,
+            "own_percent": 36,
+            "own_sentences": []
+          },
+          "partial_text": false,
+          "matrix_gaps": []
+        },
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Koalicija voljnih: \"Cilj je varna Ukrajina v varni Evropi\". Janša kritičen do šibke vloge Evrope.",
+          "article_url": "https://www.rtvslo.si/svet/vojna-v-ukrajini/koalicija-voljnih-cilj-je-varna-ukrajina-v-varni-evropi-jansa-kriticen-do-sibke-vloge-evrope/800664",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Pri pogovorih z Rusijo o končanju vojne v Ukrajini želijo sodelovati kot ekipa s Kijevom in Washingtonom."
+          ],
+          "omitted_facts": [
+            "Putinovo povabilo Evropejcem v Moskvo.",
+            "Napad z droni na Kijev med srečanjem."
+          ],
+          "voices_heard": [
+            "Friedrich Merz",
+            "Andy Burnham",
+            "Janez Janša",
+            "Jared Kushner",
+            "Volodimir Zelenski",
+            "Ursula von der Leyen",
+            "Antonio Costa",
+            "Gitanas Nauseda",
+            "Andris Kulbergs"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Janševo izjavo je dal temu mediju."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov združi sklep vrha in slovenski poudarek; brez pretiravanja.",
+          "main_frame": "Diplomacija in pogajanja",
+          "frame_description": "Najpopolnejši povzetek izida z vsemi ključnimi akterji.",
+          "lede_focus": "Merz: koalicija pozdravlja nova pogajanja ZDA z Rusijo.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Merz: vojna se mora končati tako, da Ukrajina ohrani ozemeljsko celovitost."
+          ],
+          "reasoning": "Uravnoteženo poročilo z izjavami evropskih, ameriških in ukrajinskih akterjev. Ocena 0.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Janša",
+              "share_percent": 15,
+              "direct_quotes": 2,
+              "in_lede": false
+            },
+            {
+              "side": "drugi evropski voditelji",
+              "share_percent": 60,
+              "direct_quotes": 7,
+              "in_lede": true
+            },
+            {
+              "side": "ZDA (Kushner, Witkoff)",
+              "share_percent": 15,
+              "direct_quotes": 3,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.0,
+          "category": "javni",
+          "quotes_verified": true,
+          "published": "2026-11-19T16:52:14+00:00",
+          "word_count": 868,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "N1",
+              "percent": 42
+            },
+            {
+              "media": "Žurnal24",
+              "percent": 7
+            }
+          ],
+          "shared_core": {
+            "shared_percent": 42,
+            "own_percent": 58,
+            "own_sentences": [
+              "In nobene odločitve o evropski varnosti brez prisotnosti Evrope za pogajalsko mizo - to je jasno,\" pa je dejal britanski premier Andy Burnham, ki je skupaj z Merzem in francoskim predsednikom Emmanuelom Macronom gostil srečanje.",
+              "Merz je še poudaril, da se mora vojna končati tako, da Ukrajina ohrani svojo ozemeljsko celovitost, da ima na svoji strani trdna varnostna jamstva in da je predvsem vključena v evropsko varnost."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": []
+        },
+        {
+          "media_name": "BBC World",
+          "article_title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+          "article_url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "European leaders have said they are ready for negotiations with Russia on ending the war in Ukraine, in a strong show of support for Kyiv."
+          ],
+          "omitted_facts": [],
+          "voices_heard": [
+            "Andy Burnham",
+            "Friedrich Merz",
+            "Jared Kushner",
+            "Vladimir Putin",
+            "Volodymyr Zelensky",
+            "Yury Ushakov"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Referenčni vir; Janše ne omeni."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Opisni naslov s pripisom (»leaders say«).",
+          "main_frame": "Diplomacija in pogajanja",
+          "frame_description": "Vrh postavi v kontekst Putinovih izjav in nadaljevanja napadov na Ukrajino.",
+          "lede_focus": "Evropski voditelji so pripravljeni na pogajanja z Rusijo.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Putinovo povabilo Evropejcem v Moskvo.",
+            "Napad z droni na Kijev med srečanjem."
+          ],
+          "reasoning": "Referenčni vir z izjavami vseh strani, vključno z Rusijo. Ocena 0.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "drugi evropski voditelji",
+              "share_percent": 45,
+              "direct_quotes": 4,
+              "in_lede": true
+            },
+            {
+              "side": "ZDA (Kushner, Witkoff)",
+              "share_percent": 20,
+              "direct_quotes": 3,
+              "in_lede": false
+            },
+            {
+              "side": "Rusija (Putin)",
+              "share_percent": 30,
+              "direct_quotes": 4,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.0,
+          "category": "mednarodni",
+          "quotes_verified": true,
+          "published": "2026-11-19T19:16:21+00:00",
+          "word_count": 873,
+          "cited_sources": [],
+          "text_overlap": [],
+          "shared_core": null,
+          "partial_text": false,
+          "matrix_gaps": []
+        }
+      ],
+      "neutral_summary": "Na največjem vrhu koalicije voljnih doslej so voditelji 26 držav, evropskih institucij in Nata ter ameriška odposlanca razpravljali o pogajanjih za konec vojne v Ukrajini. Evropa želi sodelovati v pogovorih z Rusijo skupaj s Kijevom in Washingtonom. Slovenski premier Janša je pred srečanjem dejal, da je bila Evropa šibka, ker je le odgovarjala na ruske zahteve.",
+      "context": "Koalicijo voljnih sta v začetku lanskega leta ustanovila Pariz in London; vključuje več kot 30 držav. Vrh je potekal isti dan kot tristransko srečanje Trumpa, Putina in Ši Džinpinga v Shenzhenu.",
+      "key_differences": [
+        "Slovenski mediji v ospredje postavijo Janševo izjavo, ki jo je dal MMC RTV SLO; mednarodni vir Janše ne omeni.",
+        "Nova24TV in Žurnal24 objavita le Janševo izjavo in napoved srečanja, izida vrha nimata; oba sta bila objavljena pred koncem srečanja.",
+        "MMC RTV SLO in N1 povzameta izid (Merz, Burnham, naslednji pogovori morda v ZAE); MMC RTV SLO doda še Kushnerja in Zelenskega.",
+        "Samo mednarodni vir navede Putinovo povabilo Evropejcem v Moskvo in napad z droni na Kijev med srečanjem.",
+        "Žurnal24 v naslovu Janši pripiše očitek »pasivnosti«, čeprav je Janša govoril o šibkosti in odzivanju na ruske zahteve."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Vrh koalicije voljnih v Berlinu (največji doslej)",
+          "media": [
+            "Nova24TV",
+            "N1",
+            "Žurnal24",
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [
+            "N1",
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Janša: Evropa je bila šibka, le odgovarjala je na zahteve Rusije",
+          "media": [
+            "Nova24TV",
+            "N1",
+            "Žurnal24",
+            "MMC RTV SLO"
+          ],
+          "prominent_in": [
+            "Nova24TV",
+            "N1",
+            "Žurnal24",
+            "MMC RTV SLO"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Udeležba ameriških odposlancev Witkoffa in Kushnerja",
+          "media": [
+            "Nova24TV",
+            "N1",
+            "Žurnal24",
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        },
+        {
+          "fact": "Merz: Evropa želi sodelovati v pogajanjih z Rusijo skupaj s Kijevom in Washingtonom",
+          "media": [
+            "N1",
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Burnham: nobene odločitve o Ukrajini brez Ukrajine in o Evropi brez Evrope",
+          "media": [
+            "N1",
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Merz kritičen do srečanja Trump–Putin–Ši v Shenzhenu",
+          "media": [
+            "N1",
+            "MMC RTV SLO"
+          ],
+          "prominent_in": [],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Naslednji mirovni pogovori kmalu, morda v Združenih arabskih emiratih",
+          "media": [
+            "N1",
+            "MMC RTV SLO"
+          ],
+          "prominent_in": [],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Kushner: Trump želi dogovor z Evropo ob strani",
+          "media": [
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Kushner: varnostna jamstva po 5. členu Nata, Rusija naj bi soglašala",
+          "media": [
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Zelenski: potreben je pritisk na Rusijo; Putin je doslej vse zavrnil",
+          "media": [
+            "MMC RTV SLO",
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": "2026-11-19T16:00:00+00:00"
+        },
+        {
+          "fact": "Putin je Evropejce povabil v Moskvo, da opredelijo svoje stališče",
+          "media": [
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        },
+        {
+          "fact": "Med srečanjem so droni napadli središče Kijeva, ena smrtna žrtev",
+          "media": [
+            "BBC World"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        }
+      ],
+      "id": "story-1",
+      "has_international_source": true,
+      "source_checks": [],
+      "missing_context": [],
+      "not_covered_by": [],
+      "blind_analysis": true,
+      "manual": true
+    },
+    {
+      "topic_title": "Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine Resnica",
+      "international_baseline": "Mednarodnega vira ni. Izhodišče so dejstva, ki jih navaja večina medijev: poslanca Katja Kokot in Aleksander Štorek sta izstopila iz poslanske skupine Resnica in ostajata nepovezana poslanca; razlog je po njunih besedah nesoglasje o usmeritvah stranke. Svet stranke je 11. 11. predlagal zamenjavo vodje poslanske skupine, ki jo je 17. 11. prevzela Martina Haring. Skupina ima le še tri člane, kar je najmanj.",
+      "coverage_comparison": [
+        {
+          "media_name": "Portal24",
+          "article_title": "Po Katji Kokot Resnico zapušča še Aleksander Štorek, poslanska skupina ostaja s tremi člani",
+          "article_url": "https://portal24.si/po-katji-kokot-resnico-zapusca-se-aleksander-storek-poslanska-skupina-ostaja-s-tremi-clani/",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Časovnica kaže, da je bila odločitev o zamenjavi sprejeta pred njenim odhodom; Kokot povezave med odločitvama za zdaj ni izrecno potrdila."
+          ],
+          "omitted_facts": [
+            "Ozadje: posnetek o donaciji za zemljišče v Kranju in izid lokalnih volitev."
+          ],
+          "voices_heard": [
+            "Katja Kokot (posredno)",
+            "Aleksander Štorek",
+            "Resnica"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Kratek članek, objavljen pred izjavo poslancev v DZ."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Opisni naslov z dejstvom, da ostajajo trije poslanci.",
+          "main_frame": "Uradna izjava",
+          "frame_description": "Povzetek izstopov in časovnice zamenjave vodje.",
+          "lede_focus": "Izstop obeh poslancev iz skupine in stranke.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Sklep, da je bila zamenjava vodje sprejeta pred izstopom (z opozorilom, da Kokot povezave ni potrdila)."
+          ],
+          "reasoning": "Nevtralno poročilo brez vrednotenja in brez političnih odzivov. Ocena 0.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 60,
+              "direct_quotes": 1,
+              "in_lede": true
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 35,
+              "direct_quotes": 0,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.0,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-19T10:57:28+00:00",
+          "word_count": 235,
+          "cited_sources": [
+            "N1"
+          ],
+          "text_overlap": [],
+          "shared_core": {
+            "shared_percent": 7,
+            "own_percent": 93,
+            "own_sentences": [
+              "Kmalu po njeni objavi je izstop sporočil še Aleksander Štorek. “V nadaljevanju ne vidim več poti za skupno sodelovanje,” je zapisal na Facebooku.",
+              "Resni.ca je sporočila, da je svet stranke vprašanje vodenja poslanske skupine obravnaval v sredo, 11. novembra, in predlagal zamenjavo vodje."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Nesoglasja v stranki trajajo že več kot leto dni",
+            "Kot razlog Kokot navaja preklic decembrskega kongresa",
+            "Kokot: »umazanega perila« ne bo prala v javnosti",
+            "Kokot obljublja konstruktivno sodelovanje pri rešitvah, dobrih za narod",
+            "Levica (Vrečko): Kokot in Štorek bosta pristala v SDS, Resnica se potaplja",
+            "Posnetek o donaciji za zemljišče za pravoslavno cerkev v Kranju in Kokotin odziv",
+            "Resnica je na lokalnih volitvah dobila le enega svetnika"
+          ]
+        },
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Kokot in Štorek zapustila poslansko skupino Resni.ce. \"Nesoglasja se vlečejo že več kot leto dni.\"",
+          "article_url": "https://www.rtvslo.si/slovenija/kokot-in-storek-zapustila-poslansko-skupino-resni-ce-nesoglasja-se-vlecejo-ze-vec-kot-leto-dni/800593",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Po besedah prvaka Svobode Roberta Goloba je Stevanović odgovornost stranke SDS, saj se brez njihove podpore ne bi zavihtel na današnji položaj."
+          ],
+          "omitted_facts": [],
+          "voices_heard": [
+            "Katja Kokot",
+            "Aleksander Štorek",
+            "Zoran Stevanović",
+            "Resnica",
+            "Asta Vrečko (Levica)",
+            "Robert Golob (Svoboda)",
+            "Svoboda"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Najobsežnejši članek; vključuje izjavo poslancev v DZ in odzive opozicije, odziva koalicije ni."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov z navedkom razloga; brez pretiravanja.",
+          "main_frame": "Notranji spor v stranki",
+          "frame_description": "Izstop, razlogi, ozadje sporov in politični odzivi.",
+          "lede_focus": "Kokotin zapis o izstopu.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Golob: Stevanovićeva dejanja so odgovornost Janeza Janše."
+          ],
+          "reasoning": "Celovito poročilo; politične odzive dobi le opozicija (Levica, Svoboda) z ostrimi izjavami o Janševi odgovornosti, odziva koalicije ni. Rahel odklon: −0,25.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 50,
+              "direct_quotes": 6,
+              "in_lede": true
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 15,
+              "direct_quotes": 2,
+              "in_lede": false
+            },
+            {
+              "side": "opozicija (Levica, Svoboda)",
+              "share_percent": 30,
+              "direct_quotes": 3,
+              "in_lede": false
+            }
+          ],
+          "lean_score": -0.25,
+          "category": "javni",
+          "quotes_verified": true,
+          "published": "2026-11-19T11:02:30+01:00",
+          "word_count": 1284,
+          "cited_sources": [],
+          "text_overlap": [
+            {
+              "media": "Svet24",
+              "percent": 6
+            }
+          ],
+          "shared_core": {
+            "shared_percent": 9,
+            "own_percent": 91,
+            "own_sentences": [
+              "Da so v stranki Resni.ca nesoglasja, je bilo mogoče slutiti že od začetka novembra, ko je Katja Kokot na družbenih omrežjih objavila posnetek, v katerem se je med vrsticami obregnila ob zgodbo o prodaji zemljišča za srbsko pravoslavno cerkev v Kranju, kar je označila za prodajo slovenske zemlje tujcem.",
+              "A ker pričakuje, da bodo izstopi še sledili ter da Katja Kokot in Štorek ne bosta dolgo nepovezana poslanca, saj da vse poteka v dogovoru z največjo vladno stranko SDS, bo po njenih besedah več kot dovolj glasov, da se Stevanovića s te funkcije \"odstrani\"."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Izstopila sta tudi iz stranke"
+          ]
+        },
+        {
+          "media_name": "N1",
+          "article_title": "Pretres v Resnici: Katja Kokot in Aleksander Štorek izstopila iz poslanske skupine in stranke",
+          "article_url": "https://n1info.si/novice/slovenija/katja-kokot-izstopila-iz-poslanske-skupine-resnice/",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Kokot in Štorek sta popoldne v državnem zboru stopila pred medije, kjer pa sta bila s pojasnili za svoj izstop iz poslanske skupine in iz stranke precej skopa."
+          ],
+          "omitted_facts": [
+            "Odzivi opozicije (Levica, Svoboda)."
+          ],
+          "voices_heard": [
+            "Katja Kokot",
+            "Aleksander Štorek",
+            "Resnica"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "»Pretres« doda dramatičnost, sicer opisno.",
+          "main_frame": "Notranji spor v stranki",
+          "frame_description": "Izstop, razlogi in ozadje (posnetek o zemljišču, lokalne volitve).",
+          "lede_focus": "Izstop iz skupine in stranke, nova vodja Haring, preklic kongresa kot razlog.",
+          "loaded_language": [
+            {
+              "quote": "Pretres",
+              "explanation": "Dramatičen izraz v naslovu.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [],
+          "reasoning": "Poročilo brez političnega vrednotenja; vključi tudi neugodno ozadje za vodstvo Resnice. Ocena 0.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 65,
+              "direct_quotes": 5,
+              "in_lede": true
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 20,
+              "direct_quotes": 1,
+              "in_lede": true
+            }
+          ],
+          "lean_score": 0.0,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-19T13:44:47+00:00",
+          "word_count": 939,
+          "cited_sources": [],
+          "text_overlap": [],
+          "shared_core": {
+            "shared_percent": 5,
+            "own_percent": 95,
+            "own_sentences": [
+              "Tukaj smo kot sodelavci še naprej in verjamem, da bi kakršno koli blatenje ali pranje umazanega perila v javnosti šlo v nasprotno smer,\" je dejala in dodala, da so poslanci izvoljeni v državni zbor, da delajo za ljudi, ne pa zaradi nesoglasij in \"zdrah\".",
+              "Omenjeni posnetek je Kokot na Facebooku objavila po tem, ko se je prvak Resnice Zoran Stevanović pred javnostjo moral zagovarjati zaradi posnetka, ki kaže, kako naj bi se s kranjskim županom Matjažem Rakovcem dogovarjal glede zemljišča v Kranju, na katerem bi gradili srbsko pravoslavno cerkev."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Levica (Vrečko): Kokot in Štorek bosta pristala v SDS, Resnica se potaplja"
+          ]
+        },
+        {
+          "media_name": "Svet24",
+          "article_title": "Vrečko prepričana, da bosta Kokot in Štorek kmalu pristala v SDS",
+          "article_url": "https://svet24.si/novice/slovenija/resnica-katja-kokot-vodenje-stranke-martina-haring-1941776",
+          "sensationalism_score": 5,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "Sicer pa je znano, da si je poslanka Kokot blizu z nekaterimi člani SDS. Pričakovati je torej, da bi lahko kmalu stopila pod njihov dežnik."
+          ],
+          "omitted_facts": [],
+          "voices_heard": [
+            "Katja Kokot",
+            "Aleksander Štorek",
+            "Resnica",
+            "Zoran Stevanović",
+            "Asta Vrečko (Levica)",
+            "Svoboda"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [
+            "Trditev, da je »znano«, da je Kokot blizu nekaterim članom SDS, ni podprta z virom."
+          ],
+          "notes": [],
+          "headline_leaning": "Sredina-Levo",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov ugibanje Levice predstavi kot glavno novico.",
+          "main_frame": "Politične posledice in prerazporeditev moči",
+          "frame_description": "Izstop je prikazan kot verjeten prestop k SDS, ki bi koaliciji zagotovil večino.",
+          "lede_focus": "Resnica ima le še tri poslance; če se oba pridružita SDS, Stevanović ni več jeziček na tehtnici.",
+          "loaded_language": [],
+          "editorial_statements": [
+            "Pretres v stranki Resnica bo imel velike politične posledice."
+          ],
+          "unique_facts": [
+            "Izračun: s prestopom obeh bi imela koalicija 45 poslancev, z manjšinskima poslancema dovolj za vladanje."
+          ],
+          "reasoning": "Naslov in uvod prevzameta tezo Levice o prestopu k SDS, avtor jo podpre z nepodprto trditvijo (»znano je«). Hkrati navede izjave obeh poslancev. Odklon k opozicijskemu okviru: −0,75.",
+          "confidence": "Srednja",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 45,
+              "direct_quotes": 3,
+              "in_lede": false
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 15,
+              "direct_quotes": 1,
+              "in_lede": false
+            },
+            {
+              "side": "opozicija (Levica, Svoboda)",
+              "share_percent": 30,
+              "direct_quotes": 2,
+              "in_lede": true
+            }
+          ],
+          "lean_score": -0.75,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-19T11:07:28+01:00",
+          "word_count": 1063,
+          "cited_sources": [
+            "STA"
+          ],
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 5
+            }
+          ],
+          "shared_core": {
+            "shared_percent": 10,
+            "own_percent": 90,
+            "own_sentences": [
+              "Na vprašanje, ali lahko koalicija tudi v prihodnje računa na njene glasove, je odgovorila, da si želi konstruktivnega sodelovanja in da bo podprla rešitve, ki bodo dobre za slovenski narod.",
+              "Njen odziv je sledil objavi posnetka, v katerem je predsednik državnega zbora in stranke Resnica Zoran Stevanović dejal, da je s svojo funkcijo pridobil donatorja za nakup občinskega zemljišča, namenjenega gradnji pravoslavne cerkve v Kranju, še poroča STA."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Resnica je na lokalnih volitvah dobila le enega svetnika"
+          ]
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Razkol v Resnici: Odhajata Kokot in Štorek",
+          "article_url": "https://www.zurnal24.si/slovenija/katja-kokot-ni-vec-vodja-poslanske-skupine-resnica-468465",
+          "sensationalism_score": 5,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Na ta dan je Kokot na twitterju objavila prostaški stavek",
+            "Stranka Resnica, ki jo vodi Zoran Stevanović, je na nedavnih lokalnih volitvah doživela popoln fiasko."
+          ],
+          "omitted_facts": [
+            "Izjava poslancev v DZ (razlogi, preklic kongresa)."
+          ],
+          "voices_heard": [
+            "Katja Kokot",
+            "Aleksander Štorek",
+            "Resnica",
+            "Zoran Stevanović",
+            "Asta Vrečko (Levica)"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Kokotin zapis navede kot »fakiča«; drug medij ga je dan prej navajal kot »sredinca« – izvirnika ni bilo mogoče preveriti.",
+            "Objavljeno pred izjavo poslancev v DZ."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "»Razkol« dramatizira, sicer opisno.",
+          "main_frame": "Notranji spor v stranki",
+          "frame_description": "Izstop kot nezaupnica stranke Kokot in znak propadanja Resnice.",
+          "lede_focus": "Kokotin zapis o izstopu.",
+          "loaded_language": [
+            {
+              "quote": "prostaški stavek",
+              "explanation": "Avtorjeva vrednostna oznaka Kokotinega zapisa.",
+              "verified": true
+            },
+            {
+              "quote": "popoln fiasko",
+              "explanation": "Avtorjeva vrednostna oznaka izida volitev.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "Stranka Resnica, ki jo vodi Zoran Stevanović, je na nedavnih lokalnih volitvah doživela popoln fiasko."
+          ],
+          "unique_facts": [
+            "Ime domnevnega donatorja za zemljišče v Kranju (Mladen Milanović)."
+          ],
+          "reasoning": "Vrednostne oznake (»prostaški«, »popoln fiasko«) so usmerjene v obe strani spora; edini politični odziv je Levice. Minimalen odklon: −0,25.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 40,
+              "direct_quotes": 2,
+              "in_lede": true
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 25,
+              "direct_quotes": 2,
+              "in_lede": false
+            },
+            {
+              "side": "opozicija (Levica, Svoboda)",
+              "share_percent": 20,
+              "direct_quotes": 1,
+              "in_lede": false
+            }
+          ],
+          "lean_score": -0.25,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-19T11:00:00+01:00",
+          "word_count": 581,
+          "cited_sources": [
+            "N1"
+          ],
+          "text_overlap": [],
+          "shared_core": {
+            "shared_percent": 5,
+            "own_percent": 95,
+            "own_sentences": [
+              "Z večino glasov so poslanci Resnice v torek za novo vodjo poslanske skupine določili poslanko Martino Haring, ki je v državni zbor prišla po odstopu Borisa Mijiča.",
+              "V javnosti se je nedavno pojavil posnetek, na katerem je predsednik Resnice in državnega zbora Zoran Stevanović govoril o tem, da je izkoristil svoj položaj za pridobitev donatorja za nakup občinskega zemljišča za gradnjo pravoslavne cerkve v Kranju."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Nesoglasja v stranki trajajo že več kot leto dni",
+            "Kot razlog Kokot navaja preklic decembrskega kongresa",
+            "Kokot: »umazanega perila« ne bo prala v javnosti",
+            "Kokot obljublja konstruktivno sodelovanje pri rešitvah, dobrih za narod"
+          ]
+        },
+        {
+          "media_name": "Mladina",
+          "article_title": "Resnico zapustila dva poslanca",
+          "article_url": "https://www.mladina.si/253640/resnico-zapustila-dva-poslanca/",
+          "sensationalism_score": 1,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "Odmevala je tudi njegova poteza iz leta 2021, ko je na upravni enoti podpisal listino, s katero se je zavezal, da stranka nikoli ne bo politično sodelovala s stranko SDS in njenim predsednikom.",
+            "Stranko sicer že dlje časa pretresajo afere, povezane z že nekdanjim poslancem Borisom Mijičem ter strankinim predsednikom Zoranom Stevanovićem, sicer tudi predsednikom DZ."
+          ],
+          "omitted_facts": [
+            "Izjava poslancev v DZ (razlogi, preklic kongresa)."
+          ],
+          "voices_heard": [
+            "Katja Kokot",
+            "Aleksander Štorek",
+            "Resnica"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [
+            "Polovica besedila je ozadje o aferah Resnice in njeni podpori Janševi vladi.",
+            "Objavljeno pred izjavo poslancev v DZ."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Povsem opisen naslov.",
+          "main_frame": "Odgovornost in ozadje",
+          "frame_description": "Izstop je postavljen v zgodbo o aferah Resnice in prelomljeni zavezi, da ne bo podprla SDS.",
+          "lede_focus": "Kokot in Štorek zapuščata skupino; vodenje je prevzela Haring.",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Mijičeve afere (dolgovi podjetja Progros, zavajanje o izobrazbi).",
+            "Koalicija ima 43 poslancev, z Resnico po izstopih največ 46.",
+            "Stevanovićeva zaveza iz leta 2021, da ne bo sodeloval s SDS."
+          ],
+          "reasoning": "Brez obremenjenega besedišča, a izbor ozadja poudarja afere Resnice in njeno prelomljeno zavezo o nesodelovanju s SDS, kar zgodbo uokviri kot težavo podpornice vlade. −0,75.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 30,
+              "direct_quotes": 1,
+              "in_lede": true
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 20,
+              "direct_quotes": 0,
+              "in_lede": false
+            }
+          ],
+          "lean_score": -0.75,
+          "category": "alternativni",
+          "quotes_verified": true,
+          "published": "2026-11-19T11:47:45+01:00",
+          "word_count": 930,
+          "cited_sources": [],
+          "text_overlap": [],
+          "shared_core": {
+            "shared_percent": 6,
+            "own_percent": 94,
+            "own_sentences": [
+              "Na istem posnetku so ujeli tudi izjave kranjskega župana Matjaža Rakovca glede možnosti spremembe namembnosti zemljišča, kar ga je po nekaterih ocenah tudi stalo županskega položaja, saj se po nedeljskih županskih volitvah presenetljivo ni uvrstil v drugi krog in bo po osmih letih moral zapustiti položaj.",
+              "Stevanović, ki je postal znan kot prvi obraz protestnikov, ki jih je policija preganjala z vodnim topom, in je pred tem izkušnje nabiral v lokalni politiki, je stranko prvič na parlamentarne volitve popeljal leta 2022, ko ji je podporo namenilo 2,86 odstotka volivcev, premalo za prestop parlamentarnega praga."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Izstopila sta tudi iz stranke",
+            "Nesoglasja v stranki trajajo že več kot leto dni",
+            "Kot razlog Kokot navaja preklic decembrskega kongresa",
+            "Kokot: »umazanega perila« ne bo prala v javnosti",
+            "Kokot obljublja konstruktivno sodelovanje pri rešitvah, dobrih za narod",
+            "Levica (Vrečko): Kokot in Štorek bosta pristala v SDS, Resnica se potaplja"
+          ]
+        },
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Kokotova in Štorek zapustila poslansko skupino, umazanega perila pa v javnosti ne bosta prala",
+          "article_url": "https://nova24tv.si/katja-kokot-zapustila-poslansko-skupino-resnice/",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina-Desno",
+          "bias_evidence_quotes": [
+            "Poslanska skupina stranke Resni.ca zdaj šteje tri člane."
+          ],
+          "omitted_facts": [
+            "Posnetek o donaciji za zemljišče za pravoslavno cerkev v Kranju in Kokotin odziv.",
+            "Slab izid Resnice na lokalnih volitvah."
+          ],
+          "voices_heard": [
+            "Katja Kokot",
+            "Aleksander Štorek",
+            "Resnica",
+            "Zoran Stevanović"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov povzame Kokotino izjavo o »umazanem perilu«.",
+          "main_frame": "Uradna izjava",
+          "frame_description": "Prenos izjav poslancev in stranke brez ozadja.",
+          "lede_focus": "Izstop in razlog (ni soglasja).",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [],
+          "reasoning": "Izjave so prenesene korektno, izpuščeno pa je vse ozadje, neugodno za podpornico vlade (afera z zemljiščem, volilni poraz), in odzivi opozicije. +0,5.",
+          "confidence": "Visoka",
+          "side_weights": [
+            {
+              "side": "Kokot in Štorek",
+              "share_percent": 70,
+              "direct_quotes": 4,
+              "in_lede": true
+            },
+            {
+              "side": "Resnica (vodstvo)",
+              "share_percent": 30,
+              "direct_quotes": 2,
+              "in_lede": false
+            }
+          ],
+          "lean_score": 0.5,
+          "category": "alternativni",
+          "quotes_verified": true,
+          "published": "2026-11-19T10:31:07+00:00",
+          "word_count": 395,
+          "cited_sources": [],
+          "text_overlap": [],
+          "shared_core": {
+            "shared_percent": 7,
+            "own_percent": 93,
+            "own_sentences": [
+              "Kokotova je izjavila, da umazanega perila ne bo prala v javnosti: “Javno ponavljam, da se ne bom spuščala na ta nivo, določene stvari pač ostanejo znotraj hiše tako kot znotraj družine, kot ob vsaki ločitvi.",
+              "Na odstop so se odzvali v stranki Resni.ca. “Svet stranke je na seji v sredo, 11. novembra 2026, obravnaval vprašanje vodenja poslanske skupine in sprejel sklep, s katerim je poslanski skupini predlagal zamenjavo vodje poslanske skupine."
+            ]
+          },
+          "partial_text": false,
+          "matrix_gaps": [
+            "Izstopila sta tudi iz stranke",
+            "Kot razlog Kokot navaja preklic decembrskega kongresa",
+            "Levica (Vrečko): Kokot in Štorek bosta pristala v SDS, Resnica se potaplja",
+            "Posnetek o donaciji za zemljišče za pravoslavno cerkev v Kranju in Kokotin odziv",
+            "Resnica je na lokalnih volitvah dobila le enega svetnika"
+          ]
+        }
+      ],
+      "neutral_summary": "Iz poslanske skupine Resnica sta izstopila nekdanja vodja Katja Kokot in Aleksander Štorek, ki bosta nadaljevala kot nepovezana poslanca. Kokot je kot razlog navedla dolgotrajna nesoglasja in preklic decembrskega kongresa, podrobnosti pa ni želela razkriti. Resnica, ki podpira vlado Janeza Janše, ima zdaj le še tri poslance.",
+      "context": "Resnica Zorana Stevanovića je na marčnih volitvah osvojila pet mandatov; formalno ni v koaliciji, a jo pri glasovanjih pogosto podpira, Stevanović pa je predsednik DZ. Pred izstopom so odmevali posnetek o donaciji za nakup zemljišča za pravoslavno cerkev v Kranju in slab izid stranke na lokalnih volitvah.",
+      "key_differences": [
+        "Le MMC RTV SLO, Svet24 in Žurnal24 navedejo odzive opozicije; Svet24 jo postavi v naslov (»Vrečko prepričana, da bosta Kokot in Štorek kmalu pristala v SDS«) in jo podkrepi z nepodprto lastno trditvijo.",
+        "Mladina doda obsežno ozadje o aferah Resnice in o Stevanovićevi zavezi, da ne bo sodeloval s SDS, ki jo je prelomil; drugi mediji tega nimajo.",
+        "Nova24TV in Portal24 ne omenita afere z zemljiščem v Kranju niti slabega izida na lokalnih volitvah.",
+        "Žurnal24 Kokotin zapis z 17. 11. avtorsko označi za »prostaški stavek« in izid na volitvah za »popoln fiasko«.",
+        "Portal24 edini sklepa iz časovnice, da je bila zamenjava vodje sprejeta pred njenim izstopom.",
+        "Golobovo izjavo, da so Stevanovićeva dejanja odgovornost Janše, objavi samo MMC RTV SLO."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Kokot in Štorek izstopila iz poslanske skupine Resnica",
+          "media": [
+            "Portal24",
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Žurnal24",
+            "Mladina",
+            "Nova24TV"
+          ],
+          "prominent_in": [
+            "Portal24",
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Žurnal24",
+            "Mladina",
+            "Nova24TV"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Izstopila sta tudi iz stranke",
+          "media": [
+            "Portal24",
+            "N1",
+            "Svet24",
+            "Žurnal24"
+          ],
+          "prominent_in": [
+            "Portal24",
+            "N1"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Nesoglasja v stranki trajajo že več kot leto dni",
+          "media": [
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Nova24TV"
+          ],
+          "prominent_in": [
+            "MMC RTV SLO"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Kot razlog Kokot navaja preklic decembrskega kongresa",
+          "media": [
+            "MMC RTV SLO",
+            "N1",
+            "Svet24"
+          ],
+          "prominent_in": [
+            "N1"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Kokot: »umazanega perila« ne bo prala v javnosti",
+          "media": [
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Nova24TV"
+          ],
+          "prominent_in": [
+            "Nova24TV"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Svet stranke je 11. 11. predlagal zamenjavo vodje; 17. 11. jo je prevzela Martina Haring",
+          "media": [
+            "Portal24",
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Žurnal24",
+            "Mladina",
+            "Nova24TV"
+          ],
+          "prominent_in": [
+            "N1",
+            "Mladina"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Poslanska skupina ima le še tri člane, kar je najmanj",
+          "media": [
+            "Portal24",
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Žurnal24",
+            "Mladina",
+            "Nova24TV"
+          ],
+          "prominent_in": [
+            "Portal24",
+            "Svet24"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Kokot obljublja konstruktivno sodelovanje pri rešitvah, dobrih za narod",
+          "media": [
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Nova24TV"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        },
+        {
+          "fact": "Levica (Vrečko): Kokot in Štorek bosta pristala v SDS, Resnica se potaplja",
+          "media": [
+            "MMC RTV SLO",
+            "Svet24",
+            "Žurnal24"
+          ],
+          "prominent_in": [
+            "Svet24"
+          ],
+          "known_from": null
+        },
+        {
+          "fact": "Svoboda zahteva novo razdelitev vodstvenih mest v odborih DZ",
+          "media": [
+            "MMC RTV SLO",
+            "Svet24"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        },
+        {
+          "fact": "Posnetek o donaciji za zemljišče za pravoslavno cerkev v Kranju in Kokotin odziv",
+          "media": [
+            "MMC RTV SLO",
+            "N1",
+            "Svet24",
+            "Žurnal24",
+            "Mladina"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        },
+        {
+          "fact": "Resnica je na lokalnih volitvah dobila le enega svetnika",
+          "media": [
+            "MMC RTV SLO",
+            "N1",
+            "Žurnal24",
+            "Mladina"
+          ],
+          "prominent_in": [],
+          "known_from": null
+        }
+      ],
+      "id": "story-2",
+      "has_international_source": false,
+      "source_checks": [],
+      "missing_context": [],
+      "not_covered_by": [],
+      "blind_analysis": true,
+      "manual": true
+    }
+  ]
+}

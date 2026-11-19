@@ -58,6 +58,10 @@ class FactPresence(BaseModel):
         default_factory=list,
         description="Podmnožica »media«: mediji, ki dejstvo postavijo v naslov ali uvod (prvi odstavek).",
     )
+    known_from: str | None = Field(
+        default=None,
+        description="Neobvezno: čas (ISO 8601), od katerega je dejstvo javno znano (npr. konec dogodka).",
+    )
 
 
 class SideWeight(BaseModel):
@@ -277,7 +281,8 @@ ANALYSIS_RULES = """Si strog, nepristranski medijski analitik. Pravila:
 11. main_frame, lede_focus in unique_facts opisujejo izbiro poudarkov: kaj je v uvodu, kaj je
    samo v tem mediju, katera zgodba se pripoveduje.
 12. fact_matrix: 6–12 ključnih dejstev zgodbe in za vsakega imena medijev, ki ga navedejo; v
-   prominent_in tiste, ki ga postavijo v naslov ali uvod.
+   prominent_in tiste, ki ga postavijo v naslov ali uvod. known_from izpolni le, če iz besedil jasno
+   izhaja, od kdaj je dejstvo znano (npr. izid srečanja, ki se je končalo po objavi nekaterih člankov).
    key_differences: 3–6 najpomembnejših razlik med mediji.
 13. lean_score določi vedno, tudi za sredinske članke: tudi uravnotežen članek se lahko rahlo nagiba
    z izbiro sogovornikov (kdo dobi več prostora, kdo uvod), dejstev (kaj izpusti) in naslova. Na slovenski
@@ -633,7 +638,8 @@ def clean_fact_matrix(matrix: list[FactPresence], names: list[str]) -> list[Fact
         media = [lookup[m.lower()] for m in row.media if m.lower() in lookup]
         prominent = [lookup[m.lower()] for m in row.prominent_in if m.lower() in lookup]
         media = list(dict.fromkeys(media + prominent))
-        result.append(FactPresence(fact=row.fact, media=media, prominent_in=list(dict.fromkeys(prominent))))
+        result.append(FactPresence(fact=row.fact, media=media, prominent_in=list(dict.fromkeys(prominent)),
+                                   known_from=row.known_from))
     return result
 
 
@@ -685,7 +691,15 @@ def matrix_gaps(
     if len(others) < 2:
         return []
     need = max(2, math.ceil(len(others) / 2))
-    return [row.fact for row in matrix if name not in row.media and sum(m in others for m in row.media) >= need]
+    self_dt = _parse_published((published or {}).get(name))[0]
+
+    def known_before_publication(row: FactPresence) -> bool:
+        # dejstvo, ki je postalo znano šele po objavi članka, ni vrzel
+        known_dt = _parse_published(row.known_from)[0]
+        return not (self_dt and known_dt and known_dt > self_dt)
+
+    return [row.fact for row in matrix if name not in row.media and known_before_publication(row)
+            and sum(m in others for m in row.media) >= need]
 
 
 _SENTENCE = re.compile(r"(?<=[.!?…])\s+(?=[A-ZČŠŽĆĐ„\"»0-9])|\n+")
@@ -786,7 +800,9 @@ def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: i
                 text_overlap=text_overlaps(article, cluster),
                 shared_core=shared_core(article, cluster),
                 partial_text=partial,
-                matrix_gaps=matrix_gaps(matrix, article.source, names, published_by_name),
+                # mednarodni vir je izhodišče primerjave; dejstva domačih medijev mu niso vrzel
+                matrix_gaps=[] if article.category == "mednarodni"
+                else matrix_gaps(matrix, article.source, names, published_by_name),
                 # naslov in URL vedno vzamemo iz zajetih podatkov, ne iz modela
                 article_title=article.title,
                 article_url=article.url,

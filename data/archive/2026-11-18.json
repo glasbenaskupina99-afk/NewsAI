@@ -428,7 +428,8 @@
           ],
           "prominent_in": [
             "Nova24TV"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Minister predloga ne podpira",
@@ -443,7 +444,8 @@
             "Nova24TV",
             "Žurnal24",
             "N1"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "ZZZS za 2027 napoveduje okoli 136 milijonov evrov primanjkljaja kljub ukrepom",
@@ -455,7 +457,8 @@
           ],
           "prominent_in": [
             "MMC RTV SLO"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Zvišanje bi prineslo okoli 141 milijonov evrov",
@@ -463,7 +466,8 @@
             "Nova24TV",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Skupščina ZZZS bo o predlogu odločala 25. novembra",
@@ -473,7 +477,8 @@
             "Žurnal24",
             "N1"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Redna uskladitev bi prispevek marca 2027 zvišala na okoli 43,11 evra",
@@ -481,7 +486,8 @@
             "Nova24TV",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Minister: razkorak po ukinitvi dopolnilnega zavarovanja (135 milijonov, 2027 okoli 188 milijonov) in plačna reforma (123 milijonov)",
@@ -490,14 +496,16 @@
             "Žurnal24",
             "N1"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "ZZZS: proračunski transfer za 2027 naj bi znašal 380 milijonov evrov",
           "media": [
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Rebalans 2026 je ZZZS zmanjšal sredstva za 100 milijonov evrov",
@@ -506,7 +514,8 @@
             "Žurnal24",
             "N1"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Primerjava s Hrvaško (5,8 proti 6,7 milijarde evrov)",
@@ -514,7 +523,8 @@
             "MMC RTV SLO",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Minister na vprašanje o višini prihrankov ni odgovoril oziroma izračuna ni predstavil",
@@ -522,7 +532,8 @@
             "MMC RTV SLO",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Predsednica skupščine Vuk bo predlagala diferenciran (progresiven) prispevek",
@@ -530,7 +541,8 @@
             "MMC RTV SLO",
             "N1"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Odzivi Svobode, SD in Levice",
@@ -540,7 +552,8 @@
           ],
           "prominent_in": [
             "N1"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Projekcija ZZZS že vključuje 100 milijonov manj za bolniška nadomestila in prenos 145 milijonov v 2028",
@@ -548,7 +561,8 @@
             "MMC RTV SLO",
             "N1"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-1",
@@ -968,7 +982,8 @@
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Aplikacija pred vožnjo prikaže pot, najvišjo ceno in podatke o vozilu; plačilo brezgotovinsko",
@@ -979,7 +994,8 @@
           ],
           "prominent_in": [
             "MMC RTV SLO"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Taksimeter: obračun po razdalji ali času, ne več po obeh hkrati",
@@ -987,7 +1003,8 @@
             "MMC RTV SLO",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Obvezno znanje slovenščine (raven A1), na dvojezičnih območjih tudi jezika narodne skupnosti",
@@ -998,7 +1015,8 @@
           ],
           "prominent_in": [
             "MMC RTV SLO"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Enoletno prehodno obdobje za jezikovni pogoj",
@@ -1006,21 +1024,24 @@
             "MMC RTV SLO",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Licenca in drugi pogoji ostajajo obvezni",
           "media": [
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Globe za nepravilno uporabo aplikacij",
           "media": [
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Sindikat taksistov nasprotuje odpravi obveznega taksimetra",
@@ -1029,21 +1050,24 @@
           ],
           "prominent_in": [
             "Žurnal24"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Provizije platform (okoli 25 %, ponekod do 44 %)",
           "media": [
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Podlaga za platforme že leta 2021, pozneje odpravljena",
           "media": [
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Uber v Sloveniji deluje od maja 2025 s taksimetri",
@@ -1051,7 +1075,8 @@
             "Nova24TV",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-2",
@@ -1589,7 +1614,8 @@
             "Svet24",
             "N1",
             "MMC RTV SLO"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Po virih POP TV / 24ur hišni pripor prestaja v Romuniji",
@@ -1599,7 +1625,8 @@
             "N1",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Po virih POP TV naj bi očitana dejanja že priznal",
@@ -1609,7 +1636,8 @@
             "N1",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Razrešen z mesta direktorja Gen-I Sonce (12. 11.), delovno razmerje ni prenehalo, pogodba v suspenzu",
@@ -1623,7 +1651,8 @@
           "prominent_in": [
             "Žurnal24",
             "N1"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Sum: zahteval 450.000 evrov podkupnine (posel za baterijski hranilnik v Romuniji)",
@@ -1637,7 +1666,8 @@
           "prominent_in": [
             "Info360",
             "Svet24"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Pridržan konec septembra, pripor podaljšan za 30 dni",
@@ -1648,7 +1678,8 @@
             "N1",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Domnevni sostorilec Cristian Dragomir je že izpuščen",
@@ -1656,7 +1687,8 @@
             "Info360",
             "Svet24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Gen-I odredil revizijo posla in začasno vodstvo Gen-I Sonce (Soklič, Kavalič)",
@@ -1665,7 +1697,8 @@
             "N1",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Predkazenski postopek vodi tudi slovenska policija (specializirano tožilstvo)",
@@ -1673,28 +1706,32 @@
             "Žurnal24",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Pravna podlaga za prestajanje tujega hišnega pripora v Sloveniji",
           "media": [
             "Info360"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Hudohmet naj bi v preiskavi razkril sodelovanje še dveh Romunov",
           "media": [
             "Info360"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Podrobnosti o partnerkini hiši v Limbušu (bazen, sončna elektrarna)",
           "media": [
             "Info360"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-3",
@@ -2422,7 +2459,8 @@
             "MMC RTV SLO",
             "Svet24",
             "Žurnal24"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Pekošak je 17. 11. ponudila oziroma podala (ustno) odstop",
@@ -2435,7 +2473,8 @@
           "prominent_in": [
             "N1",
             "Nova24TV"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Pet nakazil med 2. in 6. 11. na lažni račun v imenu Strabaga, skupaj okoli 2,5–2,6 milijona evrov",
@@ -2450,7 +2489,8 @@
           ],
           "prominent_in": [
             "Žurnal24"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Dve nakazili so ustavili, okoli 1,8 milijona evrov je pristalo na lažnem računu",
@@ -2465,7 +2505,8 @@
             "N1",
             "Portal24",
             "Info360"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Pristojne službe so pred nakazili opozorile na prevaro",
@@ -2480,7 +2521,8 @@
           ],
           "prominent_in": [
             "N1"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Policija je zavarovala večino denarja (1,5–1,6 milijona evrov)",
@@ -2490,7 +2532,8 @@
           ],
           "prominent_in": [
             "MMC RTV SLO"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Nakazila naj bi bila izvedena brez potrdila finančne direktorice",
@@ -2499,7 +2542,8 @@
             "Svet24",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Pekošak je nekdanja poslanka Gibanja Svoboda",
@@ -2513,7 +2557,8 @@
           ],
           "prominent_in": [
             "Nova24TV"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "SDS je odgovornost pripisala Svobodi",
@@ -2523,7 +2568,8 @@
             "Svet24",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Predsednik uprave Drobež: žrtev mednarodne kriminalne združbe",
@@ -2534,7 +2580,8 @@
             "Nova24TV",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Nadzorni svet bo o zadevi razpravljal v četrtek",
@@ -2544,14 +2591,16 @@
           ],
           "prominent_in": [
             "Info360"
-          ]
+          ],
+          "known_from": null
         },
         {
           "fact": "Predsednica nadzornega sveta prihaja iz odvetniške pisarne ministra Matoza",
           "media": [
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-4",

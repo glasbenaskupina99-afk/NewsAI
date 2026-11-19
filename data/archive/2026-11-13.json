@@ -539,7 +539,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "»Nobenega zujfa ne bo«",
@@ -550,7 +551,8 @@
             "Svet24",
             "24ur"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Minister opozorila opozicije označi za zavajanje in laži",
@@ -560,7 +562,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Opozorila o krčenju pravic označi za »politiko strahu in politiko zavisti«",
@@ -571,7 +574,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Okoli 300 milijonov evrov prihrankov iz gospodarnejše porabe in povezovanja evidenc",
@@ -583,7 +587,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Dolg se bo zmanjševal za vsaj 0,5 odstotne točke BDP letno",
@@ -595,7 +600,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Rebalans proračuna, če bo sprejet razvojni (interventni) zakon",
@@ -606,7 +612,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Plačni stebri (policija, vojska, zdravstvo) po koalicijski pogodbi",
@@ -617,7 +624,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Primer neupoštevanih obveznosti prejšnje vlade: posledice dviga minimalne plače",
@@ -627,7 +635,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Časovnica prenove plačnega sistema še ni določena",
@@ -635,14 +644,16 @@
             "MMC RTV SLO",
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Socialne pravice v proračunu: 2,2 milijarde evrov",
           "media": [
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Referendum o interventnem zakonu 6. decembra",
@@ -652,14 +663,16 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Ukom je trditve opozicije pred konferenco označil za laži",
           "media": [
             "Svet24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Nevladniki (Inštitut 8. marec) opozarjajo na reze v socialnih transferjih",
@@ -667,7 +680,8 @@
             "Svet24",
             "24ur"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Odziv Levice: rez pri socialni državi, več za vojsko",
@@ -676,7 +690,8 @@
             "Svet24",
             "24ur"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Odziv Svobode: za zagotovila ni zakona, seznama ne ocene; »amerikanizacija Slovenije«",
@@ -685,7 +700,8 @@
             "Svet24",
             "24ur"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "DZ je predsednika fiskalnega sveta pozval k izselitvi iz službenega stanovanja",
@@ -693,7 +709,8 @@
             "Svet24",
             "24ur"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Učinki interventnega zakona niso vključeni v predlog proračuna 2027",
@@ -701,7 +718,8 @@
             "24ur",
             "Portal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-1",
@@ -1553,7 +1571,8 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Primanjkljaj obveznega zavarovanja okoli 154 milijonov evrov do 30. 9.",
@@ -1567,7 +1586,8 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "ZZZS ob koncu leta zakonsko ne sme izkazovati dolga",
@@ -1581,7 +1601,8 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Vzroki: ukinitev dopolnilnega zavarovanja in plačna reforma",
@@ -1595,7 +1616,8 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Vzroki: višji stroški dela, minimalna plača, zimski regres, staranje, nove tehnologije",
@@ -1609,7 +1631,8 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Vzrok: oktobrski rebalans je proračunski transfer zmanjšal s 520 na 420 milijonov evrov",
@@ -1622,28 +1645,32 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Vlada: v proračunu je bilo že prvotno načrtovanih 420 milijonov",
           "media": [
             "Svet24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Brez zmanjšanja transfera bi bil zamik okoli 85 milijonov evrov",
           "media": [
             "Svet24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Interventni zakon bi blagajni odvzel še 113 milijonov (z dolgotrajno oskrbo 211 milijonov) letno",
           "media": [
             "Žurnal24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Okoli 85 % zamika se nanaša na izvajalce zdravstvenih storitev; začetek 21. decembra",
@@ -1655,7 +1682,8 @@
             "Portal24",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Poplačilo v januarju z novim likvidnostnim posojilom",
@@ -1667,7 +1695,8 @@
             "Portal24",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Dolgotrajna oskrba ni prizadeta",
@@ -1679,21 +1708,24 @@
             "Portal24",
             "Info360"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Za zdaj ni napovedanega zmanjšanja pravic za zavarovance",
           "media": [
             "Svet24"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Opozorila takratne opozicije (SDS) ob preoblikovanju zavarovanja leta 2023",
           "media": [
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika",
@@ -1702,7 +1734,8 @@
             "Portal24",
             "Info360"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila",
@@ -1711,7 +1744,8 @@
             "Info360",
             "NaDlani"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-2",
@@ -2025,9 +2059,7 @@
           "text_overlap": [],
           "shared_core": null,
           "partial_text": false,
-          "matrix_gaps": [
-            "Poročila o razmerju z uslužbenko Kimberly Powell (NYT)"
-          ]
+          "matrix_gaps": []
         },
         {
           "media_name": "MMC RTV SLO",
@@ -2206,7 +2238,8 @@
             "MMC RTV SLO",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Razmerje z Alice Huang iz singapurskega podjetja Megaspeed",
@@ -2215,7 +2248,8 @@
             "MMC RTV SLO",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Ameriške službe Alice Huang sumijo povezav s kitajsko obveščevalno službo",
@@ -2224,7 +2258,8 @@
             "MMC RTV SLO",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Peking obtožbe zavrača",
@@ -2232,14 +2267,16 @@
             "BBC World",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Upravni odbor Nvidie: ni razlogov za sum, da so bile ogrožene skrivnosti ali nacionalna varnost",
           "media": [
             "BBC World"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Poročila o razmerju z uslužbenko Kimberly Powell (NYT)",
@@ -2247,14 +2284,16 @@
             "MMC RTV SLO",
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Tretje domnevno razmerje (Reuters, anonimni viri)",
           "media": [
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Huang je bil eden najbližjih poslovnežev Trumpa",
@@ -2262,14 +2301,16 @@
             "BBC World",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Ministrstvo za trgovino (Lutnick) ni uvrstilo Megaspeeda na izvozni črni seznam",
           "media": [
             "BBC World"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Kongres želi zaslišati Huanga; preiskave obeh strank",
@@ -2277,35 +2318,40 @@
             "BBC World",
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Padec delnic Nvidie (do 14 % ob odstopu)",
           "media": [
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Začasna direktorica Colette Kress",
           "media": [
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Trump predlaga Tima Cooka za novega direktorja",
           "media": [
             "MMC RTV SLO"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         },
         {
           "fact": "Morebitna delitev premoženja ob ločitvi; Huangovo premoženje 143 milijard dolarjev",
           "media": [
             "Nova24TV"
           ],
-          "prominent_in": []
+          "prominent_in": [],
+          "known_from": null
         }
       ],
       "id": "story-3",

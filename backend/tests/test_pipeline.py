@@ -201,6 +201,16 @@ class AnalyzerTest(unittest.TestCase):
         self.assertEqual(analyzer.matrix_gaps(matrix, "A", names, pub), [])
         self.assertEqual(analyzer.matrix_gaps(matrix, "B", names, pub), [])
 
+    def test_matrix_gaps_skip_facts_known_after_publication(self):
+        F = analyzer.FactPresence
+        names = ["A", "B", "C"]
+        matrix = [F(fact="izid vrha", media=["B", "C"], known_from="2026-11-19T16:30:00+00:00"),
+                  F(fact="napoved vrha", media=["B", "C"])]
+        published = {"A": "2026-11-19T15:44:00+00:00", "B": "2026-11-19T16:52:00+00:00", "C": "2026-11-19T18:38:00+00:00"}
+        self.assertEqual(analyzer.matrix_gaps(matrix, "A", names, published), ["napoved vrha"])
+        published["A"] = "2026-11-19T17:00:00+00:00"
+        self.assertEqual(analyzer.matrix_gaps(matrix, "A", names, published), ["izid vrha", "napoved vrha"])
+
     def test_shared_core_and_own_sentences(self):
         agency = "Minister je danes na novinarski konferenci predstavil predlog proračuna za prihodnje leto in poudaril stabilnost."
         a = _article("A", "javni", "t", agency + " Opozicija je predlog označila za predvolilno darilo upokojencem in javnim uslužbencem.")

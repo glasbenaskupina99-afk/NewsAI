@@ -100,7 +100,7 @@ CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.htm
    zanesljivost ocene pa omejena na »Nizka«.
 11. **Izračunana analitika**: skupno (agencijsko) jedro in lastno besedilo vsakega medija z do dvema stavkoma,
    ki ju ima samo ta medij (`shared_core`); dejstva iz matrike, ki jih navaja večina drugih medijev, ta pa ne
-   (`matrix_gaps`); matrika loči dejstva v naslovu/uvodu (★, `prominent_in`) od tistih v besedilu (✓);
+   (`matrix_gaps`; ne šteje dejstev, ki so znana šele po objavi – neobvezno `known_from` pri dejstvu – in ne velja za mednarodni vir); matrika loči dejstva v naslovu/uvodu (★, `prominent_in`) od tistih v besedilu (✓);
    `side_weights` (delež prostora, citati in uvod za vsako stran) določa `sides_represented`.
 12. **Stran**: zavihki v zgodbi (Pregled · Matrika dejstev · Primerjaj dva medija · Podrobno · Preverjanje virov),
    trak naslovov (označeno, kjer je naslov drugače nagnjen kot besedilo), časovnica objav, oznaka »Slepa pega«
