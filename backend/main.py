@@ -21,11 +21,15 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 OUTPUT = DATA_DIR / "daily_analysis.json"
 RAW_OUTPUT = DATA_DIR / "raw_articles.json"
+RUN_RESULT = DATA_DIR / "run_result.json"  # rezultat zadnjega samodejnega zagona (za ponovno objavo)
 ARCHIVE_DIR = DATA_DIR / "archive"
 MEDIA_STATS_OUTPUT = DATA_DIR / "media_stats.json"
 
 LEAN_DEFAULT_SCORE = {"Levo": -2.5, "Sredina-Levo": -1.0, "Sredina": 0.0, "Sredina-Desno": 1.0, "Desno": 2.5}
 AGENCY_COPY_THRESHOLD = 75
+# Statistika se računa iz vseh člankov; v datoteko gre le toliko najnovejših (velikost ostane omejena)
+STATS_MAX_ARTICLES = 30
+STATS_MAX_POINTS = 100
 
 log = logging.getLogger("pipeline")
 
@@ -115,7 +119,7 @@ def build_media_stats(archive_dir: Path = ARCHIVE_DIR) -> dict:
             "name": m["name"],
             "category": m["category"],
             "count": count,
-            "lean": m["lean"],
+            "lean": m["lean"][:STATS_MAX_POINTS],  # arhiv je urejen od najnovejšega dne
             "avg_lean": avg_lean,
             "min_lean": min(m["lean"]),
             "max_lean": max(m["lean"]),
@@ -125,17 +129,78 @@ def build_media_stats(archive_dir: Path = ARCHIVE_DIR) -> dict:
             "avg_own_percent": round(sum(m["own"]) / len(m["own"])) if m["own"] else None,
             "agency_copy_share": round(100 * m["agency_copies"] / m["core_count"]) if m["core_count"] else None,
             "orientation": orientation,
-            "articles": sorted(m["articles"], key=lambda a: (a["date"], a["story_id"]), reverse=True),
+            "articles": sorted(m["articles"], key=lambda a: (a["date"], a["story_id"]), reverse=True)[:STATS_MAX_ARTICLES],
         })
     media_rows.sort(key=lambda r: r["avg_lean"])
     return {"days": days_count, "media": media_rows}
 
 
+def _story_urls(story: dict) -> set[str]:
+    return {c["article_url"] for c in story.get("coverage_comparison", []) if c.get("article_url")}
+
+
+def _overlaps(a: dict, b: dict) -> bool:
+    """Isti dogodek: vsaj dva skupna članka ali vsaj polovica člankov manjše zgodbe."""
+    ua, ub = _story_urls(a), _story_urls(b)
+    shared = len(ua & ub)
+    return shared >= 2 or (shared >= 1 and shared * 2 >= min(len(ua), len(ub)))
+
+
+def _merge_models(*models: str) -> str:
+    parts = [p.strip() for m in models if m for p in m.split(" + ")]
+    return " + ".join(dict.fromkeys(p for p in parts if p))
+
+
+def merge_day(existing: dict | None, new: dict) -> dict:
+    """Združi novo analizo z obstoječo za isti dan.
+
+    Zgodbe istega izvora (ročne / samodejne) nova analiza zamenja, zgodbe drugega izvora ostanejo.
+    Ročne zgodbe imajo prednost: samodejna zgodba o istem dogodku se izpusti.
+    """
+    if not existing or existing.get("is_mock") or new.get("is_mock"):
+        return new
+    new_origins = {bool(s.get("manual")) for s in new["stories"]}
+    if not new_origins:
+        return existing
+    # starejši arhivi nimajo polja »manual«: izvor razberemo iz imena modela dneva
+    day_is_manual = "ročn" in existing.get("model", "").lower()
+    old_stories = [{**s, "manual": bool(s.get("manual", day_is_manual))} for s in existing.get("stories", [])]
+    kept = [s for s in old_stories if s["manual"] not in new_origins]
+    if not kept:
+        return new
+    combined = kept + new["stories"]
+    manual = [s for s in combined if s.get("manual")]
+    auto = [s for s in combined if not s.get("manual") and not any(_overlaps(s, m) for m in manual)]
+    stories = manual + auto
+    for i, story in enumerate(stories):
+        story["id"] = f"story-{i + 1}"
+    new_is_manual = True in new_origins
+    # iz obstoječega opisa modela obdržimo le del drugega izvora (ročne analize imajo v imenu »ročn«)
+    kept_models = [p for p in _merge_models(existing.get("model", "")).split(" + ")
+                   if p and ("ročn" in p.lower()) != new_is_manual]
+    still_other = (manual if not new_is_manual else auto)
+    return {
+        **new,
+        "model": _merge_models(*(kept_models if still_other else []), new["model"]),
+        "articles_scraped": max(existing.get("articles_scraped", 0), new.get("articles_scraped", 0)),
+        "stories": stories,
+    }
+
+
 def publish(result, date: str | None = None) -> None:
-    """Zapiše analizo kot najnovejšo in v arhiv po dnevih (data/archive/YYYY-MM-DD.json + index.json)."""
-    date = date or result.generated_at[:10]
-    payload = result.model_dump()
-    write_json(ARCHIVE_DIR / f"{date}.json", payload)
+    """Zapiše analizo kot najnovejšo in v arhiv po dnevih (data/archive/YYYY-MM-DD.json + index.json).
+
+    Če za ta dan arhiv že obstaja, se zgodbi združita (merge_day): samodejni zagon ne prepiše ročnih analiz.
+    """
+    payload = result.model_dump() if hasattr(result, "model_dump") else dict(result)
+    date = date or payload["generated_at"][:10]
+    day_path = ARCHIVE_DIR / f"{date}.json"
+    try:
+        existing = json.loads(day_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        existing = None
+    payload = merge_day(existing, payload)
+    write_json(day_path, payload)
 
     index_path = ARCHIVE_DIR / "index.json"
     try:
@@ -143,7 +208,7 @@ def publish(result, date: str | None = None) -> None:
     except (OSError, ValueError):
         index = []
     index = [e for e in index if e["date"] != date] + [
-        {"date": date, "stories": len(result.stories), "model": result.model, "is_mock": result.is_mock}
+        {"date": date, "stories": len(payload["stories"]), "model": payload["model"], "is_mock": payload["is_mock"]}
     ]
     index.sort(key=lambda e: e["date"], reverse=True)
     write_json(index_path, index)
@@ -196,6 +261,8 @@ def run(limit: int, force_mock: bool, max_stories: int, scrape_only: bool = Fals
     if result.is_mock:
         write_json(OUTPUT, result.model_dump())  # demo podatki ne gredo v arhiv
     else:
+        # shranimo rezultat, da ga lahko CI ob sporu pri pushu objavi znova na novejšem stanju
+        write_json(RUN_RESULT, result.model_dump())
         publish(result)
     log.info("Zapisano: %s (%d zgodb, mock=%s)", OUTPUT.relative_to(ROOT), len(result.stories), result.is_mock)
     return 0
@@ -208,8 +275,14 @@ def main() -> None:
     parser.add_argument("--scrape-only", action="store_true",
                         help="samo zajem s polnim besedilom v data/raw_articles.json")
     parser.add_argument("--mock", action="store_true", help="zapiši demo podatke brez zajema")
+    parser.add_argument("--republish", type=Path, metavar="RESULT_JSON",
+                        help="brez zajema in analize znova objavi shranjen rezultat (npr. data/run_result.json)")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    if args.republish:
+        publish(json.loads(args.republish.read_text(encoding="utf-8")))
+        log.info("Znova objavljeno: %s", args.republish)
+        sys.exit(0)
     sys.exit(run(args.limit, args.mock, args.max_stories, args.scrape_only))
 
 

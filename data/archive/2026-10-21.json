@@ -270,7 +270,8 @@
       "key_differences": [],
       "fact_matrix": [],
       "id": "story-1",
-      "has_international_source": true
+      "has_international_source": true,
+      "manual": true
     },
     {
       "topic_title": "Gregorčič zaradi predčasnega prenehanja mandata v programskem svetu RTV vložil pritožbo na ESČP",
@@ -368,7 +369,8 @@
       "key_differences": [],
       "fact_matrix": [],
       "id": "story-2",
-      "has_international_source": false
+      "has_international_source": false,
+      "manual": true
     },
     {
       "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
@@ -669,7 +671,8 @@
       "key_differences": [],
       "fact_matrix": [],
       "id": "story-3",
-      "has_international_source": false
+      "has_international_source": false,
+      "manual": true
     }
   ]
 }

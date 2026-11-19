@@ -114,6 +114,15 @@ Workflow `daily.yml` teče ob 07:00 UTC (in ročno prek *Run workflow*), zažene
 commita posodobljeni `data/daily_analysis.json`. V *Settings → Secrets and variables → Actions* dodajte
 secret `GEMINI_API_KEY` (neobvezno variable `GEMINI_MODEL`, privzeto `gemini-2.5-flash`).
 
+Ročne in samodejne analize istega dne se **združijo** (`merge_day` v `main.py`): nova analiza zamenja le
+zgodbe svojega izvora, ročne zgodbe imajo prednost, samodejna zgodba o istem dogodku (vsaj dva skupna
+članka) pa se izpusti. Če je bil med zagonom na vejo potisnjen drug commit, workflow poskusi rebase; ob
+sporu v podatkih rezultat znova objavi na novejšem stanju (`python main.py --republish data/run_result.json`)
+in push ponovi (do 3-krat). Zajeti članki in rezultat ostanejo v artefaktu `raw-articles`.
+
+`data/media_stats.json` vsebuje statistiko po medijih iz celotnega arhiva, seznam člankov pa le zadnjih
+30 na medij (in 100 točk za prikaz razpršenosti), da datoteka ne raste brez omejitev.
+
 ## Omejitve
 
 Ocene ustvarja jezikovni model in veljajo za posamezen članek, ne za medij kot celoto. Mednarodni vir

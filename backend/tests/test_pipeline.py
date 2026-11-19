@@ -279,6 +279,65 @@ class AnalyzerTest(unittest.TestCase):
         self.assertGreaterEqual(len(roundtrip.stories), 3)
 
 
+def _story(title, urls, manual):
+    return {"id": "x", "topic_title": title, "manual": manual,
+            "coverage_comparison": [{"media_name": u, "article_url": f"https://e.si/{u}"} for u in urls]}
+
+
+def _day(model, stories, **extra):
+    return {"generated_at": "2026-11-20T07:00:00+00:00", "model": model, "is_mock": False, "sources": [],
+            "articles_scraped": 10, "stories": stories, **extra}
+
+
+class PublishMergeTest(unittest.TestCase):
+    def test_auto_run_keeps_manual_and_drops_overlapping_auto_story(self):
+        import main
+        manual = _day("Claude (ročna analiza)", [_story("Ročna", ["a", "b", "c"], True)])
+        auto = _day("gemini-2.5-flash", [_story("Isti dogodek", ["a", "b"], False), _story("Druga", ["x", "y"], False)])
+        merged = main.merge_day(manual, auto)
+        self.assertEqual([s["topic_title"] for s in merged["stories"]], ["Ročna", "Druga"])
+        self.assertEqual([s["id"] for s in merged["stories"]], ["story-1", "story-2"])
+        self.assertEqual(merged["model"], "Claude (ročna analiza) + gemini-2.5-flash")
+
+    def test_new_auto_run_replaces_old_auto_stories_only(self):
+        import main
+        day = _day("Claude (ročna analiza) + gemini-2.5-flash",
+                   [_story("Ročna", ["a", "b"], True), _story("Stara samodejna", ["x", "y"], False)])
+        merged = main.merge_day(day, _day("gemini-3", [_story("Nova samodejna", ["p", "q"], False)]))
+        self.assertEqual([s["topic_title"] for s in merged["stories"]], ["Ročna", "Nova samodejna"])
+        self.assertEqual(merged["model"], "Claude (ročna analiza) + gemini-3")
+
+    def test_old_archive_without_flag_counts_as_manual_by_model_name(self):
+        import main
+        old = _day("Claude (ročna analiza)", [{k: v for k, v in _story("Ročna", ["a"], True).items() if k != "manual"}])
+        merged = main.merge_day(old, _day("gemini", [_story("Samodejna", ["z", "w"], False)]))
+        self.assertEqual([s["topic_title"] for s in merged["stories"]], ["Ročna", "Samodejna"])
+
+    def test_publish_merges_into_existing_archive_and_caps_stats(self):
+        import tempfile
+        import main
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            archive = tmp / "archive"
+            patches = [mock.patch.object(main, "ARCHIVE_DIR", archive), mock.patch.object(main, "OUTPUT", tmp / "daily.json"),
+                       mock.patch.object(main, "MEDIA_STATS_OUTPUT", tmp / "stats.json"),
+                       mock.patch.object(main, "STATS_MAX_ARTICLES", 1)]
+            for p in patches:
+                p.start()
+            try:
+                main.publish(_day("Claude (ročna analiza)", [_story("Ročna", ["a", "b"], True)]), "2026-11-20")
+                main.publish(_day("gemini", [_story("Samodejna", ["x", "y"], False)]), "2026-11-20")
+                day = json.loads((archive / "2026-11-20.json").read_text(encoding="utf-8"))
+                index = json.loads((archive / "index.json").read_text(encoding="utf-8"))
+                stats = json.loads((tmp / "stats.json").read_text(encoding="utf-8"))
+            finally:
+                for p in patches:
+                    p.stop()
+        self.assertEqual([s["topic_title"] for s in day["stories"]], ["Ročna", "Samodejna"])
+        self.assertEqual(index[0]["stories"], 2)
+        self.assertTrue(all(len(m["articles"]) <= 1 for m in stats["media"]))
+
+
 class AddArticleTest(unittest.TestCase):
     def test_drops_counters_bylines_and_bulleted_end_marker(self):
         page = "Naslov članka\n197\nPrvi odstavek članka z vsebino.\nC. Š., STA\nM. D.\n* OZNAKE\n* [Oznaka](https://x/)\nNoga strani"

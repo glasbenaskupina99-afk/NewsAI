@@ -716,7 +716,8 @@
         }
       ],
       "not_covered_by": [],
-      "blind_analysis": false
+      "blind_analysis": false,
+      "manual": true
     },
     {
       "topic_title": "Vlada sprejela novelo: taksi prevozi tudi prek aplikacij, taksimeter ni več obvezen",
@@ -1143,7 +1144,8 @@
         }
       ],
       "not_covered_by": [],
-      "blind_analysis": false
+      "blind_analysis": false,
+      "manual": true
     },
     {
       "topic_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet v hišnem priporu",
@@ -1702,7 +1704,8 @@
       "not_covered_by": [
         "Nova24TV"
       ],
-      "blind_analysis": true
+      "blind_analysis": true,
+      "manual": true
     },
     {
       "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
@@ -2556,7 +2559,8 @@
       "source_checks": [],
       "missing_context": [],
       "not_covered_by": [],
-      "blind_analysis": true
+      "blind_analysis": true,
+      "manual": true
     }
   ]
 }

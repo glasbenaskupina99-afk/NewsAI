@@ -225,6 +225,7 @@ class StoryReport(StoryAnalysis):
         default_factory=list, description="Preverjeni mediji, ki o dogodku niso objavili članka."
     )
     blind_analysis: bool = Field(default=False, description="Model ni videl imen medijev (MEDIJ_A, MEDIJ_B …).")
+    manual: bool = Field(default=False, description="Ročna analiza; ima prednost pred samodejno istega dne.")
 
 
 class SourceInfo(BaseModel):

@@ -70,6 +70,7 @@ def main() -> None:
             analysis = unmask_analysis(analysis, aliases, cluster)
         report = build_story_report(analysis, cluster, i)
         report.blind_analysis = blind
+        report.manual = True
         report.source_checks = [SourceCheck.model_validate(c) for c in story.get("source_checks", [])]
         report.missing_context = [ContextItem.model_validate(c) for c in story.get("missing_context", [])]
         report.not_covered_by = story.get("not_covered_by", [])

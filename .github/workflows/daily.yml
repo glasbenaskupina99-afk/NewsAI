@@ -21,9 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -48,22 +48,48 @@ jobs:
           fi
           python main.py --max-stories "$MAX_STORIES"
 
-      - name: Shrani zajete članke
+      - name: Shrani zajete članke in rezultat
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: raw-articles
-          path: data/raw_articles.json
+          path: |
+            data/raw_articles.json
+            data/run_result.json
           if-no-files-found: ignore
 
       - name: Commit rezultatov
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="${GITHUB_REF_NAME}"
           git add data/daily_analysis.json data/media_stats.json data/archive
           if git diff --cached --quiet; then
             echo "Ni sprememb."
-          else
-            git commit -m "data: dnevna analiza $(date -u +%Y-%m-%d)"
-            git push
+            exit 0
           fi
+          git commit -m "data: dnevna analiza $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${branch}"; then
+              exit 0
+            fi
+            echo "::warning::Push zavrnjen (poskus ${attempt}): na veji so novejši commiti."
+            git fetch origin "${branch}"
+            if git rebase "origin/${branch}"; then
+              continue
+            fi
+            # Spor v podatkih (npr. vmes potisnjena ročna analiza): rezultat objavimo znova na
+            # novejšem stanju, da se ročne in samodejne zgodbe združijo (main.py --republish).
+            git rebase --abort
+            git reset --hard "origin/${branch}"
+            if [ ! -f data/run_result.json ]; then
+              echo "::error::Ni shranjenega rezultata za ponovno objavo."
+              exit 1
+            fi
+            (cd backend && python main.py --republish ../data/run_result.json)
+            git add data/daily_analysis.json data/media_stats.json data/archive
+            git diff --cached --quiet || git commit -m "data: dnevna analiza $(date -u +%Y-%m-%d)"
+            sleep $((attempt * 5))
+          done
+          echo "::error::Push ni uspel po 3 poskusih; rezultat je v artefaktu raw-articles."
+          exit 1

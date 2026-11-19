@@ -909,7 +909,8 @@
         "N1",
         "Mladina"
       ],
-      "blind_analysis": false
+      "blind_analysis": false,
+      "manual": true
     },
     {
       "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
@@ -1956,7 +1957,8 @@
         "N1",
         "Mladina"
       ],
-      "blind_analysis": false
+      "blind_analysis": false,
+      "manual": true
     },
     {
       "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
@@ -2311,7 +2313,8 @@
       "source_checks": [],
       "missing_context": [],
       "not_covered_by": [],
-      "blind_analysis": false
+      "blind_analysis": false,
+      "manual": true
     }
   ]
 }

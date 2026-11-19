@@ -22,9 +22,9 @@ Cilj: stran se vsak dan sama posodobi s pravimi podatki, brez ročnega dela.
 | 1.1.1 | Dodati `GEMINI_API_KEY` v GitHub secrets in izvesti prvi samodejni zagon | Brez ključa samodejne analize ni | S |
 | 1.1.2 | Preveriti RSS za N1 (`/feed/`) in poiskati pravi RSS za Mladino | N1 je dodan nepreverjeno, Mladina ne deluje | S |
 | 1.1.3 ✅ | **Arhiv po dnevih**: `data/archive/YYYY-MM-DD.json` + `data/index.json` | Zdaj vsak zagon prepiše prejšnji dan | S |
-| 1.1.4 | Samodejne in ročne analize se **združujejo**, ne prepisujejo (ročne imajo prednost) | Ročno dodani mediji (Delo, Svet24 …) bi se ob naslednjem zagonu izgubili | M |
+| 1.1.4 ✅ | Samodejne in ročne analize se **združujejo**, ne prepisujejo (ročne imajo prednost) | Ročno dodani mediji (Delo, Svet24 …) bi se ob naslednjem zagonu izgubili | M |
 | 1.1.5 | Opozorilo (GitHub issue), ko vir 2 dni zapored ne vrne člankov | Okvara vira zdaj ostane neopažena | S |
-| 1.1.6 | Posodobitev GitHub Actions na Node 24 (`checkout@v5`, `setup-python@v6` …) | Actions že opozarjajo na opustitev Node 20 | S |
+| 1.1.6 ✅ | Posodobitev GitHub Actions na Node 24 (`checkout@v5`, `setup-python@v6` …) | Actions že opozarjajo na opustitev Node 20 | S |
 
 ## 1.2 Več virov in lažji ročni vnos
 
