@@ -15,7 +15,7 @@ import random
 import re
 import time
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Literal
 
 from pydantic import BaseModel, Field, ValidationError
@@ -252,7 +252,11 @@ ANALYSIS_RULES = """Si strog, nepristranski medijski analitik. Pravila:
    brez prevajanja, brez parafraziranja, največ ~30 besed na citat).
 3. Če besedilo ne vsebuje vrednostno obarvanega besedišča, je ocena "Sredina".
 4. sensationalism_score ocenjuje samo naslov: čustvene besede, pretiravanje, vprašalni/klikabejt
-   naslovi, velike črke in klicaji zvišujejo oceno.
+   naslovi, velike črke in klicaji zvišujejo oceno. Merilo:
+   - 1–3 (nevtralen): dejstven opis ali pripisan nevtralen citat brez vrednotenja.
+   - 4–6 (zmerno obarvan): poudarjanje konflikta, retorično vprašanje, dramatičen pridevnik ali namig.
+   - 7–10 (senzacionalističen): čustveno/vrednostno etiketiranje, klicaji, VELIKE ČRKE, klikabejt ali
+     zavajajoče pretiravanje.
 5. omitted_facts navaja samo dejstva, ki jih mednarodni (referenčni) vir dejansko navaja, ta medij pa ne.
    Če mednarodnega vira ni, primerjaj z dejstvi, ki jih navaja večina drugih virov, in to
    povej v international_baseline. Prazen seznam je dovoljen. Vsako dejstvo v omitted_facts mora
@@ -277,8 +281,13 @@ ANALYSIS_RULES = """Si strog, nepristranski medijski analitik. Pravila:
 13. lean_score določi vedno, tudi za sredinske članke: tudi uravnotežen članek se lahko rahlo nagiba
    z izbiro sogovornikov (kdo dobi več prostora, kdo uvod), dejstev (kaj izpusti) in naslova. Na slovenski
    politični osi je levo sedanja opozicija (Svoboda, Levica, SD), sindikati in levo usmerjene NVO, desno
-   sedanja koalicija (SDS, NSi, Demokrati …). 0 dodeli samo, če sta strani res enakovredni ali politične
-   razsežnosti ni. Vsak odklon od 0 utemelji v reasoning s konkretnim dokazom.
+   sedanja koalicija (SDS, NSi, Demokrati …). Merilo:
+   - 0,0: obe strani enakovredni ali brez politične razsežnosti; ±0,1 do ±0,4: minimalen nagib (Sredina).
+   - ±0,5 do ±1,9 (Sredina-Levo/-Desno): izrazit poudarek eni strani v uvodu/naslovu, izpuščena ključna
+     dejstva druge strani ali opazna izbira okvira brez odkritega komentiranja.
+   - ±2,0 do ±3,0 (Levo/Desno): avtorjevo obremenjeno besedišče, lastne sodbe v novici ali povsem
+     enostranski napad/zagovor.
+   Vsak odklon od 0 utemelji v reasoning s konkretnim dokazom.
 14. reasoning v 2–4 stavkih poveže oceno s konkretnimi dokazi; confidence je "Nizka", če je
    besedilo kratko, delno dostopno (oznaka DELNO BESEDILO) ali so dokazi šibki.
 15. Vsa besedila (razen citatov) piši v slovenščini.
@@ -393,7 +402,7 @@ def quote_in_text(quote: str, body: str) -> bool:
     return _normalize(quote).strip("\"'. »«") in _normalize(body)
 
 
-_QUOTED = re.compile(r"[„“”\"»«][^„“”\"»«]{0,600}[„“”\"»«]")
+_QUOTED = re.compile(r"„[^“”\n]{1,1500}[“”]|»[^«\n]{1,1500}«|“[^”\n]{1,1500}”|\"[^\"\n]{1,1500}\"")
 _WORDS = re.compile(r"\w+")
 
 
@@ -437,19 +446,25 @@ def verify_quotes(quotes: list[str], body: str) -> tuple[list[str], bool]:
 # --------------------------------------------------------------------------- #
 # Dodatne oblike imen, pod katerimi se medij omenja v lastnih in tujih člankih
 NAME_VARIANTS = {
-    "MMC RTV SLO": ["MMC RTV SLO", "RTV SLO", "RTV Slovenija", "RTVSLO.si", "rtvslo.si", "MMC"],
-    "24ur": ["24ur.com", "24UR", "24ur"],
-    "N1": ["n1info.si", "N1 Slovenija", "N1"],
-    "Nova24TV": ["nova24tv.si", "Nova24TV", "Nova24 TV", "Nova24"],
-    "Mladina": ["mladina.si", "Mladina", "Mladine", "Mladini"],
+    "MMC RTV SLO": [
+        "MMC RTV SLO", "RTV SLO", "RTV Slovenija", "RTV Slovenije", "RTV Sloveniji",
+        "RTV Slovenijo", "RTVSLO.si", "rtvslo.si", "rtvslo", "MMC-ja", "MMC-ju", "MMC",
+    ],
+    "24ur": ["24ur.com", "24UR", "24ur-a", "24ur"],
+    "N1": ["n1info.si", "N1 Slovenija", "N1info", "N1-ja", "N1-ju", "N1"],
+    "Nova24TV": ["nova24tv.si", "Nova24TV", "Nova24 TV", "Nova24TV-ja", "Nove24TV", "Nova24"],
+    "Mladina": ["mladina.si", "Mladina", "Mladine", "Mladini", "Mladino"],
     "BBC World": ["BBC News", "BBC World", "bbc.com", "BBC"],
-    "Žurnal24": ["zurnal24.si", "Žurnal24", "Žurnal 24", "Zurnal24", "zurnal24"],
-    "Svet24": ["svet24.si", "Svet24", "Svet 24", "svet24"],
-    "Delo": ["delo.si", "Delo", "Dela", "Delu"],
-    "Info360": ["info360.si", "Info360", "Info 360", "info360", "INFO360"],
-    "Portal24": ["portal24.si", "Portal24", "Portal 24", "portal24"],
+    "Žurnal24": ["zurnal24.si", "Žurnal24", "Žurnal 24", "Žurnala24", "Žurnalu24", "Zurnal24", "zurnal24"],
+    "Svet24": ["svet24.si", "Svet24", "Svet 24", "Sveta24", "Svetu24", "svet24"],
+    "Delo": ["delo.si", "Delo"],
+    "Info360": ["info360.si", "Info360", "Info 360", "Info360-ja", "info360", "INFO360"],
+    "Portal24": ["portal24.si", "Portal24", "Portal 24", "Portala24", "Portalu24", "portal24"],
     "NaDlani": ["nadlani.si", "NaDlani.si", "NaDlani", "Na dlani"],
 }
+# Enobesedna imena, ki so na začetku stavka pogosto občna beseda (npr. »Delo vlade …«)
+_SENTENCE_START_COMMON = {"Delo"}
+_AT_SENTENCE_START = re.compile(r"(?:^|[.!?…\n]\s*)$")
 
 
 def _alias_letters(n: int) -> list[str]:
@@ -457,10 +472,11 @@ def _alias_letters(n: int) -> list[str]:
     return [f"MEDIJ_{letters[i]}" if i < 26 else f"MEDIJ_{i + 1}" for i in range(n)]
 
 
-def make_aliases(cluster: list[Article], index: int) -> dict[str, str]:
-    """Psevdonim za vsak medij v zgodbi (alias -> ime medija). Vrstni red je premešan, a ponovljiv."""
-    names = list(dict.fromkeys(a.source for a in cluster))
-    random.Random(f"story-{index}").shuffle(names)
+def make_aliases(cluster: list[Article], index: int = 0) -> dict[str, str]:
+    """Psevdonim za vsak medij v zgodbi (alias -> ime medija). Neodvisno od vrstnega reda zgodb."""
+    names = sorted(dict.fromkeys(a.source for a in cluster))
+    seed = ",".join(sorted(a.id for a in cluster)) or f"story-{index}"
+    random.Random(seed).shuffle(names)
     return dict(zip(_alias_letters(len(names)), names))
 
 
@@ -479,7 +495,14 @@ def mask_names(text: str, aliases: dict[str, str]) -> str:
     pairs = sorted(((v, a) for a, name in aliases.items() for v in _variants(name)), key=lambda p: -len(p[0]))
     lookup = {v: a for v, a in pairs}
     pattern = _name_pattern([v for v, _ in pairs])
-    return pattern.sub(lambda m: lookup[m.group(0)], text)
+
+    def _replace(m: re.Match) -> str:
+        word = m.group(0)
+        if word in _SENTENCE_START_COMMON and _AT_SENTENCE_START.search(text[:m.start()]):
+            return word
+        return lookup[word]
+
+    return pattern.sub(_replace, text)
 
 
 _ALIAS = re.compile(r"MEDIJ_[A-Z0-9]+")
@@ -613,9 +636,51 @@ def clean_fact_matrix(matrix: list[FactPresence], names: list[str]) -> list[Fact
     return result
 
 
-def matrix_gaps(matrix: list[FactPresence], name: str, names: list[str]) -> list[str]:
-    """Dejstva, ki jih navaja vsaj polovica DRUGIH medijev (in vsaj dva), ta medij pa ne."""
+def _parse_published(value: str | None) -> tuple[datetime | None, str | None]:
+    """Vrne (utc_datetime, YYYY-MM-DD); za datum brez ure je prvi element None."""
+    if not value:
+        return None, None
+    day = value[:10] if len(value) >= 10 else None
+    if "T" not in value:
+        return None, day
+    try:
+        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc), day
+    except ValueError:
+        return None, day
+
+
+MATRIX_GAP_GRACE = timedelta(hours=6)
+
+
+def matrix_gaps(
+    matrix: list[FactPresence],
+    name: str,
+    names: list[str],
+    published: dict[str, str | None] | None = None,
+) -> list[str]:
+    """Dejstva, ki jih navaja vsaj polovica primerljivih DRUGIH medijev (in vsaj dva), ta medij pa ne.
+
+    Mediji, objavljeni bistveno pozneje (>6 ur ali poznejši datum), se pri zgodnejšem članku ne štejejo,
+    da mu ne očitamo dejstev, ki ob njegovi objavi še niso bila znana.
+    """
     others = [n for n in names if n != name]
+    if published:
+        self_dt, self_day = _parse_published(published.get(name))
+        if self_dt or self_day:
+            eligible = []
+            for other in others:
+                o_dt, o_day = _parse_published(published.get(other))
+                if self_dt and o_dt and (o_dt - self_dt) > MATRIX_GAP_GRACE:
+                    continue
+                if self_day and o_day and not o_dt and o_day > self_day:
+                    continue
+                if not self_dt and self_day and o_day and o_day > self_day:
+                    continue
+                eligible.append(other)
+            others = eligible
     if len(others) < 2:
         return []
     need = max(2, math.ceil(len(others) / 2))
@@ -623,6 +688,34 @@ def matrix_gaps(matrix: list[FactPresence], name: str, names: list[str]) -> list
 
 
 _SENTENCE = re.compile(r"(?<=[.!?…])\s+(?=[A-ZČŠŽĆĐ„\"»0-9])|\n+")
+_OPEN_QUOTE = "„“”\"»«"
+
+
+def _sentence_spans(text: str) -> list[tuple[int, int]]:
+    spans: list[tuple[int, int]] = []
+    pos = 0
+    for m in _SENTENCE.finditer(text):
+        spans.append((pos, m.start()))
+        pos = m.end()
+    spans.append((pos, len(text)))
+    return spans
+
+
+def _strip_spans(text: str, start: int, end: int, exclude: list[tuple[int, int]]) -> str:
+    """Del besedila v [start, end) brez pododsekov, ki se prekrivajo z exclude (npr. citati)."""
+    parts = []
+    cursor = start
+    for ex_s, ex_e in exclude:
+        if ex_e <= cursor:
+            continue
+        if ex_s >= end:
+            break
+        if ex_s > cursor:
+            parts.append(text[cursor:ex_s])
+        cursor = max(cursor, min(ex_e, end))
+    if cursor < end:
+        parts.append(text[cursor:end])
+    return " ".join(parts)
 
 
 def shared_core(article: Article, cluster: list[Article]) -> SharedCore | None:
@@ -633,11 +726,19 @@ def shared_core(article: Article, cluster: list[Article]) -> SharedCore | None:
         return None
     other_shingles = set().union(*(_shingles(o.body) for o in others))
     shared = round(100 * len(own & other_shingles) / len(own))
+    quoted_spans = [m.span() for m in _QUOTED.finditer(article.body)]
     unique = []
-    for sentence in _SENTENCE.split(article.body):
-        sentence = sentence.strip()
-        grams = _shingles(sentence)
-        if len(_WORDS.findall(sentence)) >= 8 and grams and not grams & other_shingles:
+    for raw_start, raw_end in _sentence_spans(article.body):
+        raw = article.body[raw_start:raw_end]
+        sentence = raw.strip()
+        if not sentence or sentence[0] in _OPEN_QUOTE:
+            continue
+        lead = len(raw) - len(raw.lstrip())
+        s_start = raw_start + lead
+        s_end = s_start + len(sentence)
+        authorial = _strip_spans(article.body, s_start, s_end, quoted_spans)
+        grams = _shingles(authorial)
+        if len(_WORDS.findall(authorial)) >= 8 and grams and not grams & other_shingles:
             unique.append(sentence)
     best = sorted(sorted(unique, key=len, reverse=True)[:2], key=article.body.find)
     return SharedCore(shared_percent=shared, own_percent=100 - shared, own_sentences=[s[:400] for s in best])
@@ -648,6 +749,7 @@ def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: i
     by_source = {a.source.lower(): a for a in cluster}
     names = [a.source for a in cluster if any(c.media_name.lower() == a.source.lower()
                                               for c in analysis.coverage_comparison)]
+    published_by_name = {a.source: a.published for a in cluster}
     matrix = clean_fact_matrix(analysis.fact_matrix, names)
     coverage: list[CoverageReport] = []
     for item in analysis.coverage_comparison:
@@ -680,7 +782,7 @@ def build_story_report(analysis: StoryAnalysis, cluster: list[Article], index: i
                 text_overlap=text_overlaps(article, cluster),
                 shared_core=shared_core(article, cluster),
                 partial_text=partial,
-                matrix_gaps=matrix_gaps(matrix, article.source, names),
+                matrix_gaps=matrix_gaps(matrix, article.source, names, published_by_name),
                 # naslov in URL vedno vzamemo iz zajetih podatkov, ne iz modela
                 article_title=article.title,
                 article_url=article.url,

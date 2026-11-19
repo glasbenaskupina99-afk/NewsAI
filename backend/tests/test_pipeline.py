@@ -126,10 +126,25 @@ class AnalyzerTest(unittest.TestCase):
         self.assertEqual(restored, "Kot je za MMC povedal minister")
 
     def test_mask_spelling_variants(self):
-        cluster = [_article("Info360", "komercialni", "t", "x"), _article("Žurnal24", "komercialni", "t", "y")]
+        cluster = [
+            _article("Info360", "komercialni", "t", "x"),
+            _article("Žurnal24", "komercialni", "t", "y"),
+            _article("Delo", "komercialni", "t", "z"),
+        ]
         aliases = analyzer.make_aliases(cluster, 0)
-        masked = analyzer.mask_names("Kot so za Info 360 in portal info360 povedali ...", aliases)
+        masked = analyzer.mask_names(
+            "Delo vlade je pohvalil. Kot so za Delo, Info 360 in Žurnala24 povedali ...",
+            aliases,
+        )
+        self.assertTrue(masked.startswith("Delo vlade je pohvalil."))
+        self.assertNotIn("za Delo", masked)
         self.assertNotIn("360", masked)
+        self.assertNotIn("Žurnala24", masked)
+
+    def test_make_aliases_is_invariant_to_story_index_and_order(self):
+        a = _article("N1", "komercialni", "t", "x")
+        b = _article("MMC RTV SLO", "javni", "t", "y")
+        self.assertEqual(analyzer.make_aliases([a, b], 0), analyzer.make_aliases([b, a], 4))
 
     def test_clean_text_drops_ads_and_page_tail(self):
         from scraper import clean_text
@@ -176,6 +191,16 @@ class AnalyzerTest(unittest.TestCase):
         self.assertEqual(analyzer.matrix_gaps(matrix, "A", names), ["znesek"])
         self.assertEqual(analyzer.matrix_gaps(matrix, "B", names), [])
 
+        # Zgodnejši članek (dan prej) ne dobi očitanih dejstev iz poznejših člankov
+        pub = {
+            "A": "2026-11-17T14:00:00+00:00",
+            "B": "2026-11-18T17:00:00+00:00",
+            "C": "2026-11-18T18:00:00+00:00",
+            "D": "2026-11-18",
+        }
+        self.assertEqual(analyzer.matrix_gaps(matrix, "A", names, pub), [])
+        self.assertEqual(analyzer.matrix_gaps(matrix, "B", names, pub), [])
+
     def test_shared_core_and_own_sentences(self):
         agency = "Minister je danes na novinarski konferenci predstavil predlog proračuna za prihodnje leto in poudaril stabilnost."
         a = _article("A", "javni", "t", agency + " Opozicija je predlog označila za predvolilno darilo upokojencem in javnim uslužbencem.")
@@ -183,6 +208,33 @@ class AnalyzerTest(unittest.TestCase):
         core = analyzer.shared_core(a, [a, b])
         self.assertGreater(core.shared_percent, 40)
         self.assertEqual(core.own_sentences, ["Opozicija je predlog označila za predvolilno darilo upokojencem in javnim uslužbencem."])
+
+    def test_shared_core_ignores_multi_sentence_direct_quotes(self):
+        agency = "Minister je danes na novinarski konferenci predstavil predlog proračuna za prihodnje leto in poudaril stabilnost."
+        quote = "»Ker preiskovalni postopki še potekajo, je pomembno, da ne razkrivamo podrobnosti. O nadaljnjih korakih bomo obvestili javnost,« so zapisali."
+        a = _article("A", "javni", "t", f"{agency} {quote}")
+        b = _article("B", "komercialni", "t", f"{agency} {quote}")
+        core = analyzer.shared_core(a, [a, b])
+        self.assertEqual(core.own_sentences, [])
+
+    def test_build_media_stats_aggregates_archive(self):
+        import tempfile
+        import main as pipeline_main
+        with tempfile.TemporaryDirectory() as tmp:
+            arch = Path(tmp)
+            mock_day = build_mock_analysis()
+            mock_day.is_mock = False
+            (arch / "2026-11-18.json").write_text(mock_day.model_dump_json(), encoding="utf-8")
+            (arch / "index.json").write_text(
+                json.dumps([{"date": "2026-11-18", "stories": len(mock_day.stories), "model": "test", "is_mock": False}]),
+                encoding="utf-8",
+            )
+            stats = pipeline_main.build_media_stats(arch)
+            self.assertEqual(stats["days"], 1)
+            by_name = {m["name"]: m for m in stats["media"]}
+            self.assertIn("MMC RTV SLO", by_name)
+            self.assertEqual(by_name["MMC RTV SLO"]["count"], 3)
+            self.assertEqual(len(by_name["MMC RTV SLO"]["articles"]), 3)
 
     def test_invalid_model_output_is_rejected(self):
         bad = {"topic_title": "t", "international_baseline": "b", "neutral_summary": "s",

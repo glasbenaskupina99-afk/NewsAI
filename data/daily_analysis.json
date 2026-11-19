@@ -301,11 +301,7 @@
             ]
           },
           "partial_text": false,
-          "matrix_gaps": [
-            "Predsednica skupščine Vuk bo predlagala diferenciran (progresiven) prispevek",
-            "Odzivi Svobode, SD in Levice",
-            "Projekcija ZZZS že vključuje 100 milijonov manj za bolniška nadomestila in prenos 145 milijonov v 2028"
-          ]
+          "matrix_gaps": []
         },
         {
           "media_name": "Nova24TV",
@@ -408,10 +404,7 @@
             "Minister: razkorak po ukinitvi dopolnilnega zavarovanja (135 milijonov, 2027 okoli 188 milijonov) in plačna reforma (123 milijonov)",
             "Rebalans 2026 je ZZZS zmanjšal sredstva za 100 milijonov evrov",
             "Primerjava s Hrvaško (5,8 proti 6,7 milijarde evrov)",
-            "Minister na vprašanje o višini prihrankov ni odgovoril oziroma izračuna ni predstavil",
-            "Predsednica skupščine Vuk bo predlagala diferenciran (progresiven) prispevek",
-            "Odzivi Svobode, SD in Levice",
-            "Projekcija ZZZS že vključuje 100 milijonov manj za bolniška nadomestila in prenos 145 milijonov v 2028"
+            "Minister na vprašanje o višini prihrankov ni odgovoril oziroma izračuna ni predstavil"
           ]
         }
       ],
@@ -795,9 +788,7 @@
             ]
           },
           "partial_text": false,
-          "matrix_gaps": [
-            "Uber v Sloveniji deluje od maja 2025 s taksimetri"
-          ]
+          "matrix_gaps": []
         },
         {
           "media_name": "Nova24TV",
@@ -953,10 +944,7 @@
             ]
           },
           "partial_text": false,
-          "matrix_gaps": [
-            "Taksimeter: obračun po razdalji ali času, ne več po obeh hkrati",
-            "Enoletno prehodno obdobje za jezikovni pogoj"
-          ]
+          "matrix_gaps": []
         }
       ],
       "neutral_summary": "Vlada je v DZ poslala novelo, ki taksi prevoznikom omogoča obračun prek aplikacij (kot Uber ali Bolt) namesto obveznega taksimetra, uvaja obvezno znanje slovenščine za voznike ter nadzor in globe za aplikacije. Ministrstvo obljublja preglednejše cene in več konkurence, sindikat taksistov opozarja na provizije platform, dinamične cene in neenake pogoje.",
@@ -1809,7 +1797,6 @@
             "shared_percent": 27,
             "own_percent": 73,
             "own_sentences": [
-              "\"Ker preiskovalni postopki še potekajo, je izjemno pomembno, da s preuranjenim razkrivanjem informacij ne bi vplivali na njihov potek ali ogrozili nadaljnjih aktivnosti pristojnih organov,\" so dejali na Darsu in dodali, da bodo dodatna pojasnila in informacije o sprejetih ukrepih posredovali, ko bo to mogoče, ne da bi pri tem posegali v potek preiskave.",
               "Ko so ugotovili, da so naredili napako, so na Darsu po informacijah TVS prekinili dve nakazili, ni pa jim uspelo zaustaviti treh nakazil v skupni vrednosti 1,8 milijona evrov, ki so tako pristali na fiktivnem bančnem računu v tujini."
             ]
           },
@@ -2191,7 +2178,6 @@
             "shared_percent": 59,
             "own_percent": 41,
             "own_sentences": [
-              "»Ker preiskovalni postopki še potekajo, je izjemno pomembno, da s prehitrim razkrivanjem informacij ne bi vplivali na njihov potek ali ogrozili nadaljnjih aktivnosti pristojnih organov.",
               "Oseba, ki je opravila nakazila, naj bi to po navedbah TV Slovenija storila brez potrdila Pekošak, istega dne pa so na Darsu izvedli tudi tri nakazila na slovenski račun Strabaga."
             ]
           },
@@ -2300,10 +2286,7 @@
             ]
           },
           "partial_text": false,
-          "matrix_gaps": [
-            "Pekošak in Dars sta sklenila dogovor o prenehanju delovnega razmerja",
-            "SDS je odgovornost pripisala Svobodi"
-          ]
+          "matrix_gaps": []
         },
         {
           "media_name": "Žurnal24",
@@ -2397,9 +2380,7 @@
           "shared_core": {
             "shared_percent": 93,
             "own_percent": 7,
-            "own_sentences": [
-              "\"Ker preiskovalni postopki še potekajo, je izjemno pomembno, da s prehitrim razkrivanjem informacij ne bi vplivali na njihov potek ali ogrozili nadaljnjih aktivnosti pristojnih organov."
-            ]
+            "own_sentences": []
           },
           "partial_text": false,
           "matrix_gaps": [

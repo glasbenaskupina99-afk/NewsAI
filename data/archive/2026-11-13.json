@@ -355,8 +355,7 @@
             "shared_percent": 38,
             "own_percent": 62,
             "own_sentences": [
-              "S tem je ciljal na opozorila sindikalistov, da jih proračun za leto 2027 spominja na zloglasni zakon o uravnoteženju javnih financ (ZUJF) iz leta 2012, ko se je z varčevalnimi ukrepi poseglo ravno v pravice ljudi.",
-              "»Če govorimo o tem, da bomo preprečevali zlorabe, to ne pomeni, da ne bomo izplačevali prejemkov tistim, ki jih v resnici potrebujejo, tistim, ki jih dobijo po zakonu, tistim, ki izpolnjujejo vse zakonske zadeve.« Tudi ko govorimo o urejanju evidenc oziroma »povezovanju evidenc o premoženju z evidencami o dohodkih, z evidencami o prebivališču«, v te pravice ne bo posegov."
+              "S tem je ciljal na opozorila sindikalistov, da jih proračun za leto 2027 spominja na zloglasni zakon o uravnoteženju javnih financ (ZUJF) iz leta 2012, ko se je z varčevalnimi ukrepi poseglo ravno v pravice ljudi."
             ]
           },
           "partial_text": false,
@@ -982,12 +981,13 @@
           "shared_core": {
             "shared_percent": 77,
             "own_percent": 23,
-            "own_sentences": [
-              "\"ZZZS se zaveda, da ima takšna prilagoditev dinamike plačil lahko posledice za likvidnost izvajalcev zdravstvenih storitev in drugih partnerjev, zato bo po vračilu obstoječih likvidnostnih posojil in glede na tekoča razpoložljiva sredstva postopoma poravnaval zadržane obveznosti."
-            ]
+            "own_sentences": []
           },
           "partial_text": false,
-          "matrix_gaps": []
+          "matrix_gaps": [
+            "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika",
+            "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila"
+          ]
         },
         {
           "media_name": "Nova24TV",
@@ -1175,12 +1175,14 @@
             "shared_percent": 20,
             "own_percent": 80,
             "own_sentences": [
-              "\"ZZZS se zaveda, da ima takšna prilagoditev dinamike plačil lahko posledice za likvidnost izvajalcev zdravstvenih storitev in drugih partnerjev, zato bo po vračilu obstoječih likvidnostnih posojil in glede na tekoča razpoložljiva sredstva postopoma poravnaval zadržane obveznosti.",
               "Glavni ukrepi interventnega zakona, ki posegajo v prihodke zdravstvene blagajne, so razvojna kapica pri 7.500 evrih bruto plače, nižji prispevki za mikro samostojne podjetnike in kmete ter spremembe pri prispevkih samozaposlenih."
             ]
           },
           "partial_text": false,
-          "matrix_gaps": []
+          "matrix_gaps": [
+            "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika",
+            "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila"
+          ]
         },
         {
           "media_name": "Svet24",
@@ -1302,12 +1304,14 @@
             "shared_percent": 78,
             "own_percent": 22,
             "own_sentences": [
-              "Pri tem je soglašal, da ZZZS zaradi zagotavljanja poslovanja v okviru potrjenega finančnega načrta prilagodi dinamiko plačevanja zapadlih obveznosti, so sporočili z zavoda.",
-              "\"ZZZS se zaveda, da ima takšna prilagoditev dinamike plačil lahko posledice za likvidnost izvajalcev zdravstvenih storitev in drugih partnerjev, zato bo po vračilu obstoječih likvidnostnih posojil in glede na tekoča razpoložljiva sredstva postopoma poravnaval zadržane obveznosti."
+              "Pri tem je soglašal, da ZZZS zaradi zagotavljanja poslovanja v okviru potrjenega finančnega načrta prilagodi dinamiko plačevanja zapadlih obveznosti, so sporočili z zavoda."
             ]
           },
           "partial_text": false,
-          "matrix_gaps": []
+          "matrix_gaps": [
+            "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika",
+            "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila"
+          ]
         },
         {
           "media_name": "Portal24",
@@ -1369,7 +1373,9 @@
             ]
           },
           "partial_text": false,
-          "matrix_gaps": []
+          "matrix_gaps": [
+            "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila"
+          ]
         },
         {
           "media_name": "Info360",
@@ -1515,7 +1521,8 @@
           },
           "partial_text": false,
           "matrix_gaps": [
-            "Dolgotrajna oskrba ni prizadeta"
+            "Dolgotrajna oskrba ni prizadeta",
+            "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika"
           ]
         }
       ],

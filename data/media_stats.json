@@ -1,0 +1,871 @@
+{
+  "days": 3,
+  "media": [
+    {
+      "name": "Delo",
+      "category": "komercialni",
+      "count": 1,
+      "lean": [
+        -1.0
+      ],
+      "avg_lean": -1.0,
+      "min_lean": -1.0,
+      "max_lean": -1.0,
+      "avg_sens": 4.0,
+      "one_sided_share": 0,
+      "avg_words": null,
+      "avg_own_percent": null,
+      "agency_copy_share": null,
+      "orientation": null,
+      "articles": [
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Zbornica, ki bi lahko dvignila roko za šolsko reformo",
+          "article_url": "https://www.delo.si/novice/slovenija/ucitelji-sviz-solstvo-reforme-vzgoja-in-izobrazevanje-uciteljska-zbornica",
+          "lean_score": -1.0,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 4,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "Svet24",
+      "category": "komercialni",
+      "count": 5,
+      "lean": [
+        0.0,
+        0.25,
+        -1.0,
+        0.0,
+        -1.25
+      ],
+      "avg_lean": -0.4,
+      "min_lean": -1.25,
+      "max_lean": 0.25,
+      "avg_sens": 3.4,
+      "one_sided_share": 20,
+      "avg_words": 598,
+      "avg_own_percent": 76,
+      "agency_copy_share": 0,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "Monika Pekošak sklenila dogovor z Darsom",
+          "article_url": "https://svet24.si/novice/slovenija/dars-monika-pekosak-nakazilo-denar-1941637",
+          "lean_score": 0.25,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": 59
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-3",
+          "topic_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet v hišnem priporu",
+          "article_title": "Hudohmet odkorakal v hišni pripor",
+          "article_url": "https://svet24.si/novice/slovenija/gregor-hudohmet-hisni-pripor-1941632",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 4,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 0
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "Zdravstvena blagajna v težavah: denarja za decembrska plačila ni dovolj",
+          "article_url": "https://svet24.si/novice/slovenija/zdravstveno-zavarovanje-zamik-placila-denar-1939901",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": 1
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-1",
+          "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+          "article_title": "Šircelj: Ne bo novega Zujfa, opozicija izvaja politiko strahu in zavisti",
+          "article_url": "https://svet24.si/novice/slovenija/andrej-sircelj-interventni-zakon-1940357",
+          "lean_score": -1.0,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 4,
+          "sides_represented": "Obe strani",
+          "shared_percent": 38
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Štrukelj kritičen: \"Učiteljska zbornica bo podaljšana roka ministrstva\"",
+          "article_url": "https://svet24.si/novice/slovenija/branimir-strukelj-sindikat-sviz-solstvo-1935126",
+          "lean_score": -1.25,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 3,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "24ur",
+      "category": "komercialni",
+      "count": 4,
+      "lean": [
+        -0.6,
+        0.0,
+        0.0,
+        -0.75
+      ],
+      "avg_lean": -0.34,
+      "min_lean": -0.75,
+      "max_lean": 0.0,
+      "avg_sens": 2.0,
+      "one_sided_share": 0,
+      "avg_words": 726,
+      "avg_own_percent": 43,
+      "agency_copy_share": 50,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "ZZZS bo do 185 milijonov letošnjih zapadlih obveznosti poravnal naslednje leto",
+          "article_url": "https://www.24ur.com/novice/slovenija/zzzs-bo-do-185-milijonov-letosnjih-zapadlih-obveznosti-poravnal-naslednje-leto.html",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 78
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-1",
+          "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+          "article_title": "Šircelj: Izplačane bodo vse zakonske pravice",
+          "article_url": "https://www.24ur.com/novice/slovenija/sircelj-izplacane-bodo-vse-zakonske-pravice.html",
+          "lean_score": -0.6,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 36
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Štrukelj kritičen do učiteljske zbornice: To je projekt politike",
+          "article_url": "https://www.24ur.com/novice/slovenija/strukelj-kriticen-do-uciteljske-zbornice-to-je-projekt-politike.html",
+          "lean_score": -0.75,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-1",
+          "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
+          "article_title": "Witkoff tri ure pri Putinu: Rusija pripravljena na nove tristranske pogovore",
+          "article_url": "https://www.24ur.com/novice/tujina/po-konstruktivnih-pogovorih-z-zelenskim-witkoff-odhaja-k-putinu.html",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "Žurnal24",
+      "category": "komercialni",
+      "count": 7,
+      "lean": [
+        -0.5,
+        -0.75,
+        0.0,
+        0.0,
+        0.75,
+        -1.0,
+        -0.6
+      ],
+      "avg_lean": -0.3,
+      "min_lean": -1.0,
+      "max_lean": 0.75,
+      "avg_sens": 4.57,
+      "one_sided_share": 14,
+      "avg_words": 415,
+      "avg_own_percent": 64,
+      "agency_copy_share": 33,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "2,5-milijonski napačni klik Darsa odnesel vodjo finančne službe",
+          "article_url": "https://www.zurnal24.si/slovenija/25-milijonski-napacni-klik-darsa-odnesel-vodjo-financne-sluzbe-468437",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 6,
+          "sides_represented": "Obe strani",
+          "shared_percent": 93
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-3",
+          "topic_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet v hišnem priporu",
+          "article_title": "Preobrat v aferi Gen-I, oglasilo se je romunsko tožilstvo",
+          "article_url": "https://www.zurnal24.si/slovenija/preobrat-v-aferi-gen-i-oglasilo-se-je-romunsko-tozilstvo-468441",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 5,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 96
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-2",
+          "topic_title": "Vlada sprejela novelo: taksi prevozi tudi prek aplikacij, taksimeter ni več obvezen",
+          "article_title": "Velike spremembe na področju prevozov s taksiji",
+          "article_url": "https://www.zurnal24.si/avto/velike-spremembe-na-podrocju-prevozov-s-taksiji-468406",
+          "lean_score": -0.75,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": 2
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-1",
+          "topic_title": "Minister Ostrc zavrnil predlog ZZZS za izredno zvišanje obveznega zdravstvenega prispevka",
+          "article_title": "Ostrc: \"Nobenega izrednega zvišanja zdravstvenega prispevka ne bo!\"",
+          "article_url": "https://www.zurnal24.si/slovenija/ostrc-nobenega-izrednega-zvisanja-zdravstvenega-prispevka-ne-bo-468400",
+          "lean_score": -0.5,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 3,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 3
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "Težave zdravstvene blagajne: Odvzeli 100 milijonov, grozi še nov izpad",
+          "article_url": "https://www.zurnal24.si/slovenija/154-milijonov-minusa-placila-zdravnikom-in-dobaviteljem-prestavljena-468082",
+          "lean_score": -1.0,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 6,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 20
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-1",
+          "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+          "article_title": "Šircelj miri: \"Vse mame bodo dobile porodniško nadomestilo\"",
+          "article_url": "https://www.zurnal24.si/slovenija/sircelj-miri-vse-mame-bodo-dobile-porodnisko-nadomestilo-468182",
+          "lean_score": 0.75,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 3,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": 5
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Nova ideja ministra: Učitelji obvezno v zbornico, šolniki na nogah",
+          "article_url": "https://www.zurnal24.si/slovenija/ideja-o-ustanovitvi-uciteljske-zbornice-buri-duhove-466915",
+          "lean_score": -0.6,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 6,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "BBC World",
+      "category": "mednarodni",
+      "count": 2,
+      "lean": [
+        -0.6,
+        0.0
+      ],
+      "avg_lean": -0.3,
+      "min_lean": -0.6,
+      "max_lean": 0.0,
+      "avg_sens": 2.5,
+      "one_sided_share": 0,
+      "avg_words": 1017,
+      "avg_own_percent": null,
+      "agency_copy_share": null,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-13",
+          "story_id": "story-3",
+          "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
+          "article_title": "How a sex scandal at Nvidia is putting pressure on the White House",
+          "article_url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
+          "lean_score": -0.6,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 4,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-1",
+          "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
+          "article_title": "Russia says it is ready to resume talks with Ukraine and US to end war",
+          "article_url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "NaDlani",
+      "category": "komercialni",
+      "count": 1,
+      "lean": [
+        -0.2
+      ],
+      "avg_lean": -0.2,
+      "min_lean": -0.2,
+      "max_lean": -0.2,
+      "avg_sens": 7.0,
+      "one_sided_share": 0,
+      "avg_words": 394,
+      "avg_own_percent": 97,
+      "agency_copy_share": 0,
+      "orientation": null,
+      "articles": [
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "ZZZS nima dovolj denarja za vsa plačila: bodo delavci na bolniški ostali brez plačila?",
+          "article_url": "https://www.nadlani.si/novice/zzzs-nima-dovolj-denarja-za-vsa-placila-bodo-delavci-na-bolniski-ostali-brez-placila/",
+          "lean_score": -0.2,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 7,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 3
+        }
+      ]
+    },
+    {
+      "name": "Info360",
+      "category": "komercialni",
+      "count": 3,
+      "lean": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "avg_lean": -0.17,
+      "min_lean": -0.5,
+      "max_lean": 0.0,
+      "avg_sens": 4.0,
+      "one_sided_share": 0,
+      "avg_words": 591,
+      "avg_own_percent": 93,
+      "agency_copy_share": 0,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "Nadzorniki Darsa za prevaro izvedeli iz medijev",
+          "article_url": "https://info360.si/gospodarstvo/nadzorniki-darsa-za-prevaro-izvedeli-iz-medijev/",
+          "lean_score": -0.5,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 4,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 5
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-3",
+          "topic_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet v hišnem priporu",
+          "article_title": "Romunska policija: Hudohmet je v hišnem priporu. Preživljal naj bi ga v Sloveniji",
+          "article_url": "https://info360.si/aktualno/romunska-policija-hudohmet-je-v-hisnem-priporu-prezivljal-naj-bi-ga-v-sloveniji/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 3,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 0
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "Zmanjkuje denarja: ZZZS odlaga izplačila pogodbenikom in delodajalcem za nadomestila bolniških",
+          "article_url": "https://info360.si/aktualno/zmanjkuje-denarja-zzzs-odlaga-izplacila-pogodbenikom-in-delodajalcem-za-nadomestila-bolniskih/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 5,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 16
+        }
+      ]
+    },
+    {
+      "name": "MMC RTV SLO",
+      "category": "javni",
+      "count": 10,
+      "lean": [
+        0.0,
+        0.5,
+        0.0,
+        -0.25,
+        0.0,
+        0.0,
+        -0.4,
+        0.0,
+        -0.3,
+        -0.75
+      ],
+      "avg_lean": -0.12,
+      "min_lean": -0.75,
+      "max_lean": 0.5,
+      "avg_sens": 1.8,
+      "one_sided_share": 10,
+      "avg_words": 778,
+      "avg_own_percent": 65,
+      "agency_copy_share": 29,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "Vodja Darsove finančne službe sporazumno zapušča družbo. Večina denarja zavarovana.",
+          "article_url": "https://www.rtvslo.si/gospodarstvo/vodja-darsove-financne-sluzbe-sporazumno-zapusca-druzbo-vecina-denarja-zavarovana/800546",
+          "lean_score": -0.25,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 22
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-3",
+          "topic_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet v hišnem priporu",
+          "article_title": "Hudohmet naj bi bil v hišnem priporu",
+          "article_url": "https://www.rtvslo.si/crna-kronika/hudohmet-naj-bi-bil-v-hisnem-priporu/800551",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 82
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-2",
+          "topic_title": "Vlada sprejela novelo: taksi prevozi tudi prek aplikacij, taksimeter ni več obvezen",
+          "article_title": "Vlada sprejela predlog zakonske novele, ki omogoča izvajanje avtotaksi storitev tudi z aplikacijo",
+          "article_url": "https://www.rtvslo.si/slovenija/vlada-sprejela-predlog-zakonske-novele-ki-omogoca-izvajanje-avtotaksi-storitev-tudi-z-aplikacijo/800448",
+          "lean_score": 0.5,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 1,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": 3
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-1",
+          "topic_title": "Minister Ostrc zavrnil predlog ZZZS za izredno zvišanje obveznega zdravstvenega prispevka",
+          "article_title": "Ostrc: Izrednega zvišanja prispevka ne bo. ZZZS: Kljub ukrepom 136 milijonov evrov primanjkljaja.",
+          "article_url": "https://www.rtvslo.si/slovenija/ostrc-izrednega-zvisanja-prispevka-ne-bo-zzzs-kljub-ukrepom-136-milijonov-evrov-primanjkljaja/800452",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 37
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-3",
+          "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
+          "article_title": "Po objavi afer, tudi z domnevno kitajsko vohunko, odstopil izvršni direktor Nvidie",
+          "article_url": "https://www.rtvslo.si/svet/po-objavi-afer-tudi-z-domnevno-kitajsko-vohunko-odstopil-izvrsni-direktor-nvidie/799926",
+          "lean_score": -0.4,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": 0
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "ZZZS bo do 185 milijonov evrov zapadlih obveznosti poravnal na začetku leta 2027",
+          "article_url": "https://www.rtvslo.si/zdravje/zzzs-bo-do-185-milijonov-evrov-zapadlih-obveznosti-poravnal-na-zacetku-leta-2027/799769",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 77
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-1",
+          "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+          "article_title": "Šircelj: Ne gre za to, da bi komur koli kaj vzeli, gre izključno za to, da bomo gospodarno ravnali",
+          "article_url": "https://www.rtvslo.si/slovenija/sircelj-ne-gre-za-to-da-bi-komur-koli-kaj-vzeli-gre-izkljucno-za-to-da-bomo-gospodarno-ravnali/799990",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 26
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Sviz kritičen do učiteljske zbornice. Štrukelj: To je arogantna poteza.",
+          "article_url": "https://www.rtvslo.si/slovenija/sviz-kriticen-do-uciteljske-zbornice-strukelj-to-je-arogantna-poteza/797652",
+          "lean_score": -0.75,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 3,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-2",
+          "topic_title": "Gregorčič zaradi predčasnega prenehanja mandata v programskem svetu RTV vložil pritožbo na ESČP",
+          "article_title": "Gregorčič v zadevi RTV Slovenija vložil pritožbo na ESČP",
+          "article_url": "https://www.rtvslo.si/slovenija/gregorcic-v-zadevi-rtv-slovenija-vlozil-pritozbo-na-escp/797667",
+          "lean_score": -0.3,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-1",
+          "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
+          "article_title": "Kremelj privolil v obnovitev mirovnih pogajanj med Rusijo, Ukrajino in ZDA",
+          "article_url": "https://www.rtvslo.si/svet/vojna-v-ukrajini/kremelj-privolil-v-obnovitev-mirovnih-pogajanj-med-rusijo-ukrajino-in-zda/797676",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "N1",
+      "category": "komercialni",
+      "count": 4,
+      "lean": [
+        -0.5,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "avg_lean": -0.12,
+      "min_lean": -0.5,
+      "max_lean": 0.0,
+      "avg_sens": 1.25,
+      "one_sided_share": 0,
+      "avg_words": 727,
+      "avg_own_percent": 44,
+      "agency_copy_share": 33,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "Dars in Monika Pekošak sklenila dogovor o prenehanju delovnega razmerja",
+          "article_url": "https://n1info.si/novice/slovenija/dars-in-monika-pekosak-sklenila-dogovor-o-prenehanju-delovnega-razmerja/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Obe strani",
+          "shared_percent": 27
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-3",
+          "topic_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet v hišnem priporu",
+          "article_title": "Nekdanji direktor Gen-I Sonce Gregor Hudohmet naj bi bil v hišnem priporu",
+          "article_url": "https://n1info.si/novice/slovenija/nekdanji-direktor-gen-i-sonce-gregor-hudohmet-v-hisnem-priporu-neuradno-naj-bi-bil-v-sloveniji/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 100
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-1",
+          "topic_title": "Minister Ostrc zavrnil predlog ZZZS za izredno zvišanje obveznega zdravstvenega prispevka",
+          "article_title": "Minister Ostrc zavrnil predlog ZZZS: Nobenega izrednega zvišanja prispevka ne bo",
+          "article_url": "https://n1info.si/zdravje/minister-ostrc-zavrnil-predlog-zzzs-nobenega-izrednega-zvisanja-prispevka-ne-bo/",
+          "lean_score": -0.5,
+          "bias_leaning": "Sredina-Levo",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": 41
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-1",
+          "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
+          "article_title": "Rusija mirovna pogajanja z Ukrajino in ZDA pripravljena obnoviti novembra",
+          "article_url": "https://n1info.si/novice/svet/rusija-mirovna-pogajanja-z-ukrajino-in-zda-pripravljena-obnoviti-novembra/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "Portal24",
+      "category": "komercialni",
+      "count": 3,
+      "lean": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "avg_lean": 0.33,
+      "min_lean": 0.0,
+      "max_lean": 1.0,
+      "avg_sens": 2.0,
+      "one_sided_share": 33,
+      "avg_words": 518,
+      "avg_own_percent": 94,
+      "agency_copy_share": 0,
+      "orientation": "sredina",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "Po nakazilih 1,8 milijona evrov goljufom Monika Pekošak sporazumno zapušča Dars",
+          "article_url": "https://portal24.si/po-nakazilih-18-milijona-evrov-goljufom-monika-pekosak-sporazumno-zapusca-dars/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 2,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 2
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "ZZZS bo do 185 milijonov evrov obveznosti poravnal šele v začetku leta 2027",
+          "article_url": "https://portal24.si/zzzs-bo-do-185-milijonov-evrov-obveznosti-poravnal-sele-v-zacetku-leta-2027/",
+          "lean_score": 0.0,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 1,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 9
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-1",
+          "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+          "article_title": "Minister Šircelj zavrača strašenje: Izplačane bodo vse zakonske pravice",
+          "article_url": "https://portal24.si/minister-sircelj-zavraca-strasenje-izplacane-bodo-vse-zakonske-pravice/",
+          "lean_score": 1.0,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 3,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": 7
+        }
+      ]
+    },
+    {
+      "name": "Moja Dolenjska",
+      "category": "regionalni",
+      "count": 1,
+      "lean": [
+        0.75
+      ],
+      "avg_lean": 0.75,
+      "min_lean": 0.75,
+      "max_lean": 0.75,
+      "avg_sens": 2.0,
+      "one_sided_share": 0,
+      "avg_words": null,
+      "avg_own_percent": null,
+      "agency_copy_share": null,
+      "orientation": null,
+      "articles": [
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Ministrstvo: Članstvo v učiteljski zbornici še ni določeno, namen ni nadomeščanje sindikatov",
+          "article_url": "https://moja-dolenjska.si/ministrstvo-clanstvo-v-uciteljski-zbornici-se-ni-doloceno-namen-ni-nadomescanje-sindikatov/",
+          "lean_score": 0.75,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 2,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        }
+      ]
+    },
+    {
+      "name": "Nova24TV",
+      "category": "alternativni",
+      "count": 9,
+      "lean": [
+        1.75,
+        1.0,
+        2.0,
+        1.25,
+        2.5,
+        0.3,
+        0.2,
+        1.25,
+        2.25
+      ],
+      "avg_lean": 1.39,
+      "min_lean": 0.2,
+      "max_lean": 2.5,
+      "avg_sens": 6.22,
+      "one_sided_share": 44,
+      "avg_words": 487,
+      "avg_own_percent": 95,
+      "agency_copy_share": 0,
+      "orientation": "desno",
+      "articles": [
+        {
+          "date": "2026-11-18",
+          "story_id": "story-4",
+          "topic_title": "Darsova finančna direktorica Monika Pekošak odhaja po nakazilih goljufom",
+          "article_title": "Kriminalisti na Darsu: Je milijone na lažni račun nakazala nekdanja poslanka Svobode?",
+          "article_url": "https://nova24tv.si/kriminalisti-na-darsu-je-milijone-na-lazni-racun-nakazala-nekdanja-poslanka-svobode/",
+          "lean_score": 2.0,
+          "bias_leaning": "Desno",
+          "sensationalism_score": 8,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": 4
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-2",
+          "topic_title": "Vlada sprejela novelo: taksi prevozi tudi prek aplikacij, taksimeter ni več obvezen",
+          "article_title": "Vlada odpravlja obvezni taksimeter: Prihaja Uberjev model",
+          "article_url": "https://nova24tv.si/vlada-odpravlja-obvezni-taksimeter-prihaja-uberjev-model/",
+          "lean_score": 1.0,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 4,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": 0
+        },
+        {
+          "date": "2026-11-18",
+          "story_id": "story-1",
+          "topic_title": "Minister Ostrc zavrnil predlog ZZZS za izredno zvišanje obveznega zdravstvenega prispevka",
+          "article_title": "Minister zavrnil predlog za drastično podražitev (Golobovega) obveznega zdravstvenega prispevka",
+          "article_url": "https://nova24tv.si/minister-zavrnil-predlog-za-drasticno-podrazitev-golobovega-obveznega-zdravstvenega-prispevka/",
+          "lean_score": 1.75,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 6,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 1
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-3",
+          "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
+          "article_title": "Nvidiinega milijarderja odnesle ljubezenske afere: Po domnevni kitajski vohunki razkriti še dve ljubici",
+          "article_url": "https://nova24tv.si/nvidiinega-milijarderja-odnesle-ljubezenske-afere-po-domnevni-kitajski-vohunki-razkriti-se-dve-ljubici/",
+          "lean_score": 0.3,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 8,
+          "sides_represented": "Obe strani",
+          "shared_percent": 0
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-2",
+          "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
+          "article_title": "Golobova vlada se je hvalila z zgodovinskim ukrepom, danes ZZZS zaradi njega tone v likvidnostne težave",
+          "article_url": "https://nova24tv.si/golobova-vlada-se-je-hvalila-z-zgodovinskim-ukrepom-danes-zzzs-zaradi-njega-tone-v-likvidnostne-tezave/",
+          "lean_score": 2.5,
+          "bias_leaning": "Desno",
+          "sensationalism_score": 7,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": 11
+        },
+        {
+          "date": "2026-11-13",
+          "story_id": "story-1",
+          "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
+          "article_title": "Šircelj zavrača strašenje opozicije: “Nikomur ne bomo nič vzeli, vse zagotovljene pravice bomo izplačali”",
+          "article_url": "https://nova24tv.si/sircelj-zavraca-strasenje-opozicije-nikomur-ne-bomo-nic-vzeli-vse-zagotovljene-pravice-bomo-izplacali/",
+          "lean_score": 1.25,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 5,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": 13
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-3",
+          "topic_title": "Sviz ostro proti napovedani učiteljski zbornici, ministrstvo zavrača očitke",
+          "article_title": "Štrukelj nad učiteljsko združenje, Rončević pa: “Na kraj pameti mi ne pade, da bi se o tem pogovarjal s sindikati”",
+          "article_url": "https://nova24tv.si/strukelj-nad-uciteljsko-zdruzenje-roncevic-pa-na-kraj-pameti-mi-ne-pade-da-bi-se-o-tem-pogovarjal-s-sindikati/",
+          "lean_score": 2.25,
+          "bias_leaning": "Desno",
+          "sensationalism_score": 6,
+          "sides_represented": "Obe strani",
+          "shared_percent": null
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-2",
+          "topic_title": "Gregorčič zaradi predčasnega prenehanja mandata v programskem svetu RTV vložil pritožbo na ESČP",
+          "article_title": "Bo ustavno sodišče dobilo zaušnico ESČP pri ugrabitvi RTV?",
+          "article_url": "https://nova24tv.si/bo-ustavno-sodisce-dobilo-zausnico-escp-pri-ugrabitvi-rtv/",
+          "lean_score": 1.25,
+          "bias_leaning": "Sredina-Desno",
+          "sensationalism_score": 8,
+          "sides_represented": "Samo ena stran",
+          "shared_percent": null
+        },
+        {
+          "date": "2026-10-21",
+          "story_id": "story-1",
+          "topic_title": "Rusija pripravljena na obnovo tristranskih mirovnih pogovorov z Ukrajino in ZDA",
+          "article_title": "Srečanje Witkoffa s Putinom – smo res bližje miru v Ukrajini?",
+          "article_url": "https://nova24tv.si/srecanje-witkoffa-s-putinom-smo-res-blizje-miru-v-ukrajini/",
+          "lean_score": 0.2,
+          "bias_leaning": "Sredina",
+          "sensationalism_score": 4,
+          "sides_represented": "Pretežno ena stran",
+          "shared_percent": null
+        }
+      ]
+    }
+  ]
+}

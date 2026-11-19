@@ -52,7 +52,9 @@ def main() -> None:
     if args.print_prompts:
         for i, story in enumerate(spec["stories"]):
             cluster = [articles[aid] for aid in story["article_ids"]]
-            print(f"===== ZGODBA {i + 1}\n{story_prompt(cluster, make_aliases(cluster, i))}\n")
+            aliases = story.get("aliases") or make_aliases(cluster, i)
+            print(f"===== ZGODBA {i + 1}\n{story_prompt(cluster, aliases)}\n")
+            log.info("Zgodba %d psevdonimi: %s", i + 1, json.dumps(aliases, ensure_ascii=False))
         return
 
     stories = []
@@ -64,7 +66,8 @@ def main() -> None:
         analysis = StoryAnalysis.model_validate(story)
         blind = all(_ALIAS.fullmatch(c.media_name) for c in analysis.coverage_comparison)
         if blind:
-            analysis = unmask_analysis(analysis, make_aliases(cluster, i), cluster)
+            aliases = story.get("aliases") or make_aliases(cluster, i)
+            analysis = unmask_analysis(analysis, aliases, cluster)
         report = build_story_report(analysis, cluster, i)
         report.blind_analysis = blind
         report.source_checks = [SourceCheck.model_validate(c) for c in story.get("source_checks", [])]

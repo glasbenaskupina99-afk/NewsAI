@@ -127,6 +127,7 @@ function renderLegend() {
       h("span", { class: "text-slate-500 dark:text-slate-400" }, "Številka ob oceni: −3 levo … 0 uravnoteženo … +3 desno")));
 }
 
+const AGENCY_COPY_THRESHOLD = 75;
 const mean = (xs) => xs.reduce((a, b) => a + b, 0) / (xs.length || 1);
 const scorePos = (x) => `${((Math.max(-3, Math.min(3, x)) + 3) / 6) * 100}%`;
 
@@ -136,12 +137,30 @@ function mediaStats(days) {
   for (const day of days) {
     for (const story of day.stories || []) {
       for (const c of story.coverage_comparison) {
-        const e = byMedia.get(c.media_name) || { name: c.media_name, category: c.category, sens: [], lean: [], words: [], oneSided: 0, days: new Set() };
+        const score = leanScore(c);
+        const core = c.shared_core || {};
+        const e = byMedia.get(c.media_name) || {
+          name: c.media_name, category: c.category, sens: [], lean: [], words: [], own: [],
+          oneSided: 0, days: new Set(), articles: [],
+        };
         e.sens.push(c.sensationalism_score);
-        e.lean.push(leanScore(c));
+        e.lean.push(score);
         if (c.word_count) e.words.push(c.word_count);
+        if (typeof core.own_percent === "number") e.own.push(core.own_percent);
         if (c.sides_represented === "Samo ena stran") e.oneSided += 1;
         e.days.add(day.date || "");
+        e.articles.push({
+          date: day.date || "",
+          story_id: story.id || "",
+          topic_title: story.topic_title || "",
+          article_title: c.article_title || "",
+          article_url: c.article_url || "",
+          lean_score: score,
+          bias_leaning: c.bias_leaning,
+          sensationalism_score: c.sensationalism_score,
+          sides_represented: c.sides_represented || "",
+          shared_percent: typeof core.shared_percent === "number" ? core.shared_percent : null,
+        });
         byMedia.set(c.media_name, e);
       }
     }
@@ -150,17 +169,59 @@ function mediaStats(days) {
     ...e, count: e.lean.length, avgSens: mean(e.sens), avgLean: mean(e.lean),
     min: Math.min(...e.lean), max: Math.max(...e.lean),
     avgWords: e.words.length ? Math.round(mean(e.words)) : null,
+    avgOwnPercent: e.own.length ? Math.round(mean(e.own)) : null,
     oneSidedShare: Math.round((100 * e.oneSided) / e.lean.length),
+    articles: e.articles.sort((a, b) => (b.date + b.story_id).localeCompare(a.date + a.story_id)),
   }]));
 }
 
+function statsFromPrecomputed(payload) {
+  const map = new Map();
+  for (const r of payload?.media || []) {
+    map.set(r.name, {
+      name: r.name, category: r.category, count: r.count, lean: r.lean || [],
+      avgLean: r.avg_lean, min: r.min_lean, max: r.max_lean, avgSens: r.avg_sens,
+      oneSidedShare: r.one_sided_share, avgWords: r.avg_words,
+      avgOwnPercent: r.avg_own_percent, orientation: r.orientation,
+      articles: r.articles || [],
+    });
+  }
+  return map;
+}
+
 let profileMode = "day";
+let expandedMedia = null;
 try { profileMode = localStorage.getItem("profileMode") === "archive" ? "archive" : "day"; } catch { /* brez shrambe */ }
 
-function renderProfile(data, archiveDays) {
-  const canArchive = archiveDays.length > 1;
+function mediaArticlesPanel(r, currentDate) {
+  const items = r.articles || [];
+  if (!items.length) return null;
+  return h("div", { class: "mt-2 rounded-xl border border-slate-200 bg-slate-50/80 p-3 dark:border-slate-800 dark:bg-slate-800/40" },
+    h("div", { class: "mb-2 text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400" },
+      `Analizirani članki (${plural(items.length, WORDS.article)})`),
+    h("ul", { class: "divide-y divide-slate-200/70 dark:divide-slate-700/60" }, items.map((a) => {
+      const sameDay = !a.date || a.date === currentDate;
+      const href = sameDay ? `#${a.story_id}` : `?datum=${encodeURIComponent(a.date)}#${a.story_id}`;
+      return h("li", { class: "flex flex-wrap items-start justify-between gap-2 py-2 first:pt-0 last:pb-0 text-xs" },
+        h("div", { class: "min-w-0 flex-1" },
+          h("div", { class: "flex flex-wrap items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400" },
+            a.date ? h("span", {}, formatDay(a.date)) : null,
+            h("a", { href, class: "font-medium text-slate-700 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:text-slate-200 dark:decoration-slate-600" }, a.topic_title)),
+          h("div", { class: "mt-0.5 text-slate-600 dark:text-slate-300" }, a.article_title)),
+        h("div", { class: "flex shrink-0 flex-wrap items-center gap-1" },
+          leanBadge(a.bias_leaning),
+          typeof a.lean_score === "number" ? scoreChip(a) : null,
+          h("span", { class: "rounded bg-slate-200/80 px-1.5 py-0.5 text-[11px] tabular-nums text-slate-700 dark:bg-slate-700 dark:text-slate-200", title: "Senzacionalizem naslova" }, `${a.sensationalism_score}/10`),
+          typeof a.shared_percent === "number" && a.shared_percent >= AGENCY_COPY_THRESHOLD
+            ? h("span", { class: "rounded bg-slate-200 px-1.5 py-0.5 text-[10px] font-semibold text-slate-700 dark:bg-slate-700 dark:text-slate-200" }, "Agencijski prepis")
+            : null));
+    })));
+}
+
+function renderProfile(data, archiveStats, archiveDaysCount) {
+  const canArchive = archiveDaysCount > 1 && archiveStats && archiveStats.size > 0;
   const mode = canArchive ? profileMode : "day";
-  const stats = mediaStats(mode === "archive" ? archiveDays : [data]);
+  const stats = mode === "archive" ? archiveStats : mediaStats([data]);
   if (!stats.size) return;
   const rows = [...stats.values()].sort((a, b) => a.avgLean - b.avgLean);
 
@@ -169,12 +230,12 @@ function renderProfile(data, archiveDays) {
     class: `rounded-md px-2.5 py-1 text-xs font-medium ${mode === key ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900" : "text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"}`,
   }, label);
   const dayBtn = toggle("day", "Ta dan");
-  const archBtn = toggle("archive", `Celoten arhiv (${plural(archiveDays.length, ["dan", "dneva", "dnevi", "dni"])})`);
+  const archBtn = toggle("archive", `Celoten arhiv (${plural(archiveDaysCount, ["dan", "dneva", "dnevi", "dni"])})`);
   for (const [btn, key] of [[dayBtn, "day"], [archBtn, "archive"]]) {
     btn.addEventListener("click", () => {
       profileMode = key;
       try { localStorage.setItem("profileMode", key); } catch { /* brez shrambe */ }
-      renderProfile(data, archiveDays);
+      renderProfile(data, archiveStats, archiveDaysCount);
     });
   }
 
@@ -185,43 +246,60 @@ function renderProfile(data, archiveDays) {
         canArchive ? h("div", { class: "flex gap-1 rounded-lg bg-slate-100 p-0.5 dark:bg-slate-800/60", role: "group", "aria-label": "Obdobje profila" }, dayBtn, archBtn) : null),
       h("p", { class: "mb-4 text-xs text-slate-500 dark:text-slate-400" },
         "Vsaka pika je en članek, črta kaže razpon od najbolj levo do najbolj desno ocenjenega članka, velik krog je povprečje (−3 levo … +3 desno). ",
-        "»Samo ena stran« je delež člankov, v katerih je dobila besedo le ena stran."),
-      h("div", { class: "space-y-4" }, rows.map((r) =>
-        h("div", { class: "grid grid-cols-1 items-center gap-2 sm:grid-cols-[10rem_1fr_15rem]" },
-          h("div", {},
-            h("div", { class: "text-sm font-medium" }, r.name),
-            h("div", { class: "text-[11px] text-slate-500" }, `${CATEGORY_LABEL[r.category] || r.category} · ${plural(r.count, WORDS.article)}`)),
-          h("div", { class: "relative h-2 rounded-full bg-gradient-to-r from-red-500 via-slate-300 to-blue-500 dark:via-slate-600", role: "img",
-            "aria-label": `Povprečni nagib ${formatScore(r.avgLean)}, razpon od ${formatScore(r.min)} do ${formatScore(r.max)}` },
-            r.count > 1 && r.max > r.min
-              ? h("span", { class: "absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-slate-900/70 dark:bg-white/70", style: `left:${scorePos(r.min)};width:calc(${scorePos(r.max)} - ${scorePos(r.min)})` })
-              : null,
-            r.count > 1 ? r.lean.map((x) => h("span", {
-              class: "absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-slate-700 dark:border-slate-900 dark:bg-slate-200",
-              style: `left:${scorePos(x)}`, title: formatScore(x),
-            })) : null,
-            h("span", {
-              class: "absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-slate-900 shadow dark:border-slate-900 dark:bg-white",
-              style: `left:${scorePos(r.avgLean)}`, title: `Povprečje ${formatScore(r.avgLean)}`,
-            })),
-          h("div", { class: "text-xs text-slate-600 dark:text-slate-300 sm:text-right" },
-            h("div", { class: "whitespace-nowrap" },
-              "Nagib ", h("span", { class: "font-semibold tabular-nums" }, formatScore(r.avgLean)),
-              " · Senzac. ", h("span", { class: "font-semibold tabular-nums" }, r.avgSens.toFixed(1)), "/10"),
-            h("div", { class: "whitespace-nowrap text-[11px] text-slate-500 dark:text-slate-400" },
-              `Samo ena stran: ${r.oneSidedShare} %`, r.avgWords ? ` · ${r.avgWords} besed v povprečju` : "")))))));
+        "Klik na ime medija prikaže vse njegove analizirane članke."),
+      h("div", { class: "space-y-4" }, rows.map((r) => {
+        const isOpen = expandedMedia === r.name;
+        const nameBtn = h("button", {
+          type: "button", "aria-expanded": String(isOpen),
+          class: "text-left text-sm font-medium underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:decoration-slate-600 dark:hover:decoration-slate-300",
+        }, r.name, h("span", { class: "ml-1 text-[10px] text-slate-400", "aria-hidden": "true" }, isOpen ? "▾" : "▸"));
+        nameBtn.addEventListener("click", () => {
+          expandedMedia = isOpen ? null : r.name;
+          renderProfile(data, archiveStats, archiveDaysCount);
+        });
+        const metaBits = [
+          `Samo ena stran: ${r.oneSidedShare} %`,
+          typeof r.avgOwnPercent === "number" ? `lastno besedilo: ${r.avgOwnPercent} %` : null,
+          r.avgWords ? `${r.avgWords} besed` : null,
+        ].filter(Boolean).join(" · ");
+        return h("div", {},
+          h("div", { class: "grid grid-cols-1 items-center gap-2 sm:grid-cols-[10rem_1fr_18rem]" },
+            h("div", {},
+              nameBtn,
+              h("div", { class: "text-[11px] text-slate-500" }, `${CATEGORY_LABEL[r.category] || r.category} · ${plural(r.count, WORDS.article)}`)),
+            h("div", { class: "relative h-2 rounded-full bg-gradient-to-r from-red-500 via-slate-300 to-blue-500 dark:via-slate-600", role: "img",
+              "aria-label": `Povprečni nagib ${formatScore(r.avgLean)}, razpon od ${formatScore(r.min)} do ${formatScore(r.max)}` },
+              r.count > 1 && r.max > r.min
+                ? h("span", { class: "absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-slate-900/70 dark:bg-white/70", style: `left:${scorePos(r.min)};width:calc(${scorePos(r.max)} - ${scorePos(r.min)})` })
+                : null,
+              r.count > 1 ? r.lean.map((x) => h("span", {
+                class: "absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-slate-700 dark:border-slate-900 dark:bg-slate-200",
+                style: `left:${scorePos(x)}`, title: formatScore(x),
+              })) : null,
+              h("span", {
+                class: "absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-slate-900 shadow dark:border-slate-900 dark:bg-white",
+                style: `left:${scorePos(r.avgLean)}`, title: `Povprečje ${formatScore(r.avgLean)}`,
+              })),
+            h("div", { class: "text-xs text-slate-600 dark:text-slate-300 sm:text-right" },
+              h("div", { class: "whitespace-nowrap" },
+                "Nagib ", h("span", { class: "font-semibold tabular-nums" }, formatScore(r.avgLean)),
+                " · Senzac. ", h("span", { class: "font-semibold tabular-nums" }, r.avgSens.toFixed(1)), "/10"),
+              h("div", { class: "text-[11px] text-slate-500 dark:text-slate-400" }, metaBits))),
+          isOpen ? mediaArticlesPanel(r, data.date) : null);
+      }))));
 }
 
 // Usmerjenost medija = povprečni nagib njegovih člankov v arhivu (le ob vsaj dveh člankih).
-function outletOrientation(archiveDays) {
+function outletOrientation(statsMap) {
   const result = new Map();
-  for (const [name, s] of mediaStats(archiveDays)) {
-    if (s.count >= 2) result.set(name, s.avgLean <= -0.5 ? "levo" : s.avgLean >= 0.5 ? "desno" : "sredina");
+  for (const [name, s] of statsMap || []) {
+    if (s.orientation) result.set(name, s.orientation);
+    else if (s.count >= 2) result.set(name, s.avgLean <= -0.5 ? "levo" : s.avgLean >= 0.5 ? "desno" : "sredina");
   }
   return result;
 }
 
-// Slepa pega: o zgodbi poročajo mediji ene strani, preverjeno odsotni pa so mediji druge strani.
+// Loči pravo slepo pego (odsotnost poročanja ene strani) od enostranskega nagiba ocen.
 function blindspot(story, orientation) {
   const domestic = story.coverage_comparison.filter((c) => c.category !== "mednarodni");
   const sideOf = (score) => score <= -0.5 ? "levo" : score >= 0.5 ? "desno" : null;
@@ -231,18 +309,31 @@ function blindspot(story, orientation) {
     const coveredBySide = domestic.some((c) => orientation.get(c.media_name) === side);
     const coveredByOther = domestic.some((c) => orientation.get(c.media_name) === other);
     if (absent.length && !coveredBySide && coveredByOther) {
-      notes.push({ side, text: `Ne poročajo mediji, ki so v arhivu v povprečju ${side === "levo" ? "levo" : "desno"} usmerjeni: ${absent.join(", ")}.` });
+      notes.push({
+        kind: "blindspot",
+        label: `Slepa pega ${side}`,
+        text: `Ne poročajo mediji, ki so v arhivu v povprečju ${side} usmerjeni: ${absent.join(", ")}.`,
+      });
       continue;
     }
     const sideArticles = domestic.filter((c) => sideOf(leanScore(c)) === other);
     if (domestic.length >= 3 && sideArticles.length >= 2 && !domestic.some((c) => sideOf(leanScore(c)) === side)) {
-      notes.push({ side, text: `Noben članek ni ocenjen ${side === "levo" ? "levo" : "desno"} od sredine, vsaj dva sta ${other === "levo" ? "levo" : "desno"}.` });
+      notes.push({
+        kind: "skew",
+        label: `Enostranski nagib (${other})`,
+        text: `Noben članek ni ocenjen ${side} od sredine, vsaj dva sta ${other}.`,
+      });
     }
   }
   if (!notes.length) return null;
   return h("div", { class: "mt-2 flex flex-wrap gap-2" }, notes.map((n) =>
-    h("span", { class: "inline-flex items-center gap-1.5 rounded-md bg-violet-100 px-2 py-1 text-[11px] font-semibold text-violet-900 ring-1 ring-inset ring-violet-200 dark:bg-violet-950 dark:text-violet-200 dark:ring-violet-900", title: n.text },
-      h("span", { "aria-hidden": "true" }, "◐"), `Slepa pega ${n.side === "levo" ? "levo" : "desno"}`,
+    h("span", {
+      class: n.kind === "blindspot"
+        ? "inline-flex items-center gap-1.5 rounded-md bg-violet-100 px-2 py-1 text-[11px] font-semibold text-violet-900 ring-1 ring-inset ring-violet-200 dark:bg-violet-950 dark:text-violet-200 dark:ring-violet-900"
+        : "inline-flex items-center gap-1.5 rounded-md bg-amber-100 px-2 py-1 text-[11px] font-semibold text-amber-900 ring-1 ring-inset ring-amber-200 dark:bg-amber-950 dark:text-amber-200 dark:ring-amber-900",
+      title: n.text,
+    },
+      h("span", { "aria-hidden": "true" }, n.kind === "blindspot" ? "◐" : "⚖"), n.label,
       h("span", { class: "font-normal" }, `– ${n.text}`))));
 }
 
@@ -304,20 +395,34 @@ const SIDE_COLORS = ["bg-indigo-500", "bg-teal-500", "bg-amber-500", "bg-fuchsia
 function sideWeights(c, { compact = false } = {}) {
   const weights = c.side_weights || [];
   if (!weights.length) return null;
-  const total = weights.reduce((a, w) => a + w.share_percent, 0) || 1;
+  const sum = weights.reduce((a, w) => a + w.share_percent, 0);
+  const remainder = sum < 95 ? Math.max(0, 100 - sum) : 0;
+  const denom = remainder > 0 ? Math.max(100, sum) : (sum || 1);
+  const ariaParts = weights.map((w) => `${w.side} ${w.share_percent} %`);
+  if (remainder > 0) ariaParts.push(`avtorski del ali ozadje ${remainder} %`);
   return h("div", { class: "space-y-1" },
     h("div", { class: "flex h-2.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700", role: "img",
-      "aria-label": weights.map((w) => `${w.side} ${w.share_percent} %`).join(", ") },
+      "aria-label": ariaParts.join(", ") },
       weights.map((w, i) => w.share_percent
-        ? h("span", { class: SIDE_COLORS[i % SIDE_COLORS.length], style: `width:${(100 * w.share_percent) / total}%`, title: `${w.side}: ${w.share_percent} %` })
-        : null)),
-    h("ul", { class: compact ? "flex flex-wrap gap-x-3 gap-y-0.5" : "space-y-0.5" }, weights.map((w, i) =>
-      h("li", { class: `flex items-center gap-1.5 text-[11px] ${w.share_percent ? "text-slate-700 dark:text-slate-300" : "text-slate-400 line-through decoration-slate-300 dark:text-slate-500"}` },
-        h("span", { class: `h-2 w-2 shrink-0 rounded-sm ${SIDE_COLORS[i % SIDE_COLORS.length]}`, "aria-hidden": "true" }),
-        h("span", {}, w.side),
-        h("span", { class: "tabular-nums text-slate-500 dark:text-slate-400" },
-          `${w.share_percent} %${compact ? "" : ` · ${plural(w.direct_quotes, ["citat", "citata", "citati", "citatov"])}`}`),
-        w.in_lede ? h("span", { class: "rounded bg-slate-200 px-1 text-[10px] font-semibold text-slate-700 dark:bg-slate-700 dark:text-slate-200", title: "Ta stran dobi besedo v naslovu ali uvodu" }, "uvod") : null))));
+        ? h("span", { class: SIDE_COLORS[i % SIDE_COLORS.length], style: `width:${(100 * w.share_percent) / denom}%`, title: `${w.side}: ${w.share_percent} %` })
+        : null),
+      remainder > 0
+        ? h("span", { class: "bg-slate-300 dark:bg-slate-600", style: `width:${(100 * remainder) / denom}%`, title: `Avtorski del / ozadje: ${remainder} %` })
+        : null),
+    h("ul", { class: compact ? "flex flex-wrap gap-x-3 gap-y-0.5" : "space-y-0.5" },
+      weights.map((w, i) =>
+        h("li", { class: `flex items-center gap-1.5 text-[11px] ${w.share_percent ? "text-slate-700 dark:text-slate-300" : "text-slate-400 line-through decoration-slate-300 dark:text-slate-500"}` },
+          h("span", { class: `h-2 w-2 shrink-0 rounded-sm ${SIDE_COLORS[i % SIDE_COLORS.length]}`, "aria-hidden": "true" }),
+          h("span", {}, w.side),
+          h("span", { class: "tabular-nums text-slate-500 dark:text-slate-400" },
+            `${w.share_percent} %${compact ? "" : ` · ${plural(w.direct_quotes, ["citat", "citata", "citati", "citatov"])}`}`),
+          w.in_lede ? h("span", { class: "rounded bg-slate-200 px-1 text-[10px] font-semibold text-slate-700 dark:bg-slate-700 dark:text-slate-200", title: "Ta stran dobi besedo v naslovu ali uvodu" }, "uvod") : null)),
+      remainder > 0
+        ? h("li", { class: "flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400" },
+            h("span", { class: "h-2 w-2 shrink-0 rounded-sm bg-slate-300 dark:bg-slate-600", "aria-hidden": "true" }),
+            h("span", {}, "Avtorski del / ozadje"),
+            h("span", { class: "tabular-nums" }, `${remainder} %`))
+        : null));
 }
 
 function voicesBlock(c) {
@@ -342,6 +447,15 @@ function partialBadge(c) {
     : null;
 }
 
+function agencyBadge(c) {
+  const pct = c.shared_core?.shared_percent;
+  if (typeof pct !== "number" || pct < AGENCY_COPY_THRESHOLD) return null;
+  return h("span", {
+    class: "rounded bg-slate-200 px-1.5 py-0.5 text-[10px] font-semibold text-slate-700 dark:bg-slate-700 dark:text-slate-200",
+    title: `${pct} % avtorskega besedila (brez citatov) je enakega drugemu primerjanemu mediju – pretežno agencijska vest.`,
+  }, "Agencijski prepis");
+}
+
 function coreBar(c) {
   const core = c.shared_core;
   if (!core) return null;
@@ -363,12 +477,20 @@ function listBlock(title, items, tone) {
 function coverageColumn(c) {
   const url = safeUrl(c.article_url);
   const intl = c.category === "mednarodni";
+  const gaps = c.matrix_gaps || [];
+  const omittedHeading = intl
+    ? "Referenčni vir"
+    : c.omitted_facts.length
+      ? "Zamolčano ali minimizirano"
+      : gaps.length
+        ? "Manjka glede na večino medijev"
+        : "Zamolčano ali minimizirano";
   return h("article", { class: `flex flex-col gap-3 rounded-xl border p-4 ${intl ? "border-emerald-300 bg-emerald-50/50 dark:border-emerald-800 dark:bg-emerald-950/30" : "border-slate-200 bg-slate-50/60 dark:border-slate-800 dark:bg-slate-900/60"}` },
     h("div", { class: "flex items-start justify-between gap-2" },
       h("div", {},
         h("div", { class: "text-sm font-bold" }, c.media_name),
         h("div", { class: "text-[11px] uppercase tracking-wide text-slate-500" }, CATEGORY_LABEL[c.category] || c.category)),
-      h("div", { class: "flex shrink-0 flex-wrap items-center justify-end gap-1" }, leanBadge(c.bias_leaning), scoreChip(c), partialBadge(c))),
+      h("div", { class: "flex shrink-0 flex-wrap items-center justify-end gap-1" }, leanBadge(c.bias_leaning), scoreChip(c), partialBadge(c), agencyBadge(c))),
     url
       ? h("a", { href: url, target: "_blank", rel: "noopener noreferrer", class: "text-sm font-medium leading-snug text-slate-800 underline decoration-slate-300 underline-offset-2 hover:decoration-slate-700 dark:text-slate-100 dark:decoration-slate-600" }, c.article_title)
       : h("p", { class: "text-sm font-medium leading-snug" }, c.article_title),
@@ -388,16 +510,20 @@ function coverageColumn(c) {
       box: "bg-slate-100 dark:bg-slate-800",
       title: "text-slate-600 dark:text-slate-300", text: "text-slate-600 dark:text-slate-300" }),
     h("div", { class: "mt-auto" },
-      h("div", { class: "mb-1 text-xs font-semibold text-slate-600 dark:text-slate-300" }, intl ? "Referenčni vir" : "Zamolčano ali minimizirano"),
+      h("div", { class: "mb-1 text-xs font-semibold text-slate-600 dark:text-slate-300" }, omittedHeading),
       intl
         ? h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "Izhodišče za primerjavo dejstev.")
         : c.omitted_facts.length
           ? h("ul", { class: "space-y-1" }, c.omitted_facts.map((f) =>
               h("li", { class: "flex gap-1.5 text-xs text-slate-700 dark:text-slate-300" },
                 h("span", { class: "mt-0.5 text-amber-600", "aria-hidden": "true" }, "▲"), f)))
-          : (c.notes || []).length
-            ? h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "Ni ocenjeno – glej opombo.")
-            : h("p", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznanih izpuščenih ključnih dejstev.")));
+          : gaps.length
+            ? h("ul", { class: "space-y-1" }, gaps.map((f) =>
+                h("li", { class: "flex gap-1.5 text-xs text-slate-700 dark:text-slate-300" },
+                  h("span", { class: "mt-0.5 text-amber-600", "aria-hidden": "true" }, "–"), f)))
+            : (c.notes || []).length
+              ? h("p", { class: "text-xs text-slate-500 dark:text-slate-400" }, "Ni ocenjeno – glej opombo.")
+              : h("p", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznanih izpuščenih ključnih dejstev.")));
 }
 
 const CONFIDENCE_STYLE = {
@@ -452,7 +578,7 @@ function detailCard(c) {
         h("div", { class: "mt-1 text-[11px] text-slate-500 dark:text-slate-400" },
           [published, c.word_count ? `${c.word_count} besed` : null].filter(Boolean).join(" · "))),
       h("div", { class: "flex flex-wrap items-center gap-1.5" },
-        leanBadge(c.bias_leaning), scoreChip(c), partialBadge(c),
+        leanBadge(c.bias_leaning), scoreChip(c), partialBadge(c), agencyBadge(c),
         c.confidence ? h("span", { class: `rounded px-1.5 py-0.5 text-[11px] font-semibold ${CONFIDENCE_STYLE[c.confidence] || ""}` }, `Zanesljivost: ${c.confidence.toLowerCase()}`) : null)),
 
     h("div", { class: "grid gap-4 lg:grid-cols-2" },
@@ -558,28 +684,56 @@ function factMatrix(story, coverage) {
   if (!facts.length) return null;
   const media = coverage.map((c) => c.media_name);
   const hasProminence = facts.some((f) => (f.prominent_in || []).length);
-  return h("div", {},
-    h("h4", { class: "mb-1 text-sm font-semibold" }, "Kdo navede katero dejstvo"),
-    h("p", { class: "mb-2 text-xs text-slate-500 dark:text-slate-400" },
-      hasProminence
-        ? "★ dejstvo je v naslovu ali uvodu · ✓ v besedilu · – ga ne navede. Število pod imenom medija: koliko ključnih dejstev navede."
-        : "✓ medij dejstvo navede · – ga ne navede. Število pod imenom medija: koliko ključnih dejstev navede."),
-    h("div", { class: "relative overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800" },
-      h("table", { class: "w-full min-w-[32rem] text-left text-sm" },
-        h("thead", { class: "bg-slate-50 text-xs text-slate-500 dark:bg-slate-800/60 dark:text-slate-400" },
-          h("tr", {},
-            h("th", { class: "px-3 py-2 font-semibold", scope: "col" }, "Dejstvo"),
-            media.map((m) => h("th", { class: "px-2 py-2 text-center font-semibold", scope: "col" },
-              h("div", {}, m),
-              h("div", { class: "font-normal tabular-nums" }, `${facts.filter((f) => f.media.includes(m)).length}/${facts.length}`))))),
-        h("tbody", { class: "divide-y divide-slate-100 dark:divide-slate-800" },
-          facts.map((f) => h("tr", {},
-            h("td", { class: "px-3 py-2 text-slate-700 dark:text-slate-200" }, f.fact),
-            media.map((m) => {
-              const mark = FACT_MARK[factMark(f, m)];
-              return h("td", { class: `px-2 py-2 text-center ${mark.cls}`, title: `${m}: ${mark.label}` },
-                h("span", { "aria-hidden": "true" }, mark.sign), h("span", { class: "sr-only" }, mark.label));
-            })))))));
+  const isUniform = (f) => new Set(media.map((m) => factMark(f, m))).size <= 1;
+  const diffCount = facts.filter((f) => !isUniform(f)).length;
+  let onlyDiff = false;
+  const wrap = h("div", {});
+
+  const draw = () => {
+    const shown = onlyDiff
+      ? [...facts].filter((f) => !isUniform(f)).sort((a, b) => a.media.length - b.media.length)
+      : facts;
+    const toggleBtn = diffCount > 0 && diffCount < facts.length
+      ? h("button", {
+          type: "button", "aria-pressed": String(onlyDiff),
+          class: `rounded-md px-2.5 py-1 text-xs font-medium ring-1 ring-inset ${onlyDiff ? "bg-slate-900 text-white ring-slate-900 dark:bg-slate-100 dark:text-slate-900 dark:ring-slate-100" : "bg-white text-slate-600 ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700"}`,
+        }, onlyDiff ? `Samo razlike (${diffCount}/${facts.length})` : `Prikaži samo razlike (${diffCount})`)
+      : null;
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", () => { onlyDiff = !onlyDiff; draw(); });
+    }
+    wrap.replaceChildren(
+      h("div", { class: "mb-1 flex flex-wrap items-center justify-between gap-2" },
+        h("h4", { class: "text-sm font-semibold" }, "Kdo navede katero dejstvo"),
+        toggleBtn),
+      h("p", { class: "mb-2 text-xs text-slate-500 dark:text-slate-400" },
+        hasProminence
+          ? "★ dejstvo je v naslovu ali uvodu · ✓ v besedilu · – ga ne navede. Število pod imenom medija: koliko ključnih dejstev navede."
+          : "✓ medij dejstvo navede · – ga ne navede. Število pod imenom medija: koliko ključnih dejstev navede."),
+      h("div", { class: "relative overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800" },
+        h("table", { class: "w-full min-w-[32rem] text-left text-sm" },
+          h("thead", { class: "bg-slate-50 text-xs text-slate-500 dark:bg-slate-800/60 dark:text-slate-400" },
+            h("tr", {},
+              h("th", { class: "px-3 py-2 font-semibold", scope: "col" }, "Dejstvo"),
+              media.map((m) => h("th", { class: "px-2 py-2 text-center font-semibold", scope: "col" },
+                h("div", {}, m),
+                h("div", { class: "font-normal tabular-nums" }, `${facts.filter((f) => f.media.includes(m)).length}/${facts.length}`))))),
+          h("tbody", { class: "divide-y divide-slate-100 dark:divide-slate-800" },
+            shown.map((f) => {
+              const count = media.filter((m) => f.media.includes(m)).length;
+              return h("tr", {},
+                h("td", { class: "px-3 py-2 text-slate-700 dark:text-slate-200" },
+                  f.fact, " ",
+                  h("span", { class: "whitespace-nowrap text-[11px] tabular-nums text-slate-400 dark:text-slate-500" }, `(${count}/${media.length})`)),
+                media.map((m) => {
+                  const mark = FACT_MARK[factMark(f, m)];
+                  return h("td", { class: `px-2 py-2 text-center ${mark.cls}`, title: `${m}: ${mark.label}` },
+                    h("span", { "aria-hidden": "true" }, mark.sign), h("span", { class: "sr-only" }, mark.label));
+                }));
+            })))));
+  };
+  draw();
+  return wrap;
 }
 
 // Strnjen pregled naslovov: senzacionalizem in nagib naslova; poudarjeno, kjer se naslov razlikuje od besedila.
@@ -589,11 +743,13 @@ function headlineStrip(coverage) {
     h("ul", { class: "divide-y divide-slate-100 dark:divide-slate-800" }, coverage.map((c) => {
       const differs = c.headline_leaning && c.body_leaning && c.headline_leaning !== c.body_leaning;
       const s = Number(c.sensationalism_score) || 1;
+      const ag = agencyBadge(c);
       return h("li", { class: `grid grid-cols-[1fr_auto] items-start gap-x-3 gap-y-1 px-4 py-2 sm:grid-cols-[8rem_1fr_auto] ${differs ? "bg-amber-50/70 dark:bg-amber-950/30" : ""}` },
         h("span", { class: "text-xs font-semibold text-slate-500 dark:text-slate-400" }, c.media_name),
         h("span", { class: "col-span-2 row-start-2 text-sm leading-snug sm:col-span-1 sm:row-start-auto" }, c.article_title,
           differs ? h("span", { class: "ml-2 whitespace-nowrap rounded bg-amber-200 px-1.5 py-0.5 text-[10px] font-semibold text-amber-900 dark:bg-amber-800 dark:text-amber-100" },
-            `naslov ${c.headline_leaning.toLowerCase()} · besedilo ${c.body_leaning.toLowerCase()}`) : null),
+            `naslov ${c.headline_leaning.toLowerCase()} · besedilo ${c.body_leaning.toLowerCase()}`) : null,
+          ag ? h("span", { class: "ml-1.5 inline-block align-middle" }, ag) : null),
         h("span", { class: "flex items-center gap-1.5 justify-self-end" },
           h("span", { class: `rounded px-1.5 py-0.5 text-[11px] font-semibold tabular-nums ${s >= 7 ? "bg-amber-500 text-white" : s >= 4 ? "bg-amber-200 text-amber-900 dark:bg-amber-800 dark:text-amber-100" : "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-100"}`, title: "Senzacionalizem naslova (1–10)" }, `${s}/10`),
           leanBadge(c.headline_leaning || c.bias_leaning)));
@@ -636,20 +792,56 @@ function timeline(coverage) {
     h("p", { class: "mt-2 text-[11px] text-slate-500 dark:text-slate-400" }, "Dejstva, ki so postala znana po objavi članka, se ne štejejo kot zamolčana."));
 }
 
+function pairOverlap(a, b) {
+  if (!a || !b) return 0;
+  const ab = (a.text_overlap || []).find((o) => o.media === b.media_name)?.percent || 0;
+  const ba = (b.text_overlap || []).find((o) => o.media === a.media_name)?.percent || 0;
+  return Math.max(ab, ba);
+}
+
+// Privzeti par za primerjavo: največja razlika v nagibu, ob izenačenju najmanjše prekrivanje besedila.
+function defaultComparePair(coverage) {
+  const pool = coverage.filter((c) => c.category !== "mednarodni");
+  const list = pool.length >= 2 ? pool : coverage;
+  let best = [list[0].media_name, list[1].media_name];
+  let bestScore = -Infinity;
+  for (let i = 0; i < list.length; i++) {
+    for (let j = i + 1; j < list.length; j++) {
+      const leanDiff = Math.abs(leanScore(list[i]) - leanScore(list[j]));
+      const overlap = pairOverlap(list[i], list[j]);
+      const sensDiff = Math.abs((list[i].sensationalism_score || 0) - (list[j].sensationalism_score || 0));
+      const score = leanDiff * 100 - overlap + sensDiff * 2;
+      if (score > bestScore) {
+        bestScore = score;
+        best = [list[i].media_name, list[j].media_name];
+      }
+    }
+  }
+  return best;
+}
+
 // Primerjava dveh medijev drug ob drugem.
 function compareView(story, coverage) {
   if (coverage.length < 2) return h("p", { class: "text-sm text-slate-500" }, "Za primerjavo sta potrebna vsaj dva medija.");
   const names = coverage.map((c) => c.media_name);
-  const domestic = coverage.filter((c) => c.category !== "mednarodni");
-  const pickA = (domestic[0] || coverage[0]).media_name;
-  const pickB = (domestic[domestic.length - 1] || coverage[1]).media_name;
-  const state = { a: pickA, b: pickB === pickA ? names.find((n) => n !== pickA) : pickB };
+  const [pickA, pickB] = defaultComparePair(coverage);
+  const state = { a: pickA, b: pickB };
   const body = h("div", {});
+  const selects = {};
 
   const select = (key, label) => {
+    const other = key === "a" ? "b" : "a";
     const el = h("select", { class: "rounded-md border border-slate-300 bg-white px-2 py-1 text-sm dark:border-slate-700 dark:bg-slate-900", "aria-label": label },
       names.map((n) => h("option", { value: n, selected: n === state[key] ? "selected" : null }, n)));
-    el.addEventListener("change", () => { state[key] = el.value; draw(); });
+    el.addEventListener("change", () => {
+      if (el.value === state[other]) {
+        state[other] = state[key];
+        selects[other].value = state[other];
+      }
+      state[key] = el.value;
+      draw();
+    });
+    selects[key] = el;
     return el;
   };
 
@@ -663,26 +855,53 @@ function compareView(story, coverage) {
     const facts = story.fact_matrix || [];
     if (!facts.length) return null;
     const groups = [
-      { title: `Samo ${state.a}`, items: facts.filter((f) => f.media.includes(state.a) && !f.media.includes(state.b)) },
-      { title: "Oba", items: facts.filter((f) => f.media.includes(state.a) && f.media.includes(state.b)) },
-      { title: `Samo ${state.b}`, items: facts.filter((f) => !f.media.includes(state.a) && f.media.includes(state.b)) },
+      { key: "a", title: `Samo ${state.a}`, items: facts.filter((f) => f.media.includes(state.a) && !f.media.includes(state.b)) },
+      { key: "both", title: "Oba", items: facts.filter((f) => f.media.includes(state.a) && f.media.includes(state.b)) },
+      { key: "b", title: `Samo ${state.b}`, items: facts.filter((f) => !f.media.includes(state.a) && f.media.includes(state.b)) },
     ];
+    const prominenceBadge = (gKey, f) => {
+      const prom = f.prominent_in || [];
+      if (gKey === "a") return prom.includes(state.a) ? h("span", { class: "mr-1 font-bold text-amber-500", title: `${state.a}: v naslovu ali uvodu` }, "★") : null;
+      if (gKey === "b") return prom.includes(state.b) ? h("span", { class: "mr-1 font-bold text-amber-500", title: `${state.b}: v naslovu ali uvodu` }, "★") : null;
+      const inA = prom.includes(state.a);
+      const inB = prom.includes(state.b);
+      if (!inA && !inB) return null;
+      const label = inA && inB ? "★ oba" : `★ samo ${inA ? state.a : state.b}`;
+      return h("span", {
+        class: `mr-1.5 inline-block rounded px-1 py-0.5 text-[10px] font-semibold ${inA && inB ? "bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100" : "bg-amber-200 text-amber-950 dark:bg-amber-800 dark:text-amber-100"}`,
+        title: "Kateri medij je dejstvo postavil v naslov ali uvod",
+      }, label);
+    };
     return h("div", { class: "border-t border-slate-100 pt-3 dark:border-slate-800" },
       h("div", { class: "mb-2 text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400" }, "Razlika v dejstvih (★ = v naslovu ali uvodu)"),
       h("div", { class: "grid gap-3 sm:grid-cols-3" }, groups.map((g) =>
         h("div", { class: "rounded-lg bg-slate-50 p-3 dark:bg-slate-800/50" },
           h("div", { class: "mb-1 text-xs font-semibold" }, `${g.title} (${g.items.length})`),
           g.items.length
-            ? h("ul", { class: "space-y-1" }, g.items.map((f) => h("li", { class: "text-xs text-slate-700 dark:text-slate-300" },
-                [state.a, state.b].filter((n) => (f.prominent_in || []).includes(n)).length ? h("span", { class: "mr-1 text-amber-500", title: "v naslovu ali uvodu" }, "★") : null,
-                f.fact)))
+            ? h("ul", { class: "space-y-1.5" }, g.items.map((f) => h("li", { class: "text-xs text-slate-700 dark:text-slate-300" },
+                prominenceBadge(g.key, f), f.fact)))
             : h("p", { class: "text-xs text-slate-400" }, "—")))));
   };
 
   const draw = () => {
-    body.replaceChildren(
+    const aObj = coverage.find((c) => c.media_name === state.a);
+    const bObj = coverage.find((c) => c.media_name === state.b);
+    const overlap = pairOverlap(aObj, bObj);
+    const hasEditorial = (aObj?.editorial_statements?.length || 0) + (bObj?.editorial_statements?.length || 0) > 0;
+    const hasReasoning = Boolean(aObj?.reasoning || bObj?.reasoning);
+    const overlapNote = overlap >= 5
+      ? h("p", { class: "mb-2 rounded-lg bg-slate-100 px-3 py-1.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200" },
+          "Neposredna podobnost izbranih člankov: ",
+          h("span", { class: "font-semibold tabular-nums" }, `${overlap} %`),
+          " avtorskega besedila (brez citatov) je enakega.")
+      : (aObj?.shared_core && bObj?.shared_core
+          ? h("p", { class: "mb-2 text-xs text-slate-500 dark:text-slate-400" }, "Izbrana članka nimata bistvenega neposrednega prekrivanja besedila (< 5 %).")
+          : null);
+
+    body.replaceChildren(...[
+      overlapNote,
       row("Naslov", (c) => h("div", {}, h("p", { class: "font-medium" }, c.article_title),
-        h("div", { class: "mt-1 flex flex-wrap items-center gap-1" }, leanBadge(c.bias_leaning), scoreChip(c), partialBadge(c),
+        h("div", { class: "mt-1 flex flex-wrap items-center gap-1" }, leanBadge(c.bias_leaning), scoreChip(c), partialBadge(c), agencyBadge(c),
           h("span", { class: "text-[11px] text-slate-500" }, `senzac. ${c.sensationalism_score}/10`)))),
       row("Uvod", (c) => c.lede_focus || null),
       row("Okvir", (c) => c.main_frame ? h("div", {}, h("p", { class: "font-semibold" }, c.main_frame), c.frame_description ? h("p", { class: "mt-0.5 text-xs text-slate-500 dark:text-slate-400" }, c.frame_description) : null) : null),
@@ -695,8 +914,16 @@ function compareView(story, coverage) {
             h("span", { class: "rounded bg-amber-100 px-1 font-medium text-amber-900 dark:bg-amber-900 dark:text-amber-100" }, `»${t.quote}«`),
             h("span", { class: "text-slate-500 dark:text-slate-400" }, ` — ${t.explanation}`))))
         : h("span", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznano")),
+      hasEditorial
+        ? row("Avtorjeva mnenja", (c) => (c.editorial_statements || []).length
+            ? h("div", { class: "space-y-1" }, c.editorial_statements.map((e) =>
+                h("blockquote", { class: "border-l-2 border-slate-300 pl-2 text-xs italic text-slate-700 dark:border-slate-600 dark:text-slate-200" }, `»${e}«`)))
+            : h("span", { class: "text-xs text-emerald-700 dark:text-emerald-400" }, "Ni zaznano"))
+        : null,
+      hasReasoning ? row("Utemeljitev ocene", (c) => c.reasoning ? h("p", { class: "text-xs leading-relaxed" }, c.reasoning) : null) : null,
       row("Skupno jedro", (c) => coreBar(c)),
-      factDiff());
+      factDiff(),
+    ].filter(Boolean));
   };
   draw();
 
@@ -882,17 +1109,34 @@ async function init() {
   }
   const currentDate = entry ? entry.date : index?.[0]?.date;
   data.date = currentDate;
-  // Celoten arhiv za profil skozi čas in usmerjenost medijev (slepe pege)
-  const archiveDays = index
-    ? (await Promise.all(index.filter((e) => !e.is_mock).map((e) => e.date === currentDate
-        ? Promise.resolve(data)
-        : fetchJson(`archive/${e.date}.json`).then((d) => ({ ...d, date: e.date })).catch(() => null)))).filter(Boolean)
-    : [data];
+
+  // Predizračunana statistika arhiva (1 zahtevek namesto nalaganja vseh dni); rezerva je branje arhiva.
+  let archiveStats = null;
+  let archiveDaysCount = 1;
+  try {
+    const precomputed = await fetchJson("media_stats.json");
+    if (precomputed && Array.isArray(precomputed.media) && precomputed.media.length) {
+      archiveStats = statsFromPrecomputed(precomputed);
+      archiveDaysCount = precomputed.days || 1;
+    }
+  } catch {
+    // starejši arhiv brez media_stats.json
+  }
+  if (!archiveStats) {
+    const archiveDays = index
+      ? (await Promise.all(index.filter((e) => !e.is_mock).map((e) => e.date === currentDate
+          ? Promise.resolve(data)
+          : fetchJson(`archive/${e.date}.json`).then((d) => ({ ...d, date: e.date })).catch(() => null)))).filter(Boolean)
+      : [data];
+    archiveStats = mediaStats(archiveDays);
+    archiveDaysCount = archiveDays.length;
+  }
+
   renderDates(index, currentDate);
   renderMeta(data);
-  renderProfile(data, archiveDays);
+  renderProfile(data, archiveStats, archiveDaysCount);
   renderToc(data);
-  const orientation = outletOrientation(archiveDays);
+  const orientation = outletOrientation(archiveStats);
   const container = document.getElementById("stories");
   container.replaceChildren(...(data.stories.length
     ? data.stories.map((s, i) => storyCard(s, i, orientation))
