@@ -5,6 +5,8 @@ Nova24TV, BBC World), Gemini analizo s Pydantic shemo, ročnim uvozom analiz (`m
 preverjanjem dobesednih citatov in statično stranjo na GitHub Pages. Objavljene so 3 ročno
 analizirane zgodbe z 11 mediji.
 
+Stanje 19. 11. 2026: dodano slepo ocenjevanje (MEDIJ_A …), delna besedila, skupno jedro in lastni stavki, ★/✓ matrika, deleži prostora po straneh, zavihki, primerjava dveh medijev, profil čez arhiv, slepe pege.
+
 Stanje 13. 11. 2026: ✅ = narejeno (arhiv po dnevih, ločena ocena naslova in besedila, merjenje prevzemanja besedila med primerjanimi mediji in navedenih virov, izbira datuma na strani). Pri 1.3.1 manjka primerjava z izvirnim besedilom STA, ki ni prosto dostopno.
 
 Obseg: **S** = do pol dneva, **M** = 1–3 dni, **L** = teden ali več.
@@ -33,7 +35,7 @@ Cilj: pokriti ključne slovenske medije, tudi tiste, ki samodejnega zajema ne do
 | 1.2.1 | Novi RSS viri: Delo, Večer, Dnevnik, Žurnal24, Svet24, Siol, Demokracija, Mladina, Necenzurirano | Pri učiteljski zbornici je bila slika popolna šele s 7 mediji | S |
 | 1.2.2 | Drugo mednarodno sidro: **The Guardian API** (brezplačen ključ, dovoljuje uporabo) + DW/Euronews RSS | BBC pokrije malo slovenskih tem; Reuters ni na voljo | M |
 | 1.2.3 ✅ | Orodje `add_article.py`: prilepiš besedilo s strani, samo odstrani menije, komentarje in oglase ter doda članek k zgodbi | Ročno čiščenje prilepljenih strani je zdaj zamudno | M |
-| 1.2.4 | Označevanje plačljivih in delno dostopnih člankov (`partial_text: true`) | Pri Delu je ocena temeljila le na prvem odstavku | S |
+| 1.2.4 ✅ | Označevanje plačljivih in delno dostopnih člankov (`partial_text: true`) | Pri Delu je ocena temeljila le na prvem odstavku | S |
 | 1.2.5 | Dogovor z mediji (Pro Plus, Delo …) za dostop do vsebin | Zakonita pot za vire, ki blokirajo robote | L (neodvisno od kode) |
 
 ## 1.3 Natančnejša analiza
@@ -43,7 +45,7 @@ Cilj: ocene, ki jim bralec lahko zaupa in jih lahko preveri.
 | # | Naloga | Zakaj | Obseg |
 |---|---|---|---|
 | 1.3.1 (delno) | **Zaznava agencijskih vesti (STA)**: podobnost besedil med mediji, oznaka »X % enako besedilu STA« | Večina razlik je bila v tem, kaj je medij k vesti STA dodal ali izpustil | M |
-| 1.3.2 | Prikaz **razlik glede na skupno jedro** (kaj je medij dodal / odvzel), ne le glede na BBC | Pri slovenskih temah mednarodnega sidra pogosto ni | M |
+| 1.3.2 ✅ | Prikaz **razlik glede na skupno jedro** (kaj je medij dodal / odvzel), ne le glede na BBC | Pri slovenskih temah mednarodnega sidra pogosto ni | M |
 | 1.3.3 ✅ | Ločena ocena naslova in besedila (`headline_leaning`, `body_leaning`) | Pri Nova24TV (ESČP) je bil obarvan predvsem naslov | S |
 | 1.3.4 | Pisna lestvica za senzacionalizem in nagib (z zgledi za vsako stopnjo) v navodilih modelu | Doslednost ocen med dnevi in zgodbami | S |
 | 1.3.5 | Testni nabor 20–30 ročno ocenjenih člankov in merjenje ujemanja modela | Brez tega ne vemo, kako dober je model | M |
@@ -60,7 +62,7 @@ Cilj: bralec hitro najde, primerja in razume.
 |---|---|---|---|
 | 1.4.1 ✅ | Izbira datuma (arhiv) in povezava na posamezno zgodbo (`#story-…` z datumom) | Deljenje in pregled za nazaj | S (po 1.1.3) |
 | 1.4.2 | Filter po mediju in pogled »vse zgodbe izbranega medija« | Primerjava enega medija skozi čas | M |
-| 1.4.3 | **Profil medija skozi čas**: povprečni senzacionalizem, nagib, delež »samo ena stran« po tednih | Vzorci postanejo vidni šele čez več dni | M |
+| 1.4.3 ✅ | **Profil medija skozi čas**: povprečni senzacionalizem, nagib, delež »samo ena stran« po tednih | Vzorci postanejo vidni šele čez več dni | M |
 | 1.4.4 | Stran **»Metodologija«**: kako nastanejo ocene, omejitve, kdo jih je pripravil (model / ročno) | Preglednost in zaupanje | S |
 | 1.4.5 | Strnjen pogled kartic (razširi ob kliku) za zgodbe s 5+ mediji | Zgodba s 7 mediji je zelo dolga | S |
 | 1.4.6 | Gumb »Prijavi napako v oceni« (GitHub issue ali obrazec) | Popravki bralcev in medijev | S |

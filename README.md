@@ -87,7 +87,21 @@ CSS je že preveden (`frontend/styles.css`). Po spremembah razredov v `index.htm
    generira; vnesejo se prek `manual_analysis.py`.
 8. **Dodatna polja**: kdo v članku dobi besedo (`voices_heard`, `sides_represented`), dejanske napake
    (`factual_errors`) in opombe k oceni (`notes`).
-9. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
+9. **Slepo ocenjevanje** (od 19. 11. 2026): model vidi medije kot `MEDIJ_A`, `MEDIJ_B` … (vrstni red premešan),
+   brez URL-jev in kategorij; imena medijev (tudi »MMC«, »RTV SLO«, »nova24tv.si« …) so zakrita tudi v naslovih in
+   besedilih. Po odgovoru se psevdonimi preslikajo nazaj, dobesedni citati pa obnovijo v izvirni obliki.
+   Model dobi do 15 000 znakov besedila in čas objave; dejstvo, ki se je zgodilo po objavi, ne sme biti
+   označeno kot zamolčano.
+10. **Delna besedila** (`partial_text`): kratko (< 150 besed), odrezano ali plačljivo besedilo je označeno,
+   zanesljivost ocene pa omejena na »Nizka«.
+11. **Izračunana analitika**: skupno (agencijsko) jedro in lastno besedilo vsakega medija z do dvema stavkoma,
+   ki ju ima samo ta medij (`shared_core`); dejstva iz matrike, ki jih navaja večina drugih medijev, ta pa ne
+   (`matrix_gaps`); matrika loči dejstva v naslovu/uvodu (★, `prominent_in`) od tistih v besedilu (✓);
+   `side_weights` (delež prostora, citati in uvod za vsako stran) določa `sides_represented`.
+12. **Stran**: zavihki v zgodbi (Pregled · Matrika dejstev · Primerjaj dva medija · Podrobno · Preverjanje virov),
+   trak naslovov (označeno, kjer je naslov drugače nagnjen kot besedilo), časovnica objav, oznaka »Slepa pega«
+   in profil medijev za ta dan ali za celoten arhiv (razpršenost ocen, delež »Samo ena stran«, povprečna dolžina).
+13. **Varovalke**: naslov in URL članka se vedno vzameta iz zajetih podatkov (ne iz modela); vsak citat se
    preveri, ali dobesedno obstaja v besedilu članka – nepreverjeni citati so v UI označeni.
 
 ## GitHub Actions

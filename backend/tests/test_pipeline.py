@@ -81,14 +81,16 @@ class AnalyzerTest(unittest.TestCase):
             _article("BBC World", "mednarodni", "Deal agreed", "Ministers agreed a deal on Tuesday."),
             _article("Nova24TV", "alternativni", "Sramotni dogovor", "Vlada ponižno kima Bruslju."),
         ]
+        alias = {name: a for a, name in analyzer.make_aliases(cluster, 0).items()}
+        prompts = []
         fake = {
             "topic_title": "Dogovor", "international_baseline": "Ministri so se dogovorili.",
             "neutral_summary": "Dogovor sprejet.",
             "coverage_comparison": [
-                {"media_name": "BBC World", "article_title": "x", "article_url": "https://evil.example",
+                {"media_name": alias["BBC World"], "article_title": "x", "article_url": "https://evil.example",
                  "sensationalism_score": 2, "bias_leaning": "Sredina",
                  "bias_evidence_quotes": ["Ministers agreed a deal"], "omitted_facts": []},
-                {"media_name": "Nova24TV", "article_title": "x", "article_url": "https://evil.example",
+                {"media_name": alias["Nova24TV"], "article_title": "x", "article_url": "https://evil.example",
                  "sensationalism_score": 8, "bias_leaning": "Desno",
                  "bias_evidence_quotes": ["Citat, ki ga ni"], "omitted_facts": ["Datum dogovora."]},
                 {"media_name": "Neznan", "article_title": "x", "article_url": "x",
@@ -97,14 +99,79 @@ class AnalyzerTest(unittest.TestCase):
             ],
         }
         client = SimpleNamespace(models=SimpleNamespace(
-            generate_content=lambda **kw: SimpleNamespace(text=json.dumps(fake))))
+            generate_content=lambda **kw: prompts.append(kw["contents"]) or SimpleNamespace(text=json.dumps(fake))))
         story = analyze_story(client, "test-model", cluster, 0)
+        self.assertTrue(story.blind_analysis)
+        self.assertNotIn("Nova24TV", prompts[0])
+        self.assertNotIn("https://", prompts[0])
         self.assertEqual(len(story.coverage_comparison), 2)
-        bbc, n24 = story.coverage_comparison
+        bbc, n24 = sorted(story.coverage_comparison, key=lambda c: c.media_name)
+        self.assertEqual(n24.media_name, "Nova24TV")
         self.assertEqual(bbc.article_url, "https://example.org/BBC World")
         self.assertTrue(bbc.quotes_verified)
         self.assertFalse(n24.quotes_verified)
         self.assertTrue(story.has_international_source)
+
+    def test_mask_and_restore_quote(self):
+        cluster = [_article("MMC RTV SLO", "javni", "t", "Kot je za MMC povedal minister, RTV SLO ne bo ukinjena."),
+                   _article("Nova24TV", "alternativni", "t", "Po pisanju Nova24TV je minister dejal ...")]
+        aliases = analyzer.make_aliases(cluster, 3)
+        rtv = next(a for a, n in aliases.items() if n == "MMC RTV SLO")
+        masked = analyzer.mask_names(cluster[0].body, aliases)
+        self.assertNotIn("MMC", masked)
+        self.assertNotIn("RTV", masked)
+        self.assertEqual(masked.count(rtv), 2)
+        quote = masked.split(",")[0]
+        restored = analyzer.restore_quote(quote, aliases, cluster[0].body)
+        self.assertEqual(restored, "Kot je za MMC povedal minister")
+
+    def test_prompt_has_publication_time_and_partial_flag(self):
+        short = _article("Delo", "komercialni", "t", "Za nadaljevanje branja postanite naročnik.")
+        short.published = "2026-11-18T08:00:00+01:00"
+        long = _article("N1", "komercialni", "t", "beseda " * 300)
+        prompt = analyzer.story_prompt([short, long], analyzer.make_aliases([short, long], 0))
+        self.assertIn("OBJAVLJENO: 2026-11-18T08:00:00+01:00", prompt)
+        self.assertEqual(prompt.count("DELNO BESEDILO"), 1)
+        self.assertTrue(analyzer.is_partial(short))
+        self.assertFalse(analyzer.is_partial(long))
+
+    def test_sides_from_weights(self):
+        W = analyzer.SideWeight
+        f = analyzer.sides_from_weights
+        self.assertEqual(f([W(side="vlada", share_percent=100, direct_quotes=3, in_lede=True),
+                            W(side="opozicija", share_percent=0, direct_quotes=0, in_lede=False)], "Obe strani"),
+                         "Samo ena stran")
+        self.assertEqual(f([W(side="vlada", share_percent=80, direct_quotes=3, in_lede=True),
+                            W(side="opozicija", share_percent=20, direct_quotes=1, in_lede=False)], "Obe strani"),
+                         "Pretežno ena stran")
+        self.assertEqual(f([W(side="vlada", share_percent=55, direct_quotes=2, in_lede=True),
+                            W(side="opozicija", share_percent=45, direct_quotes=2, in_lede=True)], "Samo ena stran"),
+                         "Obe strani")
+        self.assertEqual(f([W(side="vlada", share_percent=50, direct_quotes=2, in_lede=True),
+                            W(side="ZZZS", share_percent=50, direct_quotes=0, in_lede=False),
+                            W(side="prejšnja vlada", share_percent=0, direct_quotes=0, in_lede=False)], "Obe strani"),
+                         "Pretežno ena stran")
+        self.assertEqual(f([], "Pretežno ena stran"), "Pretežno ena stran")
+
+    def test_matrix_gaps_and_prominence(self):
+        F = analyzer.FactPresence
+        names = ["A", "B", "C", "D"]
+        matrix = analyzer.clean_fact_matrix([
+            F(fact="znesek", media=["B", "C"], prominent_in=["D"]),
+            F(fact="datum", media=["A", "Neznan"]),
+        ], names)
+        self.assertEqual(matrix[0].media, ["B", "C", "D"])
+        self.assertEqual(matrix[1].media, ["A"])
+        self.assertEqual(analyzer.matrix_gaps(matrix, "A", names), ["znesek"])
+        self.assertEqual(analyzer.matrix_gaps(matrix, "B", names), [])
+
+    def test_shared_core_and_own_sentences(self):
+        agency = "Minister je danes na novinarski konferenci predstavil predlog proračuna za prihodnje leto in poudaril stabilnost."
+        a = _article("A", "javni", "t", agency + " Opozicija je predlog označila za predvolilno darilo upokojencem in javnim uslužbencem.")
+        b = _article("B", "komercialni", "t", agency)
+        core = analyzer.shared_core(a, [a, b])
+        self.assertGreater(core.shared_percent, 40)
+        self.assertEqual(core.own_sentences, ["Opozicija je predlog označila za predvolilno darilo upokojencem in javnim uslužbencem."])
 
     def test_invalid_model_output_is_rejected(self):
         bad = {"topic_title": "t", "international_baseline": "b", "neutral_summary": "s",
