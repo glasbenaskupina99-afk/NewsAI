@@ -1,0 +1,884 @@
+{
+  "generated_at": "2026-11-19T00:02:06+00:00",
+  "model": "Claude (ročna podrobna analiza)",
+  "is_mock": false,
+  "sources": [
+    {
+      "name": "MMC RTV SLO",
+      "category": "javni",
+      "url": "https://www.rtvslo.si/feeds/00.xml"
+    },
+    {
+      "name": "24ur",
+      "category": "komercialni",
+      "url": "https://www.24ur.com/rss"
+    },
+    {
+      "name": "N1",
+      "category": "komercialni",
+      "url": "https://n1info.si/feed/"
+    },
+    {
+      "name": "Nova24TV",
+      "category": "alternativni",
+      "url": "https://nova24tv.si/feed/"
+    },
+    {
+      "name": "Mladina",
+      "category": "alternativni",
+      "url": "https://www.mladina.si/rss/"
+    },
+    {
+      "name": "BBC World",
+      "category": "mednarodni",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    }
+  ],
+  "articles_scraped": 7,
+  "stories": [
+    {
+      "topic_title": "Minister Ostrc zavrnil predlog ZZZS za izredno zvišanje obveznega zdravstvenega prispevka",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro: upravni odbor ZZZS je predlagal, da se obvezni zdravstveni prispevek s 1. marcem 2027 izredno zviša z 39,36 na 48,60 evra mesečno, kar bi prineslo okoli 141 milijonov evrov. ZZZS za leto 2027 kljub ukrepom napoveduje okoli 136 milijonov evrov nepokritega primanjkljaja. Minister za zdravje Tadej Ostrc je predlog zavrnil in od ZZZS zahteval več nadzora nad porabo in odpravo podvajanja storitev. Skupščina ZZZS bo o predlogu odločala 25. novembra.",
+      "coverage_comparison": [
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Ostrc: Izrednega zvišanja prispevka ne bo. ZZZS: Kljub ukrepom 136 milijonov evrov primanjkljaja.",
+          "article_url": "https://www.rtvslo.si/slovenija/ostrc-izrednega-zvisanja-prispevka-ne-bo-zzzs-kljub-ukrepom-136-milijonov-evrov-primanjkljaja/800452",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina",
+          "bias_evidence_quotes": [
+            "Ostrc na vprašanje, koliko sredstev bi z okrepljenim finančnim nadzorom in odpravo podvajanja storitev lahko prihranil ZZZS, ni odgovoril.",
+            "Tudi nekdanji koalicijski partnerici SD in Levica, ki sta danes v opoziciji, menita, da je osrednje vprašanje, kdo je ustvaril finančno luknjo v zdravstveni blagajni."
+          ],
+          "omitted_facts": [
+            "Da naj bi proračunski transfer za 2027 znašal le 380 milijonov evrov (razlog, ki ga navaja ZZZS).",
+            "Redna uskladitev prispevka na okoli 43,11 evra marca 2027."
+          ],
+          "voices_heard": [
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS",
+            "Martina Vuk (skupščina ZZZS)",
+            "Tamara Kozlovič (Svoboda)",
+            "SD",
+            "Levica"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina",
+          "headline_analysis": "Naslov postavi minister in ZZZS enakovredno, vsakega z lastno trditvijo; brez vrednotenja.",
+          "main_frame": "Spor med ministrstvom in ZZZS",
+          "frame_description": "Najprej obsežno ministrova izjava (vključno z odgovori o absentizmu in onkološkem inštitutu), nato odziv ZZZS in predsednice skupščine, na koncu Svoboda, SD in Levica.",
+          "lede_focus": "Uvod je ministrov citat »Nobenega izrednega zvišanja prispevka ne bo.«",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Za dolgotrajne bolniške odsotnosti gre skoraj 700 milijonov evrov, pred desetimi leti 200–250 milijonov (minister).",
+            "Odločitev, da onkološki inštitut na obstoječi lokaciji ne bo razširjen, je dokončna."
+          ],
+          "reasoning": "Vlada in opozicija dobita ločena, obsežna dela; trditve so dosledno pripisane. Pripomba, da minister na vprašanje o prihrankih ni odgovoril, je dejstvo s konference. Smer: 0 – ravnotežje med ministrom na eni ter ZZZS in opozicijo na drugi strani.",
+          "confidence": "Visoka",
+          "lean_score": 0.0,
+          "category": "javni",
+          "quotes_verified": true,
+          "published": "2026-11-18T06:48:24+00:00",
+          "word_count": 1768,
+          "cited_sources": [
+            "STA"
+          ],
+          "text_overlap": [
+            {
+              "media": "N1",
+              "percent": 37
+            }
+          ]
+        },
+        {
+          "media_name": "N1",
+          "article_title": "Minister Ostrc zavrnil predlog ZZZS: Nobenega izrednega zvišanja prispevka ne bo",
+          "article_url": "https://n1info.si/zdravje/minister-ostrc-zavrnil-predlog-zzzs-nobenega-izrednega-zvisanja-prispevka-ne-bo/",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "V Svobodi ob tem poudarjajo, da je odgovornost vlade pacienta postaviti na prvo mesto. Za aktualno vlado pa je tam kapital",
+            "Opozicija svari pred načrtnim slabljenjem ZZZS, ki bi odprlo vrata zasebnikom"
+          ],
+          "omitted_facts": [
+            "Da naj bi proračunski transfer za 2027 znašal le 380 milijonov evrov.",
+            "Primerjava s Hrvaško in podatek, da minister ni odgovoril na vprašanje o prihrankih."
+          ],
+          "voices_heard": [
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS",
+            "Martina Vuk (skupščina ZZZS)",
+            "Irena Ilešič Čujovič (sindikat, UO ZZZS)",
+            "Tamara Kozlovič (Svoboda)",
+            "SD",
+            "Levica"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Pripisan ministrov citat v naslovu, brez vrednotenja.",
+          "main_frame": "Spor med vlado, ZZZS in opozicijo",
+          "frame_description": "Po ministrovi izjavi sledi obsežen del o opoziciji z vmesnim naslovom »Opozicija svari pred načrtnim slabljenjem ZZZS, ki bi odprlo vrata zasebnikom«, nato ZZZS in predsednica skupščine.",
+          "lede_focus": "Uvod v petih stavkih: dva ministrova, trije o stališču Svobode (»Za aktualno vlado pa je tam kapital«).",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Kozlovič: dopolnilno zavarovanje bi po napovedih zavarovalnic danes znašalo več kot 65 evrov.",
+            "Ilešič Čujovič bo predlagala progresiven prispevek; država po njenem ZZZS namenja relativno malo proračunskih sredstev."
+          ],
+          "reasoning": "Trditve so pripisane, minister je povzet obširno. Uvod pa polovico prostora nameni opoziciji in njenemu očitku, da vlada »na prvo mesto postavlja kapital«, vmesni naslov prevzame opozicijski okvir. Smer: −0,5 – opozicijski pogled je izpostavljen v uvodu in vmesnem naslovu, zato rahlo Sredina-Levo.",
+          "confidence": "Visoka",
+          "lean_score": -0.5,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-18T21:10:10+00:00",
+          "word_count": 1513,
+          "cited_sources": [
+            "STA"
+          ],
+          "text_overlap": [
+            {
+              "media": "MMC RTV SLO",
+              "percent": 40
+            }
+          ]
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Ostrc: \"Nobenega izrednega zvišanja zdravstvenega prispevka ne bo!\"",
+          "article_url": "https://www.zurnal24.si/slovenija/ostrc-nobenega-izrednega-zvisanja-zdravstvenega-prispevka-ne-bo-468400",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "Janševa vlada transfer za zdrasvtveno blagajno zmanjšala za sto milijonov",
+            "Minister ni predstavil konkretnega finančnega izračuna"
+          ],
+          "omitted_facts": [
+            "Odzivi predsednice skupščine ZZZS in opozicije (objavljeni v ločenem poznejšem članku Žurnal24).",
+            "Da naj bi proračunski transfer za 2027 znašal le 380 milijonov evrov."
+          ],
+          "voices_heard": [
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Članek je bil objavljen kot sproten (»Več sledi …«); Žurnal24 je odzive objavil v poznejšem članku »Ostrc zvišanje prispevka zatrl v kali, ZZZS bi zdaj nekaterim zaračunal več«."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Pripisan ministrov citat s klicajem.",
+          "main_frame": "Uradna izjava z vprašanjem odgovornosti",
+          "frame_description": "Ministrova izjava in razlogi, nato vmesni naslov o zmanjšanju transferja »Janševe vlade« s starim citatom ZZZS, na koncu opomba, da minister ni predstavil izračuna prihrankov.",
+          "lede_focus": "Uvod je ministrovo zagotovilo in njegov citat o neobremenjevanju ljudi.",
+          "loaded_language": [
+            {
+              "quote": "Janševa vlada transfer za zdrasvtveno blagajno zmanjšala za sto milijonov",
+              "explanation": "Vmesni naslov z imenom predsednika vlade, ki ministrovi razlagi o krivdi prejšnje vlade postavi nasproti krivdo sedanje; podprt je s citatom ZZZS iz prejšnjega tedna.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Minister ni predstavil konkretnega izračuna, koliko bi prihranili z napovedanimi ukrepi in kdaj."
+          ],
+          "reasoning": "Ministrova stališča so podrobno povzeta. Vmesni naslov z »Janševo vlado« in kritična opomba o manjkajočem izračunu postavita pod vprašaj ministrovo razlago. Smer: −0,5 – vmesni naslov in opomba sta usmerjena proti vladni razlagi, zato rahlo Sredina-Levo.",
+          "confidence": "Srednja",
+          "lean_score": -0.5,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-18T08:56:00+00:00",
+          "word_count": 582,
+          "cited_sources": [],
+          "text_overlap": []
+        },
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Minister zavrnil predlog za drastično podražitev (Golobovega) obveznega zdravstvenega prispevka",
+          "article_url": "https://nova24tv.si/minister-zavrnil-predlog-za-drasticno-podrazitev-golobovega-obveznega-zdravstvenega-prispevka/",
+          "sensationalism_score": 6,
+          "bias_leaning": "Sredina-Desno",
+          "bias_evidence_quotes": [
+            "Minister zavrnil predlog za drastično podražitev (Golobovega) obveznega zdravstvenega prispevka",
+            "kot smo že poročali, posledica zdravstvene politike prejšnje vlade"
+          ],
+          "omitted_facts": [
+            "Da ZZZS kot razlog navaja tudi manjši proračunski transfer (članek ga omeni, a primanjkljaj v avtorskem besedilu pripiše le prejšnji vladi).",
+            "Odziv predsednice skupščine ZZZS in opozicije.",
+            "Zmanjšanje sredstev ZZZS za 100 milijonov evrov z rebalansom 2026."
+          ],
+          "voices_heard": [
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS"
+          ],
+          "sides_represented": "Pretežno ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Nova24TV je istega dne objavila še dva članka o tem. V članku »Nika Kovač podpirala obvezni zdravstveni prispevek …« navaja, da prispevek »trenutno znaša 39,96 evrov« (pravilno: 39,36), in vsebuje osebne napade (»potuje v luksuznih letalih«, »totalitarni naravi«). Članek »Propaganda aktivistov trčila ob dejstva …« brez preverjanja povzema citat poslanke Godec z istim napačnim zneskom."
+          ],
+          "headline_leaning": "Desno",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Naslov uporabi okrepljen izraz »drastično podražitev« in v oklepaju prispevek pripiše Golobu, s čimer že v naslovu odgovornost naloži prejšnji vladi.",
+          "main_frame": "Odgovornost prejšnje vlade",
+          "frame_description": "Minister zaščiti državljane pred podražitvijo, ki naj bi bila posledica politike prejšnje vlade; ZZZS hoče primanjkljaj pokriti »iz žepov davkoplačevalcev«. Predsednica skupščine je predstavljena s strankarsko pripadnostjo.",
+          "lede_focus": "Uvod: minister je zavrnil predlog ZZZS, ki je »hotel … dvigniti Golobov obvezni prispevek«.",
+          "loaded_language": [
+            {
+              "quote": "drastično podražitev",
+              "explanation": "Okrepljen opis; drugi mediji pišejo o »izrednem zvišanju«.",
+              "verified": true
+            },
+            {
+              "quote": "(Golobovega)",
+              "explanation": "Prispevek poosebi s prejšnjim premierjem in mu tako naloži odgovornost.",
+              "verified": true
+            },
+            {
+              "quote": "iz žepov davkoplačevalcev",
+              "explanation": "Čustveno obarvan opis financiranja s prispevki.",
+              "verified": true
+            },
+            {
+              "quote": "sindikalistka in vidna članica SD",
+              "explanation": "Politična oznaka predsednice skupščine, ki je drugi mediji ne navajajo.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "Zato hoče ZZZS iz žepov davkoplačevalcev zmanjšati finančni primanjkljaj, ki je, kot smo že poročali, posledica zdravstvene politike prejšnje vlade."
+          ],
+          "unique_facts": [
+            "ZZZS: proračunski transfer za 2027 naj bi znašal 380 milijonov evrov, manj kot v preteklih letih.",
+            "Sprememba višine prispevka bi zahtevala spremembo zakona."
+          ],
+          "reasoning": "Dejstva v tem članku so pravilna in ZZZS je citiran, vključno s podatkom o manjšem transferju. Naslov in avtorski stavek pa primanjkljaj enostransko pripišeta prejšnji vladi, predsednica skupščine je označena strankarsko, opozicija ne dobi besede. Smer: +1,75 – Sredina-Desno (naslov Desno).",
+          "confidence": "Visoka",
+          "lean_score": 1.75,
+          "category": "alternativni",
+          "quotes_verified": true,
+          "published": "2026-11-18T10:15:31+00:00",
+          "word_count": 290,
+          "cited_sources": [],
+          "text_overlap": []
+        }
+      ],
+      "neutral_summary": "ZZZS je vladi predlagal izredno zvišanje obveznega zdravstvenega prispevka na 48,60 evra mesečno, ker za leto 2027 napoveduje 136 milijonov evrov nepokritega primanjkljaja. Minister Ostrc je predlog zavrnil, težave pripisal odločitvam prejšnje vlade in od ZZZS zahteval varčevanje. Predsednica skupščine ZZZS in opozicija odgovarjajo, da je primanjkljaj povečala sedanja vlada z zmanjšanjem proračunskih sredstev. ZZZS kot razloge navaja oboje: razkorak po ukinitvi dopolnilnega zavarovanja in manjši proračunski transfer.",
+      "context": "Zgodba nadaljuje novembrske težave ZZZS z likvidnostjo (zamik 185 milijonov evrov plačil v leto 2027). Prispevek se sicer vsako leto 1. marca uskladi z rastjo plač; brez izrednega zvišanja bi marca 2027 znašal predvidoma 43,11 evra. Višina prispevka je določena z zakonom, zato je predlog ZZZS le pobuda vladi.",
+      "key_differences": [
+        "Vsak tabor navede le del razlogov, ki jih je navedel ZZZS. Minister in Nova24TV poudarita razkorak po ukinitvi dopolnilnega zavarovanja (prejšnja vlada), predsednica skupščine ZZZS in opozicija (v RTV SLO in N1) zmanjšanje proračunskih sredstev (sedanja vlada). ZZZS v svoji izjavi navaja oboje.",
+        "Nova24TV edina navede, da naj bi proračunski transfer ZZZS za leto 2027 znašal le 380 milijonov evrov, a tega ne poveže s sedanjo vlado; primanjkljaj v avtorskem besedilu pripiše »zdravstveni politiki prejšnje vlade«.",
+        "RTV SLO in N1 objavita ministra, ZZZS, predsednico skupščine ZZZS ter Svobodo, SD in Levico; Žurnal24 ministra in ZZZS (odzivi so v ločenem poznejšem članku); Nova24TV samo ministra in ZZZS.",
+        "Žurnal24 opozori, da minister ni predstavil izračuna, koliko bi prihranili z napovedanimi ukrepi; RTV SLO zapiše, da na to vprašanje ni odgovoril.",
+        "Naslovi: RTV SLO postavi minister in ZZZS enakovredno (»Ostrc: … ZZZS: …«); Nova24TV uporabi »drastično podražitev (Golobovega) … prispevka«."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Predlog: zvišanje z 39,36 na 48,60 evra mesečno",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ]
+        },
+        {
+          "fact": "Minister predloga ne podpira",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ]
+        },
+        {
+          "fact": "ZZZS za 2027 napoveduje okoli 136 milijonov evrov primanjkljaja kljub ukrepom",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ]
+        },
+        {
+          "fact": "Zvišanje bi prineslo okoli 141 milijonov evrov",
+          "media": [
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Skupščina ZZZS bo o predlogu odločala 25. novembra",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ]
+        },
+        {
+          "fact": "Redna uskladitev bi prispevek marca 2027 zvišala na okoli 43,11 evra",
+          "media": [
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Minister: razkorak po ukinitvi dopolnilnega zavarovanja (135 milijonov, 2027 okoli 188 milijonov) in plačna reforma (123 milijonov)",
+          "media": [
+            "MMC RTV SLO",
+            "Žurnal24",
+            "N1"
+          ]
+        },
+        {
+          "fact": "ZZZS: proračunski transfer za 2027 naj bi znašal 380 milijonov evrov",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Rebalans 2026 je ZZZS zmanjšal sredstva za 100 milijonov evrov",
+          "media": [
+            "MMC RTV SLO",
+            "Žurnal24",
+            "N1"
+          ]
+        },
+        {
+          "fact": "Primerjava s Hrvaško (5,8 proti 6,7 milijarde evrov)",
+          "media": [
+            "MMC RTV SLO",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Minister na vprašanje o višini prihrankov ni odgovoril oziroma izračuna ni predstavil",
+          "media": [
+            "MMC RTV SLO",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Predsednica skupščine Vuk bo predlagala diferenciran (progresiven) prispevek",
+          "media": [
+            "MMC RTV SLO",
+            "N1"
+          ]
+        },
+        {
+          "fact": "Odzivi Svobode, SD in Levice",
+          "media": [
+            "MMC RTV SLO",
+            "N1"
+          ]
+        },
+        {
+          "fact": "Projekcija ZZZS že vključuje 100 milijonov manj za bolniška nadomestila in prenos 145 milijonov v 2028",
+          "media": [
+            "MMC RTV SLO",
+            "N1"
+          ]
+        }
+      ],
+      "id": "story-1",
+      "has_international_source": false,
+      "source_checks": [
+        {
+          "claim": "Obvezni zdravstveni prispevek trenutno znaša 39,36 evra mesečno.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ],
+          "status": "Potrjeno",
+          "finding": "Uradni list RS 16/2026: od 1. marca 2026 znaša prispevek 39,36 evra.",
+          "sources": [
+            {
+              "title": "Uradni list RS 16/2026: višina obveznega zdravstvenega prispevka",
+              "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2026-01-0608/visina-obveznega-zdravstvenega-prispevka"
+            }
+          ]
+        },
+        {
+          "claim": "Prispevek »trenutno znaša 39,96 evrov« (drug članek Nova24TV in citat poslanke Godec).",
+          "claimed_by": [
+            "Nova24TV"
+          ],
+          "status": "V nasprotju z virom",
+          "finding": "Po Uradnem listu znaša prispevek 39,36 evra. Zvišanje na 48,60 evra je zato 9,24 evra, ne 8,64 evra, kot navaja citirani zapis.",
+          "sources": [
+            {
+              "title": "Uradni list RS 16/2026: višina obveznega zdravstvenega prispevka",
+              "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2026-01-0608/visina-obveznega-zdravstvenega-prispevka"
+            }
+          ]
+        },
+        {
+          "claim": "ZZZS predlaga zvišanje na 48,60 evra s 1. marcem 2027, kar bi prineslo okoli 141 milijonov evrov; gre za pobudo vladi.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ],
+          "status": "Potrjeno",
+          "finding": "Ujema se z izjavo ZZZS; višino prispevka lahko spremeni le zakon.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        },
+        {
+          "claim": "ZZZS za 2027 kljub ukrepom napoveduje okoli 136 milijonov evrov nepokritega primanjkljaja.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ],
+          "status": "Potrjeno",
+          "finding": "Ujema se z izjavo ZZZS; projekcija že vključuje prenos 145 milijonov evrov plačil v leto 2028.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        },
+        {
+          "claim": "Razkorak zaradi ukinitve dopolnilnega zavarovanja bo leta 2027 znašal skoraj 188 milijonov evrov (minister).",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Žurnal24",
+            "N1"
+          ],
+          "status": "Potrjeno",
+          "finding": "ZZZS v izjavi navaja »približno 188 milijonov evrov razkoraka«.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        },
+        {
+          "claim": "Primanjkljaj je sistemska posledica odločitev prejšnje vlade (minister; Nova24TV v avtorskem besedilu).",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24",
+            "N1"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "ZZZS kot razloga navaja razkorak po ukinitvi dopolnilnega zavarovanja in plačno reformo (odločitvi prejšnje vlade), a hkrati izrecno tudi to, da se sredstva državnega proračuna zmanjšujejo: transfer za 2027 naj bi po predlogu znašal le 380 milijonov evrov.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            },
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "claim": "»Minus zdravstvene blagajne« je posledica rebalansa, s katerim je vlada ZZZS odvzela 100 milijonov evrov (predsednica skupščine Vuk, opozicija).",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "N1"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "Rebalans je povečal zamik plačil v leto 2027 s 85 na 185 milijonov evrov. Primanjkljaj za 2027 pa ima po ZZZS več vzrokov, med njimi razkorak po ukinitvi dopolnilnega zavarovanja (188 milijonov) in manjši transfer za 2027.",
+          "sources": [
+            {
+              "title": "ZZZS, sporočilo 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            },
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        },
+        {
+          "claim": "Slovenija je zbrala 5,8 milijarde, Hrvaška 6,7 milijarde evrov; 2.600 proti 1.650 evrom na osebo (minister).",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Žurnal24"
+          ],
+          "status": "Ni preverljivo",
+          "finding": "Podatkov hrvaškega zavoda nismo preverili. Primerjava ne upošteva razlik v plačah in cenah zdravstvenih storitev med državama.",
+          "sources": []
+        },
+        {
+          "claim": "Dopolnilno zavarovanje bi danes zagotovo znašalo več kot 65 evrov (Kozlovič, Svoboda).",
+          "claimed_by": [
+            "N1"
+          ],
+          "status": "Ni preverljivo",
+          "finding": "Gre za oceno na podlagi napovedi zavarovalnic iz leta 2023, ki je ni mogoče preveriti.",
+          "sources": []
+        }
+      ],
+      "missing_context": [
+        {
+          "text": "ZZZS je septembra zapisal, da bi brez učinkov ukinitve dopolnilnega zavarovanja in plačne reforme posloval izravnano; celoten letni učinek plačne reforme je ocenil na okoli 587 milijonov evrov. Minister je navedel 123 milijonov kot učinek v letu 2027 – številki se ne izključujeta, a merita različno.",
+          "sources": [
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "text": "V isti izjavi ZZZS poudarja, da samo zvišanje prispevka dolgoročno ne more rešiti finančnih težav; potrebni so tudi nadzor odhodkov, sistemska ureditev financiranja in zadostna javna sredstva.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        }
+      ],
+      "not_covered_by": []
+    },
+    {
+      "topic_title": "Vlada sprejela novelo: taksi prevozi tudi prek aplikacij, taksimeter ni več obvezen",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro: vlada je sprejela predlog novele zakona o prevozih v cestnem prometu, po kateri bodo lahko avtotaksi prevozniki ceno določili s taksimetrom ali z aplikacijo, ki pred vožnjo prikaže pot, najvišjo ceno in podatke o vozilu; plačilo prek aplikacije bo brezgotovinsko. Taksi vozniki bodo morali znati slovensko, na dvojezičnih območjih tudi italijansko oziroma madžarsko. Predlog gre v državni zbor.",
+      "coverage_comparison": [
+        {
+          "media_name": "MMC RTV SLO",
+          "article_title": "Vlada sprejela predlog zakonske novele, ki omogoča izvajanje avtotaksi storitev tudi z aplikacijo",
+          "article_url": "https://www.rtvslo.si/slovenija/vlada-sprejela-predlog-zakonske-novele-ki-omogoca-izvajanje-avtotaksi-storitev-tudi-z-aplikacijo/800448",
+          "sensationalism_score": 1,
+          "bias_leaning": "Sredina-Desno",
+          "bias_evidence_quotes": [
+            "S predlaganimi spremembami gre država nasproti ponudnikom, ki uporabljajo tovrstni model prevozov, med njimi Uber.",
+            "ena je bila po Dvornikovih besedah zahteva sindikata taksistov po strožjem nadzoru nad tem, kdo avto taksi prevoze opravlja"
+          ],
+          "omitted_facts": [
+            "Nasprotovanje sindikata taksistov odpravi obveznega taksimetra in opozorila o provizijah platform.",
+            "Možnost prepovedi uporabe aplikacije ob nepravilnostih."
+          ],
+          "voices_heard": [
+            "Marko Dvornik (državni sekretar)"
+          ],
+          "sides_represented": "Samo ena stran",
+          "factual_errors": [],
+          "notes": [
+            "Spletni članek vključuje še druge sklepe vlade (poroštvo 2TDK, inovacijski vavčerji), ki v analizo niso zajeti."
+          ],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Informativen naslov, ki opiše odločitev vlade.",
+          "main_frame": "Uradna odločitev vlade",
+          "frame_description": "Povzetek odločitve vlade s pojasnili državnega sekretarja; sindikat je omenjen le kot pobudnik strožjega nadzora, ne kot nasprotnik.",
+          "lede_focus": "Uvod našteje novosti (taksimeter ali aplikacija, brezgotovinsko plačilo, znanje slovenščine).",
+          "loaded_language": [],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Dosedanji zakon je zaradi nerodne dikcije omogočal hkratno obračunavanje časa in razdalje, česar inšpekcija ni mogla sankcionirati.",
+            "Ministrstvo zagovarja, da cene določa trg, in ne želi novih regulacij."
+          ],
+          "reasoning": "Besedišče je nevtralno, vendar besedo dobi le vlada; sindikat je omenjen samo kot pobudnik ene od rešitev, njegovega nasprotovanja ni. Smer: +0,5 – samo vladna stran pri spornem ukrepu, zato rahlo Sredina-Desno.",
+          "confidence": "Srednja",
+          "lean_score": 0.5,
+          "category": "javni",
+          "quotes_verified": true,
+          "published": "2026-11-18T06:35:15+00:00",
+          "word_count": 546,
+          "cited_sources": [],
+          "text_overlap": []
+        },
+        {
+          "media_name": "Nova24TV",
+          "article_title": "Vlada odpravlja obvezni taksimeter: Prihaja Uberjev model",
+          "article_url": "https://nova24tv.si/vlada-odpravlja-obvezni-taksimeter-prihaja-uberjev-model/",
+          "sensationalism_score": 4,
+          "bias_leaning": "Sredina-Desno",
+          "bias_evidence_quotes": [
+            "Odpiramo vrata sodobnim taksi prevozom!",
+            "Na ministrstvu zavračajo očitke o deregulaciji trga."
+          ],
+          "omitted_facts": [
+            "Kdo očita deregulacijo: stališče sindikata taksistov in opozorila o provizijah ter dinamičnih cenah.",
+            "Globe in nadzor nad aplikacijami."
+          ],
+          "voices_heard": [
+            "Jernej Vrtovec (minister za infrastrukturo)",
+            "ministrstvo"
+          ],
+          "sides_represented": "Samo ena stran",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina-Desno",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Naslov »Prihaja Uberjev model« poudari blagovno znamko in novost; »odpravlja obvezni taksimeter« je točen.",
+          "main_frame": "Posodobitev in digitalizacija",
+          "frame_description": "Članek začne z ministrovim zapisom na X in sklene z zavrnitvijo očitkov o deregulaciji v vmesnem naslovu »Enaki pogoji za vse«, ne da bi te očitke kdo izrekel.",
+          "lede_focus": "Uvod je ministrov citat z X: »Odpiramo vrata sodobnim taksi prevozom!«",
+          "loaded_language": [
+            {
+              "quote": "Enaki pogoji za vse",
+              "explanation": "Vmesni naslov prevzame ministrovo trditev kot dejstvo.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [],
+          "unique_facts": [
+            "Licenca, izpit iz poznavanja kraja in označeno vozilo ostajajo obvezni."
+          ],
+          "reasoning": "Dejstva so pravilna, a okvir je ministrov: uvod je njegov promocijski zapis, zavrnitev kritik je v vmesnem naslovu, kritiki pa ne dobijo besede. Smer: +1 – Sredina-Desno.",
+          "confidence": "Visoka",
+          "lean_score": 1.0,
+          "category": "alternativni",
+          "quotes_verified": true,
+          "published": "2026-11-18T17:53:56+00:00",
+          "word_count": 377,
+          "cited_sources": [],
+          "text_overlap": []
+        },
+        {
+          "media_name": "Žurnal24",
+          "article_title": "Velike spremembe na področju prevozov s taksiji",
+          "article_url": "https://www.zurnal24.si/avto/velike-spremembe-na-podrocju-prevozov-s-taksiji-468406",
+          "sensationalism_score": 3,
+          "bias_leaning": "Sredina-Levo",
+          "bias_evidence_quotes": [
+            "Medtem, ko je aplikacija bolj prijazna do potnika pa je manj prijazna do taksista.",
+            "Sindikat taksistov spremembam nasprotuje."
+          ],
+          "omitted_facts": [
+            "Popravek hkratnega obračunavanja časa in razdalje.",
+            "Enoletno prehodno obdobje za jezikovni pogoj ter globe za aplikacije."
+          ],
+          "voices_heard": [
+            "ministrstvo za infrastrukturo",
+            "Sindikat taksistov",
+            "Tea Jarc (Evropska konfederacija sindikatov)"
+          ],
+          "sides_represented": "Obe strani",
+          "factual_errors": [],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Opisen naslov brez vrednotenja.",
+          "main_frame": "Spor med vlado in taksisti",
+          "frame_description": "Uvod postavi obljube ministrstva ob nasprotovanje sindikata; več kot polovica besedila so opozorila sindikata in Evropske konfederacije sindikatov.",
+          "lede_focus": "Uvod: ministrstvo obljublja dostopnost in konkurenco, sindikat opozarja na slabše delovne pogoje in pritisk platform.",
+          "loaded_language": [
+            {
+              "quote": "Na ministrstvu mirijo",
+              "explanation": "Glagol »mirijo« zagotovilo ministrstva predstavi kot pomirjanje, ne kot argument.",
+              "verified": true
+            }
+          ],
+          "editorial_statements": [
+            "Medtem, ko je aplikacija bolj prijazna do potnika pa je manj prijazna do taksista."
+          ],
+          "unique_facts": [
+            "Provizija za aplikacijo sprva okoli 25 %, v nekaterih državah do 44 % (po nekaterih podatkih).",
+            "Dinamične cene: ista vožnja zjutraj 5–6 evrov, popoldne 15–20 (po sindikatu).",
+            "Sindikat ni bil povabljen k pripravi zakona.",
+            "Podlaga za aplikacije je bila predvidena že leta 2021, nato odpravljena."
+          ],
+          "reasoning": "Edini predstavi obe strani, a kritiki dobijo več prostora in avtorski stavek o tem, da je aplikacija »manj prijazna do taksista«; zagotovila ministrstva so uvedena z glagolom »mirijo«. Smer: −0,75 – Sredina-Levo.",
+          "confidence": "Visoka",
+          "lean_score": -0.75,
+          "category": "komercialni",
+          "quotes_verified": true,
+          "published": "2026-11-18T10:02:00+00:00",
+          "word_count": 468,
+          "cited_sources": [],
+          "text_overlap": []
+        }
+      ],
+      "neutral_summary": "Vlada je v DZ poslala novelo, ki taksi prevoznikom omogoča obračun prek aplikacij (kot Uber ali Bolt) namesto obveznega taksimetra, uvaja obvezno znanje slovenščine za voznike ter nadzor in globe za aplikacije. Ministrstvo obljublja preglednejše cene in več konkurence, sindikat taksistov opozarja na provizije platform, dinamične cene in neenake pogoje.",
+      "context": "Zakonska podlaga za prevozne platforme je bila sprejeta že leta 2021, po menjavi vlade pa razveljavljena. Uber v Ljubljani deluje od maja 2025, a s taksimetri po pravilih za taksiste.",
+      "key_differences": [
+        "Žurnal24 edini objavi nasprotovanje sindikata taksistov in Evropske konfederacije sindikatov (provizije do 44 %, dinamične cene, izrivanje domačih voznikov); RTV SLO in Nova24TV objavita samo vladno stran.",
+        "Nova24TV zgodbo uokviri z ministrovim promocijskim zapisom na X (»Odpiramo vrata sodobnim taksi prevozom!«) in vmesnim naslovom »Enaki pogoji za vse«, ki povzema stališče ministrstva.",
+        "RTV SLO edini podrobno pojasni napako v dosedanjem zakonu (hkratno obračunavanje časa in razdalje) in stališče ministrstva, da naj cene določa trg.",
+        "Nobeden od medijev ne omeni, da predlog omogoča tudi prepoved uporabe aplikacije ob ugotovljenih nepravilnostih."
+      ],
+      "fact_matrix": [
+        {
+          "fact": "Ceno bo mogoče določiti s taksimetrom ali z aplikacijo",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Aplikacija pred vožnjo prikaže pot, najvišjo ceno in podatke o vozilu; plačilo brezgotovinsko",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Taksimeter: obračun po razdalji ali času, ne več po obeh hkrati",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Obvezno znanje slovenščine (raven A1), na dvojezičnih območjih tudi jezika narodne skupnosti",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Enoletno prehodno obdobje za jezikovni pogoj",
+          "media": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Licenca in drugi pogoji ostajajo obvezni",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Globe za nepravilno uporabo aplikacij",
+          "media": [
+            "MMC RTV SLO"
+          ]
+        },
+        {
+          "fact": "Sindikat taksistov nasprotuje odpravi obveznega taksimetra",
+          "media": [
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Provizije platform (okoli 25 %, ponekod do 44 %)",
+          "media": [
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Podlaga za platforme že leta 2021, pozneje odpravljena",
+          "media": [
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Uber v Sloveniji deluje od maja 2025 s taksimetri",
+          "media": [
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        }
+      ],
+      "id": "story-2",
+      "has_international_source": false,
+      "source_checks": [
+        {
+          "claim": "Aplikacija bo pred vožnjo prikazala pot, najvišjo ceno in podatke o vozilu; plačilo bo brezgotovinsko.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24"
+          ],
+          "status": "Potrjeno",
+          "finding": "Ujema se s sporočilom vlade.",
+          "sources": [
+            {
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
+            }
+          ]
+        },
+        {
+          "claim": "Taksimeter bo še mogoč, cena pa po razdalji ali času, ne po obeh hkrati.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV"
+          ],
+          "status": "Potrjeno",
+          "finding": "Ujema se s sporočilom vlade.",
+          "sources": [
+            {
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
+            }
+          ]
+        },
+        {
+          "claim": "Vozniki bodo morali znati slovensko najmanj na ravni A1, z enoletnim prehodnim obdobjem.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "Sporočilo vlade potrjuje obvezno znanje slovenščine (na dvojezičnih območjih tudi italijanščine oziroma madžarščine) in enoletno prehodno obdobje; ravni A1 ne navaja – ta izhaja iz izjav na novinarski konferenci.",
+          "sources": [
+            {
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
+            }
+          ]
+        },
+        {
+          "claim": "Možnost obračuna prek aplikacij je bila predvidena že leta 2021, nato pa jo je Golobova vlada odpravila.",
+          "claimed_by": [
+            "Žurnal24"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "DZ je podlago za prevozne platforme sprejel leta 2021, po menjavi vlade pa je bila razveljavljena; točnega datuma razveljavitve nismo potrdili.",
+          "sources": [
+            {
+              "title": "STA (2021): DZ prižgal zeleno luč podlagi za prevozne platforme",
+              "url": "https://www.tax-fin-lex.si/Home/Novica/20231"
+            },
+            {
+              "title": "STA: Ministrstvo s predlogom novele zakona ureja prevoze z uporabo aplikacije",
+              "url": "https://tax-fin-lex.si/home/novica/37456"
+            }
+          ]
+        },
+        {
+          "claim": "Provizije platform znašajo sprva okoli 25 %, v nekaterih državah do 44 %.",
+          "claimed_by": [
+            "Žurnal24"
+          ],
+          "status": "Ni preverljivo",
+          "finding": "Žurnal24 sam navaja, da gre za podatke »po nekaterih podatkih«; vir ni naveden.",
+          "sources": []
+        }
+      ],
+      "missing_context": [
+        {
+          "text": "Predlog določa nadzor nad delovanjem aplikacij, globe za kršitve in možnost prepovedi uporabe aplikacije ob ugotovljenih nepravilnostih.",
+          "sources": [
+            {
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
+            }
+          ]
+        }
+      ],
+      "not_covered_by": []
+    }
+  ]
+}

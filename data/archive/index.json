@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-18",
+    "stories": 2,
+    "model": "Claude (ročna podrobna analiza)",
+    "is_mock": false
+  },
+  {
     "date": "2026-11-13",
     "stories": 3,
     "model": "Claude (ročna podrobna analiza)",

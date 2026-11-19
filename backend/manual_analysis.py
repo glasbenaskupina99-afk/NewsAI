@@ -20,7 +20,9 @@ import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
-from analyzer import ContextItem, DailyAnalysis, SourceCheck, StoryAnalysis, build_story_report, source_infos
+from analyzer import (
+    ContextItem, DailyAnalysis, SourceCheck, StoryAnalysis, build_story_report, leaning_from_score, source_infos,
+)
 from main import OUTPUT, RAW_OUTPUT, publish
 from scraper import Article
 
@@ -42,6 +44,9 @@ def main() -> None:
     stories = []
     for i, story in enumerate(spec["stories"]):
         cluster = [articles[aid] for aid in story["article_ids"]]
+        for cov in story["coverage_comparison"]:
+            if cov.get("lean_score") is not None and "bias_leaning" not in cov:
+                cov["bias_leaning"] = leaning_from_score(cov["lean_score"])
         report = build_story_report(StoryAnalysis.model_validate(story), cluster, i)
         report.source_checks = [SourceCheck.model_validate(c) for c in story.get("source_checks", [])]
         report.missing_context = [ContextItem.model_validate(c) for c in story.get("missing_context", [])]

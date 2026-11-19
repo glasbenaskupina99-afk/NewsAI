@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T23:41:07+00:00",
+  "generated_at": "2026-11-19T00:02:06+00:00",
   "model": "Claude (ročna podrobna analiza)",
   "is_mock": false,
   "sources": [
@@ -34,568 +34,356 @@
       "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
     }
   ],
-  "articles_scraped": 18,
+  "articles_scraped": 7,
   "stories": [
     {
-      "topic_title": "Finančni minister Šircelj: izplačila pravic niso ogrožena, novega zujfa ne bo",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro slovenskih virov: finančni minister Andrej Šircelj je v izjavi zavrnil opozorila, da bi bila zaradi proračuna ogrožena izplačila pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov, ter napovedal, da novega zujfa ne bo. Okoli 300 milijonov evrov prihrankov pripisuje gospodarnejši porabi in strožjemu preverjanju upravičenosti s povezovanjem evidenc. Napovedal je zmanjševanje dolga za vsaj 0,5 odstotne točke BDP letno, rebalans proračuna ob sprejetju razvojnega (interventnega) zakona in plačne stebre po koalicijski pogodbi.",
+      "topic_title": "Minister Ostrc zavrnil predlog ZZZS za izredno zvišanje obveznega zdravstvenega prispevka",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro: upravni odbor ZZZS je predlagal, da se obvezni zdravstveni prispevek s 1. marcem 2027 izredno zviša z 39,36 na 48,60 evra mesečno, kar bi prineslo okoli 141 milijonov evrov. ZZZS za leto 2027 kljub ukrepom napoveduje okoli 136 milijonov evrov nepokritega primanjkljaja. Minister za zdravje Tadej Ostrc je predlog zavrnil in od ZZZS zahteval več nadzora nad porabo in odpravo podvajanja storitev. Skupščina ZZZS bo o predlogu odločala 25. novembra.",
       "coverage_comparison": [
         {
           "media_name": "MMC RTV SLO",
-          "article_title": "Šircelj: Ne gre za to, da bi komur koli kaj vzeli, gre izključno za to, da bomo gospodarno ravnali",
-          "article_url": "https://www.rtvslo.si/slovenija/sircelj-ne-gre-za-to-da-bi-komur-koli-kaj-vzeli-gre-izkljucno-za-to-da-bomo-gospodarno-ravnali/799990",
+          "article_title": "Ostrc: Izrednega zvišanja prispevka ne bo. ZZZS: Kljub ukrepom 136 milijonov evrov primanjkljaja.",
+          "article_url": "https://www.rtvslo.si/slovenija/ostrc-izrednega-zvisanja-prispevka-ne-bo-zzzs-kljub-ukrepom-136-milijonov-evrov-primanjkljaja/800452",
           "sensationalism_score": 2,
           "bias_leaning": "Sredina",
           "bias_evidence_quotes": [
-            "Opozicija kritična do Šircljevih besed o izplačilu socialnih pravic",
-            "Finančni minister Andrej Šircelj je zavrnil navedbe, da bi lahko zaradi proračunskih razmer nastale zamude ali omejitve pri izplačilih socialnih transferjev"
+            "Ostrc na vprašanje, koliko sredstev bi z okrepljenim finančnim nadzorom in odpravo podvajanja storitev lahko prihranil ZZZS, ni odgovoril.",
+            "Tudi nekdanji koalicijski partnerici SD in Levica, ki sta danes v opoziciji, menita, da je osrednje vprašanje, kdo je ustvaril finančno luknjo v zdravstveni blagajni."
           ],
           "omitted_facts": [
-            "Ministrov poziv opoziciji, naj »neha zavajati in lagati«; RTV SLO navede le očitek o »zavajanju in strašenju«.",
-            "Konkretni primer obveznosti, ki po ministru niso bile vključene v proračun (posledice dviga minimalne plače)."
+            "Da naj bi proračunski transfer za 2027 znašal le 380 milijonov evrov (razlog, ki ga navaja ZZZS).",
+            "Redna uskladitev prispevka na okoli 43,11 evra marca 2027."
           ],
           "voices_heard": [
-            "Andrej Šircelj (minister za finance)",
-            "Asta Vrečko (Levica)",
-            "Klemen Boštjančič (Svoboda)"
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS",
+            "Martina Vuk (skupščina ZZZS)",
+            "Tamara Kozlovič (Svoboda)",
+            "SD",
+            "Levica"
           ],
           "sides_represented": "Obe strani",
           "factual_errors": [],
           "notes": [],
           "headline_leaning": "Sredina",
           "body_leaning": "Sredina",
-          "headline_analysis": "Naslov je dolg dobesedni citat ministra z navedbo govorca. Povzame vladno sporočilo, vendar kot jasno pripisano izjavo, brez uredniškega vrednotenja.",
-          "main_frame": "Uradna izjava in politični spor",
-          "frame_description": "Prvi del članka povzema ministrovo izjavo in odgovore na novinarska vprašanja, drugi del (vmesni naslov »Opozicija kritična do Šircljevih besed …«) predstavi odziva dveh opozicijskih strank. Zgodba je tako soočenje vladnega zagotovila in opozicijskega dvoma.",
-          "lede_focus": "Uvod povzame, da je minister zavrnil navedbe o zamudah izplačil in jih označil za zavajajoče; ocena »zavajajoče« je pripisana ministru.",
+          "headline_analysis": "Naslov postavi minister in ZZZS enakovredno, vsakega z lastno trditvijo; brez vrednotenja.",
+          "main_frame": "Spor med ministrstvom in ZZZS",
+          "frame_description": "Najprej obsežno ministrova izjava (vključno z odgovori o absentizmu in onkološkem inštitutu), nato odziv ZZZS in predsednice skupščine, na koncu Svoboda, SD in Levica.",
+          "lede_focus": "Uvod je ministrov citat »Nobenega izrednega zvišanja prispevka ne bo.«",
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [
-            "Socialne pravice so v proračunu določene v višini 2,2 milijarde evrov.",
-            "Časovnica prenove plačnega sistema še ni določena.",
-            "Referendum o interventnem zakonu bo 6. decembra.",
-            "Odziva Levice in Svobode, vključno z Boštjančičevo primerjavo z zujfom (»vsaj zakon, imel je besedilo«)."
+            "Za dolgotrajne bolniške odsotnosti gre skoraj 700 milijonov evrov, pred desetimi leti 200–250 milijonov (minister).",
+            "Odločitev, da onkološki inštitut na obstoječi lokaciji ne bo razširjen, je dokončna."
           ],
-          "reasoning": "Ministrove trditve so dosledno pripisane (»je poudaril«, »po njegovih besedah«) z nevtralnimi glagoli. Vrednostni izrazi (»zavajanje«, »politika strahu«) se pojavljajo le v citatih. Kritika dveh opozicijskih strank dobi samostojen del članka in podoben obseg kot posamezni ministrovi odgovori. Naslov vladno sporočilo povzame kot pripisan citat, kar je običajna praksa. Smer: 0 – minister in opozicija dobita ločena, obsežna dela; ublažen ministrov očitek o »laganju« in vladni naslov se izravnata z obsežnim odzivom opozicije.",
+          "reasoning": "Vlada in opozicija dobita ločena, obsežna dela; trditve so dosledno pripisane. Pripomba, da minister na vprašanje o prihrankih ni odgovoril, je dejstvo s konference. Smer: 0 – ravnotežje med ministrom na eni ter ZZZS in opozicijo na drugi strani.",
           "confidence": "Visoka",
           "lean_score": 0.0,
           "category": "javni",
           "quotes_verified": true,
-          "published": "2026-11-13T09:27:59+00:00",
-          "word_count": 1088,
-          "cited_sources": [],
+          "published": "2026-11-18T06:48:24+00:00",
+          "word_count": 1768,
+          "cited_sources": [
+            "STA"
+          ],
           "text_overlap": [
             {
-              "media": "24ur",
-              "percent": 23
-            },
-            {
-              "media": "Svet24",
-              "percent": 19
+              "media": "N1",
+              "percent": 37
             }
           ]
         },
         {
-          "media_name": "Nova24TV",
-          "article_title": "Šircelj zavrača strašenje opozicije: “Nikomur ne bomo nič vzeli, vse zagotovljene pravice bomo izplačali”",
-          "article_url": "https://nova24tv.si/sircelj-zavraca-strasenje-opozicije-nikomur-ne-bomo-nic-vzeli-vse-zagotovljene-pravice-bomo-izplacali/",
-          "sensationalism_score": 5,
-          "bias_leaning": "Sredina-Desno",
+          "media_name": "N1",
+          "article_title": "Minister Ostrc zavrnil predlog ZZZS: Nobenega izrednega zvišanja prispevka ne bo",
+          "article_url": "https://n1info.si/zdravje/minister-ostrc-zavrnil-predlog-zzzs-nobenega-izrednega-zvisanja-prispevka-ne-bo/",
+          "sensationalism_score": 2,
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
-            "Šircelj zavrača strašenje opozicije",
-            "v luči zavajanj in laži s strani opozicijskih strank"
+            "V Svobodi ob tem poudarjajo, da je odgovornost vlade pacienta postaviti na prvo mesto. Za aktualno vlado pa je tam kapital",
+            "Opozicija svari pred načrtnim slabljenjem ZZZS, ki bi odprlo vrata zasebnikom"
           ],
           "omitted_facts": [
-            "Odziva opozicije (Levica, Svoboda) in njuni konkretni očitki o zmanjšanju sredstev za transferje, šolstvo in zdravstvo.",
-            "Znesek 2,2 milijarde evrov za socialne pravice.",
-            "Datum referenduma o interventnem zakonu (6. december).",
-            "Da časovnica prenove plačnega sistema še ni določena."
+            "Da naj bi proračunski transfer za 2027 znašal le 380 milijonov evrov.",
+            "Primerjava s Hrvaško in podatek, da minister ni odgovoril na vprašanje o prihrankih."
           ],
           "voices_heard": [
-            "Andrej Šircelj (minister za finance)"
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS",
+            "Martina Vuk (skupščina ZZZS)",
+            "Irena Ilešič Čujovič (sindikat, UO ZZZS)",
+            "Tamara Kozlovič (Svoboda)",
+            "SD",
+            "Levica"
           ],
-          "sides_represented": "Samo ena stran",
+          "sides_represented": "Obe strani",
           "factual_errors": [],
-          "notes": [
-            "Drugi del članka je povzet po MMC (»po navedbah MMC«). Stavek, ki je v članku MMC novinarjev povzetek v odvisnem govoru (»da spremembe izhajajo iz koalicijske pogodbe …«), je tu v narekovajih, kot da bi bil dobeseden ministrov citat."
-          ],
-          "headline_leaning": "Desno",
-          "body_leaning": "Sredina-Desno",
-          "headline_analysis": "Naslov uporabi ministrov izraz »strašenje opozicije« brez narekovajev, kot uredniško ugotovitev, in mu doda ministrov citat. Bralcu tako že pred branjem sporoči, da so opozorila opozicije neutemeljena.",
-          "main_frame": "Vlada se brani pred napadi opozicije",
-          "frame_description": "Zgodba je postavljena kot ministrova obramba pred neresničnimi trditvami opozicije. Opozicija ne dobi besede, njene trditve pa so v uvodu z avtorjevimi besedami označene kot »zavajanja in laži«. Vmesni naslovi (»Proračun je stabilen in finance so varne«, »Zavrača strašenje …«) prevzemajo ministrova sporočila.",
-          "lede_focus": "Uvod začne z ministrovim citatom in ga postavi »v luči zavajanj in laži s strani opozicijskih strank« ter navede, da je minister opozicijo »pozval in prosil, naj preneha s tovrstnim strašenjem«.",
-          "loaded_language": [
-            {
-              "quote": "strašenje opozicije",
-              "explanation": "V naslovu je ministrov izraz zapisan kot dejstvo, ne kot njegova trditev.",
-              "verified": true
-            },
-            {
-              "quote": "zavajanj in laži s strani opozicijskih strank",
-              "explanation": "Ministrov očitek (»nehajo zavajati in lagati«) je prevzet v avtorjev glas brez pripisa, kot da gre za ugotovljeno dejstvo.",
-              "verified": true
-            },
-            {
-              "quote": "je bil jasen",
-              "explanation": "Ocenjevalni glagol govorjenja, ki ministrovo izjavo predstavi kot prepričljivo; v članku se ponovi dvakrat.",
-              "verified": true
-            },
-            {
-              "quote": "navaja in pomirja",
-              "explanation": "Glagol »pomirja« ministru pripiše vlogo tistega, ki odpravlja neupravičen strah.",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [
-            "v luči zavajanj in laži s strani opozicijskih strank v zvezi z izplačili različnih prejemkov iz proračuna"
-          ],
+          "notes": [],
+          "headline_leaning": "Sredina",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Pripisan ministrov citat v naslovu, brez vrednotenja.",
+          "main_frame": "Spor med vlado, ZZZS in opozicijo",
+          "frame_description": "Po ministrovi izjavi sledi obsežen del o opoziciji z vmesnim naslovom »Opozicija svari pred načrtnim slabljenjem ZZZS, ki bi odprlo vrata zasebnikom«, nato ZZZS in predsednica skupščine.",
+          "lede_focus": "Uvod v petih stavkih: dva ministrova, trije o stališču Svobode (»Za aktualno vlado pa je tam kapital«).",
+          "loaded_language": [],
+          "editorial_statements": [],
           "unique_facts": [
-            "Minister je kot primer neupoštevanih obveznosti navedel posledice dviga minimalne plače.",
-            "Minister je opozicijo »pozval in prosil«, naj preneha s strašenjem.",
-            "Citat »Mi poudarjamo vizijo, drugi strašijo«."
+            "Kozlovič: dopolnilno zavarovanje bi po napovedih zavarovalnic danes znašalo več kot 65 evrov.",
+            "Ilešič Čujovič bo predlagala progresiven prispevek; država po njenem ZZZS namenja relativno malo proračunskih sredstev."
           ],
-          "reasoning": "Večina besedila zvesto povzema ministrovo izjavo. Nagib izhaja iz tega, da avtor ministrova sporna očitka prevzame kot dejstvo brez pripisa: v naslovu »strašenje opozicije«, v uvodu »zavajanja in laži« opozicije (minister je opozicijo res pozval, naj »neha zavajati in lagati«, vendar je to njegova trditev). Opozicija ne dobi besede. Naslov je zato ocenjen kot Desno, besedilo in celota kot Sredina-Desno.",
+          "reasoning": "Trditve so pripisane, minister je povzet obširno. Uvod pa polovico prostora nameni opoziciji in njenemu očitku, da vlada »na prvo mesto postavlja kapital«, vmesni naslov prevzame opozicijski okvir. Smer: −0,5 – opozicijski pogled je izpostavljen v uvodu in vmesnem naslovu, zato rahlo Sredina-Levo.",
           "confidence": "Visoka",
-          "lean_score": 1.25,
-          "category": "alternativni",
+          "lean_score": -0.5,
+          "category": "komercialni",
           "quotes_verified": true,
-          "published": "2026-11-13T12:45:11+00:00",
-          "word_count": 677,
+          "published": "2026-11-18T21:10:10+00:00",
+          "word_count": 1513,
           "cited_sources": [
-            "MMC"
+            "STA"
           ],
           "text_overlap": [
             {
-              "media": "24ur",
-              "percent": 7
-            },
-            {
               "media": "MMC RTV SLO",
-              "percent": 5
+              "percent": 40
             }
           ]
         },
         {
           "media_name": "Žurnal24",
-          "article_title": "Šircelj miri: \"Vse mame bodo dobile porodniško nadomestilo\"",
-          "article_url": "https://www.zurnal24.si/slovenija/sircelj-miri-vse-mame-bodo-dobile-porodnisko-nadomestilo-468182",
+          "article_title": "Ostrc: \"Nobenega izrednega zvišanja zdravstvenega prispevka ne bo!\"",
+          "article_url": "https://www.zurnal24.si/slovenija/ostrc-nobenega-izrednega-zvisanja-zdravstvenega-prispevka-ne-bo-468400",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina-Desno",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
-            "Pozivam in prosim, opozicijske stranke, da nehajo zavajati in lagati v zvezi z izplačili različnih prejemkov iz proračuna.",
-            "Šircelj je odgovoril tudi na vprašanje glede napovedanih sprememb plačnega sistema"
+            "Janševa vlada transfer za zdrasvtveno blagajno zmanjšala za sto milijonov",
+            "Minister ni predstavil konkretnega finančnega izračuna"
           ],
           "omitted_facts": [
-            "Odziva opozicije (Levica, Svoboda).",
-            "Znesek 2,2 milijarde evrov za socialne pravice.",
-            "Datum referenduma o interventnem zakonu."
+            "Odzivi predsednice skupščine ZZZS in opozicije (objavljeni v ločenem poznejšem članku Žurnal24).",
+            "Da naj bi proračunski transfer za 2027 znašal le 380 milijonov evrov."
           ],
           "voices_heard": [
-            "Andrej Šircelj (minister za finance)"
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS"
           ],
-          "sides_represented": "Samo ena stran",
+          "sides_represented": "Pretežno ena stran",
           "factual_errors": [],
-          "notes": [],
+          "notes": [
+            "Članek je bil objavljen kot sproten (»Več sledi …«); Žurnal24 je odzive objavil v poznejšem članku »Ostrc zvišanje prispevka zatrl v kali, ZZZS bi zdaj nekaterim zaračunal več«."
+          ],
           "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov uporabi glagol »miri«, ki ministra predstavi kot tistega, ki odpravlja (neupravičene) skrbi, in doda njegov najbolj oseben citat o mamah.",
-          "main_frame": "Uradna izjava",
-          "frame_description": "Članek je skoraj v celoti sestavljen iz ministrovih citatov in povzetkov; vmesni naslovi so njegove besede (»Pretehtali bomo vsak evro, kam gre«).",
-          "lede_focus": "Članek začne z dolgim ministrovim citatom, v katerem opozicijo poziva, naj »nehajo zavajati in lagati«.",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Pripisan ministrov citat s klicajem.",
+          "main_frame": "Uradna izjava z vprašanjem odgovornosti",
+          "frame_description": "Ministrova izjava in razlogi, nato vmesni naslov o zmanjšanju transferja »Janševe vlade« s starim citatom ZZZS, na koncu opomba, da minister ni predstavil izračuna prihrankov.",
+          "lede_focus": "Uvod je ministrovo zagotovilo in njegov citat o neobremenjevanju ljudi.",
           "loaded_language": [
             {
-              "quote": "Šircelj miri",
-              "explanation": "Glagol v naslovu ministrovo izjavo uokviri kot pomiritev, ne kot stališče v sporu.",
+              "quote": "Janševa vlada transfer za zdrasvtveno blagajno zmanjšala za sto milijonov",
+              "explanation": "Vmesni naslov z imenom predsednika vlade, ki ministrovi razlagi o krivdi prejšnje vlade postavi nasproti krivdo sedanje; podprt je s citatom ZZZS iz prejšnjega tedna.",
               "verified": true
             }
           ],
           "editorial_statements": [],
           "unique_facts": [
-            "Vprašanje o plačnem sistemu je sledilo napovedi ministra Matoza o izstopu policistov iz enotnega plačnega sistema.",
-            "Minister meni, da se nadzorni mehanizmi, ki so že v zakonih, ne izvajajo tako, kot bi se morali."
+            "Minister ni predstavil konkretnega izračuna, koliko bi prihranili z napovedanimi ukrepi in kdaj."
           ],
-          "reasoning": "Vse trditve so jasno pripisane ministru, avtorske sodbe ni. Članek pa objavi samo ministrovo stran, opozicija, ki jo minister obtoži laganja, ne dobi besede. Glagol »miri« v naslovu je blago naklonjen uokvirjanju vlade. Smer: +0,75 – objavi samo ministra, vključno z njegovim očitkom o laganju opozicije, in ga v naslovu predstavi kot pomirjevalca (»miri«); zato Sredina-Desno.",
-          "confidence": "Visoka",
-          "lean_score": 0.75,
+          "reasoning": "Ministrova stališča so podrobno povzeta. Vmesni naslov z »Janševo vlado« in kritična opomba o manjkajočem izračunu postavita pod vprašaj ministrovo razlago. Smer: −0,5 – vmesni naslov in opomba sta usmerjena proti vladni razlagi, zato rahlo Sredina-Levo.",
+          "confidence": "Srednja",
+          "lean_score": -0.5,
           "category": "komercialni",
           "quotes_verified": true,
-          "published": "2026-11-13",
-          "word_count": 409,
+          "published": "2026-11-18T08:56:00+00:00",
+          "word_count": 582,
           "cited_sources": [],
           "text_overlap": []
         },
         {
-          "media_name": "Svet24",
-          "article_title": "Šircelj: Ne bo novega Zujfa, opozicija izvaja politiko strahu in zavisti",
-          "article_url": "https://svet24.si/novice/slovenija/andrej-sircelj-interventni-zakon-1940357",
-          "sensationalism_score": 4,
-          "bias_leaning": "Sredina-Levo",
+          "media_name": "Nova24TV",
+          "article_title": "Minister zavrnil predlog za drastično podražitev (Golobovega) obveznega zdravstvenega prispevka",
+          "article_url": "https://nova24tv.si/minister-zavrnil-predlog-za-drasticno-podrazitev-golobovega-obveznega-zdravstvenega-prispevka/",
+          "sensationalism_score": 6,
+          "bias_leaning": "Sredina-Desno",
           "bias_evidence_quotes": [
-            "A od nekod bo treba vzeti.",
-            "Ob tem velja spomniti, da pomislekov glede proračuna ne izražajo samo opozicija in sindikati."
+            "Minister zavrnil predlog za drastično podražitev (Golobovega) obveznega zdravstvenega prispevka",
+            "kot smo že poročali, posledica zdravstvene politike prejšnje vlade"
           ],
           "omitted_facts": [
-            "Znesek 2,2 milijarde evrov za socialne pravice.",
-            "Napoved rebalansa ob sprejetju interventnega zakona in plačni stebri po koalicijski pogodbi."
+            "Da ZZZS kot razlog navaja tudi manjši proračunski transfer (članek ga omeni, a primanjkljaj v avtorskem besedilu pripiše le prejšnji vladi).",
+            "Odziv predsednice skupščine ZZZS in opozicije.",
+            "Zmanjšanje sredstev ZZZS za 100 milijonov evrov z rebalansom 2026."
           ],
           "voices_heard": [
-            "Andrej Šircelj (minister za finance)",
-            "Ukom",
-            "Asta Vrečko (Levica)",
-            "Klemen Boštjančič (Svoboda)",
-            "nevladne organizacije"
+            "Tadej Ostrc (minister za zdravje)",
+            "ZZZS"
           ],
-          "sides_represented": "Obe strani",
+          "sides_represented": "Pretežno ena stran",
           "factual_errors": [],
           "notes": [
-            "Besedilo o odzivu Levice in Svobode je skoraj enako kot pri RTV SLO; obe povzemata STA."
+            "Nova24TV je istega dne objavila še dva članka o tem. V članku »Nika Kovač podpirala obvezni zdravstveni prispevek …« navaja, da prispevek »trenutno znaša 39,96 evrov« (pravilno: 39,36), in vsebuje osebne napade (»potuje v luksuznih letalih«, »totalitarni naravi«). Članek »Propaganda aktivistov trčila ob dejstva …« brez preverjanja povzema citat poslanke Godec z istim napačnim zneskom."
           ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina-Levo",
-          "headline_analysis": "Naslov navede ministrove trditve s pripisom (»Šircelj: …«), vključno z ostro oceno o »politiki strahu in zavisti«, ki je njegova.",
-          "main_frame": "Politični spor pred referendumom",
-          "frame_description": "Ministrova izjava je postavljena v kontekst referendumske kampanje: najprej njegove trditve, nato dvom avtorja, opozorila nevladnikov, odziva Levice in Svobode ter vprašanje o pritisku na fiskalni svet.",
-          "lede_focus": "Uvod: minister je opozicijo »obtožil laži in zavajanja«; drugi odstavek doda, da je vladni urad Ukom že pred konferenco trdil, da gre za laži.",
+          "headline_leaning": "Desno",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Naslov uporabi okrepljen izraz »drastično podražitev« in v oklepaju prispevek pripiše Golobu, s čimer že v naslovu odgovornost naloži prejšnji vladi.",
+          "main_frame": "Odgovornost prejšnje vlade",
+          "frame_description": "Minister zaščiti državljane pred podražitvijo, ki naj bi bila posledica politike prejšnje vlade; ZZZS hoče primanjkljaj pokriti »iz žepov davkoplačevalcev«. Predsednica skupščine je predstavljena s strankarsko pripadnostjo.",
+          "lede_focus": "Uvod: minister je zavrnil predlog ZZZS, ki je »hotel … dvigniti Golobov obvezni prispevek«.",
           "loaded_language": [
             {
-              "quote": "zloglasni zakon o uravnoteženju javnih financ",
-              "explanation": "Pridevnik »zloglasni« vrednoti zujf iz leta 2012.",
+              "quote": "drastično podražitev",
+              "explanation": "Okrepljen opis; drugi mediji pišejo o »izrednem zvišanju«.",
               "verified": true
             },
             {
-              "quote": "A od nekod bo treba vzeti.",
-              "explanation": "Avtorjev skeptični komentar k ministrovemu zagotovilu.",
+              "quote": "(Golobovega)",
+              "explanation": "Prispevek poosebi s prejšnjim premierjem in mu tako naloži odgovornost.",
               "verified": true
             },
             {
-              "quote": "Discipliniranje neodvisnih institucij?",
-              "explanation": "Vmesni naslov prevzame Boštjančičev okvir v obliki vprašanja.",
+              "quote": "iz žepov davkoplačevalcev",
+              "explanation": "Čustveno obarvan opis financiranja s prispevki.",
+              "verified": true
+            },
+            {
+              "quote": "sindikalistka in vidna članica SD",
+              "explanation": "Politična oznaka predsednice skupščine, ki je drugi mediji ne navajajo.",
               "verified": true
             }
           ],
           "editorial_statements": [
-            "A od nekod bo treba vzeti.",
-            "Ob tem velja spomniti, da pomislekov glede proračuna ne izražajo samo opozicija in sindikati."
+            "Zato hoče ZZZS iz žepov davkoplačevalcev zmanjšati finančni primanjkljaj, ki je, kot smo že poročali, posledica zdravstvene politike prejšnje vlade."
           ],
           "unique_facts": [
-            "Ukom je trditve opozicije že pred novinarsko konferenco označil za laži.",
-            "Nevladniki so odločevalce pozvali k premisleku glede rezov v socialnih transferjih.",
-            "DZ je predsednika fiskalnega sveta Davorina Kračuna pozval k izselitvi iz službenega stanovanja v 14 dneh; fiskalni svet je edini objavil kvantitativno analizo interventnega zakona (po Boštjančiču).",
-            "Asta Vrečko: vlada gre »z motorko po proračunu«."
+            "ZZZS: proračunski transfer za 2027 naj bi znašal 380 milijonov evrov, manj kot v preteklih letih.",
+            "Sprememba višine prispevka bi zahtevala spremembo zakona."
           ],
-          "reasoning": "Ministrove trditve so podrobno in pošteno povzete, opozicija dobi enak prostor. Avtor pa doda skeptične pripombe (»A od nekod bo treba vzeti«, »velja spomniti«) in kontekst, ki ministrova zagotovila postavlja pod vprašaj; izraz »zloglasni« vrednoti zujf. Besedilo je zato ocenjeno kot Sredina-Levo, naslov kot Sredina.",
-          "confidence": "Srednja",
-          "lean_score": -1.0,
-          "category": "komercialni",
-          "quotes_verified": true,
-          "published": "2026-11-13",
-          "word_count": 813,
-          "cited_sources": [
-            "STA"
-          ],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 37
-            },
-            {
-              "media": "MMC RTV SLO",
-              "percent": 25
-            }
-          ]
-        },
-        {
-          "media_name": "24ur",
-          "article_title": "Šircelj: Izplačane bodo vse zakonske pravice",
-          "article_url": "https://www.24ur.com/novice/slovenija/sircelj-izplacane-bodo-vse-zakonske-pravice.html",
-          "sensationalism_score": 2,
-          "bias_leaning": "Sredina-Levo",
-          "bias_evidence_quotes": [
-            "300 milijonov evrov nižji izdatki za to bodo posledica večje racionalnosti in preverjanja izpolnjevanja pogojev, trdi minister za finance Andrej Šircelj. V opoziciji so kritični.",
-            "Označil jih je za zavajanje in laži."
-          ],
-          "omitted_facts": [
-            "Znesek 2,2 milijarde evrov za socialne pravice.",
-            "Da časovnica prenove plačnega sistema še ni določena."
-          ],
-          "voices_heard": [
-            "Andrej Šircelj (minister za finance)",
-            "Asta Vrečko (Levica)",
-            "Klemen Boštjančič (Svoboda)",
-            "Davorin Kračun (fiskalni svet, posredno)",
-            "Inštitut 8. marec"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [
-            "Del o odzivu opozicije je skoraj enak kot pri RTV SLO in Svet24; vsi trije povzemajo STA."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov povzame ministrovo zagotovilo s pripisom (»Šircelj: …«), brez vrednotenja; izraz »zakonske pravice« natančno povzame bistvo njegovega zagotovila.",
-          "main_frame": "Uradna izjava in politični spor",
-          "frame_description": "Članek (STA) že v uvodu postavi ministrovo zagotovilo ob kritiko opozicije, nato podrobno povzame ministra, v drugem delu pa Levico, Svobodo, fiskalni svet in Inštitut 8. marec.",
-          "lede_focus": "Uvod navede ministrovo zagotovilo (z glagolom »trdi«), pojasnilo za 300 milijonov manj in že tudi opozicijsko kritiko »Vlada gre z motorko po proračunu«.",
-          "loaded_language": [
-            {
-              "quote": "je bil oster",
-              "explanation": "Ocenjevalni glagol govorjenja; opisuje ton izjave, ne vsebine.",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [],
-          "unique_facts": [
-            "Inštitut 8. marec: tako drastičnih rezov ni mogoče doseči z »mehkimi ukrepi«, temveč le z nižjimi transferji ali manj upravičenci; poziv je podpisalo več kot 12.500 ljudi.",
-            "Učinki interventnega zakona niso vključeni v predlog proračuna za 2027.",
-            "Pri prenovi plačnega sistema je predvideno tudi dogovarjanje s socialnimi partnerji."
-          ],
-          "reasoning": "Agencijsko besedilo, ki trditve dosledno pripisuje (»trdi«, »je poudaril«) in obe strani predstavi že v uvodu. Ministrov očitek o »zavajanju in lažeh« je naveden kot njegova ocena. Edini ocenjevalni glagol (»je bil oster«) opisuje ton, ne vsebine. Smer: −0,6 – kritika opozicije je že v uvodu, na koncu pa doda še Inštitut 8. marec s peticijo; kritični glasovi dobijo več kot polovico besedila, zato rahlo Sredina-Levo.",
+          "reasoning": "Dejstva v tem članku so pravilna in ZZZS je citiran, vključno s podatkom o manjšem transferju. Naslov in avtorski stavek pa primanjkljaj enostransko pripišeta prejšnji vladi, predsednica skupščine je označena strankarsko, opozicija ne dobi besede. Smer: +1,75 – Sredina-Desno (naslov Desno).",
           "confidence": "Visoka",
-          "lean_score": -0.6,
-          "category": "komercialni",
+          "lean_score": 1.75,
+          "category": "alternativni",
           "quotes_verified": true,
-          "published": "2026-11-13T12:08:00+01:00",
-          "word_count": 942,
+          "published": "2026-11-18T10:15:31+00:00",
+          "word_count": 290,
           "cited_sources": [],
-          "text_overlap": [
-            {
-              "media": "Svet24",
-              "percent": 26
-            },
-            {
-              "media": "MMC RTV SLO",
-              "percent": 21
-            }
-          ]
-        },
-        {
-          "media_name": "Portal24",
-          "article_title": "Minister Šircelj zavrača strašenje: Izplačane bodo vse zakonske pravice",
-          "article_url": "https://portal24.si/minister-sircelj-zavraca-strasenje-izplacane-bodo-vse-zakonske-pravice/",
-          "sensationalism_score": 3,
-          "bias_leaning": "Sredina-Desno",
-          "bias_evidence_quotes": [
-            "Minister Šircelj zavrača strašenje",
-            "je dejal in njihove navedbe označil za zavajanje in laži, poroča STA"
-          ],
-          "omitted_facts": [
-            "Odziva opozicije (Levica, Svoboda), čeprav članek omenja njihova opozorila.",
-            "Stališče Inštituta 8. marec in drugih nevladnikov.",
-            "Znesek 2,2 milijarde evrov za socialne pravice."
-          ],
-          "voices_heard": [
-            "Andrej Šircelj (minister za finance)"
-          ],
-          "sides_represented": "Samo ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Besedilo je preoblikovana vest STA (navedeno v članku), zato je dobesednega prekrivanja z drugimi mediji malo (7 % z 24ur), vsebina ministrovega dela pa se ujema s 24ur."
-          ],
-          "headline_leaning": "Sredina-Desno",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov ministrov izraz »strašenje« zapiše brez narekovajev (»Minister Šircelj zavrača strašenje«), kar sporne trditve opozicije že v naslovu označi kot strašenje; drugi del je pripisano ministrovo zagotovilo.",
-          "main_frame": "Uradna izjava",
-          "frame_description": "Predelana vest STA, ki po vrsti povzame ministrova zagotovila; vmesni naslovi (»Proračun naj bi ostal znotraj fiskalnih pravil«) so previdno pogojni.",
-          "lede_focus": "Uvod povzame ministrovo zagotovilo in pojasnilo za 300 milijonov manj porabe.",
-          "loaded_language": [
-            {
-              "quote": "zavrača strašenje",
-              "explanation": "Ministrov izraz v naslovu brez pripisa; opozorila nasprotnikov vnaprej označi kot strašenje.",
-              "verified": true
-            },
-            {
-              "quote": "je bil oster",
-              "explanation": "Ocenjevalni glagol govorjenja, prevzet iz STA; opisuje ton.",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [],
-          "unique_facts": [],
-          "reasoning": "Besedilo je zvesto in previdno pripisano (»po Šircljevih zagotovilih«, »naj bi«), zato je ocenjeno kot Sredina. Naslov pa prevzame ministrov izraz »strašenje« in opozicija, na katero se minister odziva, ne dobi besede. Smer: +1 – objavi samo ministra in v naslovu prevzame njegov izraz »strašenje«; opozicija ne dobi besede. Zato Sredina-Desno.",
-          "confidence": "Visoka",
-          "lean_score": 1.0,
-          "category": "komercialni",
-          "quotes_verified": true,
-          "published": "2026-11-13",
-          "word_count": 458,
-          "cited_sources": [
-            "STA"
-          ],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 7
-            }
-          ]
+          "text_overlap": []
         }
       ],
-      "neutral_summary": "Finančni minister Andrej Šircelj je zagotovil, da bodo vsi zakonsko določeni prejemki izplačani in da novega zakona za uravnoteženje javnih financ ne bo. Opozorila o krčenju pravic je označil za politiko strahu in zavisti. Opozicijski stranki Levica in Svoboda trdita, da proračun za prihodnji dve leti zmanjšuje sredstva za transferje, šolstvo in zdravstvo, ter opozarjata, da za zagotovila ni pisne podlage.",
-      "context": "Proračunska dokumenta za leti 2027 in 2028 sta v postopku v državnem zboru. O zakonu o interventnih ukrepih za razvoj Slovenije bodo volivci 6. decembra odločali na referendumu. Opozicija opozarja, da proračun predvideva manj sredstev za socialne transferje, vlada pa razliko pripisuje boljšemu nadzoru nad upravičenostjo.",
+      "neutral_summary": "ZZZS je vladi predlagal izredno zvišanje obveznega zdravstvenega prispevka na 48,60 evra mesečno, ker za leto 2027 napoveduje 136 milijonov evrov nepokritega primanjkljaja. Minister Ostrc je predlog zavrnil, težave pripisal odločitvam prejšnje vlade in od ZZZS zahteval varčevanje. Predsednica skupščine ZZZS in opozicija odgovarjajo, da je primanjkljaj povečala sedanja vlada z zmanjšanjem proračunskih sredstev. ZZZS kot razloge navaja oboje: razkorak po ukinitvi dopolnilnega zavarovanja in manjši proračunski transfer.",
+      "context": "Zgodba nadaljuje novembrske težave ZZZS z likvidnostjo (zamik 185 milijonov evrov plačil v leto 2027). Prispevek se sicer vsako leto 1. marca uskladi z rastjo plač; brez izrednega zvišanja bi marca 2027 znašal predvidoma 43,11 evra. Višina prispevka je določena z zakonom, zato je predlog ZZZS le pobuda vladi.",
       "key_differences": [
-        "Minister je opozorila opozicije označil za zavajanje in laži. 24ur, Žurnal24 in Svet24 to navedejo kot njegovo trditev, Nova24TV isti očitek zapiše v avtorjevem glasu brez pripisa (»v luči zavajanj in laži s strani opozicijskih strank«), RTV SLO pa očitka o lažeh ne omeni in navede le »zavajanje in strašenje«.",
-        "Odziv opozicije (Levica, Svoboda) objavijo RTV SLO, 24ur in Svet24; Nova24TV in Žurnal24 objavita samo ministra.",
-        "24ur je najcelovitejši: kritiko opozicije navede že v uvodu, poleg obeh strank pa objavi še fiskalni svet in Inštitut 8. marec, ki trdi, da tako velikih rezov ni mogoče doseči z »mehkimi ukrepi«.",
-        "Svet24 doda kritični kontekst in avtorjeve pripombe: Ukom je trditve opozicije že pred konferenco označil za laži, avtor pripomni »A od nekod bo treba vzeti.«",
-        "Naslovi: RTV SLO, 24ur in Svet24 navedejo ministrove besede s pripisom, Žurnal24 ga predstavi kot pomirjevalca (»Šircelj miri«), Nova24TV pa ministrov izraz »strašenje opozicije« zapiše kot dejstvo.",
-        "RTV SLO, 24ur in Svet24 imajo del o opoziciji skoraj enak, ker povzemajo STA; drugi del članka Nova24TV je povzet po MMC.",
-        "Portal24 objavi predelano vest STA samo z ministrovo stranjo: kritike opozicije, sindikatov in nevladnikov omeni v enem stavku, nihče od njih pa ne dobi besede. Naslov prevzame ministrov izraz »strašenje«."
+        "Vsak tabor navede le del razlogov, ki jih je navedel ZZZS. Minister in Nova24TV poudarita razkorak po ukinitvi dopolnilnega zavarovanja (prejšnja vlada), predsednica skupščine ZZZS in opozicija (v RTV SLO in N1) zmanjšanje proračunskih sredstev (sedanja vlada). ZZZS v svoji izjavi navaja oboje.",
+        "Nova24TV edina navede, da naj bi proračunski transfer ZZZS za leto 2027 znašal le 380 milijonov evrov, a tega ne poveže s sedanjo vlado; primanjkljaj v avtorskem besedilu pripiše »zdravstveni politiki prejšnje vlade«.",
+        "RTV SLO in N1 objavita ministra, ZZZS, predsednico skupščine ZZZS ter Svobodo, SD in Levico; Žurnal24 ministra in ZZZS (odzivi so v ločenem poznejšem članku); Nova24TV samo ministra in ZZZS.",
+        "Žurnal24 opozori, da minister ni predstavil izračuna, koliko bi prihranili z napovedanimi ukrepi; RTV SLO zapiše, da na to vprašanje ni odgovoril.",
+        "Naslovi: RTV SLO postavi minister in ZZZS enakovredno (»Ostrc: … ZZZS: …«); Nova24TV uporabi »drastično podražitev (Golobovega) … prispevka«."
       ],
       "fact_matrix": [
         {
-          "fact": "Minister zagotavlja izplačilo pokojnin, štipendij, porodniških nadomestil in socialnih prejemkov",
+          "fact": "Predlog: zvišanje z 39,36 na 48,60 evra mesečno",
           "media": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
+            "N1"
           ]
         },
         {
-          "fact": "»Nobenega zujfa ne bo«",
+          "fact": "Minister predloga ne podpira",
           "media": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "Svet24",
-            "24ur"
+            "N1"
           ]
         },
         {
-          "fact": "Minister opozorila opozicije označi za zavajanje in laži",
-          "media": [
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
-          ]
-        },
-        {
-          "fact": "Opozorila o krčenju pravic označi za »politiko strahu in politiko zavisti«",
-          "media": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Svet24",
-            "24ur",
-            "Portal24"
-          ]
-        },
-        {
-          "fact": "Okoli 300 milijonov evrov prihrankov iz gospodarnejše porabe in povezovanja evidenc",
+          "fact": "ZZZS za 2027 napoveduje okoli 136 milijonov evrov primanjkljaja kljub ukrepom",
           "media": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
+            "N1"
           ]
         },
         {
-          "fact": "Dolg se bo zmanjševal za vsaj 0,5 odstotne točke BDP letno",
+          "fact": "Zvišanje bi prineslo okoli 141 milijonov evrov",
+          "media": [
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Skupščina ZZZS bo o predlogu odločala 25. novembra",
           "media": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
+            "N1"
           ]
         },
         {
-          "fact": "Rebalans proračuna, če bo sprejet razvojni (interventni) zakon",
+          "fact": "Redna uskladitev bi prispevek marca 2027 zvišala na okoli 43,11 evra",
+          "media": [
+            "Nova24TV",
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Minister: razkorak po ukinitvi dopolnilnega zavarovanja (135 milijonov, 2027 okoli 188 milijonov) in plačna reforma (123 milijonov)",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV",
             "Žurnal24",
-            "24ur",
-            "Portal24"
+            "N1"
           ]
         },
         {
-          "fact": "Plačni stebri (policija, vojska, zdravstvo) po koalicijski pogodbi",
+          "fact": "ZZZS: proračunski transfer za 2027 naj bi znašal 380 milijonov evrov",
+          "media": [
+            "Nova24TV"
+          ]
+        },
+        {
+          "fact": "Rebalans 2026 je ZZZS zmanjšal sredstva za 100 milijonov evrov",
           "media": [
             "MMC RTV SLO",
-            "Nova24TV",
             "Žurnal24",
-            "24ur",
-            "Portal24"
+            "N1"
           ]
         },
         {
-          "fact": "Primer neupoštevanih obveznosti prejšnje vlade: posledice dviga minimalne plače",
-          "media": [
-            "Nova24TV",
-            "Žurnal24",
-            "24ur",
-            "Portal24"
-          ]
-        },
-        {
-          "fact": "Časovnica prenove plačnega sistema še ni določena",
+          "fact": "Primerjava s Hrvaško (5,8 proti 6,7 milijarde evrov)",
           "media": [
             "MMC RTV SLO",
             "Žurnal24"
           ]
         },
         {
-          "fact": "Socialne pravice v proračunu: 2,2 milijarde evrov",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Referendum o interventnem zakonu 6. decembra",
+          "fact": "Minister na vprašanje o višini prihrankov ni odgovoril oziroma izračuna ni predstavil",
           "media": [
             "MMC RTV SLO",
-            "Svet24",
-            "24ur",
-            "Portal24"
+            "Žurnal24"
           ]
         },
         {
-          "fact": "Ukom je trditve opozicije pred konferenco označil za laži",
-          "media": [
-            "Svet24"
-          ]
-        },
-        {
-          "fact": "Nevladniki (Inštitut 8. marec) opozarjajo na reze v socialnih transferjih",
-          "media": [
-            "Svet24",
-            "24ur"
-          ]
-        },
-        {
-          "fact": "Odziv Levice: rez pri socialni državi, več za vojsko",
+          "fact": "Predsednica skupščine Vuk bo predlagala diferenciran (progresiven) prispevek",
           "media": [
             "MMC RTV SLO",
-            "Svet24",
-            "24ur"
+            "N1"
           ]
         },
         {
-          "fact": "Odziv Svobode: za zagotovila ni zakona, seznama ne ocene; »amerikanizacija Slovenije«",
+          "fact": "Odzivi Svobode, SD in Levice",
           "media": [
             "MMC RTV SLO",
-            "Svet24",
-            "24ur"
+            "N1"
           ]
         },
         {
-          "fact": "DZ je predsednika fiskalnega sveta pozval k izselitvi iz službenega stanovanja",
+          "fact": "Projekcija ZZZS že vključuje 100 milijonov manj za bolniška nadomestila in prenos 145 milijonov v 2028",
           "media": [
-            "Svet24",
-            "24ur"
-          ]
-        },
-        {
-          "fact": "Učinki interventnega zakona niso vključeni v predlog proračuna 2027",
-          "media": [
-            "24ur",
-            "Portal24"
+            "MMC RTV SLO",
+            "N1"
           ]
         }
       ],
@@ -603,885 +391,401 @@
       "has_international_source": false,
       "source_checks": [
         {
-          "claim": "V proračunu za leto 2027 je za socialne transferje predvidenih nekaj več kot 300 milijonov evrov manj.",
+          "claim": "Obvezni zdravstveni prispevek trenutno znaša 39,36 evra mesečno.",
           "claimed_by": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
+            "N1"
           ],
           "status": "Potrjeno",
-          "finding": "Po tabeli ministrstva za finance v oceni fiskalnega sveta naj bi se transferji posameznikom in gospodinjstvom znižali z 2.234 na 1.901 milijona evrov (−333 milijonov oziroma −14,9 %).",
+          "finding": "Uradni list RS 16/2026: od 1. marca 2026 znaša prispevek 39,36 evra.",
           "sources": [
             {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+              "title": "Uradni list RS 16/2026: višina obveznega zdravstvenega prispevka",
+              "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2026-01-0608/visina-obveznega-zdravstvenega-prispevka"
             }
           ]
         },
         {
-          "claim": "Socialne pravice so v proračunu določene v višini 2,2 milijarde evrov.",
+          "claim": "Prispevek »trenutno znaša 39,96 evrov« (drug članek Nova24TV in citat poslanke Godec).",
           "claimed_by": [
-            "MMC RTV SLO"
-          ],
-          "status": "Delno potrjeno",
-          "finding": "2,2 milijarde (2.234 milijonov) je znesek transferjev posameznikom in gospodinjstvom za leto 2026. Za leto 2027 je v predlogu proračuna predvidenih 1.901 milijona. Ni jasno, ali je minister imel v mislih drugo kategorijo izdatkov.",
-          "sources": [
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
-            }
-          ]
-        },
-        {
-          "claim": "Prihranki bodo dosegli z boljšim preverjanjem upravičenosti in povezovanjem evidenc, brez posegov v pravice.",
-          "claimed_by": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
-          ],
-          "status": "Vprašljivo",
-          "finding": "Fiskalni svet ugotavlja, da obrazložitev proračuna predvideva uskladitev transferjev z inflacijo (3,7 %). Brez spremembe višine pravic bi bilo treba pri petih največjih transferjih število upravičencev zmanjšati za petino do tretjino; podlage za tako zmanjšanje v dokumentih niso predstavljene.",
-          "sources": [
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
-            }
-          ]
-        },
-        {
-          "claim": "Proračun bo v okviru fiskalnih pravil.",
-          "claimed_by": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
+            "Nova24TV"
           ],
           "status": "V nasprotju z virom",
-          "finding": "Po oceni fiskalnega sveta naj bi skupna rast neto izdatkov, po kateri se presoja spoštovanje fiskalnih pravil, presegala zavezo iz srednjeročnega fiskalnega načrta; ukrepi za znižanje primanjkljaja niso jasno predstavljeni.",
+          "finding": "Po Uradnem listu znaša prispevek 39,36 evra. Zvišanje na 48,60 evra je zato 9,24 evra, ne 8,64 evra, kot navaja citirani zapis.",
           "sources": [
             {
-              "title": "Fiskalni svet: povzetek ocene",
-              "url": "https://www.fs-rs.si/ocena-proracunskih-dokumentov-za-leti-2027-in-2028/"
-            },
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+              "title": "Uradni list RS 16/2026: višina obveznega zdravstvenega prispevka",
+              "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2026-01-0608/visina-obveznega-zdravstvenega-prispevka"
             }
           ]
         },
         {
-          "claim": "Javni dolg se bo zmanjševal za najmanj 0,5 odstotne točke BDP letno.",
+          "claim": "ZZZS predlaga zvišanje na 48,60 evra s 1. marcem 2027, kar bi prineslo okoli 141 milijonov evrov; gre za pobudo vladi.",
           "claimed_by": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24"
-          ],
-          "status": "Vprašljivo",
-          "finding": "V projekciji fiskalnega sveta brez nepojasnjenih ukrepov dolg pade s 63,4 % BDP (2026) na 62,7 % (2027), v letu 2028 pa naraste na 63,6 %. Povprečno znižanje za 0,7 odstotne točke izpolni zahtevo le zaradi porabe sredstev na računih zakladnice; brez tega bi znašalo 0,4 odstotne točke.",
-          "sources": [
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
-            }
-          ]
-        },
-        {
-          "claim": "Učinki interventnega zakona niso vključeni v proračun; ob njegovem sprejetju bo potreben rebalans.",
-          "claimed_by": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "24ur",
-            "Portal24"
+            "N1"
           ],
           "status": "Potrjeno",
-          "finding": "Fiskalni svet potrjuje, da učinki zakona niso v osnovni projekciji. Po oceni ministrstva za finance bi se primanjkljaj ob uveljavitvi povečal še za okoli 650 milijonov evrov.",
+          "finding": "Ujema se z izjavo ZZZS; višino prispevka lahko spremeni le zakon.",
           "sources": [
             {
-              "title": "Fiskalni svet: govor na odboru DZ 13. 11. 2026",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Govor-OF2028_13nov26_koncni_obj.pdf"
-            },
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
             }
           ]
         },
         {
-          "claim": "Spremembe plačnega sistema bodo v okviru proračuna.",
+          "claim": "ZZZS za 2027 kljub ukrepom napoveduje okoli 136 milijonov evrov nepokritega primanjkljaja.",
           "claimed_by": [
             "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "24ur",
-            "Portal24"
+            "N1"
           ],
-          "status": "Vprašljivo",
-          "finding": "Predlog proračuna predvideva znižanje stroškov dela za 160 milijonov evrov v letu 2027, čeprav se plačna reforma nadaljuje (povprečna plača v javnem sektorju +6,5 %). Fiskalni svet ocenjuje razkorak na več kot 500 milijonov evrov in pravi, da v dokumentih ni pojasnila.",
+          "status": "Potrjeno",
+          "finding": "Ujema se z izjavo ZZZS; projekcija že vključuje prenos 145 milijonov evrov plačil v leto 2028.",
           "sources": [
             {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
             }
           ]
         },
         {
-          "claim": "Prejšnja vlada je pustila obveznosti, ki niso bile vključene v proračun (posledice dviga minimalne plače).",
+          "claim": "Razkorak zaradi ukinitve dopolnilnega zavarovanja bo leta 2027 znašal skoraj 188 milijonov evrov (minister).",
           "claimed_by": [
+            "MMC RTV SLO",
+            "Žurnal24",
+            "N1"
+          ],
+          "status": "Potrjeno",
+          "finding": "ZZZS v izjavi navaja »približno 188 milijonov evrov razkoraka«.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        },
+        {
+          "claim": "Primanjkljaj je sistemska posledica odločitev prejšnje vlade (minister; Nova24TV v avtorskem besedilu).",
+          "claimed_by": [
+            "MMC RTV SLO",
             "Nova24TV",
             "Žurnal24",
-            "24ur",
-            "Portal24"
+            "N1"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "ZZZS kot razloga navaja razkorak po ukinitvi dopolnilnega zavarovanja in plačno reformo (odločitvi prejšnje vlade), a hkrati izrecno tudi to, da se sredstva državnega proračuna zmanjšujejo: transfer za 2027 naj bi po predlogu znašal le 380 milijonov evrov.",
+          "sources": [
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            },
+            {
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+            }
+          ]
+        },
+        {
+          "claim": "»Minus zdravstvene blagajne« je posledica rebalansa, s katerim je vlada ZZZS odvzela 100 milijonov evrov (predsednica skupščine Vuk, opozicija).",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "N1"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "Rebalans je povečal zamik plačil v leto 2027 s 85 na 185 milijonov evrov. Primanjkljaj za 2027 pa ima po ZZZS več vzrokov, med njimi razkorak po ukinitvi dopolnilnega zavarovanja (188 milijonov) in manjši transfer za 2027.",
+          "sources": [
+            {
+              "title": "ZZZS, sporočilo 11. 11. 2026",
+              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+            },
+            {
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
+            }
+          ]
+        },
+        {
+          "claim": "Slovenija je zbrala 5,8 milijarde, Hrvaška 6,7 milijarde evrov; 2.600 proti 1.650 evrom na osebo (minister).",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Žurnal24"
           ],
           "status": "Ni preverljivo",
-          "finding": "V pregledanih dokumentih fiskalnega sveta te trditve nismo mogli preveriti.",
+          "finding": "Podatkov hrvaškega zavoda nismo preverili. Primerjava ne upošteva razlik v plačah in cenah zdravstvenih storitev med državama.",
+          "sources": []
+        },
+        {
+          "claim": "Dopolnilno zavarovanje bi danes zagotovo znašalo več kot 65 evrov (Kozlovič, Svoboda).",
+          "claimed_by": [
+            "N1"
+          ],
+          "status": "Ni preverljivo",
+          "finding": "Gre za oceno na podlagi napovedi zavarovalnic iz leta 2023, ki je ni mogoče preveriti.",
           "sources": []
         }
       ],
       "missing_context": [
         {
-          "text": "Istega dne (13. 11.) je predsednik fiskalnega sveta na odboru DZ dejal, da proračun za 2027 predvideva okoli 700 milijonov evrov ukrepov, ki v dokumentih niso pojasnjeni; skupaj z interventnim zakonom gre za okoli 1,3 milijarde evrov nepojasnjenih ukrepov.",
+          "text": "ZZZS je septembra zapisal, da bi brez učinkov ukinitve dopolnilnega zavarovanja in plačne reforme posloval izravnano; celoten letni učinek plačne reforme je ocenil na okoli 587 milijonov evrov. Minister je navedel 123 milijonov kot učinek v letu 2027 – številki se ne izključujeta, a merita različno.",
           "sources": [
             {
-              "title": "Fiskalni svet: govor na odboru DZ 13. 11. 2026",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Govor-OF2028_13nov26_koncni_obj.pdf"
+              "title": "ZZZS, upravni odbor 28. 9. 2026",
+              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
             }
           ]
         },
         {
-          "text": "Vlada za leto 2028 načrtuje primanjkljaj 2,3 % BDP, po projekciji fiskalnega sveta ob veljavnih politikah pa bi se približal 4 % BDP.",
+          "text": "V isti izjavi ZZZS poudarja, da samo zvišanje prispevka dolgoročno ne more rešiti finančnih težav; potrebni so tudi nadzor odhodkov, sistemska ureditev financiranja in zadostna javna sredstva.",
           "sources": [
             {
-              "title": "Fiskalni svet: govor na odboru DZ 13. 11. 2026",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Govor-OF2028_13nov26_koncni_obj.pdf"
-            },
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
-            }
-          ]
-        },
-        {
-          "text": "Fiskalni svet opozarja, da scenarij brez dodatnih ukrepov povečuje verjetnost postopka EU zaradi presežnega primanjkljaja proti Sloveniji.",
-          "sources": [
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
-            }
-          ]
-        },
-        {
-          "text": "Po izračunu fiskalnega sveta bi lahko tako obsežno omejevanje porabe zmanjšalo gospodarsko aktivnost za okoli 0,6 % kratkoročno in blizu 1,5 % dolgoročno; vladne projekcije tega ne upoštevajo.",
-          "sources": [
-            {
-              "title": "Fiskalni svet: Ocena proračunskih dokumentov za leti 2027 in 2028 (oktober 2026)",
-              "url": "https://www.fs-rs.si/wp-content/uploads/2026/10/Ocena_oktober2026.pdf"
-            }
-          ]
-        },
-        {
-          "text": "Po analizi fiskalnega sveta bi interventni zakon leta 2027 neposredno poslabšal saldo za okoli 1,2 milijarde evrov (1,5 % BDP); višja gospodarska rast bi to nadomestila za okoli četrtino kratkoročno in polovico po desetih letih.",
-          "sources": [
-            {
-              "title": "Fiskalni svet: Analiza učinkov interventnega zakona",
-              "url": "https://www.fs-rs.si/analiza-javnofinancnih-ucinkov-zakona-o-interventnih-ukrepih-za-razvoj-slovenije/"
+              "title": "Izjava ZZZS o pobudi za zvišanje prispevka (RTV SLO/STA, 17. 11.)",
+              "url": "https://www.rtvslo.si/zdravje/zzzs-predlaga-zvisanje-obveznega-zdravstvenega-prispevka/800426"
             }
           ]
         }
       ],
-      "not_covered_by": [
-        "N1",
-        "Mladina"
-      ]
+      "not_covered_by": []
     },
     {
-      "topic_title": "ZZZS zaradi poslabšane likvidnosti zamika do 185 milijonov evrov plačil v leto 2027",
-      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro slovenskih virov: Zavod za zdravstveno zavarovanje Slovenije bo zaradi poslabšane likvidnosti ob koncu leta do 185 milijonov evrov obveznosti do izvajalcev zdravstvenih storitev in drugih partnerjev poravnal šele v začetku leta 2027.",
+      "topic_title": "Vlada sprejela novelo: taksi prevozi tudi prek aplikacij, taksimeter ni več obvezen",
+      "international_baseline": "Mednarodni vir o dogodku ne poroča. Skupno jedro: vlada je sprejela predlog novele zakona o prevozih v cestnem prometu, po kateri bodo lahko avtotaksi prevozniki ceno določili s taksimetrom ali z aplikacijo, ki pred vožnjo prikaže pot, najvišjo ceno in podatke o vozilu; plačilo prek aplikacije bo brezgotovinsko. Taksi vozniki bodo morali znati slovensko, na dvojezičnih območjih tudi italijansko oziroma madžarsko. Predlog gre v državni zbor.",
       "coverage_comparison": [
         {
           "media_name": "MMC RTV SLO",
-          "article_title": "ZZZS bo do 185 milijonov evrov zapadlih obveznosti poravnal na začetku leta 2027",
-          "article_url": "https://www.rtvslo.si/zdravje/zzzs-bo-do-185-milijonov-evrov-zapadlih-obveznosti-poravnal-na-zacetku-leta-2027/799769",
+          "article_title": "Vlada sprejela predlog zakonske novele, ki omogoča izvajanje avtotaksi storitev tudi z aplikacijo",
+          "article_url": "https://www.rtvslo.si/slovenija/vlada-sprejela-predlog-zakonske-novele-ki-omogoca-izvajanje-avtotaksi-storitev-tudi-z-aplikacijo/800448",
           "sensationalism_score": 1,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Desno",
           "bias_evidence_quotes": [
-            "je poslabšana likvidnost ZZZS-ja v letu 2026 posledica več medsebojno povezanih dejavnikov",
-            "Pomemben dejavnik je ob koncu leta po navedbah zavoda tudi nepričakovano zmanjšanje transfera iz državnega proračuna"
+            "S predlaganimi spremembami gre država nasproti ponudnikom, ki uporabljajo tovrstni model prevozov, med njimi Uber.",
+            "ena je bila po Dvornikovih besedah zahteva sindikata taksistov po strožjem nadzoru nad tem, kdo avto taksi prevoze opravlja"
           ],
-          "omitted_facts": [],
+          "omitted_facts": [
+            "Nasprotovanje sindikata taksistov odpravi obveznega taksimetra in opozorila o provizijah platform.",
+            "Možnost prepovedi uporabe aplikacije ob nepravilnostih."
+          ],
           "voices_heard": [
-            "ZZZS (sporočilo za javnost)"
+            "Marko Dvornik (državni sekretar)"
           ],
-          "sides_represented": "Pretežno ena stran",
+          "sides_represented": "Samo ena stran",
           "factual_errors": [],
           "notes": [
-            "Povzetek sporočila za javnost ZZZS; odzivov vlade, opozicije ali izvajalcev v tem članku ni. O posledicah za izvajalce je RTV SLO poročal v ločenem prispevku »Mali izvajalci o zamiku plačil ZZZS-ja«."
+            "Spletni članek vključuje še druge sklepe vlade (poroštvo 2TDK, inovacijski vavčerji), ki v analizo niso zajeti."
           ],
           "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Informativen naslov, ki navede znesek in rok; brez vrednotenja.",
-          "main_frame": "Uradno sporočilo institucije",
-          "frame_description": "Članek po vrsti povzame sporočilo ZZZS: obseg in razlog zamika, izvedbo, vse navedene vzroke in na koncu zmanjšanje proračunskega transfera.",
-          "lede_focus": "Uvod navede, da so težave po navedbah ZZZS posledica sistemskih finančnih pritiskov in da dolgotrajna oskrba ni prizadeta.",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Informativen naslov, ki opiše odločitev vlade.",
+          "main_frame": "Uradna odločitev vlade",
+          "frame_description": "Povzetek odločitve vlade s pojasnili državnega sekretarja; sindikat je omenjen le kot pobudnik strožjega nadzora, ne kot nasprotnik.",
+          "lede_focus": "Uvod našteje novosti (taksimeter ali aplikacija, brezgotovinsko plačilo, znanje slovenščine).",
           "loaded_language": [],
           "editorial_statements": [],
           "unique_facts": [
-            "Z oktobrskim rebalansom je bil proračunski transfer zmanjšan s 520 na 420 milijonov evrov; ZZZS je DZ že septembra pozval, naj sredstva ohrani.",
-            "Okoli 85 odstotkov zamika se nanaša na izvajalce zdravstvenih storitev; zamik se začne predvidoma 21. decembra.",
-            "Obveznosti bodo poravnane v januarju z novim likvidnostnim posojilom v sistemu enotnega zakladniškega računa.",
-            "Dolgotrajna oskrba ni prizadeta."
+            "Dosedanji zakon je zaradi nerodne dikcije omogočal hkratno obračunavanje časa in razdalje, česar inšpekcija ni mogla sankcionirati.",
+            "Ministrstvo zagovarja, da cene določa trg, in ne želi novih regulacij."
           ],
-          "reasoning": "Članek zvesto in v celoti povzame sporočilo ZZZS, vse trditve so pripisane zavodu, brez vrednostnih izrazov. Navede vse vzroke, tudi tiste, ki zadevajo prejšnjo vlado (ukinitev dopolnilnega zavarovanja, plačna reforma), in tistega, ki zadeva sedanjo (zmanjšanje proračunskega transfera). Smer: 0 – navede vzroke, ki bremenijo obe vladi, brez poudarka.",
-          "confidence": "Visoka",
-          "lean_score": 0.0,
+          "reasoning": "Besedišče je nevtralno, vendar besedo dobi le vlada; sindikat je omenjen samo kot pobudnik ene od rešitev, njegovega nasprotovanja ni. Smer: +0,5 – samo vladna stran pri spornem ukrepu, zato rahlo Sredina-Desno.",
+          "confidence": "Srednja",
+          "lean_score": 0.5,
           "category": "javni",
           "quotes_verified": true,
-          "published": "2026-11-11",
-          "word_count": 476,
+          "published": "2026-11-18T06:35:15+00:00",
+          "word_count": 546,
           "cited_sources": [],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 77
-            },
-            {
-              "media": "Žurnal24",
-              "percent": 13
-            },
-            {
-              "media": "Info360",
-              "percent": 10
-            },
-            {
-              "media": "Nova24TV",
-              "percent": 8
-            },
-            {
-              "media": "Portal24",
-              "percent": 7
-            }
-          ]
+          "text_overlap": []
         },
         {
           "media_name": "Nova24TV",
-          "article_title": "Golobova vlada se je hvalila z zgodovinskim ukrepom, danes ZZZS zaradi njega tone v likvidnostne težave",
-          "article_url": "https://nova24tv.si/golobova-vlada-se-je-hvalila-z-zgodovinskim-ukrepom-danes-zzzs-zaradi-njega-tone-v-likvidnostne-tezave/",
-          "sensationalism_score": 7,
-          "bias_leaning": "Desno",
+          "article_title": "Vlada odpravlja obvezni taksimeter: Prihaja Uberjev model",
+          "article_url": "https://nova24tv.si/vlada-odpravlja-obvezni-taksimeter-prihaja-uberjev-model/",
+          "sensationalism_score": 4,
+          "bias_leaning": "Sredina-Desno",
           "bias_evidence_quotes": [
-            "Danes je mogoče videti, kako nepremišljen je bil ukrep tako imenovane ukinitve oziroma preoblikovanja dopolnilnega zdravstvenega zavarovanja.",
-            "Kot vidimo, res ni vseeno, kdo vodi državo."
+            "Odpiramo vrata sodobnim taksi prevozom!",
+            "Na ministrstvu zavračajo očitke o deregulaciji trga."
           ],
           "omitted_facts": [
-            "Zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov z oktobrskim rebalansom, ki ga ZZZS v istem sporočilu navaja kot pomemben dejavnik in ga navedejo vsi štirje drugi mediji.",
-            "Izvedbene podrobnosti: 85 % zamika se nanaša na izvajalce, poplačilo v januarju z novim posojilom, dolgotrajna oskrba ni prizadeta.",
-            "Posledice za izvajalce zdravstvenih storitev.",
-            "Sedanji odziv prejšnje vlade ali zagovornikov ukrepa."
+            "Kdo očita deregulacijo: stališče sindikata taksistov in opozorila o provizijah ter dinamičnih cenah.",
+            "Globe in nadzor nad aplikacijami."
           ],
           "voices_heard": [
-            "ZZZS (upravni odbor)",
-            "Zvone Černač (SDS, izjave iz leta 2023)",
-            "Robert Golob (izjave iz leta 2023)",
-            "Inštitut 8. marec (izjave iz let 2023 in 2025)"
+            "Jernej Vrtovec (minister za infrastrukturo)",
+            "ministrstvo"
           ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [
-            "Naslov težave pripiše enemu ukrepu (»zaradi njega«), ZZZS pa v istem članku navaja »več medsebojno povezanih dejavnikov«, med njimi plačno reformo, višje stroške dela, dvig minimalne plače, zimski regres in staranje prebivalstva."
-          ],
-          "notes": [
-            "Besedilo je po žanru komentar, objavljen brez oznake mnenja.",
-            "Članek citira sporočilo ZZZS o vzrokih, izpusti pa del istega sporočila o oktobrskem zmanjšanju proračunskega transfera za 100 milijonov evrov, ki ga je DZ sprejel z rebalansom sedanje vlade.",
-            "Sklep, da bi morale biti trditve o dobičkih zavarovalnic napačne, ker ima ZZZS danes težave, ne sledi iz navedenih podatkov: dobički zasebnih zavarovalnic in likvidnost ZZZS sta ločeni vprašanji.",
-            "Nasprotna stran je citirana le z izjavami iz preteklih let, ki jih članek nato zavrne."
-          ],
-          "headline_leaning": "Desno",
-          "body_leaning": "Desno",
-          "headline_analysis": "Naslov poveže pretekli ponos vlade (»se je hvalila z zgodovinskim ukrepom«) z današnjo krizo (»tone«) in težave pripiše enemu ukrepu (»zaradi njega«). Glagol »tone« je dramatičen, ironični kontrast pa je značilen za komentar.",
-          "main_frame": "Odgovornost prejšnje vlade",
-          "frame_description": "Likvidnostne težave so predstavljene kot dokaz, da je bila ukinitev dopolnilnega zavarovanja napaka prejšnje vlade. Članek citira takratna opozorila SDS, nato izjave Goloba in Inštituta 8. marec, ki jih zavrne, ter se konča s politično sodbo.",
-          "lede_focus": "Prvi stavek je avtorjeva sodba (»Danes je mogoče videti, kako nepremišljen je bil ukrep …«), šele drugi stavek poroča o sporočilu ZZZS.",
-          "loaded_language": [
-            {
-              "quote": "tone v likvidnostne težave",
-              "explanation": "Dramatična prispodoba v naslovu; ZZZS sam govori o »poslabšani likvidnosti«.",
-              "verified": true
-            },
-            {
-              "quote": "nepremišljen",
-              "explanation": "Avtorjeva ocena ukrepa, zapisana kot dejstvo v prvem stavku.",
-              "verified": true
-            },
-            {
-              "quote": "gluhe za opozorila",
-              "explanation": "Prispodoba, ki takratni koaliciji pripiše namerno ignoriranje kritike.",
-              "verified": true
-            },
-            {
-              "quote": "bogatunske kapitalistične zavarovalnice",
-              "explanation": "Ironično pretiravanje, s katerim avtor smeši argumente zagovornikov ukrepa.",
-              "verified": true
-            },
-            {
-              "quote": "še en biser prejšnje Golobove vlade",
-              "explanation": "Ironični izraz za plačno reformo.",
-              "verified": true
-            },
-            {
-              "quote": "populističen ukrep",
-              "explanation": "Avtorjeva sodba o ukrepu.",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [
-            "Danes je mogoče videti, kako nepremišljen je bil ukrep tako imenovane ukinitve oziroma preoblikovanja dopolnilnega zdravstvenega zavarovanja.",
-            "Že nekaj mesecev pozneje se je izkazalo, da je imel Černač prav",
-            "Tako se je danes le še dodatno pokazalo, za kako populističen ukrep je v resnici šlo.",
-            "Kot vidimo, res ni vseeno, kdo vodi državo."
-          ],
-          "unique_facts": [
-            "Opozorila poslanca SDS Zvoneta Černača iz leta 2023.",
-            "Izjave Roberta Goloba in Inštituta 8. marec ob uvedbi ukrepa (2023–2025)."
-          ],
-          "reasoning": "Članek vsebuje več avtorjevih sodb, zapisanih kot dejstva, in se konča s politično poanto (»res ni vseeno, kdo vodi državo«). Iz sporočila ZZZS izbere vzroke, ki bremenijo prejšnjo vlado, izpusti pa zmanjšanje proračunskega transfera, ki ga je sprejela sedanja koalicija; v naslovu težave pripiše enemu samemu ukrepu. Nasprotna stran nastopa le z izjavami iz preteklosti, ki jih avtor zavrača.",
-          "confidence": "Visoka",
-          "lean_score": 2.5,
-          "category": "alternativni",
-          "quotes_verified": true,
-          "published": "2026-11-12T10:21:56+00:00",
-          "word_count": 762,
-          "cited_sources": [
-            "STA",
-            "Siol",
-            "24ur"
-          ],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 10
-            },
-            {
-              "media": "MMC RTV SLO",
-              "percent": 7
-            }
-          ]
-        },
-        {
-          "media_name": "Žurnal24",
-          "article_title": "Težave zdravstvene blagajne: Odvzeli 100 milijonov, grozi še nov izpad",
-          "article_url": "https://www.zurnal24.si/slovenija/154-milijonov-minusa-placila-zdravnikom-in-dobaviteljem-prestavljena-468082",
-          "sensationalism_score": 6,
-          "bias_leaning": "Sredina-Levo",
-          "bias_evidence_quotes": [
-            "Janševa koalicija transferje iz proračuna za ZZZS zmanjšala za sto milijonov evrov",
-            "Odvzeli 100 milijonov, grozi še nov izpad"
-          ],
-          "omitted_facts": [
-            "Vladno pojasnilo, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov."
-          ],
-          "voices_heard": [
-            "ZZZS (sporočilo za javnost)"
-          ],
-          "sides_represented": "Pretežno ena stran",
+          "sides_represented": "Samo ena stran",
           "factual_errors": [],
-          "notes": [
-            "Vmesni naslov o »Janševi koaliciji« je avtorjev; ZZZS v citiranem sporočilu govori o odločitvi Državnega zbora."
-          ],
-          "headline_leaning": "Sredina-Levo",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov izpostavi enega od vzrokov, zmanjšanje proračunskih sredstev, z glagolom »odvzeli«, ki nakazuje dejanje vlade, in doda grožnjo novega izpada zaradi interventnega zakona. Glavno novico, zamik plačil, pusti v ozadju.",
-          "main_frame": "Odgovornost sedanje vlade",
-          "frame_description": "Članek povzame celotno sporočilo ZZZS z vsemi vzroki, vendar poudarek z naslovom in vmesnim naslovom (»Janševa koalicija transferje … zmanjšala za sto milijonov evrov«) ter sklepnim delom o interventnem zakonu usmeri na sedanjo vlado.",
-          "lede_focus": "Uvod navede primanjkljaj in zakonsko prepoved dolga ob koncu leta.",
+          "notes": [],
+          "headline_leaning": "Sredina-Desno",
+          "body_leaning": "Sredina-Desno",
+          "headline_analysis": "Naslov »Prihaja Uberjev model« poudari blagovno znamko in novost; »odpravlja obvezni taksimeter« je točen.",
+          "main_frame": "Posodobitev in digitalizacija",
+          "frame_description": "Članek začne z ministrovim zapisom na X in sklene z zavrnitvijo očitkov o deregulaciji v vmesnem naslovu »Enaki pogoji za vse«, ne da bi te očitke kdo izrekel.",
+          "lede_focus": "Uvod je ministrov citat z X: »Odpiramo vrata sodobnim taksi prevozom!«",
           "loaded_language": [
             {
-              "quote": "Odvzeli 100 milijonov",
-              "explanation": "Glagol »odvzeti« predstavi znižanje zgornje meje financiranja kot odvzem že dodeljenega denarja; Svet24 pojasni, da to ni nujno tako.",
-              "verified": true
-            },
-            {
-              "quote": "Janševa koalicija",
-              "explanation": "Vmesni naslov odločitev DZ pripiše strankam z imenom predsednika vlade.",
+              "quote": "Enaki pogoji za vse",
+              "explanation": "Vmesni naslov prevzame ministrovo trditev kot dejstvo.",
               "verified": true
             }
           ],
           "editorial_statements": [],
           "unique_facts": [
-            "Če bo uveljavljen interventni zakon, bo ZZZS prejel še 113 milijonov evrov manj; z dolgotrajno oskrbo bi bil skupni letni izpad okoli 211 milijonov.",
-            "Glavni ukrepi interventnega zakona, ki znižujejo prihodke blagajne: razvojna kapica pri 7.500 evrih bruto plače, nižji prispevki za mikro samostojne podjetnike in kmete."
+            "Licenca, izpit iz poznavanja kraja in označeno vozilo ostajajo obvezni."
           ],
-          "reasoning": "Besedilo zvesto povzame sporočilo ZZZS, vključno z vzroki, ki zadevajo prejšnjo vlado. Izbira naslova in vmesnega naslova pa poudarek usmeri na sedanjo koalicijo, glagol »odvzeli« pa ne razloči med znižanjem zgornje meje in odvzemom denarja. Vlada ne dobi besede.",
+          "reasoning": "Dejstva so pravilna, a okvir je ministrov: uvod je njegov promocijski zapis, zavrnitev kritik je v vmesnem naslovu, kritiki pa ne dobijo besede. Smer: +1 – Sredina-Desno.",
           "confidence": "Visoka",
-          "lean_score": -1.0,
-          "category": "komercialni",
+          "lean_score": 1.0,
+          "category": "alternativni",
           "quotes_verified": true,
-          "published": "2026-11-11",
-          "word_count": 517,
+          "published": "2026-11-18T17:53:56+00:00",
+          "word_count": 377,
           "cited_sources": [],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 20
-            },
-            {
-              "media": "MMC RTV SLO",
-              "percent": 16
-            }
-          ]
+          "text_overlap": []
         },
         {
-          "media_name": "Svet24",
-          "article_title": "Zdravstvena blagajna v težavah: denarja za decembrska plačila ni dovolj",
-          "article_url": "https://svet24.si/novice/slovenija/zdravstveno-zavarovanje-zamik-placila-denar-1939901",
+          "media_name": "Žurnal24",
+          "article_title": "Velike spremembe na področju prevozov s taksiji",
+          "article_url": "https://www.zurnal24.si/avto/velike-spremembe-na-podrocju-prevozov-s-taksiji-468406",
           "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
+          "bias_leaning": "Sredina-Levo",
           "bias_evidence_quotes": [
-            "Razlika ne pomeni nujno, da je država že odobrila in nato odvzela celoten znesek, saj zakon določa sredstva v višini do določene vrednosti.",
-            "Vlada je septembra pojasnjevala, da je bilo za ta namen v državnem proračunu že prvotno načrtovanih 420 milijonov evrov."
+            "Medtem, ko je aplikacija bolj prijazna do potnika pa je manj prijazna do taksista.",
+            "Sindikat taksistov spremembam nasprotuje."
           ],
           "omitted_facts": [
-            "Oceno ZZZS o izpadu prihodkov zaradi interventnega zakona (113 oziroma 211 milijonov evrov)."
+            "Popravek hkratnega obračunavanja časa in razdalje.",
+            "Enoletno prehodno obdobje za jezikovni pogoj ter globe za aplikacije."
           ],
           "voices_heard": [
-            "ZZZS",
-            "vlada (septembrsko pojasnilo)"
+            "ministrstvo za infrastrukturo",
+            "Sindikat taksistov",
+            "Tea Jarc (Evropska konfederacija sindikatov)"
           ],
           "sides_represented": "Obe strani",
           "factual_errors": [],
           "notes": [],
           "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Informativen naslov, ki pove, kaj se dogaja (»denarja za decembrska plačila ni dovolj«); »v težavah« je opisno.",
-          "main_frame": "Pojasnjevalno poročilo",
-          "frame_description": "Članek po vrsti razloži, kaj se bo zgodilo, komu, zakaj in kaj to pomeni za bolnike; pri vsakem vzroku navede tudi drugo plat.",
-          "lede_focus": "Uvod pove, da bo ZZZS del decembrskih plačil prestavil v januar in kdo so prejemniki.",
-          "loaded_language": [],
-          "editorial_statements": [],
-          "unique_facts": [
-            "Akontacije izvajalcem v višini 145 milijonov evrov so del istega prilagajanja plačil.",
-            "Brez zmanjšanja proračunskega transfera bi bil zamik okoli 85 milijonov evrov; zmanjšanje ga je povečalo na 185 milijonov.",
-            "Vlada je septembra pojasnila, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov.",
-            "Zamik povračil delodajalcem sam po sebi ne pomeni zamude pri nadomestilih za bolniško odsotnost."
-          ],
-          "reasoning": "Najbolj pojasnjevalen in uravnotežen članek: pri zmanjšanju transfera navede tudi vladno pojasnilo in razliko med zgornjo mejo in dodeljenim zneskom, vse vzroke ZZZS navede brez poudarjanja enega. Vrednostnih izrazov ni. Smer: 0 – edini navede tudi vladno pojasnilo k zmanjšanju transfera.",
-          "confidence": "Visoka",
-          "lean_score": 0.0,
-          "category": "komercialni",
-          "quotes_verified": true,
-          "published": "2026-11-11",
-          "word_count": 1044,
-          "cited_sources": [],
-          "text_overlap": []
-        },
-        {
-          "media_name": "24ur",
-          "article_title": "ZZZS bo do 185 milijonov letošnjih zapadlih obveznosti poravnal naslednje leto",
-          "article_url": "https://www.24ur.com/novice/slovenija/zzzs-bo-do-185-milijonov-letosnjih-zapadlih-obveznosti-poravnal-naslednje-leto.html",
-          "sensationalism_score": 1,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Kot so še pojasnili, je poslabšana likvidnost ZZZS v letu 2026 posledica več medsebojno povezanih dejavnikov",
-            "Pomemben dejavnik je ob koncu leta po navedbah zavoda tudi nepričakovano zmanjšanje transfera iz državnega proračuna"
-          ],
-          "omitted_facts": [
-            "Vladno pojasnilo, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov."
-          ],
-          "voices_heard": [
-            "ZZZS (sporočilo za javnost)"
-          ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Besedilo (STA) je skoraj enako kot pri RTV SLO."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Informativen naslov z zneskom in rokom, brez vrednotenja.",
-          "main_frame": "Uradno sporočilo institucije",
-          "frame_description": "Agencijski povzetek sporočila ZZZS: obseg, izvedba, vsi vzroki in na koncu zmanjšanje proračunskega transfera.",
-          "lede_focus": "Uvod navede odločitev upravnega odbora ZZZS o zamiku do 185 milijonov evrov.",
-          "loaded_language": [],
-          "editorial_statements": [],
-          "unique_facts": [],
-          "reasoning": "Zvest agencijski povzetek sporočila ZZZS z vsemi navedenimi vzroki, brez vrednostnih izrazov. Vlada ali drugi deležniki ne dobijo besede. Smer: 0 – enako agencijsko besedilo kot RTV SLO.",
-          "confidence": "Visoka",
-          "lean_score": 0.0,
-          "category": "komercialni",
-          "quotes_verified": true,
-          "published": "2026-11-11T13:20:00+01:00",
-          "word_count": 509,
-          "cited_sources": [],
-          "text_overlap": [
-            {
-              "media": "MMC RTV SLO",
-              "percent": 71
-            },
-            {
-              "media": "Žurnal24",
-              "percent": 16
-            },
-            {
-              "media": "Info360",
-              "percent": 11
-            },
-            {
-              "media": "Nova24TV",
-              "percent": 10
-            },
-            {
-              "media": "Portal24",
-              "percent": 7
-            }
-          ]
-        },
-        {
-          "media_name": "Portal24",
-          "article_title": "ZZZS bo do 185 milijonov evrov obveznosti poravnal šele v začetku leta 2027",
-          "article_url": "https://portal24.si/zzzs-bo-do-185-milijonov-evrov-obveznosti-poravnal-sele-v-zacetku-leta-2027/",
-          "sensationalism_score": 1,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Likvidnostne težave ZZZS so posledica sistemskih finančnih pritiskov.",
-            "Proračunski transfer zmanjšan za 100 milijonov evrov"
-          ],
-          "omitted_facts": [
-            "Vladno pojasnilo, da je bilo v proračunu že prvotno načrtovanih 420 milijonov evrov."
-          ],
-          "voices_heard": [
-            "ZZZS (sporočilo za javnost)"
-          ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Najpopolnejši povzetek izvirnega sporočila ZZZS med primerjanimi mediji, z veliko dobesednimi citati."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Informativen naslov z zneskom in rokom.",
-          "main_frame": "Uradno sporočilo institucije",
-          "frame_description": "Obsežen povzetek sporočila ZZZS z dolgimi dobesednimi citati in vsemi vzroki, vključno z zmanjšanjem proračunskega transfera.",
-          "lede_focus": "Uvod navede zamik do 185 milijonov in delež izvajalcev (85 %).",
-          "loaded_language": [],
-          "editorial_statements": [],
-          "unique_facts": [
-            "ZZZS poudarja, da ne gre za zmanjšanje ali preklic pogodbenih obveznosti, temveč za začasno spremembo časa plačila."
-          ],
-          "reasoning": "Zvest, obsežen povzetek sporočila ZZZS z vsemi vzroki, brez vrednostnih izrazov. Drugi deležniki ne dobijo besede. Smer: 0 – vmesni naslov o zmanjšanju transfera je uravnotežen z vsemi drugimi vzroki.",
-          "confidence": "Visoka",
-          "lean_score": 0.0,
-          "category": "komercialni",
-          "quotes_verified": true,
-          "published": "2026-11-11",
-          "word_count": 839,
-          "cited_sources": [],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 6
-            },
-            {
-              "media": "MMC RTV SLO",
-              "percent": 5
-            }
-          ]
-        },
-        {
-          "media_name": "Info360",
-          "article_title": "Zmanjkuje denarja: ZZZS odlaga izplačila pogodbenikom in delodajalcem za nadomestila bolniških",
-          "article_url": "https://info360.si/aktualno/zmanjkuje-denarja-zzzs-odlaga-izplacila-pogodbenikom-in-delodajalcem-za-nadomestila-bolniskih/",
-          "sensationalism_score": 5,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Zmanjkuje denarja: ZZZS odlaga izplačila pogodbenikom in delodajalcem za nadomestila bolniških",
-            "Kot pravijo naši viri na ZZZS"
-          ],
-          "omitted_facts": [
-            "Delež zamika, ki se nanaša na izvajalce (okoli 85 %).",
-            "Poplačilo z novim likvidnostnim posojilom."
-          ],
-          "voices_heard": [
-            "ZZZS (sporočilo za javnost)",
-            "anonimni viri na ZZZS"
-          ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [
-            "Navaja, da bo zamik povračil za bolniška nadomestila »predvidoma 3,5 milijona evrov«; po razčlenitvi ZZZS iz septembra gre za 11 milijonov, 3,5 milijona pa je znesek za medicinske pripomočke."
-          ],
-          "notes": [
-            "Del informacij temelji na anonimnih virih, ki jih ni mogoče preveriti."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov začne z dramatičnim »Zmanjkuje denarja« in izpostavi bolniška nadomestila, ki so le manjši del zamika.",
-          "main_frame": "Posledice za zaposlene in delodajalce",
-          "frame_description": "Povzetek sporočila ZZZS, dopolnjen z informacijami anonimnih virov na ZZZS o tem, kaj zamik pomeni za plače v bolnišnicah in povračila za bolniške odsotnosti.",
-          "lede_focus": "Uvod navede, da zaposleni v zdravstvu in na bolniški naj ne bi nosili posledic.",
+          "body_leaning": "Sredina-Levo",
+          "headline_analysis": "Opisen naslov brez vrednotenja.",
+          "main_frame": "Spor med vlado in taksisti",
+          "frame_description": "Uvod postavi obljube ministrstva ob nasprotovanje sindikata; več kot polovica besedila so opozorila sindikata in Evropske konfederacije sindikatov.",
+          "lede_focus": "Uvod: ministrstvo obljublja dostopnost in konkurenco, sindikat opozarja na slabše delovne pogoje in pritisk platform.",
           "loaded_language": [
             {
-              "quote": "Zmanjkuje denarja",
-              "explanation": "Dramatičen uvod v naslovu; vsebinsko točen (ZZZS govori o poslabšani likvidnosti).",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [],
-          "unique_facts": [
-            "Po anonimnih virih na ZZZS bolnišnice in zdravstveni domovi plač zaposlenim zaradi zamika ne bodo izplačali z zamudo."
-          ],
-          "reasoning": "Besedilo zvesto citira sporočilo ZZZS in nima političnega nagiba. Naslov poudari manjši del zgodbe, en navedeni znesek pa se ne ujema z razčlenitvijo ZZZS. Smer: 0 – brez politične izbire poudarkov; težava je natančnost, ne nagib.",
-          "confidence": "Visoka",
-          "lean_score": 0.0,
-          "category": "komercialni",
-          "quotes_verified": true,
-          "published": "2026-11-11",
-          "word_count": 482,
-          "cited_sources": [],
-          "text_overlap": [
-            {
-              "media": "24ur",
-              "percent": 14
-            },
-            {
-              "media": "MMC RTV SLO",
-              "percent": 13
-            }
-          ]
-        },
-        {
-          "media_name": "NaDlani",
-          "article_title": "ZZZS nima dovolj denarja za vsa plačila: bodo delavci na bolniški ostali brez plačila?",
-          "article_url": "https://www.nadlani.si/novice/zzzs-nima-dovolj-denarja-za-vsa-placila-bodo-delavci-na-bolniski-ostali-brez-placila/",
-          "sensationalism_score": 7,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "bodo delavci na bolniški ostali brez plačila?",
-            "zamik refundacij delodajalcem ne pomeni, da bodo zaposleni na bolniški samodejno ostali brez nadomestila"
-          ],
-          "omitted_facts": [
-            "Akontacije izvajalcem (145 milijonov evrov).",
-            "Izvirne izjave ZZZS v dobesedni obliki."
-          ],
-          "voices_heard": [
-            "ZZZS (sporočilo za javnost)",
-            "Info360 (prevzeto)"
-          ],
-          "sides_represented": "Pretežno ena stran",
-          "factual_errors": [],
-          "notes": [
-            "Za odgovor na vprašanje iz naslova se sklicuje na Info360, ki temelji na anonimnih virih."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov kombinira dramatično trditev (»nima dovolj denarja za vsa plačila«) z vprašanjem, ki vzbudi strah (»bodo delavci na bolniški ostali brez plačila?«); besedilo na vprašanje odgovori nikalno.",
-          "main_frame": "Posledice za zaposlene",
-          "frame_description": "Pojasnjevalni povzetek, ki se osredotoči na bolniška nadomestila; za ključni odgovor se sklicuje na Info360.",
-          "lede_focus": "Uvod govori o »resnih likvidnostnih težavah« in napove vprašanje, kaj to pomeni za bolnišnice, delodajalce in zaposlene na bolniški.",
-          "loaded_language": [
-            {
-              "quote": "bodo delavci na bolniški ostali brez plačila?",
-              "explanation": "Vprašanje v naslovu vzbudi skrb, na katero besedilo odgovori nikalno (klikabejt).",
-              "verified": true
-            },
-            {
-              "quote": "resnih likvidnostnih težavah",
-              "explanation": "Okrepljen opis; ZZZS govori o »poslabšani likvidnosti«.",
+              "quote": "Na ministrstvu mirijo",
+              "explanation": "Glagol »mirijo« zagotovilo ministrstva predstavi kot pomirjanje, ne kot argument.",
               "verified": true
             }
           ],
           "editorial_statements": [
-            "Čeprav zavod poudarja, da gre za začasen ukrep, dogajanje odpira pomembno vprašanje: kako dolgo lahko zdravstveni sistem deluje brez dodatnih finančnih pritiskov na ustanove in podjetja, ki zagotavljajo zdravstveno oskrbo?"
+            "Medtem, ko je aplikacija bolj prijazna do potnika pa je manj prijazna do taksista."
           ],
           "unique_facts": [
-            "Pojasni, da delodajalci zaposlenim izplačujejo nadomestila in jim jih ZZZS pozneje povrne, zato zamik povračil ne pomeni zamude pri izplačilu zaposlenim."
+            "Provizija za aplikacijo sprva okoli 25 %, v nekaterih državah do 44 % (po nekaterih podatkih).",
+            "Dinamične cene: ista vožnja zjutraj 5–6 evrov, popoldne 15–20 (po sindikatu).",
+            "Sindikat ni bil povabljen k pripravi zakona.",
+            "Podlaga za aplikacije je bila predvidena že leta 2021, nato odpravljena."
           ],
-          "reasoning": "Politično nevtralno besedilo, ki dejstva povzame pravilno in na koncu doda avtorjevo retorično vprašanje. Glavna slabost je naslov v obliki vprašanja, ki napoveduje posledico, ki je besedilo ne potrdi. Smer: −0,2 – vmesni naslov »Država zmanjšala predvidena sredstva« izpostavi vladni del, a besedilo navede tudi druge vzroke; ostaja Sredina.",
+          "reasoning": "Edini predstavi obe strani, a kritiki dobijo več prostora in avtorski stavek o tem, da je aplikacija »manj prijazna do taksista«; zagotovila ministrstva so uvedena z glagolom »mirijo«. Smer: −0,75 – Sredina-Levo.",
           "confidence": "Visoka",
-          "lean_score": -0.2,
+          "lean_score": -0.75,
           "category": "komercialni",
           "quotes_verified": true,
-          "published": "2026-11-11",
-          "word_count": 394,
-          "cited_sources": [
-            "Info360"
-          ],
+          "published": "2026-11-18T10:02:00+00:00",
+          "word_count": 468,
+          "cited_sources": [],
           "text_overlap": []
         }
       ],
-      "neutral_summary": "ZZZS bo zaradi primanjkljaja do 185 milijonov evrov letošnjih obveznosti, večinoma do izvajalcev zdravstvenih storitev, plačal v začetku leta 2027 z novim likvidnostnim posojilom, ker ob koncu leta zakonsko ne sme izkazovati dolga. Kot vzroke navaja več dejavnikov: ukinitev dopolnilnega zdravstvenega zavarovanja, plačno reformo, višje stroške dela in tudi oktobrsko zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov. Izvajalci opozarjajo na likvidnostne težave.",
-      "context": "Dopolnilno zdravstveno zavarovanje je prejšnja vlada Roberta Goloba ukinila s 1. januarjem 2024 in ga nadomestila z obveznim prispevkom. ZZZS je 13. 11. napovedal tudi morebitno prodajo svojega 15-odstotnega deleža v zavarovalnici Vzajemna. RTV SLO je istega dne poročal še o finančnih težavah NIJZ.",
+      "neutral_summary": "Vlada je v DZ poslala novelo, ki taksi prevoznikom omogoča obračun prek aplikacij (kot Uber ali Bolt) namesto obveznega taksimetra, uvaja obvezno znanje slovenščine za voznike ter nadzor in globe za aplikacije. Ministrstvo obljublja preglednejše cene in več konkurence, sindikat taksistov opozarja na provizije platform, dinamične cene in neenake pogoje.",
+      "context": "Zakonska podlaga za prevozne platforme je bila sprejeta že leta 2021, po menjavi vlade pa razveljavljena. Uber v Ljubljani deluje od maja 2025, a s taksimetri po pravilih za taksiste.",
       "key_differences": [
-        "Zmanjšanje proračunskega transfera s 520 na 420 milijonov evrov z oktobrskim rebalansom navedejo RTV SLO, 24ur, Žurnal24 in Svet24; Žurnal24 ga postavi v naslov (»Odvzeli 100 milijonov«) in v vmesnem naslovu pripiše »Janševi koaliciji«. Nova24TV ga ne omeni, čeprav citira isto sporočilo ZZZS.",
-        "Nasprotno Nova24TV v naslovu težave pripiše enemu ukrepu prejšnje vlade (ukinitev dopolnilnega zavarovanja), čeprav ZZZS navaja več dejavnikov.",
-        "Svet24 je edini, ki navede vladno pojasnilo (v proračunu je bilo že prvotno načrtovanih 420 milijonov) in razloži, da bi bil zamik brez zmanjšanja okoli 85 milijonov, z njim pa 185 milijonov.",
-        "Žurnal24 edini doda oceno ZZZS, da bi interventni zakon zdravstveni blagajni odvzel še 113 milijonov evrov letno (skupaj z dolgotrajno oskrbo 211 milijonov), kar je pomembno pred referendumom 6. decembra.",
-        "Nova24TV je komentar z več avtorjevimi sodbami; RTV SLO, Žurnal24 in Svet24 so poročila, pri čemer je Svet24 najbolj pojasnjevalen (akontacije, kaj zamik pomeni za bolnike).",
-        "RTV SLO in 24ur objavita skoraj enako agencijsko besedilo STA; razlikujeta se le v naslovu in uvodu.",
-        "Info360 in NaDlani zgodbo uokvirita okoli bolniških nadomestil. Naslov NaDlani je vprašanje (»bodo delavci na bolniški ostali brez plačila?«), na katero besedilo odgovori nikalno; Info360 navaja znesek, ki se ne ujema z razčlenitvijo ZZZS."
+        "Žurnal24 edini objavi nasprotovanje sindikata taksistov in Evropske konfederacije sindikatov (provizije do 44 %, dinamične cene, izrivanje domačih voznikov); RTV SLO in Nova24TV objavita samo vladno stran.",
+        "Nova24TV zgodbo uokviri z ministrovim promocijskim zapisom na X (»Odpiramo vrata sodobnim taksi prevozom!«) in vmesnim naslovom »Enaki pogoji za vse«, ki povzema stališče ministrstva.",
+        "RTV SLO edini podrobno pojasni napako v dosedanjem zakonu (hkratno obračunavanje časa in razdalje) in stališče ministrstva, da naj cene določa trg.",
+        "Nobeden od medijev ne omeni, da predlog omogoča tudi prepoved uporabe aplikacije ob ugotovljenih nepravilnostih."
       ],
       "fact_matrix": [
         {
-          "fact": "Zamik plačila do 185 milijonov evrov obveznosti v leto 2027",
+          "fact": "Ceno bo mogoče določiti s taksimetrom ali z aplikacijo",
           "media": [
             "MMC RTV SLO",
             "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ]
-        },
-        {
-          "fact": "Primanjkljaj obveznega zavarovanja okoli 154 milijonov evrov do 30. 9.",
-          "media": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ]
-        },
-        {
-          "fact": "ZZZS ob koncu leta zakonsko ne sme izkazovati dolga",
-          "media": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ]
-        },
-        {
-          "fact": "Vzroki: ukinitev dopolnilnega zavarovanja in plačna reforma",
-          "media": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ]
-        },
-        {
-          "fact": "Vzroki: višji stroški dela, minimalna plača, zimski regres, staranje, nove tehnologije",
-          "media": [
-            "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ]
-        },
-        {
-          "fact": "Vzrok: oktobrski rebalans je proračunski transfer zmanjšal s 520 na 420 milijonov evrov",
-          "media": [
-            "MMC RTV SLO",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ]
-        },
-        {
-          "fact": "Vlada: v proračunu je bilo že prvotno načrtovanih 420 milijonov",
-          "media": [
-            "Svet24"
-          ]
-        },
-        {
-          "fact": "Brez zmanjšanja transfera bi bil zamik okoli 85 milijonov evrov",
-          "media": [
-            "Svet24"
-          ]
-        },
-        {
-          "fact": "Interventni zakon bi blagajni odvzel še 113 milijonov (z dolgotrajno oskrbo 211 milijonov) letno",
-          "media": [
             "Žurnal24"
           ]
         },
         {
-          "fact": "Okoli 85 % zamika se nanaša na izvajalce zdravstvenih storitev; začetek 21. decembra",
+          "fact": "Aplikacija pred vožnjo prikaže pot, najvišjo ceno in podatke o vozilu; plačilo brezgotovinsko",
           "media": [
             "MMC RTV SLO",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "NaDlani"
+            "Nova24TV",
+            "Žurnal24"
           ]
         },
         {
-          "fact": "Poplačilo v januarju z novim likvidnostnim posojilom",
+          "fact": "Taksimeter: obračun po razdalji ali času, ne več po obeh hkrati",
           "media": [
             "MMC RTV SLO",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "NaDlani"
+            "Nova24TV"
           ]
         },
         {
-          "fact": "Dolgotrajna oskrba ni prizadeta",
+          "fact": "Obvezno znanje slovenščine (raven A1), na dvojezičnih območjih tudi jezika narodne skupnosti",
           "media": [
             "MMC RTV SLO",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360"
+            "Nova24TV",
+            "Žurnal24"
           ]
         },
         {
-          "fact": "Za zdaj ni napovedanega zmanjšanja pravic za zavarovance",
+          "fact": "Enoletno prehodno obdobje za jezikovni pogoj",
           "media": [
-            "Svet24"
+            "MMC RTV SLO",
+            "Nova24TV"
           ]
         },
         {
-          "fact": "Opozorila takratne opozicije (SDS) ob preoblikovanju zavarovanja leta 2023",
+          "fact": "Licenca in drugi pogoji ostajajo obvezni",
           "media": [
             "Nova24TV"
           ]
         },
         {
-          "fact": "Akontacije izvajalcem v višini 145 milijonov evrov so del zamika",
+          "fact": "Globe za nepravilno uporabo aplikacij",
           "media": [
-            "Svet24",
-            "Portal24",
-            "Info360"
+            "MMC RTV SLO"
           ]
         },
         {
-          "fact": "Zaposleni na bolniški zaradi zamika ne bodo ostali brez nadomestila",
+          "fact": "Sindikat taksistov nasprotuje odpravi obveznega taksimetra",
           "media": [
-            "Svet24",
-            "Info360",
-            "NaDlani"
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Provizije platform (okoli 25 %, ponekod do 44 %)",
+          "media": [
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Podlaga za platforme že leta 2021, pozneje odpravljena",
+          "media": [
+            "Žurnal24"
+          ]
+        },
+        {
+          "fact": "Uber v Sloveniji deluje od maja 2025 s taksimetri",
+          "media": [
+            "Nova24TV",
+            "Žurnal24"
           ]
         }
       ],
@@ -1489,552 +793,91 @@
       "has_international_source": false,
       "source_checks": [
         {
-          "claim": "ZZZS bo do 185 milijonov evrov obveznosti poravnal šele v začetku leta 2027.",
+          "claim": "Aplikacija bo pred vožnjo prikazala pot, najvišjo ceno in podatke o vozilu; plačilo bo brezgotovinsko.",
           "claimed_by": [
             "MMC RTV SLO",
             "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
+            "Žurnal24"
           ],
           "status": "Potrjeno",
-          "finding": "Izvirno sporočilo ZZZS navaja zamik »do 185 milijonov evrov« in poplačilo v prvih dneh januarja z novim likvidnostnim posojilom.",
+          "finding": "Ujema se s sporočilom vlade.",
           "sources": [
             {
-              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
-              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
             }
           ]
         },
         {
-          "claim": "Primanjkljaj obveznega zavarovanja je do 30. 9. znašal 153.819.314 evrov, dolg v enotnem zakladniškem računu 156 milijonov.",
+          "claim": "Taksimeter bo še mogoč, cena pa po razdalji ali času, ne po obeh hkrati.",
           "claimed_by": [
             "MMC RTV SLO",
-            "Nova24TV",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ],
-          "status": "Potrjeno",
-          "finding": "Številki se natančno ujemata s sporočilom ZZZS.",
-          "sources": [
-            {
-              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
-              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
-            }
-          ]
-        },
-        {
-          "claim": "Okoli 85 % zamika se nanaša na izvajalce zdravstvenih storitev; prilagoditev se začne 21. decembra.",
-          "claimed_by": [
-            "MMC RTV SLO",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "NaDlani"
-          ],
-          "status": "Potrjeno",
-          "finding": "Ujema se s sporočilom ZZZS. Septembrsko sporočilo zamik razčleni: 158 milijonov izvajalcem, 13 za zdravila, 11 za bolniška nadomestila, 3,5 za medicinske pripomočke.",
-          "sources": [
-            {
-              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
-              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
-            },
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            }
-          ]
-        },
-        {
-          "claim": "Oktobrski rebalans je proračunski transfer ZZZS zmanjšal s 520 na 420 milijonov evrov.",
-          "claimed_by": [
-            "MMC RTV SLO",
-            "Žurnal24",
-            "Svet24",
-            "24ur",
-            "Portal24",
-            "Info360",
-            "NaDlani"
-          ],
-          "status": "Potrjeno",
-          "finding": "ZZZS to navaja kot »pomemben dejavnik« in zmanjšanje imenuje »nepričakovano«. Zmanjšanje je bilo sicer predlagano že septembra in ZZZS mu je takrat javno nasprotoval, zato je »nepričakovano« le glede na sprejeti finančni načrt.",
-          "sources": [
-            {
-              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
-              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
-            },
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            }
-          ]
-        },
-        {
-          "claim": "Težave ZZZS so posledica ukinitve dopolnilnega zdravstvenega zavarovanja (naslov: »zaradi njega tone v likvidnostne težave«).",
-          "claimed_by": [
             "Nova24TV"
           ],
-          "status": "Delno potrjeno",
-          "finding": "ZZZS ukinitev dopolnilnega zavarovanja navaja kot enega od dveh glavnih vzrokov primanjkljaja (drugi je plačna reforma); manko iz tega naslova v letu 2026 ocenjuje na 184 milijonov evrov. Za obseg decembrskega zamika pa je ključno tudi zmanjšanje transfera za 100 milijonov, ki ga članek ne omeni.",
+          "status": "Potrjeno",
+          "finding": "Ujema se s sporočilom vlade.",
           "sources": [
             {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            },
-            {
-              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
-              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
             }
           ]
         },
         {
-          "claim": "Vlada oziroma koalicija je ZZZS »odvzela« 100 milijonov evrov.",
+          "claim": "Vozniki bodo morali znati slovensko najmanj na ravni A1, z enoletnim prehodnim obdobjem.",
+          "claimed_by": [
+            "MMC RTV SLO",
+            "Nova24TV",
+            "Žurnal24"
+          ],
+          "status": "Delno potrjeno",
+          "finding": "Sporočilo vlade potrjuje obvezno znanje slovenščine (na dvojezičnih območjih tudi italijanščine oziroma madžarščine) in enoletno prehodno obdobje; ravni A1 ne navaja – ta izhaja iz izjav na novinarski konferenci.",
+          "sources": [
+            {
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
+            }
+          ]
+        },
+        {
+          "claim": "Možnost obračuna prek aplikacij je bila predvidena že leta 2021, nato pa jo je Golobova vlada odpravila.",
           "claimed_by": [
             "Žurnal24"
           ],
           "status": "Delno potrjeno",
-          "finding": "DZ je z rebalansom znižal zakonsko zgornjo mejo transfera (»do 520 milijonov«) na 420 milijonov. Minister Ostrc trdi, da je prejšnja vlada v proračunu ministrstva namenila le 420 milijonov in da gre za odpravo neskladja; ZZZS pa navaja, da je vlada januarja dala soglasje k finančnemu načrtu z 520 milijoni. Izraz »odvzeli« zato poenostavi spor o tem, ali je bil denar dejansko zagotovljen.",
+          "finding": "DZ je podlago za prevozne platforme sprejel leta 2021, po menjavi vlade pa je bila razveljavljena; točnega datuma razveljavitve nismo potrdili.",
           "sources": [
             {
-              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
-              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
+              "title": "STA (2021): DZ prižgal zeleno luč podlagi za prevozne platforme",
+              "url": "https://www.tax-fin-lex.si/Home/Novica/20231"
             },
             {
-              "title": "RTV SLO: minister Ostrc o zmanjšanju (september)",
-              "url": "https://www.rtvslo.si/slovenija/ostrc-o-100-milijonskem-zmanjsanju-za-zzzs-iscemo-resitve/794094"
+              "title": "STA: Ministrstvo s predlogom novele zakona ureja prevoze z uporabo aplikacije",
+              "url": "https://tax-fin-lex.si/home/novica/37456"
             }
           ]
         },
         {
-          "claim": "Brez zmanjšanja transfera bi bil zamik okoli 85 milijonov evrov, z njim 185 milijonov.",
-          "claimed_by": [
-            "Svet24"
-          ],
-          "status": "Potrjeno",
-          "finding": "ZZZS je septembra pojasnil, da je sprejeti finančni načrt predvideval 85-milijonski zamik dela decembrskih akontacij, ki bi se ob zmanjšanju transfera povečal za 100 milijonov.",
-          "sources": [
-            {
-              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
-              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
-            }
-          ]
-        },
-        {
-          "claim": "Interventni zakon bi zdravstveni blagajni odvzel še 113 milijonov evrov letno (z dolgotrajno oskrbo 211 milijonov).",
+          "claim": "Provizije platform znašajo sprva okoli 25 %, v nekaterih državah do 44 %.",
           "claimed_by": [
             "Žurnal24"
           ],
           "status": "Ni preverljivo",
-          "finding": "V pregledanih sporočilih ZZZS teh zneskov nismo našli. Skupščina ZZZS je vlado septembra pozvala, naj pojasni, kako bo nadomestila izpad sredstev ob uveljavitvi interventnega zakona, zneska pa ne navaja.",
-          "sources": [
-            {
-              "title": "ZZZS, skupščina 16. 9. 2026",
-              "url": "https://www.zzzs.si/novica/skupscina-zzzs-poziva-k-ukrepom-za-zagotovitev-nemotenega-financiranja-obveznega-zdravstvenega-zavarovanja/"
-            }
-          ]
-        },
-        {
-          "claim": "Zamik povračil delodajalcem za nadomestila med bolniško odsotnostjo bo predvidoma znašal 3,5 milijona evrov.",
-          "claimed_by": [
-            "Info360"
-          ],
-          "status": "V nasprotju z virom",
-          "finding": "Po razčlenitvi zamika v septembrskem sporočilu ZZZS (pri enakem skupnem znesku 185 milijonov) gre za bolniška nadomestila 11 milijonov evrov; 3,5 milijona je znesek za medicinske pripomočke. Novembrsko sporočilo razčlenitve ne navaja.",
-          "sources": [
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            },
-            {
-              "title": "ZZZS, sporočilo za javnost 11. 11. 2026",
-              "url": "https://www.zzzs.si/novica/zzzs-bo-zaradi-zakonskih-in-likvidnostnih-omejitev-del-letosnjih-zapadlih-obveznosti-do-pogodbenih-in-drugih-partnerjev-poravnal-v-zacetku-leta-2027/"
-            }
-          ]
+          "finding": "Žurnal24 sam navaja, da gre za podatke »po nekaterih podatkih«; vir ni naveden.",
+          "sources": []
         }
       ],
       "missing_context": [
         {
-          "text": "ZZZS: »Če izločimo vpliv ukinitve dopolnilnega zavarovanja in plačne reforme, bi ZZZS posloval izravnano, brez primanjkljaja prihodkov nad odhodki.« Plačna reforma ZZZS letno stane okoli 587 milijonov evrov, manko zaradi prenizko določenega obveznega zdravstvenega prispevka pa v letu 2026 znaša 184 milijonov.",
+          "text": "Predlog določa nadzor nad delovanjem aplikacij, globe za kršitve in možnost prepovedi uporabe aplikacije ob ugotovljenih nepravilnostih.",
           "sources": [
             {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            }
-          ]
-        },
-        {
-          "text": "Primanjkljaj ima dva ločena vzroka: strukturni del izvira iz ukrepov prejšnje vlade (ukinitev dopolnilnega zavarovanja, plačna reforma), obseg decembrskega zamika pa se je zaradi oktobrskega rebalansa sedanje vlade povečal s 85 na 185 milijonov evrov.",
-          "sources": [
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            },
-            {
-              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
-              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
-            }
-          ]
-        },
-        {
-          "text": "Razlika med 520 in 420 milijoni izvira iz prejšnjega mandata: zakon je dovoljeval do 520 milijonov, v proračunu ministrstva za zdravje pa je bilo po navedbah ministra Ostrca predvidenih 420 milijonov.",
-          "sources": [
-            {
-              "title": "RTV SLO: minister Ostrc o zmanjšanju (september)",
-              "url": "https://www.rtvslo.si/slovenija/ostrc-o-100-milijonskem-zmanjsanju-za-zzzs-iscemo-resitve/794094"
-            },
-            {
-              "title": "RTV SLO: Vlada okrnila sredstva za zdravstveno blagajno (september)",
-              "url": "https://www.rtvslo.si/zdravje/vlada-okrnila-proracunska-sredstva-za-zdravstveno-blagajno-za-100-milijonov-evrov/793821"
-            }
-          ]
-        },
-        {
-          "text": "Za leto 2027 ZZZS napoveduje 260 milijonov evrov nepokritega primanjkljaja, in to kljub prenosu 145 milijonov plačil v leto 2028 ter brez upoštevanja interventnega zakona.",
-          "sources": [
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            }
-          ]
-        },
-        {
-          "text": "Del zamika (11 milijonov evrov) se nanaša na bolniška nadomestila, ki jih ZZZS povrne delodajalcem.",
-          "sources": [
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
-            }
-          ]
-        },
-        {
-          "text": "ZZZS v letu 2026 izvaja varčevalne ukrepe v vrednosti 194 milijonov evrov; julija je ministrstvoma predlagal še za 93,2 milijona dodatnih ukrepov, ki čakajo na pravno podlago.",
-          "sources": [
-            {
-              "title": "ZZZS, upravni odbor 28. 9. 2026",
-              "url": "https://www.zzzs.si/novica/upravni-odbor-zzzs-poziva-poslanke-in-poslance-k-ohranitvi-520-milijonov-evrov-sredstev-za-javno-zdravstveno-blagajno/"
+              "title": "Vlada RS: Odpiramo vrata sodobnim taksi prevozom (18. 11. 2026)",
+              "url": "https://www.gov.si/novice/2026-11-18-odpiramo-vrata-sodobnim-taksi-prevozom-prek-digitalnih-aplikacij/"
             }
           ]
         }
       ],
-      "not_covered_by": [
-        "N1",
-        "Mladina"
-      ]
-    },
-    {
-      "topic_title": "Afera in odstop šefa Nvidie Jensena Huanga ter vprašanja o odgovornosti v Beli hiši",
-      "international_baseline": "BBC poroča, da je Jensen Huang zapustil vodstvo Nvidie po razkritju razmerja z Alice Huang, nekdanjo direktorico singapurskega podjetja Megaspeed, ki jo ameriške obveščevalne službe domnevno sumijo povezav s kitajsko obveščevalno službo; Peking obtožbe zavrača, upravni odbor Nvidie pa pravi, da nima razlogov za sum, da bi bile ogrožene poslovne skrivnosti ali nacionalna varnost. Ker je bil Huang eden najbližjih poslovnežev Donalda Trumpa in vpliven pri odločitvah o izvozu čipov na Kitajsko, se vprašanja zdaj širijo na ministrstvo za trgovino (Howard Lutnick), ki je bilo pod pritiskom, naj Megaspeed uvrsti na izvozni črni seznam. Preiskave so sprožili kongresniki obeh strank.",
-      "coverage_comparison": [
-        {
-          "media_name": "BBC World",
-          "article_title": "How a sex scandal at Nvidia is putting pressure on the White House",
-          "article_url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
-          "sensationalism_score": 4,
-          "bias_leaning": "Sredina-Levo",
-          "bias_evidence_quotes": [
-            "How close is Donald Trump to Jensen Huang?",
-            "This is becoming difficult to dismiss as the misjudgement of one businessman or one government department."
-          ],
-          "omitted_facts": [],
-          "voices_heard": [
-            "Tan Yong Pong (Megaspeed)",
-            "Scott Bessent (minister za finance)",
-            "John Moolenaar (republikanec)",
-            "Elizabeth Warren (demokratka)",
-            "Bela hiša (prek New York Posta)",
-            "upravni odbor Nvidie"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [
-            "Članek je analitični prispevek, ne zgolj poročilo; avtorjeve sklepne ocene so označene v razdelku avtorskih stavkov."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov uporabi izraz »sex scandal«, ki je opisen, a privlačen; jedro naslova je politična posledica (»pressure on the White House«).",
-          "main_frame": "Nacionalna varnost in politična odgovornost",
-          "frame_description": "Osebna afera je izhodišče, zgodba pa je o tem, kaj je vedela administracija in kdo je odgovoren za nadzor izvoza čipov. Članek se konča z vprašanji, ki segajo do predsednika.",
-          "lede_focus": "Uvod z vprašanjem »How close is Donald Trump to Jensen Huang?« takoj postavi v ospredje politično razsežnost.",
-          "loaded_language": [
-            {
-              "quote": "sex scandal",
-              "explanation": "V naslovu poudari osebni vidik zgodbe, čeprav je besedilo pretežno o politiki izvoza.",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [
-            "This is becoming difficult to dismiss as the misjudgement of one businessman or one government department."
-          ],
-          "unique_facts": [
-            "Ministrstvo za trgovino je prejelo zaupni memorandum o Alice Huang in Megaspeedu, a proti podjetju ni ukrepalo.",
-            "Po poročanju NYT je preiskavo Megaspeeda zamrznilo po posredovanju Nvidiinega pravnega svetovalca.",
-            "Bela hiša izraža popolno zaupanje Lutnicku; po poročilih se tehta njegova odstavitev."
-          ],
-          "reasoning": "Kritična vprašanja administraciji so podprta z navedbami virov (NYT, FT, CNBC) in uravnotežena z izjavami republikancev, demokratov, podjetja Megaspeed in Bele hiše. Sklepni stavek je avtorjeva ocena, vendar izhaja iz predstavljenih dejstev. Ideološko obarvanega besedišča ni. Smer: −0,6 – sklepna avtorska ocena odgovornost usmeri proti predsedniku Trumpu (»questions now reach into the White House«); kritike sicer navaja tudi od republikancev, zato rahlo Sredina-Levo.",
-          "confidence": "Visoka",
-          "lean_score": -0.6,
-          "category": "mednarodni",
-          "quotes_verified": true,
-          "published": "2026-11-13T12:22:30+00:00",
-          "word_count": 1017,
-          "cited_sources": [
-            "CNBC",
-            "New York Times",
-            "New York Post"
-          ],
-          "text_overlap": []
-        },
-        {
-          "media_name": "MMC RTV SLO",
-          "article_title": "Po objavi afer, tudi z domnevno kitajsko vohunko, odstopil izvršni direktor Nvidie",
-          "article_url": "https://www.rtvslo.si/svet/po-objavi-afer-tudi-z-domnevno-kitajsko-vohunko-odstopil-izvrsni-direktor-nvidie/799926",
-          "sensationalism_score": 3,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Huang je bil eden najtesnejših zaveznikov predsednika Trumpa med voditelji tehnoloških podjetij.",
-            "Nvidia je proti Huangu zaradi razmerja z domnevno kitajsko vohunko Alice Huang v začetku tedna uvedla neodvisno preiskavo"
-          ],
-          "omitted_facts": [
-            "Vloga ministrstva za trgovino (Lutnick) in neuvrstitev Megaspeeda na izvozni črni seznam.",
-            "Sum, da je Megaspeed preusmerjal napredne čipe na Kitajsko.",
-            "Izjava upravnega odbora Nvidie, da nima razlogov za sum, da je bila ogrožena nacionalna varnost."
-          ],
-          "voices_heard": [
-            "Colette Kress (začasna direktorica)",
-            "Harvey Jones (predsednik upravnega odbora)",
-            "Donald Trump",
-            "Mike Johnson (predsednik predstavniškega doma)"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [],
-          "notes": [
-            "Objavljeno 12. 11., dan pred člankom BBC; poznejših izjav (npr. ministra Bessenta) zato ne more vsebovati."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov je informativen in previden (»domnevno kitajsko vohunko«); množina »afer« napove, da ni šlo le za eno razmerje.",
-          "main_frame": "Poslovna novica s političnim ozadjem",
-          "frame_description": "Najprej odstop in padec delnic, nato vodstvene spremembe, podrobnosti afere in na koncu Huangova bližina Trumpu ter vpliv na politiko izvoza čipov.",
-          "lede_focus": "Uvod (po povzetku) navaja, da se je Huang odpovedal tudi mestu v upravnem odboru in da podjetje razlogov ni navedlo.",
-          "loaded_language": [],
-          "editorial_statements": [],
-          "unique_facts": [
-            "Delnice so ob odstopu sprva izgubile 14 odstotkov (skoraj 600 milijard dolarjev tržne vrednosti).",
-            "Vodenje je začasno prevzela finančna direktorica Colette Kress.",
-            "Trump je predlagal, naj Nvidio vodi Tim Cook iz Appla.",
-            "Delničarji so vložili skupinsko tožbo; Nvidia je za plesno dvorano v Beli hiši obljubila 25 milijonov dolarjev."
-          ],
-          "reasoning": "Dejstva so skrbno pripisana virom (AFP, CBS, CNN, NYT), sum vohunjenja je dosledno označen kot domneven, Pekingova zavrnitev je navedena. Trumpov predlog je pospremljen s pripombo o njegovih prejšnjih šalah, kar je pojasnilo, ne vrednotenje. Ideološkega nagiba ni. Smer: −0,4 – rahlo ironična pripomba o Trumpovih »šalah« in podatek o donaciji za plesno dvorano; odklon je majhen, zato Sredina.",
-          "confidence": "Visoka",
-          "lean_score": -0.4,
-          "category": "javni",
-          "quotes_verified": true,
-          "published": "2026-11-12T15:01:25+00:00",
-          "word_count": 596,
-          "cited_sources": [
-            "AFP",
-            "CNN",
-            "CBS",
-            "New York Times"
-          ],
-          "text_overlap": []
-        },
-        {
-          "media_name": "Nova24TV",
-          "article_title": "Nvidiinega milijarderja odnesle ljubezenske afere: Po domnevni kitajski vohunki razkriti še dve ljubici",
-          "article_url": "https://nova24tv.si/nvidiinega-milijarderja-odnesle-ljubezenske-afere-po-domnevni-kitajski-vohunki-razkriti-se-dve-ljubici/",
-          "sensationalism_score": 8,
-          "bias_leaning": "Sredina",
-          "bias_evidence_quotes": [
-            "Nvidiinega milijarderja odnesle ljubezenske afere",
-            "Kako točno so ameriški obveščevalni organi izvedeli, da je Huangova posredovala tajne informacije iz podjetja Nvidia, ni znano."
-          ],
-          "omitted_facts": [
-            "Huangova bližina Trumpu in vpliv na politiko izvoza čipov.",
-            "Vloga ministrstva za trgovino in preiskave kongresa obeh strank.",
-            "Pekingova zavrnitev obtožb in izjava upravnega odbora Nvidie, da nima razlogov za sum, da so bile ogrožene skrivnosti."
-          ],
-          "voices_heard": [
-            "Jensen Huang (odgovor New York Timesu)",
-            "Reuters (anonimni viri)",
-            "Forbes"
-          ],
-          "sides_represented": "Obe strani",
-          "factual_errors": [
-            "Kot dejstvo navaja, da je Alice Huang »posredovala tajne informacije iz podjetja Nvidia«; BBC in RTV SLO poročata le o sumu obveščevalnih služb, upravni odbor Nvidie pa pravi, da nima razlogov za sum, da so bile skrivnosti ogrožene."
-          ],
-          "notes": [
-            "Trditev, da je razkritje razmerja s Kimberly Powell »prispevalo k njegovemu odstopu«, nima navedenega vira; Nvidia razlogov za odstop ni navedla (RTV SLO).",
-            "Isti medij je 9. 11. v članku »Seks, vohunjenje in umetna inteligenca …« opisal Huangovo bližino s Trumpom; v tem članku politične razsežnosti ni."
-          ],
-          "headline_leaning": "Sredina",
-          "body_leaning": "Sredina",
-          "headline_analysis": "Naslov poudari zasebno življenje (»odnesle ljubezenske afere«, »še dve ljubici«) in stopnjevanje števila razmerij. Politično ni obarvan, je pa izrazito senzacionalističen.",
-          "main_frame": "Osebni škandal",
-          "frame_description": "Zgodba je pripoved o številu razmerij, morebitni ločitvi in delitvi premoženja. Vprašanja nacionalne varnosti so omenjena le kot ugibanje, politična razsežnost (Trump, ministrstvo za trgovino, kongres) manjka.",
-          "lede_focus": "Uvod stopnjuje: »naj ne bi imel samo ene ljubice. Niti dveh.«",
-          "loaded_language": [
-            {
-              "quote": "ljubice",
-              "explanation": "Pogovoren, moralno obarvan izraz za razmerja.",
-              "verified": true
-            },
-            {
-              "quote": "Niti dveh.",
-              "explanation": "Retorično stopnjevanje v uvodu, značilno za tabloidni slog.",
-              "verified": true
-            },
-            {
-              "quote": "eksplodirala vest",
-              "explanation": "Dramatična prispodoba za poročanje medijev.",
-              "verified": true
-            },
-            {
-              "quote": "vrtoglavih 143 milijard dolarjev",
-              "explanation": "Pridevnik poudarja bogastvo in s tem kontrast z afero.",
-              "verified": true
-            }
-          ],
-          "editorial_statements": [
-            "Nekdanjemu direktorju Nvidie tudi v tem primeru ne bi bilo hudega.",
-            "bržčas pa so se nanašale na dva tipa podatkov: industrijske in poslovne skrivnosti, morebiti tudi informacije, ki so se nanašale na ameriške omejitve izvoza najnaprednejših čipov Nvidie na Kitajsko"
-          ],
-          "unique_facts": [
-            "Reuters je ob sklicevanju na anonimne vire poročal o tretjem razmerju.",
-            "V Kaliforniji se premoženje ob ločitvi deli na polovico; Lori in Jensen Huang imata 3,5-odstotni delež v Nvidii.",
-            "Forbes ocenjuje Huangovo premoženje na 143 milijard dolarjev (13. mesto med najbogatejšimi)."
-          ],
-          "reasoning": "Ideološko obarvanega besedišča ni, zato je politični nagib ocenjen kot Sredina. Glavni težavi sta senzacionalistični okvir (osebno življenje namesto politike izvoza in nacionalne varnosti) in natančnost: sum je zapisan kot ugotovljeno dejstvo, avtorjeva ugibanja o vrsti posredovanih informacij pa niso podprta z virom. Smer: +0,3 – izpusti Huangovo bližino Trumpu in odgovornost administracije, kar jo je istega dne izpostavil BBC; ker gre predvsem za tabloidni okvir, ostaja Sredina.",
-          "confidence": "Srednja",
-          "lean_score": 0.3,
-          "category": "alternativni",
-          "quotes_verified": true,
-          "published": "2026-11-13T14:04:43+00:00",
-          "word_count": 357,
-          "cited_sources": [
-            "Reuters",
-            "New York Times"
-          ],
-          "text_overlap": []
-        }
-      ],
-      "neutral_summary": "Jensen Huang je odstopil kot izvršni direktor Nvidie po razkritju razmerja z Alice Huang, ki jo ameriške službe sumijo povezav s kitajsko obveščevalno službo, ter poročilih o drugih razmerjih. Delnice Nvidie so močno padle. Ker je bil Huang blizu Trumpa in vpliven pri politiki izvoza čipov, kongres preiskuje, zakaj ministrstvo za trgovino ni ukrepalo proti podjetju Megaspeed.",
-      "context": "ZDA od leta 2022 omejujejo izvoz najnaprednejših čipov Nvidie na Kitajsko; čipe je mogoče kupiti v tretjih državah in jih preusmeriti. Huang je omejitve javno kritiziral, Trumpova administracija pa je Nvidii lani dovolila prodajo nekaterih čipov na Kitajsko v zameno za delež prihodkov.",
-      "key_differences": [
-        "BBC zgodbo obravnava kot vprašanje nacionalne varnosti in odgovornosti v vladi; RTV SLO kot novico o odstopu s poslovnimi posledicami in Huangovo bližino Trumpu; Nova24TV kot osebni škandal (»ljubice«, ločitev, premoženje).",
-        "Nova24TV kot dejstvo zapiše, da je Alice Huang »posredovala tajne informacije iz podjetja Nvidia«; BBC in RTV SLO poročata le o sumu, Peking ga zavrača, upravni odbor Nvidie pa nima razlogov za sum, da so bile skrivnosti ogrožene.",
-        "Politične razsežnosti (Trump, ministrstvo za trgovino, preiskave kongresa) v članku Nova24TV z dne 13. 11. ni, čeprav jih je isti medij omenil 9. 11.",
-        "RTV SLO edini navede padec delnic, začasno direktorico Colette Kress in Trumpov predlog, naj Nvidio vodi Tim Cook; Nova24TV edina navede morebitno delitev premoženja ob ločitvi in tretje domnevno razmerje.",
-        "Naslova RTV SLO in BBC uporabljata previdne izraze (»domnevno«, »sex scandal« kot opis); naslov Nova24TV je senzacionalističen (»odnesle ljubezenske afere«, »še dve ljubici«)."
-      ],
-      "fact_matrix": [
-        {
-          "fact": "Huang ni več izvršni direktor Nvidie",
-          "media": [
-            "BBC World",
-            "MMC RTV SLO",
-            "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Razmerje z Alice Huang iz singapurskega podjetja Megaspeed",
-          "media": [
-            "BBC World",
-            "MMC RTV SLO",
-            "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Ameriške službe Alice Huang sumijo povezav s kitajsko obveščevalno službo",
-          "media": [
-            "BBC World",
-            "MMC RTV SLO",
-            "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Peking obtožbe zavrača",
-          "media": [
-            "BBC World",
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Upravni odbor Nvidie: ni razlogov za sum, da so bile ogrožene skrivnosti ali nacionalna varnost",
-          "media": [
-            "BBC World"
-          ]
-        },
-        {
-          "fact": "Poročila o razmerju z uslužbenko Kimberly Powell (NYT)",
-          "media": [
-            "MMC RTV SLO",
-            "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Tretje domnevno razmerje (Reuters, anonimni viri)",
-          "media": [
-            "Nova24TV"
-          ]
-        },
-        {
-          "fact": "Huang je bil eden najbližjih poslovnežev Trumpa",
-          "media": [
-            "BBC World",
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Ministrstvo za trgovino (Lutnick) ni uvrstilo Megaspeeda na izvozni črni seznam",
-          "media": [
-            "BBC World"
-          ]
-        },
-        {
-          "fact": "Kongres želi zaslišati Huanga; preiskave obeh strank",
-          "media": [
-            "BBC World",
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Padec delnic Nvidie (do 14 % ob odstopu)",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Začasna direktorica Colette Kress",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Trump predlaga Tima Cooka za novega direktorja",
-          "media": [
-            "MMC RTV SLO"
-          ]
-        },
-        {
-          "fact": "Morebitna delitev premoženja ob ločitvi; Huangovo premoženje 143 milijard dolarjev",
-          "media": [
-            "Nova24TV"
-          ]
-        }
-      ],
-      "id": "story-3",
-      "has_international_source": true,
-      "source_checks": [],
-      "missing_context": [],
       "not_covered_by": []
     }
   ]
