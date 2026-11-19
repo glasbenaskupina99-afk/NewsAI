@@ -236,6 +236,13 @@ class AnalyzerTest(unittest.TestCase):
             self.assertEqual(by_name["MMC RTV SLO"]["count"], 3)
             self.assertEqual(len(by_name["MMC RTV SLO"]["articles"]), 3)
 
+    def test_own_sentences_ignore_paraphrase_of_quote_in_other_outlet(self):
+        statement = "dogovor so dosegli ob upoštevanju nastalih okoliščin in odgovornosti za vodenje financ"
+        a = _article("A", "javni", "t", f"Kot so pojasnili, so {statement}. Opozicija je zahtevala odstop celotne uprave in nadzornega sveta družbe.")
+        b = _article("B", "komercialni", "t", f"V družbi so sporočili: »Ta {statement}.«")
+        core = analyzer.shared_core(a, [a, b])
+        self.assertEqual(core.own_sentences, ["Opozicija je zahtevala odstop celotne uprave in nadzornega sveta družbe."])
+
     def test_invalid_model_output_is_rejected(self):
         bad = {"topic_title": "t", "international_baseline": "b", "neutral_summary": "s",
                "coverage_comparison": [{"media_name": "A", "article_title": "x", "article_url": "u",

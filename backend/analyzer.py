@@ -406,9 +406,9 @@ _QUOTED = re.compile(r"„[^“”\n]{1,1500}[“”]|»[^«\n]{1,1500}«|“[^�
 _WORDS = re.compile(r"\w+")
 
 
-def _shingles(text: str, n: int = 6) -> set[tuple[str, ...]]:
-    """n-gramska množica avtorskega besedila; citirane izjave so izločene."""
-    words = _WORDS.findall(_QUOTED.sub(" ", text).lower())
+def _shingles(text: str, n: int = 6, keep_quotes: bool = False) -> set[tuple[str, ...]]:
+    """n-gramska množica avtorskega besedila; citirane izjave so izločene (razen s keep_quotes)."""
+    words = _WORDS.findall((text if keep_quotes else _QUOTED.sub(" ", text)).lower())
     return {tuple(words[i:i + n]) for i in range(len(words) - n + 1)}
 
 
@@ -726,6 +726,9 @@ def shared_core(article: Article, cluster: list[Article]) -> SharedCore | None:
         return None
     other_shingles = set().union(*(_shingles(o.body) for o in others))
     shared = round(100 * len(own & other_shingles) / len(own))
+    # Za »samo ta medij« primerjamo s CELOTNIM besedilom drugih (tudi s citati): povzetek izjave,
+    # ki jo drugi objavijo kot citat, ni lastni dodatek medija.
+    other_full = set().union(*(_shingles(o.body, keep_quotes=True) for o in others))
     quoted_spans = [m.span() for m in _QUOTED.finditer(article.body)]
     unique = []
     for raw_start, raw_end in _sentence_spans(article.body):
@@ -738,7 +741,7 @@ def shared_core(article: Article, cluster: list[Article]) -> SharedCore | None:
         s_end = s_start + len(sentence)
         authorial = _strip_spans(article.body, s_start, s_end, quoted_spans)
         grams = _shingles(authorial)
-        if len(_WORDS.findall(authorial)) >= 8 and grams and not grams & other_shingles:
+        if len(_WORDS.findall(authorial)) >= 8 and grams and not grams & other_full:
             unique.append(sentence)
     best = sorted(sorted(unique, key=len, reverse=True)[:2], key=article.body.find)
     return SharedCore(shared_percent=shared, own_percent=100 - shared, own_sentences=[s[:400] for s in best])
